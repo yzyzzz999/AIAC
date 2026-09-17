@@ -1,0 +1,182 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RuntimeSignalInput",
+  "description": "Vehicle PMV runtime input. Only SIG/FTE fields allowed. Thermocouple temperatures forbidden.",
+  "type": "object",
+  "required": [
+    "amb_t_c"
+  ],
+  "properties": {
+    "amb_t_c": {
+      "type": "number",
+      "description": "Ambient temperature (degC). SIG source."
+    },
+    "rh_percent": {
+      "type": "number",
+      "default": 50.0,
+      "description": "Relative humidity (%)."
+    },
+    "vehicle_speed_kph": {
+      "type": "number",
+      "default": 0.0,
+      "description": "Vehicle speed (km/h)."
+    },
+    "solar_driver_w_m2": {
+      "type": "number",
+      "default": 0.0,
+      "description": "Driver-side solar (W/m2)."
+    },
+    "solar_passenger_w_m2": {
+      "type": "number",
+      "default": 0.0,
+      "description": "Passenger-side solar (W/m2)."
+    },
+    "eva_t_c": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Evap outlet temperature (degC). FTE source."
+    },
+    "hct_c": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Heater core outlet temperature (degC). FTE."
+    },
+    "ict_c": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "In-car target temperature setpoint (degC). CAN exception: AC_FrntInCarT."
+    },
+    "driver_face_flow": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Driver face outlet flow (m3/h). FTE."
+    },
+    "passenger_face_flow": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Passenger face outlet flow (m3/h). FTE."
+    },
+    "driver_floor_flow": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Driver floor outlet flow (m3/h). FTE."
+    },
+    "passenger_floor_flow": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Passenger floor outlet flow (m3/h). FTE."
+    },
+    "driver_defrost_flow": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Driver defrost flow (m3/h). FTE."
+    },
+    "passenger_defrost_flow": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Passenger defrost flow (m3/h). FTE."
+    },
+    "tma": {
+      "type": "object",
+      "description": "Vent air temperature map (degC per outlet key).",
+      "properties": {
+        "FrntFdvFlow": {
+          "type": "number"
+        },
+        "FrntFpvFlow": {
+          "type": "number"
+        },
+        "FrntFdfFlow": {
+          "type": "number"
+        },
+        "FrntFpfFlow": {
+          "type": "number"
+        }
+      }
+    },
+    "flows": {
+      "type": "object",
+      "description": "Additional flow overrides (m3/h per outlet key)."
+    },
+    "measured_head_air_temp_c": {
+      "type": "object",
+      "description": "Optional measured front-row head air temperatures from CAN-Send-2 0x100. When present, PMV air_temp_c uses the left/right average per seat; CHTD state and mean_radiant_temp_c remain model-derived.",
+      "properties": {
+        "driver_left": {
+          "type": "number",
+          "description": "TA_FdHeadTempLe, degC."
+        },
+        "driver_right": {
+          "type": "number",
+          "description": "TA_FdHeadTempRi, degC."
+        },
+        "passenger_left": {
+          "type": "number",
+          "description": "TA_FpHeadTempLe, degC."
+        },
+        "passenger_right": {
+          "type": "number",
+          "description": "TA_FpHeadTempRi, degC."
+        }
+      }
+    },
+    "image_inputs": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Optional image-module occupant data (IR surface temp, occupancy)."
+    },
+    "use_next_state": {
+      "type": "boolean",
+      "default": true
+    },
+    "chtd_param_mode": {
+      "type": "string",
+      "enum": [
+        "default",
+        "safe_preview",
+        "phase3_engineering_preview",
+        "stage2_v4_calibrated"
+      ]
+    },
+    "x_init": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Optional 28-element CHTD state vector for warm start."
+    }
+  },
+  "forbidden_keys": [
+    "TA_FdHeadTempLe",
+    "TA_FpHeadTempLe",
+    "TA_FdFloorTemp1",
+    "TA_FdFloorTemp2",
+    "TA_FpFloorTemp1",
+    "TA_FpFloorTemp2",
+    "TA_CarbinFrntTempLe",
+    "TA_CarbinFrntTempRi",
+    "measured_head_temperature",
+    "measured_feet_temperature",
+    "measured_cabin_temperature"
+  ]
+}

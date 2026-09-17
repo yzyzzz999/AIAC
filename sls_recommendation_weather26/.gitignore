@@ -1,0 +1,17 @@
+# 代码仓库只追踪源码/配置/测试, 与 sls_recommendation 仓库约定一致
+# 注意: 目录模式必须以 / 锚定仓库根目录, 否则会误伤 src/preference_learning/
+__pycache__/
+*.pyc
+/.claude/
+
+# 运行时产物
+/logs/
+/data/
+*.log
+
+# 大文件: 模型二进制与交付包(保留 feature_columns.json)
+*.zip
+/models/
+!/models/feature_columns.json
+/preference_learning/
+/V19_ONLINE_PREFERENCE_DELIVERY/

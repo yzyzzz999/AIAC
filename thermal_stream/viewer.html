@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Thermal Stream</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#111; font-family:monospace; display:flex; flex-direction:column; align-items:center; min-height:100vh; }
+  h1 { color:#888; font-size:14px; font-weight:normal; padding:10px; }
+  #v { width:100%; max-width:768px; image-rendering:pixelated; display:block; }
+  #status { color:#4a4; padding:8px; font-size:12px; }
+  #stats { color:#666; font-size:11px; }
+  .err { color:#a44; }
+</style>
+</head>
+<body>
+<h1>Thermal Stream — H.265 NVENC</h1>
+<video id="v" muted autoplay playsinline></video>
+<div id="status">connecting...</div>
+<div id="stats"></div>
+<script>
+const HOST = location.host || '127.0.0.1:7864';
+const statusEl = document.getElementById('status');
+const statsEl = document.getElementById('stats');
+const video = document.getElementById('v');
+
+let bytes = 0, chunks = 0, t0 = Date.now();
+
+function log(msg, isErr) {
+  statusEl.textContent = msg;
+  if (isErr) statusEl.className = 'err';
+}
+
+function updateStats() {
+  const sec = (Date.now() - t0) / 1000;
+  const kbps = sec > 0 ? (bytes * 8 / 1000 / sec).toFixed(0) : 0;
+  statsEl.textContent = `${chunks} chunks | ${(bytes/1024).toFixed(0)} KB | ${kbps} kbps | ${sec.toFixed(0)}s`;
+}
+
+function connect() {
+  const ws = new WebSocket(`ws://${HOST}`);
+  ws.binaryType = 'arraybuffer';
+
+  const mse = new MediaSource();
+  video.src = URL.createObjectURL(mse);
+
+  mse.addEventListener('sourceopen', () => {
+    const codecs = ['hvc1.1.6.L93.B0', 'hev1.1.6.L93.B0', 'hvc1', 'hev1'];
+    let sb = null;
+
+    for (const c of codecs) {
+      try {
+        sb = mse.addSourceBuffer(`video/mp4; codecs="${c}"`);
+        log('H.265 MSE OK: ' + c);
+        break;
+      } catch(e) {}
+    }
+
+    if (!sb) {
+      log('H.265 MSE not supported in this browser', true);
+      return;
+    }
+
+    let queue = [];
+
+    ws.onmessage = (e) => {
+      chunks++;
+      bytes += e.data.byteLength;
+      const buf = new Uint8Array(e.data);
+      if (!sb.updating) {
+        try { sb.appendBuffer(buf); }
+        catch(ex) { queue = []; }
+      } else {
+        queue.push(buf);
+      }
+    };
+
+    sb.addEventListener('updateend', () => {
+      if (queue.length && !sb.updating) {
+        try { sb.appendBuffer(queue.shift()); }
+        catch(ex) { queue = []; }
+      }
+    });
+
+    setInterval(updateStats, 2000);
+  });
+
+  ws.onopen = () => log('connected — waiting for video...');
+  ws.onerror = () => log('WebSocket error', true);
+  ws.onclose = () => { log('disconnected — reconnecting...', true); setTimeout(connect, 2000); };
+}
+
+connect();
+</script>
+</body>
+</html>

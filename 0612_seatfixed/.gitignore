@@ -1,0 +1,21 @@
+# .gitignore - Vehicle Face Recognition Service
+
+# Python
+__pycache__/
+*.py[cod]
+
+# 环境配置
+.env
+
+# 运行时数据
+*.log
+*.pkl
+*.pid
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

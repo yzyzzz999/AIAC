@@ -1,0 +1,102 @@
+{
+  "_description": "PMV AIBox 兼容完整输出示例（pmv_full 保留全部 PMV 字段，不删减）",
+
+  "timestamp":       "2026-06-15T15:30:00.123456",
+  "timestamp_str":   "20260615_153000_123456",
+  "source":          "pmv_thermal_comfort",
+  "run_index":       42,
+  "status":          "ok",
+  "schema_version":  "vehicle_runtime_package_vnext_v1",
+
+  "input_summary": {
+    "amb_t_c":                38.0,
+    "rh_percent":             45.0,
+    "vehicle_speed_kph":      60.0,
+    "solar_driver_w_m2":      600.0,
+    "solar_passenger_w_m2":   400.0,
+    "eva_t_c":                8.0,
+    "ict_c":                  24.0,
+    "tma": {
+      "FrntFdvFlow": 14.0,
+      "FrntFpvFlow": 14.5
+    }
+  },
+
+  "comfort": {
+    "driver": {
+      "pmv":           0.32,
+      "comfortable":   true,
+      "head_temp_c":   28.5,
+      "feet_temp_c":   27.0
+    },
+    "passenger": {
+      "pmv":           0.18,
+      "comfortable":   true,
+      "head_temp_c":   28.3,
+      "feet_temp_c":   27.1
+    },
+    "cabin_temp_c":    26.8
+  },
+
+  "pmv_full": {
+    "timestamp":      "2026-06-15T15:30:00.123456Z",
+    "status":         "ok",
+    "schema_version": "vehicle_runtime_package_vnext_v1",
+
+    "model_state": {
+      "driver_head_temp_c":               28.5,
+      "passenger_head_temp_c":            28.3,
+      "driver_feet_temp_c":               27.0,
+      "passenger_feet_temp_c":            27.1,
+      "second_row_driver_head_temp_c":    27.8,
+      "second_row_passenger_head_temp_c": 27.6,
+      "second_row_driver_feet_temp_c":    26.5,
+      "second_row_passenger_feet_temp_c": 26.3,
+      "front_cabin_temp_c":               26.8
+    },
+
+    "pmv": {
+      "pmv_driver":               0.32,
+      "pmv_passenger":            0.18,
+      "pmv_second_row_driver":    null,
+      "pmv_second_row_passenger": null
+    },
+
+    "comfort_flags": {
+      "driver_comfortable":    true,
+      "passenger_comfortable": true
+    },
+
+    "diagnostics": {
+      "airflow_distribution_source": "actuator_first_m8_anchor_preview",
+      "airflow_total_source":        "actuator_based_airflow",
+      "mode_key":                    "face_pure",
+      "face_fraction":               0.72,
+      "foot_fraction":               0.18,
+      "defrost_fraction":            0.10,
+      "lr_split_source":             "default_50_50",
+      "rh_source":                   "sig",
+      "forbidden_input_detected":    false,
+      "fallback_used":               false,
+      "missing_signal_list":         [],
+      "forbidden_keys_found":        [],
+      "adapter_warnings":            [],
+      "trace_status":                null,
+      "error":                       null
+    },
+
+    "provenance": {
+      "calibration_status": "midterm_preview_not_vehicle_calibration",
+      "airflow_mode":       "actuator_first_m8_anchor_preview",
+      "chtd_param_mode":    "safe_preview",
+      "package_version":    "vehicle_runtime_package_vnext_v1",
+      "adapter_provenance": {}
+    },
+
+    "x_next": [
+      38.0, 38.0, 25.0, 28.5, 28.3, 25.0, 25.0, 25.0, 25.0,
+      25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 26.8, 26.8, 25.0,
+      25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.5, 25.0
+    ]
+  }
+}

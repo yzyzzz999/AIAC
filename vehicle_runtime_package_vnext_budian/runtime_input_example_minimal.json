@@ -1,0 +1,7 @@
+{
+  "_comment": "Minimal runtime input — only amb_t_c required. All others default.",
+  "amb_t_c": 35.0,
+  "chtd_param_mode": "stage2_v4_calibrated",
+  "use_next_state": true,
+  "params_bundle_path": "config/initial_calibration_params_v8_l1_candidate.json"
+}

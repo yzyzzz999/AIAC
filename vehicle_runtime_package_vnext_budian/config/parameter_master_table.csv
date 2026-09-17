@@ -1,0 +1,400 @@
+﻿parameter_name,module,category,current_value,value_shape,source_file,source_status,is_lut,is_placeholder_like,used_in_python,used_in_model_location,needs_vehicle_calibration,pso_candidate,priority,chinese_description
+AirCpAtb,CHTD,general,1006.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,比热
+CHTD_AirCpAtb_P,CHTD,scalar_param,1005,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P3,比热
+CHTD_AmbT_X,CHTD,lut_axis,"[-20, -10, 0, 10, 20, 30, 40]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P3,环境温度断点轴
+CHTD_CHTDSdlTi_P,CHTD,scalar_param,1,scalar,param.xlsx,excel_param,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+CHTD_CabinFdAmbConvCo_M,CHTD,lut_map,"[10, 10, 10, 2, 2, 2, 2]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_CabinFdAmbRadCo_M,CHTD,lut_map,"[227, 227, 227, 227, 227, 227, 227]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_CabinFdAreaAtb_P,CHTD,scalar_param,0.560000002,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,面积
+CHTD_CabinFdCpAtb_P,CHTD,scalar_param,2379.915527,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,比热
+CHTD_CabinFdMassAtb_P,CHTD,scalar_param,0.222300515,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,质量
+CHTD_CabinFdSolarRadCo_M,CHTD,lut_map,"[5.6, 5.6, 5.6, 5.6, 5.6, 5.6, 5.6]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,太阳辐射吸收/增益系数
+CHTD_CabinFpAmbConvCo_M,CHTD,lut_map,"[10, 10, 10, 2, 2, 2, 2]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_CabinFpAmbRadCo_M,CHTD,lut_map,"[227, 227, 227, 227, 227, 227, 227]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_CabinFpAreaAtb_P,CHTD,scalar_param,0.560000002,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,面积
+CHTD_CabinFpCpAtb_P,CHTD,scalar_param,2379.915527,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,比热
+CHTD_CabinFpMassAtb_P,CHTD,scalar_param,0.222300515,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,质量
+CHTD_CabinFpSolarRadCo_M,CHTD,lut_map,"[5.6, 5.6, 5.6, 5.6, 5.6, 5.6, 5.6]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,太阳辐射吸收/增益系数
+CHTD_CabinFrntAreaAtb_P,CHTD,scalar_param,0.536000013,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,面积
+CHTD_CabinFrntConsoleRadCo_M,CHTD,lut_map,"[70, 70, 70, 70, 70, 70, 70]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_CabinFrntCpAtb_P,CHTD,scalar_param,5.492433548,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,比热
+CHTD_CabinFrntMassAtb_P,CHTD,scalar_param,0.846164286,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,质量
+CHTD_CabinSdAmbConvCo_M,CHTD,lut_map,"[9, 9, 9, 2, 2, 2, 2]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_CabinSdAmbRadCo_M,CHTD,lut_map,"[300, 300, 300, 300, 300, 300, 300]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_CabinSdAreaAtb_P,CHTD,scalar_param,0.532500029,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,面积
+CHTD_CabinSdCpAtb_P,CHTD,scalar_param,2346.621094,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,比热
+CHTD_CabinSdMassAtb_P,CHTD,scalar_param,0.771921575,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,质量
+CHTD_CabinSdSolarRadCo_M,CHTD,lut_map,"[12, 12, 12, 12, 12, 12, 12]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,太阳辐射吸收/增益系数
+CHTD_CabinSpAmbConvCo,CHTD,general,,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_CabinSpAmbConvCo_M,CHTD,lut_map,"[9, 9, 9, 2, 2, 2, 2]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_CabinSpAmbRadCo_M,CHTD,lut_map,"[300, 300, 300, 300, 300, 300, 300]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_CabinSpAreaAtb_P,CHTD,scalar_param,0.532500029,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,面积
+CHTD_CabinSpCpAtb_P,CHTD,scalar_param,2346.621094,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,比热
+CHTD_CabinSpMassAtb_P,CHTD,scalar_param,0.771921575,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,质量
+CHTD_CabinSpSolarRadCo_M,CHTD,lut_map,"[12, 12, 12, 12, 12, 12, 12]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,太阳辐射吸收/增益系数
+CHTD_CabinTdAmbConvCo_M,CHTD,lut_map,"[1, 1, 1, 1, 1, 1, 1]","(7,)",param.xlsx,excel_param,True,True,True,hvac_sim/chtd/thermal.py,True,False,P0,对流换热系数
+CHTD_CabinTdAmbRadCo_M,CHTD,lut_map,"[15.0361, 15.0361, 15.0361, 15.0361, 15.0361, 15.0361, 15.0361]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_CabinTdAreaAtb_P,CHTD,scalar_param,0.60799998,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,面积
+CHTD_CabinTdCpAtb_P,CHTD,scalar_param,6612.098145,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,比热
+CHTD_CabinTdMassAtb_P,CHTD,scalar_param,0.314279497,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,质量
+CHTD_CabinTdSolarRadCo_M,CHTD,lut_map,"[2.2135, 2.2135, 2.2135, 2.2135, 2.2135, 2.2135, 2.2135]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,太阳辐射吸收/增益系数
+CHTD_CabinTpAmbConvCo_M,CHTD,lut_map,"[1, 1, 1, 1, 1, 1, 1]","(7,)",param.xlsx,excel_param,True,True,True,hvac_sim/chtd/thermal.py,True,False,P0,对流换热系数
+CHTD_CabinTpAmbRadCo_M,CHTD,lut_map,"[15.0361, 15.0361, 15.0361, 15.0361, 15.0361, 15.0361, 15.0361]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_CabinTpAreaAtb_P,CHTD,scalar_param,0.60799998,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,面积
+CHTD_CabinTpCpAtb_P,CHTD,scalar_param,6612.098145,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,比热
+CHTD_CabinTpMassAtb_P,CHTD,scalar_param,0.314279497,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,质量
+CHTD_CabinTpSolarRadCo_M,CHTD,lut_map,"[2.2135, 2.2135, 2.2135, 2.2135, 2.2135, 2.2135, 2.2135]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,太阳辐射吸收/增益系数
+CHTD_ConsoleAreaAtb_P,CHTD,scalar_param,0.572000027,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,面积
+CHTD_ConsoleCpAtb_P,CHTD,scalar_param,3447.941895,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,比热
+CHTD_ConsoleFdRadCo_M,CHTD,lut_map,"[107.5, 107.5, 107.5, 107.5, 107.5, 107.5, 107.5]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_ConsoleFeetFdConvCo_M,CHTD,lut_map,"[6, 6, 6, 6, 6, 6, 6]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_ConsoleFeetFdRadCo_M,CHTD,lut_map,"[52, 52, 52, 52, 52, 52, 52]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_ConsoleFeetFpConvCo_M,CHTD,lut_map,"[6, 6, 6, 6, 6, 6, 6]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_ConsoleFeetFpRadCo_M,CHTD,lut_map,"[52, 52, 52, 52, 52, 52, 52]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_ConsoleFpRadCo_M,CHTD,lut_map,"[107.5, 107.5, 107.5, 107.5, 107.5, 107.5, 107.5]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_ConsoleMassAtb_P,CHTD,scalar_param,0.999701917,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,质量
+CHTD_ConsoleSolarRadCo_M,CHTD,lut_map,"[180, 180, 180, 180, 180, 180, 180]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,太阳辐射吸收/增益系数
+CHTD_ConsoleWSRadCo_M,CHTD,lut_map,"[925.1, 925.1, 925.1, 925.1, 925.1, 925.1, 925.1]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_Dt_P,CHTD,scalar_param,1,scalar,param.xlsx,excel_param,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+CHTD_FdAmbConvCo_M,CHTD,lut_map,"[1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]","(7,)",python_impl/hvac_sim/chtd/params.py,python_default,True,True,True,hvac_sim/chtd/thermal.py,True,False,P0,对流换热系数
+CHTD_FdAmbRadCo_M,CHTD,lut_map,"[1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]","(7,)",python_impl/hvac_sim/chtd/params.py,python_default,True,True,True,hvac_sim/chtd/thermal.py,True,False,P0,辐射换热系数
+CHTD_FdCabinFdConvCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,True,hvac_sim/chtd/thermal.py,True,False,P0,对流换热系数
+CHTD_FdCabinFdRadCo_M,CHTD,lut_map,"[629.1, 629.1, 629.1, 629.1, 629.1, 629.1, 629.1]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_FdDefFdConvCo_M,CHTD,lut_map,"[4, 4, 4, 3.5, 3.5, 3.5, 3.5]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_FdFeetFdConvCo_M,CHTD,lut_map,"[2, 2, 2, 2, 2, 2, 2]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_FdFeetFdRadCo_M,CHTD,lut_map,"[500, 500, 500, 500, 500, 500, 500]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_FdFpConvCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,True,hvac_sim/chtd/thermal.py,True,False,P0,对流换热系数
+CHTD_FdFpRadCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,True,hvac_sim/chtd/thermal.py,True,False,P0,辐射换热系数
+CHTD_FdLeakageCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,True,hvac_sim/chtd/thermal.py,True,False,P0,漏气换热系数
+CHTD_FdRoofConvCo_M,CHTD,lut_map,"[2, 2, 2, 2, 2, 2, 2]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_FdRoofRadCo_M,CHTD,lut_map,"[1, 1, 1, 1, 1, 1, 1]","(7,)",param.xlsx,excel_param,True,True,True,hvac_sim/chtd/thermal.py,True,False,P0,辐射换热系数
+CHTD_FdSdConvCo_M,CHTD,lut_map,"[30.5, 30.5, 30.5, 30.5, 30.5, 30.5, 30.5]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_FdSdRadCo_M,CHTD,lut_map,"[1347, 1347, 1347, 1347, 1347, 1347, 1347]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_FdSolarRadCo_M,CHTD,lut_map,"[80, 80, 80, 120, 120, 80, 80]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,太阳辐射吸收/增益系数
+CHTD_FdWinFdConvCo_M,CHTD,lut_map,"[2, 2, 2, 2, 2, 2, 2]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_FdWinFdRadCo_M,CHTD,lut_map,"[225, 225, 225, 225, 225, 225, 225]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_FdfFdConvCo_M,CHTD,lut_map,"[14, 14, 14, 14, 14, 14, 14]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_FdfFeetFdConvCo_M,CHTD,lut_map,"[18, 18, 18.1, 18.1, 18.1, 18.1, 18.1]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_FdvFdConvCo_M,CHTD,lut_map,"[50, 50, 50, 50, 50, 50, 50]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_FeetAirVAtb_P,CHTD,scalar_param,0.029222496,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,空气体积
+CHTD_FeetAreaAtb_P,CHTD,scalar_param,0.202999994,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,面积
+CHTD_FeetFdCabinFdConvCo_M,CHTD,lut_map,"[10.6, 10.6, 10.6, 10.6, 10.6, 10.6, 10.6]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_FeetFdCabinFdRadCo_M,CHTD,lut_map,"[2991.5, 2991.5, 2991.5, 2991.5, 2991.5, 2991.5, 2991.5]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_FeetFdLeakageCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,False,hvac_sim/chtd/thermal.py,True,False,P0,漏气换热系数
+CHTD_FeetFpCabinFpConvCo_M,CHTD,lut_map,"[10.6, 10.6, 10.6, 10.6, 10.6, 10.6, 10.6]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_FeetFpCabinFpRadCo_M,CHTD,lut_map,"[2991.5, 2991.5, 2991.5, 2991.5, 2991.5, 2991.5, 2991.5]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_FeetFpLeakageCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,True,hvac_sim/chtd/thermal.py,True,False,P0,漏气换热系数
+CHTD_FeetSdCabinSdConvCo_M,CHTD,lut_map,"[13.5, 13.5, 13.5, 13.5, 13.5, 13.5, 13.5]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_FeetSdCabinSdRadCo_M,CHTD,lut_map,"[564.8, 564.8, 564.8, 564.8, 564.8, 564.8, 564.8]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_FeetSdLeakageCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,False,hvac_sim/chtd/thermal.py,True,False,P0,漏气换热系数
+CHTD_FeetSpCabinSpConvCo_M,CHTD,lut_map,"[13.5, 13.5, 13.5, 13.5, 13.5, 13.5, 13.5]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_FeetSpCabinSpRadCo_M,CHTD,lut_map,"[564.8, 564.8, 564.8, 564.8, 564.8, 564.8, 564.8]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_FeetSpLeakageCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,True,hvac_sim/chtd/thermal.py,True,False,P0,漏气换热系数
+CHTD_FeetTdCabinTdConvCo_M,CHTD,lut_map,"[0.0012, 0.0012, 0.0012, 0.0012, 0.0012, 0.0012, 0.0012]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_FeetTdCabinTdRadCo_M,CHTD,lut_map,"[26.369, 26.369, 26.369, 26.369, 26.369, 26.369, 26.369]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_FeetTdLeakageCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,True,hvac_sim/chtd/thermal.py,True,False,P0,漏气换热系数
+CHTD_FeetTpCabinTpConvCo_M,CHTD,lut_map,"[0.0012, 0.0012, 0.0012, 0.0012, 0.0012, 0.0012, 0.0012]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_FeetTpCabinTpRadCo_M,CHTD,lut_map,"[26.369, 26.369, 26.369, 26.369, 26.369, 26.369, 26.369]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_FeetTpLeakageCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,True,hvac_sim/chtd/thermal.py,True,False,P0,漏气换热系数
+CHTD_FpCabinFpConvCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,False,hvac_sim/chtd/thermal.py,True,False,P0,对流换热系数
+CHTD_FpCabinFpRadCo_M,CHTD,lut_map,"[629.1, 629.1, 629.1, 629.1, 629.1, 629.1, 629.1]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_FpDefFpConvCo_M,CHTD,lut_map,"[4, 4, 4, 3.5, 3.5, 3.5, 3.5]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_FpFeetFpConvCo_M,CHTD,lut_map,"[2, 2, 2, 2, 2, 2, 2]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_FpFeetFpRadCo_M,CHTD,lut_map,"[500, 500, 500, 500, 500, 500, 500]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_FpLeakageCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,False,hvac_sim/chtd/thermal.py,True,False,P0,漏气换热系数
+CHTD_FpRoofConvCo_M,CHTD,lut_map,"[2, 2, 2, 2, 2, 2, 2]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_FpRoofRadCo_M,CHTD,lut_map,"[1, 1, 1, 1, 1, 1, 1]","(7,)",param.xlsx,excel_param,True,True,False,hvac_sim/chtd/thermal.py,True,False,P0,辐射换热系数
+CHTD_FpSolarRadCo_M,CHTD,lut_map,"[80, 80, 80, 120, 120, 80, 80]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,太阳辐射吸收/增益系数
+CHTD_FpSpConvCo_M,CHTD,lut_map,"[30.5, 30.5, 30.5, 30.5, 30.5, 30.5, 30.5]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_FpSpRadCo_M,CHTD,lut_map,"[1347, 1347, 1347, 1347, 1347, 1347, 1347]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_FpWinFpConvCo_M,CHTD,lut_map,"[2, 2, 2, 2, 2, 2, 2]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_FpWinFpRadCo_M,CHTD,lut_map,"[225, 225, 225, 225, 225, 225, 225]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_FpfFeetFpConvCo_M,CHTD,lut_map,"[18, 18, 18.1, 18.1, 18.1, 18.1, 18.1]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_FpfFpConvCo_M,CHTD,lut_map,"[14, 14, 14, 14, 14, 14, 14]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_FpvFpConvCo_M,CHTD,lut_map,"[50, 50, 50, 50, 50, 50, 50]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_HeadAirVAtb_P,CHTD,scalar_param,0.227272227,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,空气体积
+CHTD_HeadAreaAtb_P,CHTD,scalar_param,0.100000001,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,面积
+CHTD_HoodAmbConvCo_M,CHTD,lut_map,"[50, 50, 50, 50, 50, 50, 50]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_HoodAmbRadCo_M,CHTD,lut_map,"[293, 293, 293, 293, 293, 293, 293]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_HoodAreaAtb_P,CHTD,scalar_param,2.03489995,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,面积
+CHTD_HoodCabinFrntRadCo_M,CHTD,lut_map,"[637, 637, 637, 637, 637, 637, 637]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_HoodCpAtb_P,CHTD,scalar_param,577.7502441,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,比热
+CHTD_HoodMassAtb_P,CHTD,scalar_param,0.103971601,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,质量
+CHTD_HoodSolarRadCo_M,CHTD,lut_map,"[10, 10, 10, 10, 10, 10, 10]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,太阳辐射吸收/增益系数
+CHTD_QgainCo_P,CHTD,scalar_param,1,scalar,param.xlsx,excel_param,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,热增益全局系数
+CHTD_QlossCo_P,CHTD,scalar_param,-1,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,热损失全局系数
+CHTD_RawAmbHoodConvCo_M,CHTD,lut_map,"[1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_RawAmbHoodRadCo_M,CHTD,lut_map,"[748, 748, 748, 748, 748, 748, 748]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_RearSdfFeetSdConvCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,False,hvac_sim/chtd/thermal.py,True,False,P0,对流换热系数
+CHTD_RearSdfSdConvCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,False,hvac_sim/chtd/thermal.py,True,False,P0,对流换热系数
+CHTD_RearSdvSdConvCo_M,CHTD,lut_map,"[17, 17, 17, 17, 17, 17, 17]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_RearSpfFeetSpConvCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,True,hvac_sim/chtd/thermal.py,True,False,P0,对流换热系数
+CHTD_RearSpfSpConvCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,True,hvac_sim/chtd/thermal.py,True,False,P0,对流换热系数
+CHTD_RearSpvSpConvCo_M,CHTD,lut_map,"[17, 17, 17, 17, 17, 17, 17]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_RoofAmbConvCo_M,CHTD,lut_map,"[3, 3, 3, 3, 7.7, 3.8, 3.8]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_RoofAmbRadCo_M,CHTD,lut_map,"[50, 50, 50, 50, 50, 50, 50]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_RoofAreaAtb_P,CHTD,scalar_param,2.400000095,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,面积
+CHTD_RoofCpAtb_P,CHTD,scalar_param,168.9483032,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,比热
+CHTD_RoofMassAtb_P,CHTD,scalar_param,0.157994613,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,车顶质量
+CHTD_RoofSolarRadCo_M,CHTD,lut_map,"[3, 3, 8, 8, 8, 8, 8]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,太阳辐射吸收/增益系数
+CHTD_SdCabinSdConvCo_M,CHTD,lut_map,"[0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_SdCabinSdRadCo_M,CHTD,lut_map,"[45.6, 45.6, 45.6, 45.6, 45.6, 45.6, 45.6]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_SdFeetSdConvCo_M,CHTD,lut_map,"[6, 6, 6, 6, 6, 6, 6]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_SdFeetSdRadCo_M,CHTD,lut_map,"[250, 250, 250, 250, 250, 250, 250]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_SdLeakageCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,False,hvac_sim/chtd/thermal.py,True,False,P0,漏气换热系数
+CHTD_SdRoofConvCo_M,CHTD,lut_map,"[2, 2, 2, 2, 2, 2, 2]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_SdRoofRadCo_M,CHTD,lut_map,"[1, 1, 1, 1, 1, 1, 1]","(7,)",param.xlsx,excel_param,True,True,False,hvac_sim/chtd/thermal.py,True,False,P0,辐射换热系数
+CHTD_SdSolarRadCo_M,CHTD,lut_map,"[80, 80, 80, 120, 120, 80, 80]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,太阳辐射吸收/增益系数
+CHTD_SdSpConvCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,False,hvac_sim/chtd/thermal.py,True,False,P0,对流换热系数
+CHTD_SdSpRadCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,False,hvac_sim/chtd/thermal.py,True,False,P0,辐射换热系数
+CHTD_SdTdConvCo_M,CHTD,lut_map,"[2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_SdTdRadCo_M,CHTD,lut_map,"[900, 900, 900, 900, 900, 900, 900]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_SdWinSdConvCo_M,CHTD,lut_map,"[3, 3, 3, 3, 3, 3, 3]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_SdWinSdRadCo_M,CHTD,lut_map,"[2600, 2600, 2600, 2600, 2600, 2600, 2600]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_SdfFeetSdConvCo_M,CHTD,lut_map,"[15, 15, 15, 15, 15, 15, 15]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_SdfSdConvCo_M,CHTD,lut_map,"[16, 16, 16, 16, 16, 16, 16]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_SdvSdConvCo_M,CHTD,lut_map,"[40, 40, 40, 40, 40, 40, 40]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_SpCabinSpConvCo_M,CHTD,lut_map,"[0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_SpCabinSpRadCo_M,CHTD,lut_map,"[45.6, 45.6, 45.6, 45.6, 45.6, 45.6, 45.6]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_SpFeetSpConvCo_M,CHTD,lut_map,"[6, 6, 6, 6, 6, 6, 6]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_SpFeetSpRadCo_M,CHTD,lut_map,"[250, 250, 250, 250, 250, 250, 250]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_SpLeakageCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,True,hvac_sim/chtd/thermal.py,True,False,P0,漏气换热系数
+CHTD_SpRoofConvCo_M,CHTD,lut_map,"[2, 2, 2, 2, 2, 2, 2]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_SpRoofRadCo_M,CHTD,lut_map,"[1, 1, 1, 1, 1, 1, 1]","(7,)",param.xlsx,excel_param,True,True,True,hvac_sim/chtd/thermal.py,True,False,P0,辐射换热系数
+CHTD_SpSolarRadCo_M,CHTD,lut_map,"[80, 80, 80, 120, 120, 80, 80]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,太阳辐射吸收/增益系数
+CHTD_SpTpConvCo_M,CHTD,lut_map,"[2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_SpTpRadCo_M,CHTD,lut_map,"[900, 900, 900, 900, 900, 900, 900]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_SpWinSpConvCo_M,CHTD,lut_map,"[3, 3, 3, 3, 3, 3, 3]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_SpWinSpRadCo_M,CHTD,lut_map,"[2600, 2600, 2600, 2600, 2600, 2600, 2600]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_SpfFeetSpConvCo_M,CHTD,lut_map,"[15, 15, 15, 15, 15, 15, 15]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_SpfSpConvCo_M,CHTD,lut_map,"[16, 16, 16, 16, 16, 16, 16]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_SpvSpConvCo_M,CHTD,lut_map,"[40, 40, 40, 40, 40, 40, 40]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_TdCabinTdConvCo_M,CHTD,lut_map,"[16.2163, 16.2163, 16.2163, 16.2163, 16.2163, 16.2163, 16.2163]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_TdCabinTdRadCo_M,CHTD,lut_map,"[238.7802, 238.7802, 238.7802, 238.7802, 238.7802, 238.7802, 238.7802]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_TdFeetTdConvCo_M,CHTD,lut_map,"[67.5221, 67.5221, 67.5221, 67.5221, 67.5221, 67.5221, 67.5221]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_TdFeetTdRadCo_M,CHTD,lut_map,"[176.3954, 176.3954, 176.3954, 176.3954, 176.3954, 176.3954, 176.3954]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_TdLeakageCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,True,hvac_sim/chtd/thermal.py,True,False,P0,漏气换热系数
+CHTD_TdRoofConvCo_M,CHTD,lut_map,"[3.306, 3.306, 3.306, 3.306, 3.306, 3.306, 3.306]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_TdRoofRadCo_M,CHTD,lut_map,"[71.0959, 71.0959, 71.0959, 71.0959, 71.0959, 71.0959, 71.0959]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_TdSolarRadCo_M,CHTD,lut_map,"[80, 80, 80, 120, 120, 80, 80]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,太阳辐射吸收/增益系数
+CHTD_TdTpConvCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,True,hvac_sim/chtd/thermal.py,True,False,P0,对流换热系数
+CHTD_TdTpRadCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,True,hvac_sim/chtd/thermal.py,True,False,P0,辐射换热系数
+CHTD_TdWinTdConvCo_M,CHTD,lut_map,"[54.4971, 54.4971, 54.4971, 54.4971, 54.4971, 54.4971, 54.4971]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_TdWinTdRadCo_M,CHTD,lut_map,"[0.0442, 0.0442, 0.0442, 0.0442, 0.0442, 0.0442, 0.0442]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_TdfFeetTdConvCo_M,CHTD,lut_map,"[41.6591, 41.6591, 41.6591, 41.6591, 41.6591, 41.6591, 41.6591]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_TdfTdConvCo_M,CHTD,lut_map,"[33.0432, 33.0432, 33.0432, 33.0432, 33.0432, 33.0432, 33.0432]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_TdvTdConvCo_M,CHTD,lut_map,"[70, 70, 70, 70, 70, 70, 70]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_TpCabinTpConvCo_M,CHTD,lut_map,"[16.2163, 16.2163, 16.2163, 16.2163, 16.2163, 16.2163, 16.2163]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_TpCabinTpRadCo_M,CHTD,lut_map,"[238.7802, 238.7802, 238.7802, 238.7802, 238.7802, 238.7802, 238.7802]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_TpFeetTpConvCo_M,CHTD,lut_map,"[67.5221, 67.5221, 67.5221, 67.5221, 67.5221, 67.5221, 67.5221]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_TpFeetTpRadCo_M,CHTD,lut_map,"[176.3954, 176.3954, 176.3954, 176.3954, 176.3954, 176.3954, 176.3954]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_TpLeakageCo_M,CHTD,lut_map,"[0, 0, 0, 0, 0, 0, 0]","(7,)",param.xlsx,excel_param,True,True,True,hvac_sim/chtd/thermal.py,True,False,P0,漏气换热系数
+CHTD_TpRoofConvCo_M,CHTD,lut_map,"[3.306, 3.306, 3.306, 3.306, 3.306, 3.306, 3.306]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_TpRoofRadCo_M,CHTD,lut_map,"[71.0959, 71.0959, 71.0959, 71.0959, 71.0959, 71.0959, 71.0959]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_TpSolarRadCo_M,CHTD,lut_map,"[80, 80, 80, 120, 120, 80, 80]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,太阳辐射吸收/增益系数
+CHTD_TpWinTpConvCo_M,CHTD,lut_map,"[54.4971, 54.4971, 54.4971, 54.4971, 54.4971, 54.4971, 54.4971]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_TpWinTpRadCo_M,CHTD,lut_map,"[0.0442, 0.0442, 0.0442, 0.0442, 0.0442, 0.0442, 0.0442]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_TpfFeetTpConvCo_M,CHTD,lut_map,"[41.6591, 41.6591, 41.6591, 41.6591, 41.6591, 41.6591, 41.6591]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_TpfTpConvCo_M,CHTD,lut_map,"[33.0432, 33.0432, 33.0432, 33.0432, 33.0432, 33.0432, 33.0432]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_TpvTpConvCo_M,CHTD,lut_map,"[70, 70, 70, 70, 70, 70, 70]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_WSFdRadCo_M,CHTD,lut_map,"[450, 450, 450, 250, 250, 450, 450]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_WSFpRadCo_M,CHTD,lut_map,"[450, 450, 600, 250, 250, 450, 450]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_WinFdAmbConvCo_M,CHTD,lut_map,"[12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_WinFdAmbRadCo_M,CHTD,lut_map,"[750, 750, 750, 750, 750, 750, 750]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_WinFdAreaAtb_P,CHTD,scalar_param,0.159999996,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,面积
+CHTD_WinFdCpAtb_P,CHTD,scalar_param,1654.751953,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,比热
+CHTD_WinFdMassAtb_P,CHTD,scalar_param,0.79055351,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,质量
+CHTD_WinFdSolarRadCo_M,CHTD,lut_map,"[15, 15, 15, 15, 15, 15, 15]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,太阳辐射吸收/增益系数
+CHTD_WinFpAmbConvCo_M,CHTD,lut_map,"[12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_WinFpAmbRadCo_M,CHTD,lut_map,"[750, 750, 750, 750, 750, 750, 750]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_WinFpAreaAtb_P,CHTD,scalar_param,0.159999996,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,面积
+CHTD_WinFpCpAtb_P,CHTD,scalar_param,1654.751953,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,比热
+CHTD_WinFpMassAtb_P,CHTD,scalar_param,0.79055351,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,质量
+CHTD_WinFpSolarRadCo_M,CHTD,lut_map,"[15, 15, 15, 15, 15, 15, 15]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,太阳辐射吸收/增益系数
+CHTD_WinSdAmbConvCo_M,CHTD,lut_map,"[10, 10, 10, 10, 10, 10, 10]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_WinSdAmbRadCo_M,CHTD,lut_map,"[400, 400, 400, 400, 400, 400, 400]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_WinSdAreaAtb_P,CHTD,scalar_param,0.333700001,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,面积
+CHTD_WinSdCpAtb_P,CHTD,scalar_param,1353.746704,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,比热
+CHTD_WinSdMassAtb_P,CHTD,scalar_param,0.482040852,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,质量
+CHTD_WinSdSolarRadCo_M,CHTD,lut_map,"[12, 12, 12, 12, 12, 12, 12]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,太阳辐射吸收/增益系数
+CHTD_WinSpAmbConvCo_M,CHTD,lut_map,"[10, 10, 10, 10, 10, 10, 10]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_WinSpAmbRadCo_M,CHTD,lut_map,"[400, 400, 400, 400, 400, 400, 400]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_WinSpAreaAtb_P,CHTD,scalar_param,0.333700001,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,面积
+CHTD_WinSpCpAtb_P,CHTD,scalar_param,1353.746704,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,比热
+CHTD_WinSpMassAtb_P,CHTD,scalar_param,0.482040852,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,质量
+CHTD_WinSpSolarRadCo_M,CHTD,lut_map,"[12, 12, 12, 12, 12, 12, 12]","(7,)",param.xlsx,excel_param,True,False,False,hvac_sim/chtd/thermal.py,False,False,P1,太阳辐射吸收/增益系数
+CHTD_WinTdAmbConvCo_M,CHTD,lut_map,"[23.6425, 23.6425, 23.6425, 23.6425, 23.6425, 23.6425, 23.6425]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_WinTdAmbRadCo_M,CHTD,lut_map,"[281.6715, 281.6715, 281.6715, 281.6715, 281.6715, 281.6715, 281.6715]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_WinTdAreaAtb_P,CHTD,scalar_param,0.119999997,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,面积
+CHTD_WinTdCpAtb_P,CHTD,scalar_param,259.8423462,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,比热
+CHTD_WinTdMassAtb_P,CHTD,scalar_param,0.107933603,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,质量
+CHTD_WinTdSolarRadCo_M,CHTD,lut_map,"[2.9222, 2.9222, 2.9222, 2.9222, 2.9222, 2.9222, 2.9222]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,太阳辐射吸收/增益系数
+CHTD_WinTpAmbConvCo_M,CHTD,lut_map,"[23.6425, 23.6425, 23.6425, 23.6425, 23.6425, 23.6425, 23.6425]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,对流换热系数
+CHTD_WinTpAmbRadCo_M,CHTD,lut_map,"[281.6715, 281.6715, 281.6715, 281.6715, 281.6715, 281.6715, 281.6715]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,辐射换热系数
+CHTD_WinTpAreaAtb_P,CHTD,scalar_param,0.119999997,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,面积
+CHTD_WinTpCpAtb_P,CHTD,scalar_param,259.8423462,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,比热
+CHTD_WinTpMassAtb_P,CHTD,scalar_param,0.107933603,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,质量
+CHTD_WinTpSolarRadCo_M,CHTD,lut_map,"[2.9222, 2.9222, 2.9222, 2.9222, 2.9222, 2.9222, 2.9222]","(7,)",param.xlsx,excel_param,True,False,True,hvac_sim/chtd/thermal.py,False,False,P1,太阳辐射吸收/增益系数
+CabinFdAreaAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,面积
+CabinFdCpAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,比热
+CabinFdMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+CabinFdUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+CabinFpAreaAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,面积
+CabinFpCpAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,比热
+CabinFpMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+CabinFpUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+CabinFrntAreaAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,面积
+CabinFrntCpAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,比热
+CabinFrntMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+CabinFrntUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+CabinSdAreaAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,面积
+CabinSdCpAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,比热
+CabinSdMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+CabinSdUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+CabinSpAreaAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,面积
+CabinSpCpAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,比热
+CabinSpMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+CabinSpUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+CabinTdAreaAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,面积
+CabinTdCpAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,比热
+CabinTdMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+CabinTdUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+CabinTpAreaAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,面积
+CabinTpCpAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,比热
+CabinTpMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+CabinTpUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+ConsoleAreaAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,面积
+ConsoleCpAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,比热
+ConsoleMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+ConsoleUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+Dt,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+EvaRessCo,AFE,resistance,300,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/afe/,False,True,P1,流阻系数
+F1_a0,AFE,fan_curve,1.0,scalar,python_impl/hvac_sim/afe/fan.py,python_default,False,True,True,hvac_sim/afe/,True,True,P0,待工程师补充中文含义
+F1_n0,AFE,fan_curve,1000.0,scalar,python_impl/hvac_sim/afe/fan.py,python_default,False,False,True,hvac_sim/afe/,False,True,P1,待工程师补充中文含义
+F1_p0,AFE,fan_curve,10.0,scalar,python_impl/hvac_sim/afe/fan.py,python_default,False,False,True,hvac_sim/afe/,False,True,P1,待工程师补充中文含义
+F2_a0,AFE,fan_curve,1.0,scalar,python_impl/hvac_sim/afe/fan.py,python_default,False,True,True,hvac_sim/afe/,True,True,P0,待工程师补充中文含义
+F2_n0,AFE,fan_curve,1000.0,scalar,python_impl/hvac_sim/afe/fan.py,python_default,False,False,True,hvac_sim/afe/,False,True,P1,待工程师补充中文含义
+F2_p0,AFE,fan_curve,10.0,scalar,python_impl/hvac_sim/afe/fan.py,python_default,False,False,True,hvac_sim/afe/,False,True,P1,待工程师补充中文含义
+FdDefFlapRessCo,AFE,resistance,30,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/afe/,False,True,P1,流阻系数
+FdHexUpRessCo,AFE,resistance,500,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/afe/,False,True,P1,流阻系数
+FdPassUpRessCo,AFE,resistance,5,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/afe/,False,True,P1,流阻系数
+FdSvFlapRessCo,AFE,resistance,1,scalar,param.xlsx,excel_param,False,True,True,hvac_sim/afe/,True,True,P1,流阻系数
+FdfFlapRessCo,AFE,resistance,20,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/afe/,False,True,P1,流阻系数
+FdvFlapRessCo,AFE,resistance,30,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/afe/,False,True,P1,流阻系数
+FeetAirVAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,空气体积
+FeetFdMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+FeetFdUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+FeetFpMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+FeetFpUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+FeetSdMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+FeetSdUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+FeetSpMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+FeetSpUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+FeetTdMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+FeetTdUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+FeetTpMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+FeetTpUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+FpDefFlapRessCo,AFE,resistance,30,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/afe/,False,True,P1,流阻系数
+FpHexUpRessCo,AFE,resistance,500,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/afe/,False,True,P1,流阻系数
+FpPassUpRessCo,AFE,resistance,5,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/afe/,False,True,P1,流阻系数
+FpSvFlapRessCo,AFE,resistance,1,scalar,param.xlsx,excel_param,False,True,True,hvac_sim/afe/,True,True,P1,流阻系数
+FpfFlapRessCo,AFE,resistance,20,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/afe/,False,True,P1,流阻系数
+FpvFlapRessCo,AFE,resistance,30,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/afe/,False,True,P1,流阻系数
+HeadAirVAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,空气体积
+HeadFdMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+HeadFdUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+HeadFpMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+HeadFpUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+HeadSdMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+HeadSdUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+HeadTdMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+HeadTdUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+HeadTpMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+HeadTpUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+HoodAreaAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,面积
+HoodCpAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,比热
+HoodMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+HoodUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+OsaFlapRessCo,AFE,resistance,300.0,scalar,python_impl/hvac_sim/afe/params.py,missing_in_excel,False,False,True,hvac_sim/afe/,True,True,P0,流阻系数
+QgainCo,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,热增益全局系数
+QlossCo,CHTD,general,-1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,False,True,hvac_sim/chtd/thermal.py,False,False,P1,热损失全局系数
+RecFlapRessCo,AFE,resistance,300.0,scalar,python_impl/hvac_sim/afe/params.py,missing_in_excel,False,False,True,hvac_sim/afe/,True,True,P0,流阻系数
+RoofAreaAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,面积
+RoofCpAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,比热
+RoofMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,车顶质量
+RoofUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+S_a0,AFE,fan_curve,1.0,scalar,python_impl/hvac_sim/afe/fan.py,python_default,False,True,True,hvac_sim/afe/,True,True,P0,待工程师补充中文含义
+S_n0,AFE,fan_curve,1000.0,scalar,python_impl/hvac_sim/afe/fan.py,python_default,False,False,True,hvac_sim/afe/,False,True,P1,待工程师补充中文含义
+S_p0,AFE,fan_curve,10.0,scalar,python_impl/hvac_sim/afe/fan.py,python_default,False,False,True,hvac_sim/afe/,False,True,P1,待工程师补充中文含义
+SdHexRessCo,AFE,resistance,500,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/afe/,False,True,P1,流阻系数
+SdPassRessCo,AFE,resistance,5,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/afe/,False,True,P1,流阻系数
+SdfFlapRessCo,AFE,resistance,150,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/afe/,False,True,P1,流阻系数
+SdlTi,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+SdvFlapRessCo,AFE,resistance,150,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/afe/,False,True,P1,流阻系数
+SpHexRessCo,AFE,resistance,500,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/afe/,False,True,P1,流阻系数
+SpPassRessCo,AFE,resistance,5,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/afe/,False,True,P1,流阻系数
+SpfFlapRessCo,AFE,resistance,150,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/afe/,False,True,P1,流阻系数
+SpvFlapRessCo,AFE,resistance,150,scalar,param.xlsx,excel_param,False,False,True,hvac_sim/afe/,False,True,P1,流阻系数
+WinFdAreaAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,面积
+WinFdCpAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,比热
+WinFdMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+WinFdUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+WinFpAreaAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,面积
+WinFpCpAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,比热
+WinFpMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+WinFpUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+WinSdAreaAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,面积
+WinSdCpAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,比热
+WinSdMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+WinSdUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+WinSpAreaAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,面积
+WinSpCpAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,比热
+WinSpMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+WinSpUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+WinTdAreaAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,面积
+WinTdCpAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,比热
+WinTdMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+WinTdUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+WinTpAreaAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,面积
+WinTpCpAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,比热
+WinTpMassAtb,CHTD,general,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,质量
+WinTpUAAtb,CHTD,deprecated_legacy,1.0,scalar,python_impl/hvac_sim/chtd/params.py,python_default,False,True,True,hvac_sim/chtd/thermal.py,True,False,P1,待工程师补充中文含义
+defrost_posn_fdh_angle_max_deg,observer,defrost_observer,90.0,scalar,hvac_sim/defrost.py,runtime_observer_default,False,False,True,hvac_sim/defrost.py,False,False,P2,待工程师补充中文含义
+defrost_posn_fdh_angle_min_deg,observer,defrost_observer,0.0,scalar,hvac_sim/defrost.py,runtime_observer_default,False,True,True,hvac_sim/defrost.py,False,False,P2,待工程师补充中文含义
+defrost_posn_fdh_method,observer,defrost_observer,linear,scalar,hvac_sim/defrost.py,runtime_observer_default,False,False,True,hvac_sim/defrost.py,False,False,P2,待工程师补充中文含义
+defrost_tmadef_fallback,observer,defrost_observer,eva,scalar,hvac_sim/defrost.py,runtime_observer_default,False,False,True,hvac_sim/defrost.py,False,False,P2,待工程师补充中文含义
+eps,AFE,general,0.0001,scalar,python_impl/hvac_sim/afe/params.py,python_default,False,False,True,hvac_sim/afe/,False,False,P3,待工程师补充中文含义
+geometry_driver_defrost_distance_to_head_m,geometry,air_speed_geometry,0.65,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+geometry_driver_defrost_distribution_ratio,geometry,air_speed_geometry,0.15,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+geometry_driver_defrost_effective_area_m2,geometry,air_speed_geometry,0.06,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+geometry_driver_face_distance_to_head_m,geometry,air_speed_geometry,0.42,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+geometry_driver_face_distribution_ratio,geometry,air_speed_geometry,0.85,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+geometry_driver_face_effective_area_m2,geometry,air_speed_geometry,0.11,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+geometry_driver_floor_distance_to_head_m,geometry,air_speed_geometry,0.58,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+geometry_driver_floor_distribution_ratio,geometry,air_speed_geometry,0.45,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+geometry_driver_floor_effective_area_m2,geometry,air_speed_geometry,0.09,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+geometry_global_attenuation_k,geometry,air_speed_geometry,0.28,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+geometry_passenger_defrost_distance_to_head_m,geometry,air_speed_geometry,0.65,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+geometry_passenger_defrost_distribution_ratio,geometry,air_speed_geometry,0.15,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+geometry_passenger_defrost_effective_area_m2,geometry,air_speed_geometry,0.06,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+geometry_passenger_face_distance_to_head_m,geometry,air_speed_geometry,0.42,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+geometry_passenger_face_distribution_ratio,geometry,air_speed_geometry,0.85,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+geometry_passenger_face_effective_area_m2,geometry,air_speed_geometry,0.11,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+geometry_passenger_floor_distance_to_head_m,geometry,air_speed_geometry,0.58,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+geometry_passenger_floor_distribution_ratio,geometry,air_speed_geometry,0.45,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+geometry_passenger_floor_effective_area_m2,geometry,air_speed_geometry,0.09,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+geometry_rear_foot_distance_to_head_m,geometry,air_speed_geometry,0.75,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+geometry_rear_foot_distribution_ratio,geometry,air_speed_geometry,0.25,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+geometry_rear_foot_effective_area_m2,geometry,air_speed_geometry,0.08,scalar,python_impl\hvac_sim\config\geometry_defaults.json,geometry_placeholder,False,False,True,hvac_sim/air_speed.py + config/geometry_defaults.json,True,False,P0,待工程师补充中文含义
+glass_h_cabin_w_k,observer,glass_observer,18.0,scalar,hvac_sim/glass_temp.py,runtime_observer_default,False,False,True,hvac_sim/glass_temp.py,False,False,P2,待工程师补充中文含义
+glass_h_def_w_k_per_m3h,observer,glass_observer,0.08,scalar,hvac_sim/glass_temp.py,runtime_observer_default,False,False,True,hvac_sim/glass_temp.py,False,False,P2,待工程师补充中文含义
+glass_h_ext_w_k,observer,glass_observer,28.0,scalar,hvac_sim/glass_temp.py,runtime_observer_default,False,False,True,hvac_sim/glass_temp.py,False,False,P2,待工程师补充中文含义
+glass_h_rad_dash_w_k,observer,glass_observer,10.0,scalar,hvac_sim/glass_temp.py,runtime_observer_default,False,False,True,hvac_sim/glass_temp.py,False,False,P2,待工程师补充中文含义
+glass_heat_capacity_j_k,observer,glass_observer,50000.0,scalar,hvac_sim/glass_temp.py,runtime_observer_default,False,False,True,hvac_sim/glass_temp.py,False,False,P2,待工程师补充中文含义
+glass_k_solar_w_per_wm2,observer,glass_observer,0.35,scalar,hvac_sim/glass_temp.py,runtime_observer_default,False,False,True,hvac_sim/glass_temp.py,False,False,P2,待工程师补充中文含义
+glass_k_speed_per_kph,observer,glass_observer,0.015,scalar,hvac_sim/glass_temp.py,runtime_observer_default,False,False,True,hvac_sim/glass_temp.py,False,False,P2,待工程师补充中文含义
+ir_initial_variance,observer,ir_ekf,1.0,scalar,hvac_sim/pipeline.py,runtime_observer_default,False,True,True,hvac_sim/pipeline.py + hvac_sim/ekf/head_temp_filter.py,False,False,P2,待工程师补充中文含义
+ir_measurement_var,observer,ir_ekf,1.0,scalar,hvac_sim/pipeline.py,runtime_observer_default,False,True,True,hvac_sim/pipeline.py + hvac_sim/ekf/head_temp_filter.py,False,False,P2,待工程师补充中文含义
+ir_min_confidence,observer,ir_ekf,0.5,scalar,hvac_sim/pipeline.py,runtime_observer_default,False,False,True,hvac_sim/pipeline.py + hvac_sim/ekf/head_temp_filter.py,False,False,P2,待工程师补充中文含义
+ir_process_var,observer,ir_ekf,1.0,scalar,hvac_sim/pipeline.py,runtime_observer_default,False,True,True,hvac_sim/pipeline.py + hvac_sim/ekf/head_temp_filter.py,False,False,P2,待工程师补充中文含义
+ir_surface_to_air_offset_c,observer,ir_ekf,2.0,scalar,hvac_sim/pipeline.py,runtime_observer_default,False,False,True,hvac_sim/pipeline.py + hvac_sim/ekf/head_temp_filter.py,False,False,P2,待工程师补充中文含义

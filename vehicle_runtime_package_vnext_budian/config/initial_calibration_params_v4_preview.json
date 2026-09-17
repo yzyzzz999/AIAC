@@ -1,0 +1,3139 @@
+{
+  "schema": "initial_calibration_params_v1",
+  "classification": "spring_summer_midterm_preview_v4_not_vehicle_calibration",
+  "calibration_status": "spring_summer_midterm_preview_v4_not_vehicle_calibration",
+  "source": "stage3_small_pso_head_stable_feet_monitor",
+  "production_ready": false,
+  "feet_diagnostic_only": true,
+  "airflow_guard": "face_pure_m8_anchor_actuator_first",
+  "source_files": [
+    "F:\\TempWork\\SeriesPMV\\001_APP\\artifacts\\stage3_small_pso_head_stable_feet_monitor\\stage3_small_pso_best_params.json"
+  ],
+  "parameters": [
+    {
+      "name": "CHTD_AmbT_X",
+      "value": [
+        -20.0,
+        -10.0,
+        0.0,
+        10.0,
+        20.0,
+        30.0,
+        40.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_Dt_P",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_QgainCo_P",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_QlossCo_P",
+      "value": -1.502403567786104,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CHTDSdlTi_P",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_AirCpAtb_P",
+      "value": 1005.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_HeadAirVAtb_P",
+      "value": 0.227272227,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FeetAirVAtb_P",
+      "value": 0.029222496,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_HeadAreaAtb_P",
+      "value": 0.100000001,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FeetAreaAtb_P",
+      "value": 0.202999994,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_HoodMassAtb_P",
+      "value": 8.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_HoodCpAtb_P",
+      "value": 500.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_HoodAreaAtb_P",
+      "value": 2.03489995,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinFrntMassAtb_P",
+      "value": 3.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinFrntCpAtb_P",
+      "value": 800.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinFrntAreaAtb_P",
+      "value": 0.536000013,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_ConsoleMassAtb_P",
+      "value": 2.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_ConsoleCpAtb_P",
+      "value": 800.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_ConsoleAreaAtb_P",
+      "value": 0.572000027,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinFrntConsoleRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_ConsoleSolarRadCo_M",
+      "value": [
+        0.8405883313997216,
+        0.8405883313997216,
+        0.8405883313997216,
+        0.8405883313997216,
+        0.8405883313997216,
+        0.8405883313997216,
+        0.8405883313997216
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_ConsoleWSRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_ConsoleFdRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_ConsoleFpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_ConsoleFeetFdRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_ConsoleFeetFdConvCo_M",
+      "value": [
+        1.1047317323654002,
+        1.1047317323654002,
+        1.1047317323654002,
+        1.1047317323654002,
+        1.1047317323654002,
+        1.1047317323654002,
+        1.1047317323654002
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_ConsoleFeetFpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_ConsoleFeetFpConvCo_M",
+      "value": [
+        1.1047317323654002,
+        1.1047317323654002,
+        1.1047317323654002,
+        1.1047317323654002,
+        1.1047317323654002,
+        1.1047317323654002,
+        1.1047317323654002
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinFdMassAtb_P",
+      "value": 2.1772484413373236,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinFdCpAtb_P",
+      "value": 1006.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinFdAreaAtb_P",
+      "value": 0.560000002,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinFpMassAtb_P",
+      "value": 2.1772484413373236,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinFpCpAtb_P",
+      "value": 1006.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinFpAreaAtb_P",
+      "value": 0.560000002,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinSdMassAtb_P",
+      "value": 1.9595235972035914,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinSdCpAtb_P",
+      "value": 1006.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinSdAreaAtb_P",
+      "value": 0.532500029,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinSpMassAtb_P",
+      "value": 1.9595235972035914,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinSpCpAtb_P",
+      "value": 1006.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinSpAreaAtb_P",
+      "value": 0.532500029,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinTdMassAtb_P",
+      "value": 1.5240739089361264,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinTdCpAtb_P",
+      "value": 1006.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinTdAreaAtb_P",
+      "value": 0.60799998,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinTpMassAtb_P",
+      "value": 1.5240739089361264,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinTpCpAtb_P",
+      "value": 1006.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinTpAreaAtb_P",
+      "value": 0.60799998,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinFdMassAtb_P",
+      "value": 6.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinFdCpAtb_P",
+      "value": 750.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinFdAreaAtb_P",
+      "value": 0.159999996,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinFpMassAtb_P",
+      "value": 6.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinFpCpAtb_P",
+      "value": 750.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinFpAreaAtb_P",
+      "value": 0.159999996,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinSdMassAtb_P",
+      "value": 3.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinSdCpAtb_P",
+      "value": 750.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinSdAreaAtb_P",
+      "value": 0.333700001,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinSpMassAtb_P",
+      "value": 3.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinSpCpAtb_P",
+      "value": 750.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinSpAreaAtb_P",
+      "value": 0.333700001,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinTdMassAtb_P",
+      "value": 2.5,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinTdCpAtb_P",
+      "value": 750.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinTdAreaAtb_P",
+      "value": 0.119999997,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinTpMassAtb_P",
+      "value": 2.5,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinTpCpAtb_P",
+      "value": 750.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinTpAreaAtb_P",
+      "value": 0.119999997,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_RoofMassAtb_P",
+      "value": 5.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_RoofCpAtb_P",
+      "value": 500.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_RoofAreaAtb_P",
+      "value": 2.400000095,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_RawAmbHoodRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_RawAmbHoodConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_HoodAmbRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_HoodAmbConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_HoodCabinFrntRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_HoodSolarRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FdvFdConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FdfFdConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FdDefFdConvCo_M",
+      "value": [
+        2.885410544599823,
+        2.885410544599823,
+        2.885410544599823,
+        2.885410544599823,
+        2.885410544599823,
+        2.885410544599823,
+        2.885410544599823
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FdWinFdConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FdWinFdRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WSFdRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FdCabinFdConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FdCabinFdRadCo_M",
+      "value": [
+        0.4238637411878091,
+        0.4238637411878091,
+        0.4238637411878091,
+        0.4238637411878091,
+        0.4238637411878091,
+        0.4238637411878091,
+        0.4238637411878091
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FdFeetFdConvCo_M",
+      "value": [
+        1.47329996957243,
+        1.47329996957243,
+        1.47329996957243,
+        1.47329996957243,
+        1.47329996957243,
+        1.47329996957243,
+        1.47329996957243
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FdFeetFdRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FdFpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FdFpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FdSdConvCo_M",
+      "value": [
+        1.9368484246386313,
+        1.9368484246386313,
+        1.9368484246386313,
+        1.9368484246386313,
+        1.9368484246386313,
+        1.9368484246386313,
+        1.9368484246386313
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FdSdRadCo_M",
+      "value": [
+        1.9368484246386313,
+        1.9368484246386313,
+        1.9368484246386313,
+        1.9368484246386313,
+        1.9368484246386313,
+        1.9368484246386313,
+        1.9368484246386313
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FdRoofConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FdRoofRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FdAmbConvCo_M",
+      "value": [
+        0.6342197213573147,
+        0.6342197213573147,
+        0.6342197213573147,
+        0.6342197213573147,
+        0.6342197213573147,
+        0.6342197213573147,
+        0.6342197213573147
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FdAmbRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FdSolarRadCo_M",
+      "value": [
+        3.157327055148123,
+        3.157327055148123,
+        3.157327055148123,
+        3.157327055148123,
+        3.157327055148123,
+        3.157327055148123,
+        3.157327055148123
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FdLeakageCo_M",
+      "value": [
+        0.35813471315938716,
+        0.35813471315938716,
+        0.35813471315938716,
+        0.35813471315938716,
+        0.35813471315938716,
+        0.35813471315938716,
+        0.35813471315938716
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FeetFpLeakageCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinFdAmbRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinFdAmbConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinFdSolarRadCo_M",
+      "value": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinFdSolarRadCo_M",
+      "value": [
+        3.8739090429797094,
+        3.8739090429797094,
+        3.8739090429797094,
+        3.8739090429797094,
+        3.8739090429797094,
+        3.8739090429797094,
+        3.8739090429797094
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinFpAmbRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinFpAmbConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinFpSolarRadCo_M",
+      "value": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinSdAmbRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinSdAmbConvCo_M",
+      "value": [
+        1.9368484246386313,
+        1.9368484246386313,
+        1.9368484246386313,
+        1.9368484246386313,
+        1.9368484246386313,
+        1.9368484246386313,
+        1.9368484246386313
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinSdSolarRadCo_M",
+      "value": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinSpAmbRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinSpAmbConvCo_M",
+      "value": [
+        1.9368484246386313,
+        1.9368484246386313,
+        1.9368484246386313,
+        1.9368484246386313,
+        1.9368484246386313,
+        1.9368484246386313,
+        1.9368484246386313
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinSpSolarRadCo_M",
+      "value": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinTpAmbRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinTpAmbConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinTpSolarRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinTpAmbRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinTpAmbConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinTpSolarRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinSpAmbConvCo",
+      "value": null,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_SpvSpConvCo_M",
+      "value": [
+        0.3750482165813614,
+        0.3750482165813614,
+        0.3750482165813614,
+        0.3750482165813614,
+        0.3750482165813614,
+        0.3750482165813614,
+        0.3750482165813614
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_SpfSpConvCo_M",
+      "value": [
+        0.5860298427936912,
+        0.5860298427936912,
+        0.5860298427936912,
+        0.5860298427936912,
+        0.5860298427936912,
+        0.5860298427936912,
+        0.5860298427936912
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_RearSpvSpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_RearSpfSpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_SpTpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_SpTpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_SpFeetSpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_SpFeetSpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_SpCabinSpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_SpCabinSpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_SpWinSpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_SpWinSpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_SpRoofRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_SpRoofConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_SpSolarRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_SpLeakageCo_M",
+      "value": [
+        2.646672422412821,
+        2.646672422412821,
+        2.646672422412821,
+        2.646672422412821,
+        2.646672422412821,
+        2.646672422412821,
+        2.646672422412821
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TdvTdConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TdfTdConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TdTpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TdTpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TdFeetTdRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TdFeetTdConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TdCabinTdRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TdCabinTdConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TdWinTdRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TdWinTdConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TdRoofRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TdRoofConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_SdRoofConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TdSolarRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TdLeakageCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TdfFeetTdConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FeetTdCabinTdRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FeetTdCabinTdConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FeetTdLeakageCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinTdAmbRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinTdAmbConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_CabinTdSolarRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinTdAmbRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinTdAmbConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_WinTdSolarRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TpvTpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TpfTpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TpFeetTpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TpFeetTpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TpCabinTpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TpCabinTpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TpWinTpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TpWinTpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TpRoofRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TpRoofConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TpSolarRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TpLeakageCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_SpfFeetSpConvCo_M",
+      "value": [
+        0.5860298427936912,
+        0.5860298427936912,
+        0.5860298427936912,
+        0.5860298427936912,
+        0.5860298427936912,
+        0.5860298427936912,
+        0.5860298427936912
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_RearSpfFeetSpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FeetSpCabinSpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FeetSpCabinSpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FeetSpLeakageCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_TpfFeetTpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FeetTpCabinTpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FeetTpCabinTpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CHTD_FeetTpLeakageCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "Dt",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "QgainCo",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "QlossCo",
+      "value": -1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "SdlTi",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "AirCpAtb",
+      "value": 1006.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "HeadAirVAtb",
+      "value": 0.227272227,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "FeetAirVAtb",
+      "value": 0.029222496,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "HoodMassAtb",
+      "value": 8.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinFrntMassAtb",
+      "value": 3.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "ConsoleMassAtb",
+      "value": 2.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "HeadFdMassAtb",
+      "value": 0.6109814181268612,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "HeadFpMassAtb",
+      "value": 0.6109814181268612,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "HeadSdMassAtb",
+      "value": 0.6109814181268612,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "HeadTdMassAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "HeadTpMassAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "FeetFdMassAtb",
+      "value": 0.5,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "FeetFpMassAtb",
+      "value": 0.5,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "FeetSdMassAtb",
+      "value": 0.5,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "FeetSpMassAtb",
+      "value": 0.5,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "FeetTdMassAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "FeetTpMassAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinFdMassAtb",
+      "value": 2.1772484413373236,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinFpMassAtb",
+      "value": 2.1772484413373236,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinSdMassAtb",
+      "value": 1.9595235972035914,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinSpMassAtb",
+      "value": 1.9595235972035914,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinTdMassAtb",
+      "value": 1.5240739089361264,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinTpMassAtb",
+      "value": 1.5240739089361264,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinFdMassAtb",
+      "value": 6.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinFpMassAtb",
+      "value": 6.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinSdMassAtb",
+      "value": 3.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinSpMassAtb",
+      "value": 3.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinTdMassAtb",
+      "value": 2.5,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinTpMassAtb",
+      "value": 2.5,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "RoofMassAtb",
+      "value": 5.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "HoodCpAtb",
+      "value": 500.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinFrntCpAtb",
+      "value": 800.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "ConsoleCpAtb",
+      "value": 800.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinFdCpAtb",
+      "value": 1006.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinFpCpAtb",
+      "value": 1006.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinSdCpAtb",
+      "value": 1006.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinSpCpAtb",
+      "value": 1006.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinTdCpAtb",
+      "value": 1006.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinTpCpAtb",
+      "value": 1006.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinFdCpAtb",
+      "value": 750.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinFpCpAtb",
+      "value": 750.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinSdCpAtb",
+      "value": 750.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinSpCpAtb",
+      "value": 750.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinTdCpAtb",
+      "value": 750.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinTpCpAtb",
+      "value": 750.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "RoofCpAtb",
+      "value": 500.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "HoodAreaAtb",
+      "value": 2.03489995,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinFrntAreaAtb",
+      "value": 0.536000013,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "ConsoleAreaAtb",
+      "value": 0.572000027,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinFdAreaAtb",
+      "value": 0.560000002,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinFpAreaAtb",
+      "value": 0.560000002,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinSdAreaAtb",
+      "value": 0.532500029,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinSpAreaAtb",
+      "value": 0.532500029,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinTdAreaAtb",
+      "value": 0.60799998,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinTpAreaAtb",
+      "value": 0.60799998,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinFdAreaAtb",
+      "value": 0.159999996,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinFpAreaAtb",
+      "value": 0.159999996,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinSdAreaAtb",
+      "value": 0.333700001,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinSpAreaAtb",
+      "value": 0.333700001,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinTdAreaAtb",
+      "value": 0.119999997,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinTpAreaAtb",
+      "value": 0.119999997,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "RoofAreaAtb",
+      "value": 2.400000095,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "HoodUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinFrntUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "ConsoleUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "HeadFdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "HeadFpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "HeadSdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "HeadTdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "HeadTpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "FeetFdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "FeetFpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "FeetSdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "FeetSpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "FeetTdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "FeetTpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinFdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinFpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinSdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinSpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinTdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "CabinTpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinFdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinFpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinSdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinSpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinTdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "WinTpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    },
+    {
+      "name": "RoofUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "stage3_small_pso_head_stable_feet_monitor",
+      "target_type": "chtd",
+      "note": "apply_reduced_vector_clean export"
+    }
+  ],
+  "stage3_small_pso_meta": {
+    "airflow_scale": 0.988754836232567,
+    "face_foot_distribution_scale": 1.0,
+    "foot_leakage_ratio": 0.015866869426427763,
+    "flow_scale_fixed": 0.988754836232567,
+    "heat_s0": 0.4880992731823115,
+    "heat_g0": 0.9038917732881645,
+    "heat_b0": 0.9787821300808426,
+    "lut_scales": {
+      "face_hvac_gain_front": 1.0,
+      "foot_hvac_gain_front": 1.47329996957243,
+      "face_hvac_gain_second_row": 0.3750482165813614,
+      "foot_hvac_gain_second_row": 0.5860298427936912,
+      "defrost_hvac_gain_front": 2.885410544599823,
+      "head_cabin_qbus_scale": 0.4238637411878091,
+      "feet_cabin_qbus_scale": 1.2325533349002578,
+      "cabin_front_rear_exchange_scale": 1.9368484246386313,
+      "console_feet_qbus_scale": 1.1047317323654002,
+      "solar_head_scale": 3.157327055148123,
+      "solar_cabin_scale": 0.2,
+      "solar_console_scale": 0.8405883313997216,
+      "shell_solar_roof_scale": 1.293379899305212,
+      "shell_solar_window_scale": 1.9682248456362168,
+      "ambient_leakage_front_scale": 0.35813471315938716,
+      "ambient_leakage_rear_scale": 2.646672422412821,
+      "h_amb_front_base_scale": 0.6342197213573147,
+      "h_amb_rear_base_scale": 4.468085507439037
+    }
+  }
+}

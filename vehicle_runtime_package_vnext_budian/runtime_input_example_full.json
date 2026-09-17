@@ -1,0 +1,37 @@
+{
+  "_comment": "Full runtime input example — summer face-mode cooling scenario. No thermocouple inputs.",
+  "amb_t_c": 38.0,
+  "rh_percent": 45.0,
+  "vehicle_speed_kph": 60.0,
+  "solar_driver_w_m2": 600.0,
+  "solar_passenger_w_m2": 400.0,
+  "eva_t_c": 8.0,
+  "ict_c": 24.0,
+  "driver_face_flow": 45.0,
+  "passenger_face_flow": 45.0,
+  "driver_floor_flow": 0.0,
+  "passenger_floor_flow": 0.0,
+  "driver_defrost_flow": 0.0,
+  "passenger_defrost_flow": 0.0,
+  "tma": {
+    "FrntFdvFlow": 14.0,
+    "FrntFpvFlow": 14.5,
+    "FrntFdfFlow": 30.0,
+    "FrntFpfFlow": 30.5
+  },
+  "image_inputs": {
+    "driver": {
+      "occupied": true,
+      "clothing_clo": 0.5,
+      "activity_met": 1.1
+    },
+    "passenger": {
+      "occupied": false,
+      "clothing_clo": 0.5,
+      "activity_met": 1.0
+    }
+  },
+  "chtd_param_mode": "stage2_v4_calibrated",
+  "use_next_state": true,
+  "params_bundle_path": "config/initial_calibration_params_v8_l1_candidate.json"
+}

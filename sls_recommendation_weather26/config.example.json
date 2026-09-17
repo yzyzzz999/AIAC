@@ -1,0 +1,82 @@
+{
+  "system": {
+    "name": "车载空调智能推荐系统",
+    "version": "2.0.0",
+    "log_level": "INFO",
+    "log_file": "logs/recommendation.log",
+    "inference_interval": 2.0,
+    "ai_off_inference_interval": 5.0,
+    "main_loop_tick": 1.0,
+    "use_sliding_window": true,
+    "window_seconds": 5.0,
+    "window_min_samples": 2,
+    "demo_mode": false,
+    "wind_max_delta_per_step": 1,
+    "wind_min": 2
+  },
+  "model": {
+    "type": "random_forest",
+    "model_dir": "models/weather26",
+    "feature_config": "models/weather26/manifest.json",
+    "temp_min": 16.0,
+    "temp_max": 31.0,
+    "temp_step": 0.5
+  },
+  "preference_learning": {
+    "user_mlp_dir": "models/user_mlps",
+    "pref_layer_model_dir": "models/preference_layer",
+    "base_recommendation_overrides": {},
+    "occupant_wind_weight_k": 0.5,
+    "force_zero_mlp_residuals": true,
+    "pref_layer_collection_duration": 300,
+    "pref_layer_min_samples": 30,
+    "pref_layer_takeover_confirm_seconds": 5.0,
+    "face_id_confirm_seconds": 1.5,
+    "face_id_new_user_confirm_seconds": 4.0,
+    "face_id_vote_window_seconds": 15.0,
+    "face_id_vote_min_samples": 10,
+    "face_id_vote_ratio": 0.8,
+    "face_id_switch_cooldown_seconds": 20.0,
+    "command_ack_timeout": 8.0,
+    "validation_ratio": 0.2
+  },
+  "can": {
+    "socket_path": "../can_service/sock/can0_bus.sock",
+    "can_ids": ["0x18F", "0x35B", "0x338", "0x33A", "0x3B9", "0x371", "0x33F"],
+    "heartbeat_interval": 5.0,
+    "heartbeat_timeout": 15.0,
+    "retry_interval": 5.0,
+    "signal_timeout": 5.0,
+    "client_id": "recommendation_client"
+  },
+  "face_api": {
+    "base_url": "http://localhost:7860",
+    "timeout": 2.0,
+    "refresh_interval": 1.0
+  },
+  "pmv_api": {
+    "base_url": "http://localhost:7861",
+    "timeout": 2.0,
+    "refresh_interval": 1.0
+  },
+  "weather": {
+    "provider": "demo",
+    "api_key": "",
+    "lat": 0.0,
+    "lon": 0.0,
+    "city": "",
+    "refresh_interval": 300.0,
+    "timeout": 10.0
+  },
+  "result": {
+    "enabled": true,
+    "socket_path": "../can_service/sock/can0_bus.sock",
+    "can_id": "0x387",
+    "send_count": 5,
+    "send_interval_ms": 20
+  },
+  "signals": {
+    "feature_defaults": {}
+  }
+}
+

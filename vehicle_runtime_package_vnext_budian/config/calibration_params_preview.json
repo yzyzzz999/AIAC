@@ -1,0 +1,17 @@
+{
+  "schema": "calibration_params_preview_v1",
+  "calibration_status": "spring_summer_v8_l1_candidate_not_vehicle_calibration",
+  "source": "v8_l1_head_physical_joint_smoke_candidate",
+  "airflow_guard": "face_pure_m8_anchor_actuator_first",
+  "chtd_param_mode": "stage2_v4_calibrated",
+  "params_bundle_path": "config/initial_calibration_params_v8_l1_candidate.json",
+  "reduced_vector_path": "config/stage3_small_pso_reduced_vector.json",
+  "provenance": {
+    "based_on": "apply_reduced_vector_clean + cache_v5 face_pure",
+    "production_ready": false,
+    "feet_diagnostic_only": true,
+    "runtime_mode_alias_note": "stage2_v4_calibrated is internal runtime mode name"
+  },
+  "known_risk": "feet_zones_diagnostic_only",
+  "patch_candidate_params_path": "config/v8_l1_patch_candidate_params.json"
+}

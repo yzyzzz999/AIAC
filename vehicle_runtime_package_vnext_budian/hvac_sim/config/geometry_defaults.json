@@ -1,0 +1,64 @@
+{
+  "schema": "air_speed_geometry_v1",
+  "classification": "estimated_until_measured",
+  "note": "Effective outlet areas and distances are engineering estimates (measured=false). Replace per-vehicle when bench/CAD data is available; PMV does not derive these from CAN.",
+  "vehicle_rows": 2,
+  "outlets": {
+    "driver_face": {
+      "effective_area_m2": 0.11,
+      "distance_to_head_m": 0.42,
+      "distribution_ratio": 0.85,
+      "measured": false,
+      "note": "Estimated face vent effective area for ~90–120 m³/h face flow → ~0.15–0.25 m/s local"
+    },
+    "passenger_face": {
+      "effective_area_m2": 0.11,
+      "distance_to_head_m": 0.42,
+      "distribution_ratio": 0.85,
+      "measured": false,
+      "note": "Symmetric estimate to driver face"
+    },
+    "driver_floor": {
+      "effective_area_m2": 0.09,
+      "distance_to_head_m": 0.58,
+      "distribution_ratio": 0.45,
+      "measured": false,
+      "note": "Floor outlet; lower distribution to head zone"
+    },
+    "passenger_floor": {
+      "effective_area_m2": 0.09,
+      "distance_to_head_m": 0.58,
+      "distribution_ratio": 0.45,
+      "measured": false,
+      "note": "Floor outlet estimate"
+    },
+    "driver_defrost": {
+      "effective_area_m2": 0.06,
+      "distance_to_head_m": 0.65,
+      "distribution_ratio": 0.15,
+      "measured": false,
+      "note": "Windshield defrost; side-defrost split applied in air_speed stage"
+    },
+    "passenger_defrost": {
+      "effective_area_m2": 0.06,
+      "distance_to_head_m": 0.65,
+      "distribution_ratio": 0.15,
+      "measured": false,
+      "note": "Defrost outlet estimate"
+    },
+    "rear_foot": {
+      "effective_area_m2": 0.08,
+      "distance_to_head_m": 0.75,
+      "distribution_ratio": 0.25,
+      "measured": false,
+      "note": "Rear foot reserved; two-row policy often leaves flow at 0"
+    }
+  },
+  "global": {
+    "attenuation_k": {
+      "value": 0.28,
+      "measured": false,
+      "note": "Distance attenuation 1/(1+k·d²); tuned for plausible PMV air speeds at nominal face flows"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+# deploy/docker-compose.yml
+# Docker Compose 部署配置
+
+version: "3.8"
+
+services:
+  face-recognition:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile
+    container_name: face-recognition
+    image: face-recognition:latest
+    restart: unless-stopped
+    ports:
+      - "7860:7860"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=7860
+      - GALLERY_FILE=/app/data/gallery.pkl
+    volumes:
+      # 持久化 Gallery 数据
+      - ./data/gallery.pkl:/app/data/gallery.pkl
+      # 持久化日志
+      - ./logs:/app/logs
+      # 挂载数据集（可选）
+      - ./data:/data/datasets:ro
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7860/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+        reservations:
+          memory: 2G

@@ -1,0 +1,25 @@
+[Unit]
+Description=Vehicle Face Recognition Service
+After=network.target
+
+[Service]
+Type=simple
+User=test
+WorkingDirectory=/home/data/cabin_perception/cabin_perception
+EnvironmentFile=/home/data/cabin_perception/cabin_perception/.env
+ExecStart=/home/data/cabin_perception/cabin_perception/scripts/start.sh
+ExecStop=/home/data/cabin_perception/cabin_perception/scripts/stop.sh
+Restart=on-failure
+RestartSec=10
+StartLimitBurst=5
+StartLimitIntervalSec=300
+StandardOutput=append:/home/data/cabin_perception/cabin_perception/logs/service.log
+StandardError=append:/home/data/cabin_perception/cabin_perception/logs/service.log
+
+NoNewPrivileges=false
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/data/cabin_perception/cabin_perception /dev/shm /tmp
+
+[Install]
+WantedBy=multi-user.target

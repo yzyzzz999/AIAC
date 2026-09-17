@@ -1,0 +1,57 @@
+VERSION "HIPBNYYYYYYYYYYYYYYYYYYYYYYYYYYY"
+
+BS_: 
+
+BU_: CAN_Send_1 CAN_Send_1_1
+
+
+BO_ 256 C_100: 25 CAN_Send_1_1
+ SG_ C________1 : 0|8@1+ (1,0) [0|1] "" CAN_Send_1
+ SG_ GPS__ : 24|32@1- (1,0) [-90|90] "°" CAN_Send_1
+ SG_ GPS___1 : 56|32@1- (1,0) [-180|180] "°" CAN_Send_1
+ SG_ TA_FdHeadTempLe : 88|16@1+ (0.0102235446707866,-270) [-270|400] "°C" CAN_Send_1
+ SG_ TA_FdHeadTempRi : 104|16@1+ (0.0102235446707866,-270) [-270|400] "°C" CAN_Send_1
+ SG_ TA_FpHeadTempLe : 120|16@1+ (0.0102235446707866,-270) [-270|400] "°C" CAN_Send_1
+ SG_ TA_FpHeadTempRi : 136|16@1+ (0.0102235446707866,-270) [-270|400] "°C" CAN_Send_1
+ SG_ TS_FrntWidTemp : 152|16@1+ (0.0102235446707866,-270) [-270|400] "°C" CAN_Send_1
+ SG_ V_FrntHum : 168|16@1+ (0.00305180437933928,-100) [-100|100] "%" CAN_Send_1
+ SG_ V_SecHum : 184|16@1+ (0.00305180437933928,-100) [-100|100] "%" CAN_Send_1
+
+
+CM_ SG_ 256 GPS__ "??";
+CM_ SG_ 256 GPS___1 "??";
+CM_ SG_ 256 TA_FdHeadTempLe "?????????";
+CM_ SG_ 256 TA_FdHeadTempRi "?????????";
+CM_ SG_ 256 TA_FpHeadTempLe "?????????";
+CM_ SG_ 256 TA_FpHeadTempRi "?????????";
+CM_ SG_ 256 TS_FrntWidTemp "?????????";
+CM_ SG_ 256 V_FrntHum "????";
+CM_ SG_ 256 V_SecHum "????";
+
+BA_DEF_        "Baudrate" INT 0 1000000;
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ BO_    "GenMsgSendType" ENUM "cyclic", "spontaneous";
+BA_DEF_ BO_    "GenMsgCycleTime" INT 1 1000;
+BA_DEF_ BO_    "GenMsgCycleTimeus" INT 1000 1000000;
+
+BA_DEF_DEF_    "Baudrate" 500000;
+BA_DEF_DEF_  "CANFD_BRS" "1";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_DEF_DEF_    "GenMsgSendType" "cyclic";
+BA_DEF_DEF_    "GenMsgCycleTime" 100;
+BA_DEF_DEF_    "GenMsgCycleTimeus" 100000;
+
+BA_ "Baudrate" 500000;
+BA_ "BusType" "CAN FD";
+BA_ "VFrameFormat" BO_ 256 14;
+BA_ "GenMsgSendType" BO_ 256 1;
+BA_ "GenMsgCycleTime" BO_ 256 100;
+BA_ "GenMsgCycleTimeus" BO_ 256 100000;
+
+
+SIG_VALTYPE_ 256 GPS__ : 1;
+SIG_VALTYPE_ 256 GPS___1 : 1;
+

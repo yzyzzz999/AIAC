@@ -1,0 +1,91 @@
+# Local tools and editor state
+.claude/
+.codex/
+.agents/
+.vscode/
+.idea/
+.DS_Store
+__MACOSX/
+.nested_git_backups/
+
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local environments and configuration
+.env
+.env.*
+!.env.example
+interface_intergration/config.yaml
+sls_recommendation_weather26/config.json
+
+# Runtime state
+.startup_logs/
+logs/
+*.log
+*.pid
+*.sock
+*.db
+*.db-shm
+*.db-wal
+*.pkl
+*.pkl.bak
+recordings/
+outputs_sequence/
+output_frames/
+can_service/sock/
+0612_seatfixed/data/
+0612_seatfixed/server_err.txt
+0612_seatfixed/server_out.txt
+**/docs/superpowers/
+
+# Model binaries and generated ML artifacts
+0612_seatfixed/models/
+sls_recommendation_weather26/models/
+*.pt
+*.pth
+*.onnx
+*.onnx.data*
+*.safetensors
+*.joblib
+*.tflite
+*.npz
+
+# Private or review-only attachments
+vehicle_runtime_package_vnext_budian/docs/upload_by_yzy/
+
+# Archives, backups, and generated reports
+backups/
+*.zip
+*.tar
+*.tar.gz
+*.tar.zst
+*.bak
+*.v7bak
+analysis_report.html
+
+# Historical project copies not used by start_all.sh
+0612_seatfixed1/
+cabin_preception_0828/
+sls_recommendation/
+sls_recommendation_1/
+sls_recommendation_bak_20260720/
+sls_recommendation_weather26（复件）/
+vehicle_runtime_package_vnext/
+vehicle_runtime_package_vnext_bak/
+stream_sample_python/
+voice-assistant/
+tupin/
+analysis_report.py
+live_dashboard_0826.py
+live_dashboard_0828.py
+
+# Duplicate top-level launch scripts
+start_all（另一个复件）.sh
+start_all（复件）.sh
+stop_all（复件）.sh

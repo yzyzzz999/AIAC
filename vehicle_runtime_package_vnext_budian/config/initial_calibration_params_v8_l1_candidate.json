@@ -1,0 +1,3148 @@
+{
+  "schema": "initial_calibration_params_v1",
+  "classification": "spring_summer_v8_l1_candidate_not_vehicle_calibration",
+  "calibration_status": "spring_summer_v8_l1_candidate_not_vehicle_calibration",
+  "source": "v8_l1_head_physical_joint_smoke_candidate",
+  "production_ready": false,
+  "candidate_only": true,
+  "feet_diagnostic_only": true,
+  "airflow_guard": "v7_ac_mode_adjust_airflow_required",
+  "runtime_effective_scope": "CHTD parameter bundle active; v8 dynamic patch params stored separately and not guaranteed active in default runtime entry",
+  "source_files": [
+    "C:\\Users\\47650\\Desktop\\SeriesPMV\\001_APP\\001_APP\\simulink_conversion_package\\python_targets\\v8_l1_head_physical_joint_medium_pso_v1\\v8_l1_smoke_best_params.json"
+  ],
+  "parameters": [
+    {
+      "name": "CHTD_AmbT_X",
+      "value": [
+        -20.0,
+        -10.0,
+        0.0,
+        10.0,
+        20.0,
+        30.0,
+        40.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_Dt_P",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_QgainCo_P",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_QlossCo_P",
+      "value": -1.5402425075978456,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CHTDSdlTi_P",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_AirCpAtb_P",
+      "value": 1005.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_HeadAirVAtb_P",
+      "value": 0.227272227,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FeetAirVAtb_P",
+      "value": 0.029222496,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_HeadAreaAtb_P",
+      "value": 0.100000001,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FeetAreaAtb_P",
+      "value": 0.202999994,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_HoodMassAtb_P",
+      "value": 8.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_HoodCpAtb_P",
+      "value": 500.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_HoodAreaAtb_P",
+      "value": 2.03489995,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinFrntMassAtb_P",
+      "value": 3.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinFrntCpAtb_P",
+      "value": 800.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinFrntAreaAtb_P",
+      "value": 0.536000013,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_ConsoleMassAtb_P",
+      "value": 2.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_ConsoleCpAtb_P",
+      "value": 800.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_ConsoleAreaAtb_P",
+      "value": 0.572000027,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinFrntConsoleRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_ConsoleSolarRadCo_M",
+      "value": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_ConsoleWSRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_ConsoleFdRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_ConsoleFpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_ConsoleFeetFdRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_ConsoleFeetFdConvCo_M",
+      "value": [
+        1.9490170670491236,
+        1.9490170670491236,
+        1.9490170670491236,
+        1.9490170670491236,
+        1.9490170670491236,
+        1.9490170670491236,
+        1.9490170670491236
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_ConsoleFeetFpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_ConsoleFeetFpConvCo_M",
+      "value": [
+        1.9490170670491236,
+        1.9490170670491236,
+        1.9490170670491236,
+        1.9490170670491236,
+        1.9490170670491236,
+        1.9490170670491236,
+        1.9490170670491236
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinFdMassAtb_P",
+      "value": 1.5,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinFdCpAtb_P",
+      "value": 1006.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinFdAreaAtb_P",
+      "value": 0.560000002,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinFpMassAtb_P",
+      "value": 1.5,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinFpCpAtb_P",
+      "value": 1006.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinFpAreaAtb_P",
+      "value": 0.560000002,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinSdMassAtb_P",
+      "value": 1.35,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinSdCpAtb_P",
+      "value": 1006.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinSdAreaAtb_P",
+      "value": 0.532500029,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinSpMassAtb_P",
+      "value": 1.35,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinSpCpAtb_P",
+      "value": 1006.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinSpAreaAtb_P",
+      "value": 0.532500029,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinTdMassAtb_P",
+      "value": 1.0499999999999998,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinTdCpAtb_P",
+      "value": 1006.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinTdAreaAtb_P",
+      "value": 0.60799998,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinTpMassAtb_P",
+      "value": 1.0499999999999998,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinTpCpAtb_P",
+      "value": 1006.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinTpAreaAtb_P",
+      "value": 0.60799998,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinFdMassAtb_P",
+      "value": 6.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinFdCpAtb_P",
+      "value": 750.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinFdAreaAtb_P",
+      "value": 0.159999996,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinFpMassAtb_P",
+      "value": 6.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinFpCpAtb_P",
+      "value": 750.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinFpAreaAtb_P",
+      "value": 0.159999996,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinSdMassAtb_P",
+      "value": 3.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinSdCpAtb_P",
+      "value": 750.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinSdAreaAtb_P",
+      "value": 0.333700001,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinSpMassAtb_P",
+      "value": 3.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinSpCpAtb_P",
+      "value": 750.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinSpAreaAtb_P",
+      "value": 0.333700001,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinTdMassAtb_P",
+      "value": 2.5,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinTdCpAtb_P",
+      "value": 750.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinTdAreaAtb_P",
+      "value": 0.119999997,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinTpMassAtb_P",
+      "value": 2.5,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinTpCpAtb_P",
+      "value": 750.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinTpAreaAtb_P",
+      "value": 0.119999997,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_RoofMassAtb_P",
+      "value": 5.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_RoofCpAtb_P",
+      "value": 500.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_RoofAreaAtb_P",
+      "value": 2.400000095,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_RawAmbHoodRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_RawAmbHoodConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_HoodAmbRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_HoodAmbConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_HoodCabinFrntRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_HoodSolarRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FdvFdConvCo_M",
+      "value": [
+        1.375143971061594,
+        1.375143971061594,
+        1.375143971061594,
+        1.375143971061594,
+        1.375143971061594,
+        1.375143971061594,
+        1.375143971061594
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FdfFdConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FdDefFdConvCo_M",
+      "value": [
+        2.885410544599823,
+        2.885410544599823,
+        2.885410544599823,
+        2.885410544599823,
+        2.885410544599823,
+        2.885410544599823,
+        2.885410544599823
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FdWinFdConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FdWinFdRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WSFdRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FdCabinFdConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FdCabinFdRadCo_M",
+      "value": [
+        0.7020553228411545,
+        0.7020553228411545,
+        0.7020553228411545,
+        0.7020553228411545,
+        0.7020553228411545,
+        0.7020553228411545,
+        0.7020553228411545
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FdFeetFdConvCo_M",
+      "value": [
+        1.4,
+        1.4,
+        1.4,
+        1.4,
+        1.4,
+        1.4,
+        1.4
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FdFeetFdRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FdFpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FdFpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FdSdConvCo_M",
+      "value": [
+        1.3575753378120816,
+        1.3575753378120816,
+        1.3575753378120816,
+        1.3575753378120816,
+        1.3575753378120816,
+        1.3575753378120816,
+        1.3575753378120816
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FdSdRadCo_M",
+      "value": [
+        1.3575753378120816,
+        1.3575753378120816,
+        1.3575753378120816,
+        1.3575753378120816,
+        1.3575753378120816,
+        1.3575753378120816,
+        1.3575753378120816
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FdRoofConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FdRoofRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FdAmbConvCo_M",
+      "value": [
+        0.6554819627109448,
+        0.6554819627109448,
+        0.6554819627109448,
+        0.6554819627109448,
+        0.6554819627109448,
+        0.6554819627109448,
+        0.6554819627109448
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FdAmbRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FdSolarRadCo_M",
+      "value": [
+        4.2,
+        4.2,
+        4.2,
+        4.2,
+        4.2,
+        4.2,
+        4.2
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FdLeakageCo_M",
+      "value": [
+        0.43381259278287027,
+        0.43381259278287027,
+        0.43381259278287027,
+        0.43381259278287027,
+        0.43381259278287027,
+        0.43381259278287027,
+        0.43381259278287027
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FeetFpLeakageCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinFdAmbRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinFdAmbConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinFdSolarRadCo_M",
+      "value": [
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinFdSolarRadCo_M",
+      "value": [
+        1.3419058477496486,
+        1.3419058477496486,
+        1.3419058477496486,
+        1.3419058477496486,
+        1.3419058477496486,
+        1.3419058477496486,
+        1.3419058477496486
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinFpAmbRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinFpAmbConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinFpSolarRadCo_M",
+      "value": [
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinSdAmbRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinSdAmbConvCo_M",
+      "value": [
+        1.3575753378120816,
+        1.3575753378120816,
+        1.3575753378120816,
+        1.3575753378120816,
+        1.3575753378120816,
+        1.3575753378120816,
+        1.3575753378120816
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinSdSolarRadCo_M",
+      "value": [
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinSpAmbRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinSpAmbConvCo_M",
+      "value": [
+        1.3575753378120816,
+        1.3575753378120816,
+        1.3575753378120816,
+        1.3575753378120816,
+        1.3575753378120816,
+        1.3575753378120816,
+        1.3575753378120816
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinSpSolarRadCo_M",
+      "value": [
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinTpAmbRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinTpAmbConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinTpSolarRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinTpAmbRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinTpAmbConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinTpSolarRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinSpAmbConvCo",
+      "value": null,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_SpvSpConvCo_M",
+      "value": [
+        0.45681340766368955,
+        0.45681340766368955,
+        0.45681340766368955,
+        0.45681340766368955,
+        0.45681340766368955,
+        0.45681340766368955,
+        0.45681340766368955
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_SpfSpConvCo_M",
+      "value": [
+        0.5860298427936912,
+        0.5860298427936912,
+        0.5860298427936912,
+        0.5860298427936912,
+        0.5860298427936912,
+        0.5860298427936912,
+        0.5860298427936912
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_RearSpvSpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_RearSpfSpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_SpTpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_SpTpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_SpFeetSpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_SpFeetSpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_SpCabinSpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_SpCabinSpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_SpWinSpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_SpWinSpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_SpRoofRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_SpRoofConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_SpSolarRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_SpLeakageCo_M",
+      "value": [
+        2.646672422412821,
+        2.646672422412821,
+        2.646672422412821,
+        2.646672422412821,
+        2.646672422412821,
+        2.646672422412821,
+        2.646672422412821
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TdvTdConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TdfTdConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TdTpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TdTpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TdFeetTdRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TdFeetTdConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TdCabinTdRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TdCabinTdConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TdWinTdRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TdWinTdConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TdRoofRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TdRoofConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_SdRoofConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TdSolarRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TdLeakageCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TdfFeetTdConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FeetTdCabinTdRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FeetTdCabinTdConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FeetTdLeakageCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinTdAmbRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinTdAmbConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_CabinTdSolarRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinTdAmbRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinTdAmbConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_WinTdSolarRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TpvTpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TpfTpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TpFeetTpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TpFeetTpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TpCabinTpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TpCabinTpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TpWinTpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TpWinTpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TpRoofRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TpRoofConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TpSolarRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TpLeakageCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_SpfFeetSpConvCo_M",
+      "value": [
+        0.5860298427936912,
+        0.5860298427936912,
+        0.5860298427936912,
+        0.5860298427936912,
+        0.5860298427936912,
+        0.5860298427936912,
+        0.5860298427936912
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_RearSpfFeetSpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FeetSpCabinSpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FeetSpCabinSpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FeetSpLeakageCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_TpfFeetTpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FeetTpCabinTpRadCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FeetTpCabinTpConvCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CHTD_FeetTpLeakageCo_M",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "Dt",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "QgainCo",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "QlossCo",
+      "value": -1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "SdlTi",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "AirCpAtb",
+      "value": 1006.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "HeadAirVAtb",
+      "value": 0.227272227,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "FeetAirVAtb",
+      "value": 0.029222496,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "HoodMassAtb",
+      "value": 8.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinFrntMassAtb",
+      "value": 3.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "ConsoleMassAtb",
+      "value": 2.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "HeadFdMassAtb",
+      "value": 1.2890530024524764,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "HeadFpMassAtb",
+      "value": 1.2890530024524764,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "HeadSdMassAtb",
+      "value": 1.2890530024524764,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "HeadTdMassAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "HeadTpMassAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "FeetFdMassAtb",
+      "value": 0.8,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "FeetFpMassAtb",
+      "value": 0.8,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "FeetSdMassAtb",
+      "value": 0.8,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "FeetSpMassAtb",
+      "value": 0.8,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "FeetTdMassAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "FeetTpMassAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinFdMassAtb",
+      "value": 1.5,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinFpMassAtb",
+      "value": 1.5,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinSdMassAtb",
+      "value": 1.35,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinSpMassAtb",
+      "value": 1.35,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinTdMassAtb",
+      "value": 1.0499999999999998,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinTpMassAtb",
+      "value": 1.0499999999999998,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinFdMassAtb",
+      "value": 6.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinFpMassAtb",
+      "value": 6.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinSdMassAtb",
+      "value": 3.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinSpMassAtb",
+      "value": 3.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinTdMassAtb",
+      "value": 2.5,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinTpMassAtb",
+      "value": 2.5,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "RoofMassAtb",
+      "value": 5.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "HoodCpAtb",
+      "value": 500.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinFrntCpAtb",
+      "value": 800.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "ConsoleCpAtb",
+      "value": 800.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinFdCpAtb",
+      "value": 1006.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinFpCpAtb",
+      "value": 1006.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinSdCpAtb",
+      "value": 1006.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinSpCpAtb",
+      "value": 1006.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinTdCpAtb",
+      "value": 1006.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinTpCpAtb",
+      "value": 1006.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinFdCpAtb",
+      "value": 750.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinFpCpAtb",
+      "value": 750.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinSdCpAtb",
+      "value": 750.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinSpCpAtb",
+      "value": 750.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinTdCpAtb",
+      "value": 750.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinTpCpAtb",
+      "value": 750.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "RoofCpAtb",
+      "value": 500.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "HoodAreaAtb",
+      "value": 2.03489995,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinFrntAreaAtb",
+      "value": 0.536000013,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "ConsoleAreaAtb",
+      "value": 0.572000027,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinFdAreaAtb",
+      "value": 0.560000002,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinFpAreaAtb",
+      "value": 0.560000002,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinSdAreaAtb",
+      "value": 0.532500029,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinSpAreaAtb",
+      "value": 0.532500029,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinTdAreaAtb",
+      "value": 0.60799998,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinTpAreaAtb",
+      "value": 0.60799998,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinFdAreaAtb",
+      "value": 0.159999996,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinFpAreaAtb",
+      "value": 0.159999996,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinSdAreaAtb",
+      "value": 0.333700001,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinSpAreaAtb",
+      "value": 0.333700001,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinTdAreaAtb",
+      "value": 0.119999997,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinTpAreaAtb",
+      "value": 0.119999997,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "RoofAreaAtb",
+      "value": 2.400000095,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "HoodUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinFrntUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "ConsoleUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "HeadFdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "HeadFpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "HeadSdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "HeadTdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "HeadTpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "FeetFdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "FeetFpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "FeetSdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "FeetSpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "FeetTdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "FeetTpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinFdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinFpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinSdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinSpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinTdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "CabinTpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinFdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinFpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinSdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinSpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinTdUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "WinTpUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    },
+    {
+      "name": "RoofUAAtb",
+      "value": 1.0,
+      "unit": "",
+      "source": "v8_l1_head_physical_joint_smoke_candidate",
+      "target_type": "chtd",
+      "note": "v8 L1 candidate export; v4.1 reduced vector used for v8-missing fields; dynamic patch params stored separately"
+    }
+  ],
+  "v8_l1_meta": {
+    "verdict": "V8_L1_SMOKE_CANDIDATE",
+    "timestamp_utc": "20260619_222351",
+    "n_params": 17,
+    "n_particles": 24,
+    "n_iter_completed": 12,
+    "best_train_loss": 0.5988279305868237,
+    "best_val_deriv_corr_head_fd": 0.5217997284956076,
+    "best_val_range_ratio": 1.2612649340021451,
+    "flow_ref": 364.0,
+    "flow_scale_fixed": 0.58000025377236,
+    "heat_s0": 0.4880992731823115,
+    "heat_g0": 0.9038917732881645,
+    "heat_b0": -1.05365432791861,
+    "lut_scales": {
+      "face_hvac_gain_front": 1.375143971061594,
+      "foot_hvac_gain_front": 1.4,
+      "face_hvac_gain_second_row": 0.45681340766368955,
+      "foot_hvac_gain_second_row": 0.5860298427936912,
+      "defrost_hvac_gain_front": 2.885410544599823,
+      "head_cabin_qbus_scale": 0.7020553228411545,
+      "feet_cabin_qbus_scale": 2.062972754047003,
+      "cabin_front_rear_exchange_scale": 1.3575753378120816,
+      "console_feet_qbus_scale": 1.9490170670491236,
+      "solar_head_scale": 4.2,
+      "solar_cabin_scale": 0.15,
+      "solar_console_scale": 0.2,
+      "shell_solar_roof_scale": 2.3831834833434007,
+      "shell_solar_window_scale": 1.158406598630053,
+      "ambient_leakage_front_scale": 0.43381259278287027,
+      "ambient_leakage_rear_scale": 2.646672422412821,
+      "h_amb_front_base_scale": 0.6554819627109448,
+      "h_amb_rear_base_scale": 4.468085507439037
+    },
+    "base_fill": "v4_1_stage3_small_pso_reduced_vector_for_missing_v8_fields"
+  }
+}

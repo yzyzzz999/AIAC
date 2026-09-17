@@ -1,0 +1,33 @@
+{
+  "schema": "vehicle_runtime_config_v1",
+  "package": "vehicle_runtime_package_v8_l1_candidate",
+  "calibration_status": "spring_summer_v8_l1_candidate_not_vehicle_calibration",
+  "airflow_mode": "face_pure_m8_anchor_actuator_first",
+  "chtd_param_mode": "stage2_v4_calibrated",
+  "feature_flags": {
+    "enable_ir_fusion": false,
+    "enable_image_occupancy": true,
+    "enable_runtime_conditioning": false,
+    "enable_post_glass_defrost": false,
+    "enable_corrected_chtd": false,
+    "enable_vehicle_adapted_params": true,
+    "use_next_state": true
+  },
+  "forbidden_inputs": [
+    "TA_FdHeadTempLe",
+    "TA_FpHeadTempLe",
+    "TA_FdFloorTemp1",
+    "TA_FdFloorTemp2",
+    "TA_FpFloorTemp1",
+    "TA_FpFloorTemp2",
+    "TA_CarbinFrntTempLe",
+    "TA_CarbinFrntTempRi",
+    "measured_head_temperature",
+    "measured_feet_temperature",
+    "measured_cabin_temperature"
+  ],
+  "can_signal_exceptions": true,
+  "can_exception_list": "can_signal_exception_list.json",
+  "params_bundle_path": "config/initial_calibration_params_v8_l1_candidate.json",
+  "package_version": "vehicle_runtime_package_v8_l1_candidate_v1"
+}

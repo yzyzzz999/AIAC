@@ -1,0 +1,1929 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: CCU_EVR PTC_F_EVR PTC_R_EVR AC VIU0_TMS_EVR AI DSM_IP VIU0_IP PSM_CABIN VIU1_CABIN
+
+
+BO_ 859 VIU_35B: 8 VIU0_TMS_EVR
+ SG_ VIU_AmbTVld : 9|1@0+ (1,0) [0|1] ""  AC,AI
+ SG_ VIU_AmbT : 23|11@0+ (0.1,-40) [-40|164.6] "DegC"  AC,AI
+ SG_ VIU_VehAntithftSt : 28|3@0+ (1,0) [0|7] ""  AC,AI
+ SG_ CDC_SceneModePowerOnSts : 25|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ VIU_FLWinOpenDeg : 38|7@0+ (1,0) [0|127] ""  AC,AI
+ SG_ VIU_FRWinOpenDeg : 46|7@0+ (1,0) [0|127] ""  AC,AI
+ SG_ VIU_RLWinOpenDeg : 54|7@0+ (1,0) [0|127] ""  AC,AI
+ SG_ VIU_RRWinOpenDeg : 62|7@0+ (1,0) [0|127] ""  AC,AI
+
+BO_ 953 VIU_LIN1: 8 VIU0_TMS_EVR
+ SG_ BMS_PackSOCRange : 7|10@0+ (0.1,0) [0|100] "%"  AC,AI
+ SG_ SSM_F_Position : 13|3@0+ (1,0) [0|7] ""  AC,AI
+ SG_ RSM_DewPointT : 10|11@0+ (0.1,-39.6) [-39.6|100] "℃"  AC,AI
+ SG_ RSM_RainFalLev : 30|4@0+ (1,0) [0|15] ""  AC,AI
+ SG_ RSM_WinT : 26|11@0+ (0.1,-39.6) [-39.6|100] "℃"  AC,AI
+ SG_ RSM_RelHum : 47|8@0+ (0.5,-0.5) [-0.5|100] "%"  AC,AI
+ SG_ RSM_LeSolarInten : 55|8@0+ (5,0) [0|1265] ""  AC,AI
+ SG_ RSM_RiSolarInten : 63|8@0+ (5,0) [0|1265] ""  AC,AI
+
+BO_ 849 VIU_HMC: 8 VIU0_TMS_EVR
+ SG_ VDC_BattInletCooltTReq : 6|7@0+ (0.5,-20) [-20|43.5] "C"  AC,AI
+ SG_ VDC_battLoopCoolingLevel : 15|3@0+ (1,0) [0|7] ""  AC,AI
+ SG_ VDC_PTCF_ModeRequest : 12|2@0+ (1,0) [0|3] ""  PTC_F_EVR,AC,AI
+ SG_ VDC_PTCF_PWM_Value : 22|7@0+ (1,0) [0|100] "%"  PTC_F_EVR,AC,AI
+ SG_ VDC_acCompressorPowerAllowed : 30|7@0+ (0.1,0) [0|10] "KW"  AC,AI
+ SG_ VDC_cabinPtcPowerAllowed : 38|7@0+ (0.1,0) [0|10] "kW"  AC,AI
+ SG_ VDC_AllowHMC_HVworkReq : 47|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ VDC_BattCoolgLoopSts : 45|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ VDC_MotCoolgLoopSts : 43|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ VDC_ACHeatMode : 55|3@0+ (1,0) [0|7] ""  AC,AI
+ SG_ VDC_BatHeatMode : 52|3@0+ (1,0) [0|7] ""  AC,AI
+ SG_ VDC_ACReqStartEngRemind : 49|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ VDC_HeatThreeDirectValveControl : 62|7@0+ (1,0) [0|127] ""  AC,AI
+
+BO_ 789 VIU_BMS: 8 VIU0_TMS_EVR
+ SG_ BMS_BattVolt_U7 : 7|14@0+ (0.1,0) [0|1000] "V"  CCU_EVR,PTC_F_EVR,PTC_R_EVR,AI
+ SG_ BMS_BattTempMax : 23|8@0+ (1,-40) [-40|125] "℃"  AC,AI
+ SG_ BMS_BattTempMin : 31|8@0+ (1,-40) [-40|125] "℃"  AC,AI
+ SG_ BMS_BattTempAvg : 39|8@0+ (1,-40) [-40|125] "℃"  AC,AI
+ SG_ BMS_TrgtFlowRate : 47|9@0+ (0.5,0) [0|100] "L/min"  AC,AI
+ SG_ BMS_ThermRunawaySt : 54|3@0+ (1,0) [0|7] ""  AC,AI
+ SG_ BMS_DCChrgSt : 63|4@0+ (1,0) [0|15] ""  AC,AI
+ SG_ BMS_ACChrgSt : 59|4@0+ (1,0) [0|15] ""  AC,AI
+
+BO_ 954 VIU_HeatManage1: 8 VIU0_TMS_EVR
+ SG_ AGS1_CurrPosFeedback : 15|8@0+ (1,0) [0|255] ""  AC,AI
+ SG_ VIU_BattInletWaterT : 23|8@0+ (1,-48) [-48|207] "℃"  AC,AI
+ SG_ VIU_BattOutletWaterT : 31|8@0+ (1,-48) [-48|207] "℃"  AC,AI
+ SG_ VIU_BattInletWaterPumpSt : 39|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ VIU_ReMotInletWaterPumpSt : 37|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ VIU_CoolgFanSt : 35|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ VIU_PumpHSt : 33|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ VIU_CoolgFanCtrl : 46|7@0+ (1,0) [0|101] "%"  AC,AI
+ SG_ VIU_NavTunnelSt : 63|1@0+ (1,0) [0|1] ""  AC,AI
+
+BO_ 863 VIU_35F: 8 VIU0_TMS_EVR
+ SG_ VDC_FactoryReset : 2|1@0+ (1,0) [0|1] ""  AC,AI
+ SG_ VDC_DrvMod : 6|4@0+ (1,0) [0|15] ""  AC,AI
+ SG_ VDC_CDC_WashModSts : 15|3@0+ (1,0) [0|7] ""  AC,AI
+ SG_ VDC_TotalRang : 31|20@0+ (1,0) [0|1000000] "km"  CCU_EVR,PTC_F_EVR,PTC_R_EVR,AC,AI
+ SG_ VDC_REVMode : 55|3@0+ (1,0) [0|7] ""  AC,AI
+
+BO_ 958 VIU_PassiveSecSeat_3BE: 8 VIU0_TMS_EVR
+ SG_ VIU_DrvrDoorSt : 7|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ VIU_PassDoorSt : 5|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ VIU_RLDoorSt : 3|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ VIU_RRDoorSt : 1|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ VIU_TailgateSt : 15|4@0+ (1,0) [0|15] ""  AC,AI
+ SG_ VIU_HoodSts : 11|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ VIU_DriverSeatOccptSt : 47|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ VIU_PassSeatOccptSt : 45|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ VIU_RLSecRowSeatOccptSt : 43|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ VIU_RMSecRowSeatOccptSt : 41|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ VIU_RRSecRowSeatOccptSt : 55|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ VIU_RLThrdRowSeatOccptSt : 53|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ VIU_RRThrdRowSeatOccptSt : 51|2@0+ (1,0) [0|3] ""  AC,AI
+
+BO_ 399 VIU_CHA_18F: 8 VIU0_TMS_EVR
+ SG_ VDC_HV_State : 15|3@0+ (1,0) [0|7] ""  CCU_EVR,PTC_F_EVR,AC,AI
+ SG_ IPB_VehicleSpeedValid : 24|1@0+ (1,0) [0|1] ""  CCU_EVR,PTC_F_EVR,PTC_R_EVR,AC,AI
+ SG_ IPB_VehicleSpeed : 39|13@0+ (0.05625,0) [0|460.74375] "km/h"  CCU_EVR,PTC_F_EVR,PTC_R_EVR,AC,AI
+
+BO_ 901 CCU_385: 8 CCU_EVR
+ SG_ CCU_MotSpdVld : 13|1@0+ (1,0) [0|1] ""  AC,VIU0_TMS_EVR,AI
+ SG_ CCU_CtrlrVoltVld : 14|1@0+ (1,0) [0|1] ""  AC,VIU0_TMS_EVR,AI
+ SG_ CCU_CtrlrCrtVld : 15|1@0+ (1,0) [0|1] ""  AC,VIU0_TMS_EVR,AI
+ SG_ CCU_CtrlrVolt : 23|16@0+ (0.02,0) [0|1310.7] "V"  AC,VIU0_TMS_EVR,AI
+ SG_ CCU_CtrlrCrt : 39|16@0+ (0.02,0) [0|1310.7] "A"  AC,VIU0_TMS_EVR,AI
+ SG_ CCU_MotSpd : 55|16@0+ (0.25,0) [0|16383.75] "rpm"  AC,VIU0_TMS_EVR,AI
+
+BO_ 902 CCU_386: 8 CCU_EVR
+ SG_ CCU_MotCrt : 7|16@0+ (0.02,0) [0|1310.7] "A"  AC,VIU0_TMS_EVR,AI
+ SG_ CCU_HVUnderVoltFlt : 16|1@0+ (1,0) [0|1] ""  AC,VIU0_TMS_EVR,AI
+ SG_ CCU_FaultLevel : 20|3@0+ (1,0) [0|7] ""  AC,VIU0_TMS_EVR,AI
+ SG_ CCU_CrtSts : 22|2@0+ (1,0) [0|3] ""  AC,VIU0_TMS_EVR,AI
+ SG_ CCU_IninSts : 23|1@0+ (1,0) [0|1] ""  AC,VIU0_TMS_EVR,AI
+ SG_ CCU_OverCrtFlt : 31|1@0+ (1,0) [0|1] ""  AC,VIU0_TMS_EVR,AI
+ SG_ CCU_HVIntlkFlt : 32|1@0+ (1,0) [0|1] ""  AC,VIU0_TMS_EVR,AI
+ SG_ CCU_IPMTOverFlt : 33|1@0+ (1,0) [0|1] ""  AC,VIU0_TMS_EVR,AI
+ SG_ CCU_ComLost_ECC : 34|1@0+ (1,0) [0|1] ""  AC,VIU0_TMS_EVR,AI
+ SG_ CCU_CtrlCircFlt : 35|1@0+ (1,0) [0|1] ""  AC,VIU0_TMS_EVR,AI
+ SG_ CCU_IPMHwFlt : 36|1@0+ (1,0) [0|1] ""  AC,VIU0_TMS_EVR,AI
+ SG_ CCU_HVIL_St : 38|2@0+ (1,0) [0|3] ""  AC,VIU0_TMS_EVR,AI
+ SG_ CCU_IPMT : 47|8@0+ (1,-48) [-48|207] "℃"  AC,VIU0_TMS_EVR,AI
+ SG_ CCU_CrtPwr : 55|16@0+ (0.2,0) [0|13107] "W"  AC,VIU0_TMS_EVR,AI
+
+BO_ 1471 CCU_5BF: 8 CCU_EVR
+ SG_ CCU_SupplierCode : 3|4@0+ (1,0) [0|15] ""  AI
+ SG_ CCU_HwVersion : 15|8@0+ (1,0) [0|255] ""  AI
+ SG_ CCU_SwMajorVersion : 23|8@0+ (1,0) [0|255] ""  AI
+ SG_ CCU_SwMinorVersion : 31|8@0+ (1,0) [0|255] ""  AI
+ SG_ CCU_SwPatchVersion : 39|8@0+ (1,0) [0|255] ""  AI
+ SG_ CCU_SwVersionYear : 47|8@0+ (1,0) [0|255] ""  AI
+ SG_ CCU_SwVersionMonth : 55|8@0+ (1,0) [0|12] ""  AI
+ SG_ CCU_SwVersionDay : 63|8@0+ (1,0) [0|31] ""  AI
+
+BO_ 1352 CCU_548: 8 CCU_EVR
+ SG_ CAN_busoff : 0|1@0+ (1,0) [0|1] ""  AC,AI
+ SG_ LV_overvoltage : 1|1@0+ (1,0) [0|1] ""  AC,AI
+ SG_ LV_undervoltage : 2|1@0+ (1,0) [0|1] ""  AC,AI
+ SG_ Compressor_software_overcurrent : 3|1@0+ (1,0) [0|1] ""  AC,AI
+ SG_ Compressor_loss_phase : 4|1@0+ (1,0) [0|1] ""  AC,AI
+ SG_ Compressor_startup_failure : 5|1@0+ (1,0) [0|1] ""  AC,AI
+ SG_ HV_Bus_overvoltage : 6|1@0+ (1,0) [0|1] ""  AC,AI
+ SG_ Current_sensor_fault : 7|1@0+ (1,0) [0|1] ""  AC,AI
+ SG_ HV_interlock_short_to_ground : 8|1@0+ (1,0) [0|1] ""  AC,AI
+ SG_ HV_interlock_short_to_power : 9|1@0+ (1,0) [0|1] ""  AC,AI
+ SG_ Temperature_sensor_fault : 10|1@0+ (1,0) [0|1] ""  AC,AI
+ SG_ Over_load : 11|1@0+ (1,0) [0|1] ""  AC,AI
+ SG_ Drive_overvoltage : 12|1@0+ (1,0) [0|1] ""  AC,AI
+ SG_ Drive_undervoltage : 13|1@0+ (1,0) [0|1] ""  AC,AI
+ SG_ Voltage_sensor_fault : 14|1@0+ (1,0) [0|1] ""  AC,AI
+ SG_ Drive_voltage_sensor_fault : 15|1@0+ (1,0) [0|1] ""  AC,AI
+ SG_ Low_temperature : 16|1@0+ (1,0) [0|1] ""  AC,AI
+ SG_ Out_of_step : 17|1@0+ (1,0) [0|1] ""  AC,AI
+
+BO_ 909 PTC_F_38D: 8 PTC_F_EVR
+ SG_ PTC_F_Power_Rate : 6|7@0+ (1,0) [0|100] "%"  VIU0_TMS_EVR,AI
+ SG_ PTCF_DischargeState : 12|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_FaultLevel : 10|3@0+ (1,0) [0|7] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_InlT : 23|8@0+ (1,-48) [-48|207] "°C"  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_F_OutlT : 31|8@0+ (1,-48) [-48|207] "°C"  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_F_CrtPwr : 39|16@0+ (1,0) [0|10000] ""  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_F_CrtT : 55|8@0+ (1,-48) [-48|207] "°C"  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_F_IninSts : 56|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_HVPwrSplySts : 57|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_ActGear : 61|4@0+ (1,0) [0|15] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_Mod : 62|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+
+BO_ 905 PTC_F_389: 8 PTC_F_EVR
+ SG_ PTC_F_HighVoltage : 7|16@0+ (0.02,0) [0|1310] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_PCBT : 23|8@0+ (1,-48) [-48|207] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_Crt : 31|16@0+ (0.001,0) [0|65.535] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_CrtSts : 41|2@0+ (1,0) [0|3] ""  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_F_ComLost_VDC : 43|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_OverCrtFlt : 44|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_HVUnderVoltFlt : 45|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_HVOverVoltFlt : 46|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_ChkBattOverVoltFlt : 47|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_ChkBattUnderVoltFlt : 48|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_InlTSnsrFlt : 49|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_OutlTSnsrFlt : 50|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_InlOverTFlt : 51|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_OutlOverTFlt : 52|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_PCBOverTFlt : 53|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_PCBTSnsrFlt : 54|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_PwrOutpFlt : 55|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_IGBTOpenCircuitFlt : 63|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_IGBTSnsrFlt : 62|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_IGBTOverTFlt : 61|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_HVIL_St : 60|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ PTC_F_CtrlrVoltFlt : 58|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+
+BO_ 907 PTC_R_State1: 8 PTC_R_EVR
+ SG_ PTC_R_BusLineVolt : 7|8@0+ (3,0) [0|765] "V"  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_R_BusLineCurrent : 15|8@0+ (0.1,0) [0|25.5] "A"  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_R_Temperature : 23|8@0+ (1,-40) [-40|215] "℃"  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_R_HeatPwr : 31|8@0+ (50,0) [0|5000] "W"  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_R_Status : 32|1@0+ (1,0) [0|1] "bit"  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_R_FaultState : 33|1@0+ (1,0) [0|1] "bit"  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_R_OverCurrentFault : 34|1@0+ (1,0) [0|1] "bit"  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_R_LvUnderVoltFault : 35|1@0+ (1,0) [0|1] "bit"  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_R_LvOverVoltFault : 36|1@0+ (1,0) [0|1] "bit"  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_R_IGBTTempSensorFault : 37|1@0+ (1,0) [0|1] "bit"  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_R_IGBTOverTempFault : 38|1@0+ (1,0) [0|1] "bit"  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_R_TempSensorFault : 40|1@0+ (1,0) [0|1] "bit"  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_R_OverTempFault : 41|1@0+ (1,0) [0|1] "bit"  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_R_HvUnderVoltFault : 42|1@0+ (1,0) [0|1] "bit"  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_R_HvOverVoltFault : 43|1@0+ (1,0) [0|1] "bit"  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_R_ShortCircuitFault : 44|1@0+ (1,0) [0|1] "bit"  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_R_OpentCircuitFault : 45|1@0+ (1,0) [0|1] "bit"  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_R_HVIL_St : 47|2@0+ (1,0) [0|3] ""  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_R_FaultLevel : 55|3@0+ (1,0) [0|7] ""  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_R_IninSts : 52|1@0+ (1,0) [0|1] ""  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_R_CrtSts : 51|2@0+ (1,0) [0|3] ""  AC,VIU0_TMS_EVR,AI
+
+BO_ 908 PTC_R_State2: 8 PTC_R_EVR
+ SG_ PTC_R_IGBTTemperature : 7|8@0+ (1,-40) [-40|215] "℃"  AC,VIU0_TMS_EVR,AI
+ SG_ PTC_R_PCB_Temperature : 15|8@0+ (1,-40) [-40|215] "℃"  AC,VIU0_TMS_EVR,AI
+
+BO_ 903 VIU_ACSet1_387: 8 VIU0_TMS_EVR
+ SG_ CDC_ACSystemOnOffSet : 7|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ CDC_RACSystemOnOffSet : 5|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ CDC_ACSet : 3|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ CDC_FrontDefrostSet : 1|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ CDC_FHvacBlowLvSet : 15|4@0+ (1,0) [0|15] ""  AC,AI
+ SG_ CDC_RHvacBlowLvSet : 11|4@0+ (1,0) [0|15] ""  AC,AI
+ SG_ CDC_FHvacModeSet : 23|4@0+ (1,0) [0|15] ""  AC,AI
+ SG_ CDC_RHvacModeSet : 19|3@0+ (1,0) [0|7] ""  AC,AI
+ SG_ CDC_DriverTempCSet : 16|5@0+ (0.5,16) [16|31] ""  AC,AI
+ SG_ CDC_PassengerTempCSet : 27|5@0+ (0.5,16) [16|31] ""  AC,AI
+ SG_ CDC_RrTempCSet : 38|5@0+ (0.5,16) [16|31] ""  AC,AI
+ SG_ TBOX_ACONOFFSet : 47|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ TBOX_ACTempSet : 44|5@0+ (0.5,16) [16|31] ""  AC,AI
+ SG_ TBOX_ACVentSet : 55|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ TBOX_ACDefrostSet : 53|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ TBOX_MaxACSet : 51|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ TBOX_MaxHeatSet : 49|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ TBOX_PurificationSet : 63|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ TBOX_UVCSet : 61|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ CDC_ThirdRowACSystemOnOffSet : 59|2@0+ (1,0) [0|3] ""  AC,AI
+
+BO_ 897 VIU_ACSet2_381: 8 VIU0_TMS_EVR
+ SG_ CDC_ACMaxSet : 7|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ CDC_HeatMaxSet : 5|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ CDC_HvacAutoModeSet : 3|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ CDC_RHvacAutoModeSet : 1|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ CDC_AutoDefogSet : 15|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ CDC_ACFourZoneSync : 13|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ CDC_TempExclusive : 11|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ CDC_CircModSet : 9|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ CDC_IntelligentizePurSet : 23|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ CDC_ACParkAutoVentSet : 21|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ CDC_IONset : 19|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ CDC_UVCset : 17|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ CDC_FilterRenewSet : 28|1@0+ (1,0) [0|1] ""  AC,AI
+ SG_ CDC_AutoDrySet : 27|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ CDC_ACECOModReq : 25|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ CDC_VentSet : 39|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ CDC_OdorRemoveSet : 37|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ CDC_ThirdRowHvacBlowLvSet : 47|4@0+ (1,0) [0|15] ""  AC,AI
+ SG_ CDC_ThirdRowHvacModeSet : 43|3@0+ (1,0) [0|7] ""  AC,AI
+ SG_ CDC_ThirdRowTempCSet : 55|5@0+ (0.5,16) [16|31] ""  AC,AI
+ SG_ CDC_ThirdRowHvacAutoModeSet : 50|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ TBOX_ACParkAutoVentSetSts : 63|2@0+ (1,0) [0|3] ""  AC,AI
+
+BO_ 826 AC_Sts1: 8 AC
+ SG_ AC_ACSystemOnOffSts : 7|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_RACSystemOnOffSts : 5|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_ACSts : 3|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_FrontDefrostSts : 1|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_FBlowSpeedLevel : 15|4@0+ (1,0) [0|15] ""  VIU0_TMS_EVR,AI
+ SG_ AC_RBlowSpeedLevel : 11|4@0+ (1,0) [0|15] ""  VIU0_TMS_EVR,AI
+ SG_ AC_FModeAdjustSts : 23|4@0+ (1,0) [0|15] ""  VIU0_TMS_EVR,AI
+ SG_ AC_RModeAdjustSts : 19|3@0+ (1,0) [0|7] ""  VIU0_TMS_EVR,AI
+ SG_ AC_DriverTempC : 16|5@0+ (0.5,16) [16|31] ""  VIU0_TMS_EVR,AI
+ SG_ AC_PassengerTempC : 27|5@0+ (0.5,16) [16|31] ""  VIU0_TMS_EVR,AI
+ SG_ AC_RrTempC : 38|5@0+ (0.5,16) [16|31] ""  VIU0_TMS_EVR,AI
+ SG_ AC_CircleModeSts : 33|3@0+ (1,0) [0|7] ""  VIU0_TMS_EVR,AI
+ SG_ AC_ParkAutoVentSts : 46|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_FHvacBlowLvAutoSts : 42|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ AC_RHvacBlowLvAutoSts : 41|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ AC_FBlowModeAutoSts : 40|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ AC_RBlowModeAutoSts : 55|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ AC_ThirdRowACSystemOnOffSts : 54|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_ThirdRowHvacBlowLvAutoSts : 52|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ AC_ThirdRowBlowModeAutoSts : 51|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+
+BO_ 827 AC_Sts2: 8 AC
+ SG_ AC_ACMaxSts : 7|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_HeatMaxSts : 5|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_AutoModeSts : 3|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_RAutoModeSts : 1|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_AutoDefogSts : 15|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_ACFourZoneSyncSts : 13|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_TempExclusiveSts : 11|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_AutoDefogRunSts : 9|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_FaultREASON : 23|4@0+ (1,0) [0|15] ""  VIU0_TMS_EVR,AI
+ SG_ AC_Pres_HP : 19|9@0+ (0.1,0) [0|36] "Bar"  VIU0_TMS_EVR,AI
+ SG_ AC_Pres_LPT_Chiller : 26|7@0+ (0.1,0) [0|12] "Bar"  VIU0_TMS_EVR,AI
+ SG_ AC_Pres_LPT_EVAP : 35|7@0+ (0.1,0) [0|12] "Bar"  VIU0_TMS_EVR,AI
+ SG_ AC_ThirdRowBlowSpeedLevel : 55|4@0+ (1,0) [0|15] ""  VIU0_TMS_EVR,AI
+ SG_ AC_ThirdRowModeAdjustSts : 51|3@0+ (1,0) [0|7] ""  VIU0_TMS_EVR,AI
+ SG_ AC_ThirdRowTempC : 63|5@0+ (0.5,16) [16|31] ""  VIU0_TMS_EVR,AI
+ SG_ AC_ThirdRowAutoModeSts : 58|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+
+BO_ 828 AC_Sts3: 8 AC
+ SG_ AC_TimeVentSt : 7|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_VentTimeFlag : 5|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_VentholdTime : 3|9@0+ (1,0) [0|300] "s"  VIU0_TMS_EVR,AI
+ SG_ AC_VentTime : 9|10@0+ (1,0) [0|1023] ""  VIU0_TMS_EVR,AI
+ SG_ AC_BlowerVolt : 31|8@0+ (0.1,0) [0|25] "v"  VIU0_TMS_EVR,AI
+ SG_ AC_RBlowerVolt : 39|8@0+ (0.1,0) [0|25] "v"  VIU0_TMS_EVR,AI
+ SG_ AC_UVCSts : 47|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_UVC_Err : 45|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ AC_UVC_ErrValid : 44|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ AC_AutoDrySts : 43|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_ACECOModSts : 41|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_VentSts : 55|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_RemFaultSts : 53|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_OdorRemoveSts : 51|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_FilterRemain : 62|7@0+ (1,0) [0|127] "%"  VIU0_TMS_EVR,AI
+
+BO_ 1397 AC_Sts4: 8 AC
+ SG_ AC_FrntSOVSt : 7|2@0+ (1,0) [0|3] ""  AI
+ SG_ AC_ReSOVSt : 5|2@0+ (1,0) [0|3] ""  AI
+ SG_ AC_BmsEXVInitSt : 3|2@0+ (1,0) [0|3] ""  AI
+ SG_ AC_BmsEXVSt : 1|1@0+ (1,0) [0|1] ""  AI
+ SG_ AC_BmsEXV_OpenCmd : 15|16@0+ (1,0) [0|576] ""  AI
+ SG_ AC_BmsEXV_ActOpenVal : 31|16@0+ (1,0) [0|576] ""  AI
+ SG_ AC_BmsEXVInitReq : 47|1@0+ (1,0) [0|1] ""  AI
+ SG_ AC_Forward_ModePerReq : 46|7@0+ (1,0) [0|100] "%"  AI
+ SG_ AC_Second_ModePerReq : 55|7@0+ (1,0) [0|100] "%"  AI
+ SG_ AC_FrntInCarT_Target : 63|8@0+ (0.5,-40) [-40|87.5] "℃"  AI
+
+BO_ 824 AC_Temp1: 8 AC
+ SG_ AC_FrntInCarT : 7|12@0+ (0.1,-48) [-48|80] "℃"  VIU0_TMS_EVR,AI
+ SG_ AC_ReInCarT : 11|12@0+ (0.1,-48) [-48|80] "℃"  VIU0_TMS_EVR,AI
+ SG_ AC_FrntInCarTValid : 31|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ AC_ReInCarTValid : 30|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ AC_OverheatdT : 29|9@0+ (0.1,-10) [-10|30] "degreeC"  VIU0_TMS_EVR,AI
+ SG_ AC_Forward_BlwPwmOut : 47|8@0+ (0.5,-40) [-40|87] "DegC"  VIU0_TMS_EVR,AI
+ SG_ AC_LPTSnsrT : 55|8@0+ (0.5,-40) [-40|87] "DegC"  VIU0_TMS_EVR,AI
+ SG_ AC_Second_BlwPwmOut : 63|7@0+ (1,0) [0|100] "%"  VIU0_TMS_EVR,AI
+
+BO_ 830 AC_Temp2: 8 AC
+ SG_ AC_FEvapTargetTemp : 7|6@0+ (0.5,0) [0|31.5] "℃"  VIU0_TMS_EVR,AI
+ SG_ AC_FEvapCurrentTemp : 1|10@0+ (0.1,-40) [-40|60] "℃"  VIU0_TMS_EVR,AI
+ SG_ AC_REvapTargetTemp : 23|6@0+ (0.5,0) [0|31.5] "℃"  VIU0_TMS_EVR,AI
+ SG_ AC_REvapCurrentTemp : 17|10@0+ (0.1,-40) [-40|60] "℃"  VIU0_TMS_EVR,AI
+ SG_ AC_THS_RelHum : 39|8@0+ (0.5,0) [0|100] "%"  VIU0_TMS_EVR,AI
+ SG_ AC_THS_DewPointT : 47|8@0+ (0.5,-40) [-40|85] "℃"  VIU0_TMS_EVR,AI
+ SG_ AC_THS_T : 55|8@0+ (0.5,-40) [-40|85] "℃"  VIU0_TMS_EVR,AI
+ SG_ AC_cabinCoolingLevel : 58|3@0+ (1,0) [0|7] ""  VIU0_TMS_EVR,AI
+ SG_ AC_cabinheatingLevel : 61|3@0+ (1,0) [0|7] ""  VIU0_TMS_EVR,AI
+
+BO_ 831 AC_Temp3: 8 AC
+ SG_ AC_DrvrFaceVentTargetT : 7|8@0+ (0.5,-40) [-40|85] "degreeC"  VIU0_TMS_EVR,AI
+ SG_ AC_PassFaceVentTargetT : 15|8@0+ (0.5,-40) [-40|85] "degreeC"  VIU0_TMS_EVR,AI
+ SG_ AC_SecRowFaceVentTargetT : 23|8@0+ (0.5,-40) [-40|85] "degreeC"  VIU0_TMS_EVR,AI
+ SG_ AC_DrvrFaceVentActT : 31|8@0+ (0.5,-40) [-40|85] "degreeC"  VIU0_TMS_EVR,AI
+ SG_ AC_PassFaceVentActT : 39|8@0+ (0.5,-40) [-40|85] "degreeC"  VIU0_TMS_EVR,AI
+ SG_ AC_SecRowFaceVentActT : 47|8@0+ (0.5,-40) [-40|85] "degreeC"  VIU0_TMS_EVR,AI
+ SG_ AC_ThrdRowVentTargetT : 55|8@0+ (0.5,-40) [-40|85] "degreeC"  AI
+ SG_ AC_ThrdRowVentActT : 63|8@0+ (0.5,-40) [-40|85] "degreeC"  AI
+
+BO_ 880 AC_Temp4: 8 AC
+ SG_ AC_DrvrTempVentilaPosn : 7|7@0+ (0.1,0) [0|50] "V"  VIU0_TMS_EVR,AI
+ SG_ AC_PassTempVentilaPosn : 0|7@0+ (0.1,0) [0|50] "V"  VIU0_TMS_EVR,AI
+ SG_ AC_CircleModeVentilaPosn : 9|8@0+ (1,0) [0|100] "%"  VIU0_TMS_EVR,AI
+ SG_ AC_ModeVentilaPosn : 31|4@0+ (1,0) [0|15] "%"  VIU0_TMS_EVR,AI
+ SG_ AC_SecRowFootVentilaPosn : 27|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_SecRowTempVentilaPosn : 25|7@0+ (1,0) [0|100] "%"  VIU0_TMS_EVR,AI
+ SG_ AC_SecRowModeVentilaPosn : 34|4@0+ (1,0) [0|15] ""  VIU0_TMS_EVR,AI
+ SG_ AC_ThrdTempVentilaPosn : 54|7@0+ (0.1,0) [0|50] "V"  AI
+ SG_ AC_BLOW_FaceVentilaPosn : 62|7@0+ (0.1,0) [0|50] "V"  AI
+
+BO_ 881 AC_Temp5: 8 AC
+ SG_ AC_DrvrFootVentTargetT : 7|8@0+ (0.5,-40) [-40|85] "degreeC"  VIU0_TMS_EVR,AI
+ SG_ AC_PassFootVentTargetT : 15|8@0+ (0.5,-40) [-40|85] "degreeC"  VIU0_TMS_EVR,AI
+ SG_ AC_ThrdRowFootVentTargetT : 23|8@0+ (0.5,-40) [-40|85] "degreeC"  VIU0_TMS_EVR,AI
+ SG_ AC_DrvrFootVentActT : 31|8@0+ (0.5,-40) [-40|85] "degreeC"  VIU0_TMS_EVR,AI
+ SG_ AC_PassFootVentActT : 39|8@0+ (0.5,-40) [-40|85] "degreeC"  VIU0_TMS_EVR,AI
+ SG_ AC_ThrdRowFootVentActT : 47|8@0+ (0.5,-40) [-40|85] "degreeC"  VIU0_TMS_EVR,AI
+ SG_ AC_Forward_AirFlowTarget : 55|8@0+ (2,0) [0|512] "m3"  VIU0_TMS_EVR,AI
+ SG_ AC_Second_AirFlowTarget : 63|8@0+ (2,0) [0|512] "m3"  VIU0_TMS_EVR,AI
+
+BO_ 919 AC_Temp7: 8 AC
+ SG_ AC_Third_BlwPwmOut : 6|7@0+ (1,0) [0|100] "%"  AI
+ SG_ AC_UnlockVentSt : 15|2@0+ (1,0) [0|3] ""  AI
+ SG_ UVC_RespErr : 13|1@0+ (1,0) [0|1] ""  AI
+ SG_ UVC_TotWorkHr : 12|16@0+ (1,0) [0|65534] ""  AI
+ SG_ UVC_DCDrvrErr : 28|1@0+ (1,0) [0|1] ""  AI
+ SG_ UVC_Err : 27|1@0+ (1,0) [0|1] ""  AI
+ SG_ UVC_ErrSt : 26|1@0+ (1,0) [0|1] ""  AI
+ SG_ UVC_ShortErr : 25|1@0+ (1,0) [0|1] ""  AI
+ SG_ UVC_OverLoadErr : 24|1@0+ (1,0) [0|1] ""  AI
+ SG_ UVC_OpenErr : 39|1@0+ (1,0) [0|1] ""  AI
+ SG_ UVC_SW_MinorVersA : 38|7@0+ (1,0) [0|127] ""  AI
+ SG_ UVC_SW_MajorVersA : 47|4@0+ (1,0) [0|15] ""  AI
+ SG_ UVC_HW_PhaVers : 43|2@0+ (1,0) [0|3] ""  AI
+ SG_ UVC_HW_MajorVersB : 41|4@0+ (1,0) [0|15] ""  AI
+ SG_ UVC_HW_MinorVersB : 53|4@0+ (1,0) [0|15] ""  AI
+ SG_ UVC_SN_MajorVersB : 49|2@0+ (1,0) [0|3] ""  AI
+ SG_ UVC_SN_MinorVersB : 63|4@0+ (1,0) [0|15] ""  AI
+ SG_ UVC_SN_SupplierCod : 59|2@0+ (1,0) [0|3] ""  AI
+
+BO_ 899 AC_PM25AQSION: 8 AC
+ SG_ AC_InsidePM25Level : 7|3@0+ (1,0) [0|7] ""  VIU0_TMS_EVR,AI
+ SG_ AC_PM25InCarValid : 4|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_PM25InCar : 1|10@0+ (1,0) [0|1000] "ug/m3"  VIU0_TMS_EVR,AI
+ SG_ AC_outsidePM255Level : 23|3@0+ (1,0) [0|7] ""  VIU0_TMS_EVR,AI
+ SG_ AC_PM25OutCarValid : 20|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_PM25OutCar : 17|10@0+ (1,0) [0|1000] "ug/m3"  VIU0_TMS_EVR,AI
+ SG_ AC_AQSAirQualityLevel : 39|3@0+ (1,0) [0|7] ""  VIU0_TMS_EVR,AI
+ SG_ AC_PurificationStSwitch : 35|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_PurificationSt : 33|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_IntPurificationSt : 47|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_IONRunSts : 45|2@0+ (1,0) [0|3] ""  VIU0_TMS_EVR,AI
+ SG_ AC_FBlowerNegaVol : 43|8@0+ (0.1,0) [0|20] "V"  VIU0_TMS_EVR,AI
+ SG_ AC_SecBlowerNegaVol : 51|8@0+ (0.1,0) [0|20] "V"  VIU0_TMS_EVR,AI
+
+BO_ 906 AC_Ctrl: 8 AC
+ SG_ AC_PTC_R_HeatPwrReq : 7|8@0+ (50,0) [0|5000] "W"  PTC_R_EVR,VIU0_TMS_EVR,AI
+ SG_ AC_PTC_R_Enable : 15|1@0+ (1,0) [0|1] "bit"  PTC_R_EVR,VIU0_TMS_EVR,AI
+ SG_ AC_HVCnctHldReq : 14|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ AC_CoolgFanSpeedReq : 8|7@0+ (1,0) [0|100] "%"  VIU0_TMS_EVR,AI
+ SG_ AC_CmprEnable : 17|2@0+ (1,0) [0|3] ""  CCU_EVR,VIU0_TMS_EVR,AI
+ SG_ AC_HeatOutletTargetT : 31|7@0+ (1,0) [0|90] "℃"  VIU0_TMS_EVR,AI
+ SG_ AC_HeatReq : 24|1@0+ (1,0) [0|1] ""  VIU0_TMS_EVR,AI
+ SG_ AC_RBlowerNegaVol : 39|8@0+ (0.1,0) [0|20] "V"  VIU0_TMS_EVR,AI
+ SG_ AC_AirReq : 47|7@0+ (1,0) [0|127] ""  VIU0_TMS_EVR,AI
+ SG_ AC_CmprTargetSpeed : 55|16@0+ (0.25,0) [0|16383] "RPM"  CCU_EVR,VIU0_TMS_EVR,AI
+
+BO_ 1344 AC_Temp6: 8 AC
+ SG_ AC_RBlowFaceVentReq : 7|7@0+ (0.1,0) [0|50] "V"  AI
+ SG_ AC_ThrdRowModeVentReq : 0|7@0+ (0.1,0) [0|50] "V"  AI
+ SG_ AC_CarVersion : 23|3@0+ (1,0) [0|7] ""  AI
+ SG_ AC_FrontSOVReq : 20|2@0+ (1,0) [0|3] ""  AI
+ SG_ AC_RearSOVReq : 18|2@0+ (1,0) [0|3] ""  AI
+ SG_ AC_SysWorkingMode : 31|5@0+ (1,0) [0|31] ""  AI
+ SG_ AC_FrontBlowerVoltReq : 39|8@0+ (0.1,0) [0|25] "v"  AI
+ SG_ AC_SecondBlowerVoltReq : 47|8@0+ (0.1,0) [0|25] "v"  AI
+ SG_ AC_ThirdBlowerVoltReq : 55|8@0+ (0.1,0) [0|25] "v"  AI
+ SG_ AC_CirclePriorVentilaPosn : 63|7@0+ (0.1,0) [0|50] "V"  AI
+
+BO_ 1345 AC_RHVAC: 8 AC
+ SG_ AC_RBlowFaceVentPosn : 6|7@0+ (0.1,0) [0|50] "V"  AI
+ SG_ AC_RBlowFootVentPosn : 14|7@0+ (0.1,0) [0|50] "V"  AI
+ SG_ AC_ThrdRowModeVentPosn : 22|7@0+ (0.1,0) [0|50] "V"  AI
+ SG_ AC_ThrdBlowVol : 31|8@0+ (0.1,0) [0|25] "V"  AI
+ SG_ AC_12VOUT : 39|8@0+ (0.1,0) [0|25] "V"  AI
+ SG_ AC_INGVol : 47|8@0+ (0.1,0) [0|25] "V"  AI
+ SG_ AC_FrantFootVentPosn : 54|7@0+ (0.1,0) [0|50] "V"  AI
+ SG_ AC_DefrostVentilaPosn : 62|7@0+ (0.1,0) [0|50] "V"  AI
+
+BO_ 1346 AC_debug: 8 AC
+ SG_ AC_DrvrTempVentilaReq : 7|7@0+ (0.1,0) [0|50] "V"  AI
+ SG_ AC_PassTempVentilaReq : 0|7@0+ (0.1,0) [0|50] "V"  AI
+ SG_ AC_CircleModeVentilaReq : 9|7@0+ (0.1,0) [0|50] "V"  AI
+ SG_ AC_BLOW_FaceVentilaReq : 18|7@0+ (0.1,0) [0|50] "V"  AI
+ SG_ AC_DefrostVentilaReq : 27|7@0+ (0.1,0) [0|50] "V"  AI
+ SG_ AC_FrantFootVentReq : 36|7@0+ (0.1,0) [0|50] "V"  AI
+ SG_ AC_ThrdTempVentilaReq : 54|7@0+ (0.1,0) [0|50] "V"  AI
+ SG_ AC_CirclePriorVentilaReq : 45|7@0+ (0.1,0) [0|50] "V"  AI
+ SG_ AC_RBlowFootVentReq : 63|7@0+ (0.1,0) [0|50] "V"  AI
+
+BO_ 1353 AC_549: 8 AC
+ SG_ AC_SupplierCode : 3|4@0+ (1,0) [0|15] ""  AI
+ SG_ AC_HwVersion : 15|8@0+ (1,0) [0|255] ""  AI
+ SG_ AC_SwMajorVersion : 23|8@0+ (1,0) [0|255] ""  AI
+ SG_ AC_SwMinorVersion : 31|8@0+ (1,0) [0|255] ""  AI
+ SG_ AC_SwPatchVersion : 39|8@0+ (1,0) [0|255] ""  AI
+ SG_ AC_SwVersionYear : 47|8@0+ (1,0) [0|255] ""  AI
+ SG_ AC_SwVersionMonth : 55|8@0+ (1,0) [0|12] ""  AI
+ SG_ AC_SwVersionDay : 63|8@0+ (1,0) [0|31] ""  AI
+
+BO_ 1396 AC_EXV_State: 8 AC
+ SG_ EXV_RespErr : 0|1@0+ (1,0) [0|1] ""  AI
+ SG_ EXV_IninSt : 3|2@0+ (1,0) [0|3] ""  AI
+ SG_ EXV_RunngSt : 4|1@0+ (1,0) [0|1] ""  AI
+ SG_ EXV_FltSt : 11|4@0+ (1,0) [0|15] ""  AI
+ SG_ EXV_USt : 13|2@0+ (1,0) [0|3] ""  AI
+ SG_ EXV_OverTWarn : 15|2@0+ (1,0) [0|3] ""  AI
+ SG_ EXV_Posn : 23|16@0+ (1,0) [0|576] ""  AI
+ SG_ EXV_SW_MinorVersA : 38|7@0+ (1,0) [0|127] ""  AI
+ SG_ EXV_SW_MajorVersA : 43|4@0+ (1,0) [0|15] ""  AI
+ SG_ EXV_HW_PhaVers : 47|2@0+ (1,0) [0|3] ""  AI
+ SG_ EXV_HW_MajorVersB : 51|4@0+ (1,0) [0|15] ""  AI
+ SG_ EXV_HW_MinorVersB : 55|4@0+ (1,0) [0|15] ""  AI
+ SG_ EXV_SN_MajorVersB : 57|2@0+ (1,0) [0|3] ""  AI
+ SG_ EXV_SN_MinorVersB : 61|4@0+ (1,0) [0|15] ""  AI
+ SG_ EXV_SN_SupplierCod : 63|2@0+ (1,0) [0|3] ""  AI
+
+BO_ 1393 AC_ION_State: 8 AC
+ SG_ ION_L_ION_ErrSts : 2|3@0+ (1,0) [0|7] ""  AI
+ SG_ ION_L_ION_Sts : 3|1@0+ (1,0) [0|1] ""  AI
+ SG_ ION_Response_Error : 4|1@0+ (1,0) [0|1] ""  AI
+ SG_ ION_Majorversion : 9|2@0+ (1,0) [0|3] ""  AI
+ SG_ ION_Minorversion : 13|4@0+ (1,0) [0|15] ""  AI
+ SG_ ION_Supplier : 15|2@0+ (1,0) [0|3] ""  AI
+
+BO_ 1394 AC_PM_State: 8 AC
+ SG_ pm25_responseError : 0|1@0+ (1,0) [0|1] ""  AI
+ SG_ pm25_indoorValue : 15|10@0+ (1,0) [0|999] ""  AI
+ SG_ pm25_indoorLevel : 21|3@0+ (1,0) [0|7] ""  AI
+ SG_ pm25_Sts : 18|2@0+ (1,0) [0|3] ""  AI
+ SG_ pm25_errorSts : 16|1@0+ (1,0) [0|1] ""  AI
+ SG_ pm10_indoorValue : 31|10@0+ (1,0) [0|999] ""  AI
+ SG_ pm10_indoorLevel : 37|3@0+ (1,0) [0|7] ""  AI
+ SG_ pm25_airPump_FaultSt : 40|1@0+ (1,0) [0|1] ""  AI
+ SG_ pm25_LaserDiode_FaultSt : 41|1@0+ (1,0) [0|1] ""  AI
+ SG_ pm25_Phtoelectric_FaultSt : 42|1@0+ (1,0) [0|1] ""  AI
+ SG_ pm25_Benchmarkdata_FaultSt : 43|1@0+ (1,0) [0|1] ""  AI
+ SG_ pm25_Short_FaultSt : 44|1@0+ (1,0) [0|1] ""  AI
+ SG_ pm25_Majorversion : 49|2@0+ (1,0) [0|3] ""  AI
+ SG_ pm25_Minorversion : 53|4@0+ (1,0) [0|15] ""  AI
+ SG_ pm25_Supplier : 55|2@0+ (1,0) [0|3] ""  AI
+
+BO_ 1347 AC_XCP_PhyReq: 8 AC
+ SG_ AC_XCP_PhyReq_Data : 7|8@0+ (1,0) [0|255] ""  AI
+
+BO_ 1348 AC_XCP_Resp: 8 AC
+ SG_ AC_XCP_Resp_Data : 7|8@0+ (1,0) [0|255] ""  AI
+
+BO_ 1745 AC_DebugFrame2: 8 AC
+ SG_ AC_DebugFrame2_Data : 7|8@0+ (1,0) [0|255] ""  AI
+
+BO_ 1746 AC_DebugFrame3: 8 AC
+ SG_ AC_DebugFrame3_Data : 7|8@0+ (1,0) [0|255] ""  AI
+
+BO_ 1747 AC_DebugFrame4: 8 AC
+ SG_ AC_DebugFrame4_Data : 7|8@0+ (1,0) [0|255] ""  AI
+
+BO_ 1748 AC_DebugFrame5: 8 AC
+ SG_ AC_DebugFrame5_Data : 7|8@0+ (1,0) [0|255] ""  AI
+
+BO_ 1749 AC_DebugFrame6: 8 AC
+ SG_ AC_DebugFrame6_Data : 7|8@0+ (1,0) [0|255] ""  AI
+
+BO_ 1750 AC_DebugFrame7: 8 AC
+ SG_ AC_DebugFrame7_Data : 7|8@0+ (1,0) [0|255] ""  AI
+
+BO_ 1751 AC_DebugFrame8: 8 AC
+ SG_ AC_DebugFrame8_Data : 7|8@0+ (1,0) [0|255] ""  AI
+
+BO_ 1752 AC_DebugFrame9: 8 AC
+ SG_ AC_DebugFrame9_Data : 7|8@0+ (1,0) [0|255] ""  AI
+
+BO_ 1753 AC_DebugFrame10: 8 AC
+ SG_ AC_DebugFrame10_Data : 7|8@0+ (1,0) [0|255] ""  AI
+
+BO_ 1506 TBOX_TimeInfo: 8 VIU0_TMS_EVR
+ SG_ TBOX_TimeYear : 7|8@0+ (1,2000) [2000|2255] "Year"  CCU_EVR,PTC_F_EVR,PTC_R_EVR,AC,AI
+ SG_ TBOX_TimeMonth : 11|4@0+ (1,0) [1|12] "Month"  CCU_EVR,PTC_F_EVR,PTC_R_EVR,AC,AI
+ SG_ TBOX_TimeDay : 20|5@0+ (1,0) [1|31] "Day"  CCU_EVR,PTC_F_EVR,PTC_R_EVR,AC,AI
+ SG_ TBOX_TimeHour : 28|5@0+ (1,0) [0|23] "h"  CCU_EVR,PTC_F_EVR,PTC_R_EVR,AC,AI
+ SG_ TBOX_TimeMinute : 37|6@0+ (1,0) [0|59] "min"  CCU_EVR,PTC_F_EVR,PTC_R_EVR,AC,AI
+ SG_ TBOX_TimeSecond : 45|6@0+ (1,0) [0|59] "s"  CCU_EVR,PTC_F_EVR,PTC_R_EVR,AC,AI
+ SG_ TBOX_TimeZone : 49|2@0+ (1,0) [0|3] ""  AI
+ SG_ TBOX_TimeZoneNum : 54|5@0+ (1,0) [0|31] ""  AI
+ SG_ TBOX_TimeFlag : 57|2@0+ (1,0) [0|3] ""  AI
+
+BO_ 466 VIU_Info: 8 VIU0_TMS_EVR
+ SG_ VIU_Info_Checksum : 7|8@0+ (1,0) [0|255] ""  CCU_EVR,PTC_R_EVR,AC,AI
+ SG_ VIU_Info_Counter : 11|4@0+ (1,0) [0|14] ""  CCU_EVR,PTC_R_EVR,AC,AI
+ SG_ VIU_UsageMode : 31|4@0+ (1,0) [0|15] ""  CCU_EVR,PTC_F_EVR,PTC_R_EVR,AC,AI
+ SG_ VIU_CarMode : 27|4@0+ (1,0) [0|15] ""  CCU_EVR,PTC_R_EVR,AC,AI
+ SG_ VIU_PowerMode : 39|2@0+ (1,0) [0|3] ""  CCU_EVR,PTC_F_EVR,PTC_R_EVR,AC,AI
+ SG_ VIU_PowerModeFltFlag : 37|2@0+ (1,0) [0|3] ""  CCU_EVR,PTC_F_EVR,PTC_R_EVR,AC,AI
+
+BO_ 914 RAC_Set: 8 VIU0_TMS_EVR
+ SG_ RAC_RACSystemOnOffSet : 7|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ RAC_RHvacBlowLvSet : 5|4@0+ (1,0) [0|15] ""  AC,AI
+ SG_ RAC_RHvacModeSet : 1|3@0+ (1,0) [0|7] ""  AC,AI
+ SG_ RAC_HvacAutoModeSet : 14|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ RAC_SecRowTempCSet : 12|5@0+ (0.5,16) [16|31] ""  AC,AI
+ SG_ RAC_LockSt : 23|2@0+ (1,0) [0|3] ""  AC,AI
+ SG_ RAC_RLSecRowSeatHeatLvlSet : 27|3@0+ (1,0) [0|7] ""  AI
+ SG_ RAC_RRSecRowSeatHeatLvlSet : 24|3@0+ (1,0) [0|7] ""  AI
+ SG_ RAC_RLSecRowSeatVentLvlSet : 37|3@0+ (1,0) [0|7] ""  AI
+ SG_ RAC_RRSecRowSeatVentLvlSet : 34|3@0+ (1,0) [0|7] ""  AI
+
+BO_ 1362 DSM_St_0x552: 8 DSM_IP
+ SG_ DSM_CtrlSts : 7|3@0+ (1,0) [0|7] ""  AI
+ SG_ DSM_AntiPinchSts : 4|1@0+ (1,0) [0|1] ""  AI
+ SG_ DSM_HeatProtectionSts : 3|1@0+ (1,0) [0|1] ""  AI
+ SG_ DSM_SLCUotPosn : 2|7@0+ (1,0) [0|127] ""  AI
+ SG_ DSM_BackrestMotPosn : 11|7@0+ (1,0) [0|127] ""  AI
+ SG_ DSM_CushHeiMotPosn : 20|7@0+ (1,0) [0|127] ""  AI
+ SG_ DSM_CushTiltMotPosn : 29|7@0+ (1,0) [0|127] ""  AI
+ SG_ DSM_CushExtnMotPosn : 38|7@0+ (1,0) [0|127] ""  AI
+ SG_ DSM_InitSts : 47|1@0+ (1,0) [0|1] ""  AI
+ SG_ DSM_WarningReq : 46|3@0+ (1,0) [0|7] ""  AI
+ SG_ DSM_HeatgSts : 43|3@0+ (1,0) [0|7] ""  AI
+ SG_ DSM_HeatFltSts : 40|1@0+ (1,0) [0|1] ""  AI
+ SG_ DSM_VentnSts : 55|3@0+ (1,0) [0|7] ""  AI
+ SG_ DSM_VentnFltSts : 52|1@0+ (1,0) [0|1] ""  AI
+ SG_ DSM_driverSeatDetectSts : 51|1@0+ (1,0) [0|1] ""  AI
+ SG_ DSM_DevSupportSts : 50|2@0+ (1,0) [0|3] ""  AI
+ SG_ DSM_DevLinkSts : 63|2@0+ (1,0) [0|3] ""  AI
+ SG_ DSM_ChargeSts : 61|2@0+ (1,0) [0|3] ""  AI
+ SG_ DSM_DrvrSeatLinkageSt : 59|3@0+ (1,0) [0|7] ""  AI
+
+BO_ 1363 PSM_St_0x553: 8 PSM_CABIN
+ SG_ PSM_CtrlSts : 7|3@0+ (1,0) [0|7] ""  AI
+ SG_ PSM_AntiPinchSts : 4|1@0+ (1,0) [0|1] ""  AI
+ SG_ PSM_HeatProtectionSts : 3|1@0+ (1,0) [0|1] ""  AI
+ SG_ PSM_SLCUotPosn : 2|7@0+ (1,0) [0|127] ""  AI
+ SG_ PSM_BackrestMotPosn : 11|7@0+ (1,0) [0|127] ""  AI
+ SG_ PSM_CushHeiMotPosn : 20|7@0+ (1,0) [0|127] ""  AI
+ SG_ PSM_CushTiltMotPosn : 29|7@0+ (1,0) [0|127] ""  AI
+ SG_ PSM_LegSupportMotPosn : 38|7@0+ (1,0) [0|127] ""  AI
+ SG_ PSM_FootSupportMotPosn : 47|7@0+ (1,0) [0|127] ""  AI
+ SG_ PSM_SpindleMotPosn : 40|7@0+ (1,0) [0|127] ""  AI
+ SG_ PSM_InitSts : 49|1@0+ (1,0) [0|1] ""  AI
+ SG_ PSM_WarningReq : 48|3@0+ (1,0) [0|7] ""  AI
+ SG_ PSM_HeatgSts : 61|3@0+ (1,0) [0|7] ""  AI
+ SG_ PSM_HeatFltSts : 58|1@0+ (1,0) [0|1] ""  AI
+ SG_ PSM_passengerSeatDetectSts : 57|1@0+ (1,0) [0|1] ""  AI
+
+BO_ 916 VIU_PSM_0x394: 8 VIU1_CABIN
+ SG_ VIU_PassSeatHeatgReq : 49|3@0+ (1,0) [0|7] ""  AI,PSM_CABIN
+ SG_ VIU_PassSeatVentnReq : 62|3@0+ (1,0) [0|7] ""  AI,PSM_CABIN
+
+BO_ 915 VIU_DSM_0x393: 8 VIU0_IP
+ SG_ VIU_DrvrSeatHeatgReq : 32|3@0+ (1,0) [0|7] ""  AI,DSM_IP
+ SG_ VIU_DrvrSeatVentnReq : 45|3@0+ (1,0) [0|7] ""  AI,DSM_IP
+
+
+CM_ "Version:V1.0,Date:2025/12/17,Author:QinLin,Review:,Approval:,Description:()基于《【机密】JL-5-（8月12日释放）-F3EVR项目VIU0_TMS网段 Matria V4.5.0 20250812》完成初版;
+Version:V1.1,Date:2026/1/20,Author:QinLin,Review:,Approval:,Description:()1、AI控制新增接收报文“PSM_St_0x553、DSM_St_0x552”（原TMS网段不存在，需AI控制自行处理）;
+Version:V1.2,Date:2026/2/10,Author:QinLin,Review:,Approval:,Description:()1、新增报文“VIU_PSM_0x394（0x394）、VIU_DSM_0x393（0x393）”（原TMS网段不存在，需AI控制自行处理）;
+ ";
+
+CM_ BO_ 789 "热管理请求";
+CM_ BO_ 958 "被动安全和座椅信号";
+CM_ BO_ 1347 "AC调试帧";
+CM_ BO_ 1348 "AC调试帧";
+CM_ BO_ 1745 "AC调试帧,仅AC调试时发送此报文";
+CM_ BO_ 1746 "AC调试帧,仅AC调试时发送此报文";
+CM_ BO_ 1747 "AC调试帧,仅AC调试时发送此报文";
+CM_ BO_ 1748 "AC调试帧,仅AC调试时发送此报文";
+CM_ BO_ 1749 "AC调试帧,仅AC调试时发送此报文";
+CM_ BO_ 1750 "AC调试帧,仅AC调试时发送此报文";
+CM_ BO_ 1751 "AC调试帧,仅AC调试时发送此报文";
+CM_ BO_ 1752 "AC调试帧,仅AC调试时发送此报文";
+CM_ BO_ 1753 "AC调试帧,仅AC调试时发送此报文";
+CM_ BO_ 1506 "时间信息";
+CM_ BO_ 466 "LegacyECU信号";
+CM_ SG_ 859 VIU_AmbTVld "环境温度有效";
+CM_ SG_ 859 VIU_AmbT "环境温度";
+CM_ SG_ 859 VIU_VehAntithftSt "车辆防盗状态";
+CM_ SG_ 859 CDC_SceneModePowerOnSts "情景模式电源状态";
+CM_ SG_ 859 VIU_FLWinOpenDeg "左前车窗开启比例";
+CM_ SG_ 859 VIU_FRWinOpenDeg "右前车窗开启比例";
+CM_ SG_ 859 VIU_RLWinOpenDeg "左后车窗开启比例";
+CM_ SG_ 859 VIU_RRWinOpenDeg "右后车窗开启比例";
+CM_ SG_ 953 BMS_PackSOCRange "续航SOC";
+CM_ SG_ 953 SSM_F_Position "遮阳帘位置";
+CM_ SG_ 953 RSM_DewPointT "露点温度";
+CM_ SG_ 953 RSM_RainFalLev "雨量等级";
+CM_ SG_ 953 RSM_WinT "玻璃温度";
+CM_ SG_ 953 RSM_RelHum "相对湿度";
+CM_ SG_ 953 RSM_LeSolarInten "左太阳光强度";
+CM_ SG_ 953 RSM_RiSolarInten "右太阳光强度";
+CM_ SG_ 849 VDC_BattInletCooltTReq "VDC反馈的电池入口冷却液温度请求";
+CM_ SG_ 849 VDC_battLoopCoolingLevel "VDC反馈的电池循环冷却等级";
+CM_ SG_ 849 VDC_PTCF_ModeRequest "前PTC工作模式请求";
+CM_ SG_ 849 VDC_PTCF_PWM_Value "前PTC控制PWM值（占空比）";
+CM_ SG_ 849 VDC_acCompressorPowerAllowed "压缩机许可功率";
+CM_ SG_ 849 VDC_cabinPtcPowerAllowed "APTC许可功率";
+CM_ SG_ 849 VDC_AllowHMC_HVworkReq "VDC允许热管理高压工作请求";
+CM_ SG_ 849 VDC_BattCoolgLoopSts "电池冷却回路状态";
+CM_ SG_ 849 VDC_MotCoolgLoopSts "驱动电机冷却回路状态";
+CM_ SG_ 849 VDC_ACHeatMode "空调制热模式";
+CM_ SG_ 849 VDC_BatHeatMode "电池加热模式";
+CM_ SG_ 849 VDC_ACReqStartEngRemind "空调需求增程器启动提示";
+CM_ SG_ 849 VDC_HeatThreeDirectValveControl "乘员舱暖通三通阀控制信号";
+CM_ SG_ 789 BMS_BattVolt_U7 "主正外侧电压-主负外侧电压U7（电池包后端输出电压）";
+CM_ SG_ 789 BMS_BattTempMax "电池最高温度";
+CM_ SG_ 789 BMS_BattTempMin "电池最低温度";
+CM_ SG_ 789 BMS_BattTempAvg "电池平均温度";
+CM_ SG_ 789 BMS_TrgtFlowRate "请求水流量";
+CM_ SG_ 789 BMS_ThermRunawaySt "电池热失控状态";
+CM_ SG_ 789 BMS_DCChrgSt "直流充电状态";
+CM_ SG_ 789 BMS_ACChrgSt "交流充电状态";
+CM_ SG_ 954 AGS1_CurrPosFeedback "当前位置反馈";
+CM_ SG_ 954 VIU_BattInletWaterT "电池包进水口温度";
+CM_ SG_ 954 VIU_BattOutletWaterT "电池包出水口温度";
+CM_ SG_ 954 VIU_BattInletWaterPumpSt "电池包进水口冷却水泵状态";
+CM_ SG_ 954 VIU_ReMotInletWaterPumpSt "后电机进水口冷却水泵状态";
+CM_ SG_ 954 VIU_CoolgFanSt "冷却风扇状态";
+CM_ SG_ 954 VIU_PumpHSt "PTC水泵状态";
+CM_ SG_ 954 VIU_CoolgFanCtrl "冷却风扇转速控制";
+CM_ SG_ 954 VIU_NavTunnelSt "导航隧道状态";
+CM_ SG_ 863 VDC_FactoryReset "恢复空调设置项为出厂";
+CM_ SG_ 863 VDC_DrvMod "车辆驾驶模式";
+CM_ SG_ 863 VDC_CDC_WashModSts "洗车模式状态";
+CM_ SG_ 863 VDC_TotalRang "整个寿命内的车辆总行驶里程";
+CM_ SG_ 863 VDC_REVMode "增程模式";
+CM_ SG_ 958 VIU_DrvrDoorSt "主驾门状态";
+CM_ SG_ 958 VIU_PassDoorSt "副驾门状态";
+CM_ SG_ 958 VIU_RLDoorSt "左后门状态";
+CM_ SG_ 958 VIU_RRDoorSt "右后门状态";
+CM_ SG_ 958 VIU_TailgateSt "后背门状态";
+CM_ SG_ 958 VIU_HoodSts "前舱盖状态";
+CM_ SG_ 958 VIU_DriverSeatOccptSt "主驾占位状态";
+CM_ SG_ 958 VIU_PassSeatOccptSt "副驾占位状态";
+CM_ SG_ 958 VIU_RLSecRowSeatOccptSt "二排左占位状态";
+CM_ SG_ 958 VIU_RMSecRowSeatOccptSt "二排中占位状态";
+CM_ SG_ 958 VIU_RRSecRowSeatOccptSt "二排右占位状态";
+CM_ SG_ 958 VIU_RLThrdRowSeatOccptSt "三排左占位状态";
+CM_ SG_ 958 VIU_RRThrdRowSeatOccptSt "三排右占位状态";
+CM_ SG_ 399 VDC_HV_State "高压上电状态";
+CM_ SG_ 399 IPB_VehicleSpeedValid "vehicle reference speed Valid
+车速有效位";
+CM_ SG_ 399 IPB_VehicleSpeed "vehicle reference speed
+车速";
+CM_ SG_ 901 CCU_MotSpdVld "压缩机电机转速值有效位";
+CM_ SG_ 901 CCU_CtrlrVoltVld "压缩机控制器电压值有效位";
+CM_ SG_ 901 CCU_CtrlrCrtVld "压缩机控制器电流值有效位";
+CM_ SG_ 901 CCU_CtrlrVolt "压缩机控制器母线电压";
+CM_ SG_ 901 CCU_CtrlrCrt "压缩机控制器母线电流";
+CM_ SG_ 901 CCU_MotSpd "压缩机电机转速";
+CM_ SG_ 902 CCU_MotCrt "压缩机电机电流";
+CM_ SG_ 902 CCU_HVUnderVoltFlt "压缩机高压欠压故障_P166616_E00";
+CM_ SG_ 902 CCU_FaultLevel "压缩机故障等级";
+CM_ SG_ 902 CCU_CrtSts "CCU当前状态";
+CM_ SG_ 902 CCU_IninSts "CCU初始化状态";
+CM_ SG_ 902 CCU_OverCrtFlt "压缩机过流故障_P166719_E00";
+CM_ SG_ 902 CCU_HVIntlkFlt "压缩机高压互锁故障_P166F94_E00";
+CM_ SG_ 902 CCU_IPMTOverFlt "压缩机IPM过温故障_P166098_E00";
+CM_ SG_ 902 CCU_ComLost_ECC "CCU与ECC通讯丢失故障_U170187_E00";
+CM_ SG_ 902 CCU_CtrlCircFlt "压缩机控制电路故障_P166909_E00";
+CM_ SG_ 902 CCU_IPMHwFlt "压缩机IPM硬件故障_P166200_E00";
+CM_ SG_ 902 CCU_HVIL_St "压缩机高压互锁状态";
+CM_ SG_ 902 CCU_IPMT "压缩机IPM温度";
+CM_ SG_ 902 CCU_CrtPwr "压缩机当前功率";
+CM_ SG_ 1471 CCU_SupplierCode "供应商代号";
+CM_ SG_ 1471 CCU_HwVersion "硬件版本号";
+CM_ SG_ 1471 CCU_SwMajorVersion "软件主版本号";
+CM_ SG_ 1471 CCU_SwMinorVersion "软件子版本号";
+CM_ SG_ 1471 CCU_SwPatchVersion "软件补充版本号";
+CM_ SG_ 1471 CCU_SwVersionYear "软件版本年-2000";
+CM_ SG_ 1471 CCU_SwVersionMonth "软件版本月";
+CM_ SG_ 1471 CCU_SwVersionDay "软件版本日";
+CM_ SG_ 1352 CAN_busoff "CAN总线busoff";
+CM_ SG_ 1352 LV_overvoltage "低压过压保护";
+CM_ SG_ 1352 LV_undervoltage "低压欠压保护";
+CM_ SG_ 1352 Compressor_software_overcurrent "压缩机相软件过流保护";
+CM_ SG_ 1352 Compressor_loss_phase "压缩机缺相保护";
+CM_ SG_ 1352 Compressor_startup_failure "压缩机启动失败保护";
+CM_ SG_ 1352 HV_Bus_overvoltage "高压直流母线过压保护";
+CM_ SG_ 1352 Current_sensor_fault "相电流传感器故障";
+CM_ SG_ 1352 HV_interlock_short_to_ground "高压互锁对地短路";
+CM_ SG_ 1352 HV_interlock_short_to_power "高压互锁对电源短路";
+CM_ SG_ 1352 Temperature_sensor_fault "温度传感器故障";
+CM_ SG_ 1352 Over_load "过载故障";
+CM_ SG_ 1352 Drive_overvoltage "压缩机驱动过压";
+CM_ SG_ 1352 Drive_undervoltage "压缩机驱动欠压";
+CM_ SG_ 1352 Voltage_sensor_fault "压缩机电压传感器故障";
+CM_ SG_ 1352 Drive_voltage_sensor_fault "压缩机驱动电压传感器故障";
+CM_ SG_ 1352 Low_temperature "压缩机低温保护";
+CM_ SG_ 1352 Out_of_step "压缩机失步";
+CM_ SG_ 909 PTC_F_Power_Rate "PTC_F_运行功率百分比";
+CM_ SG_ 909 PTCF_DischargeState "前PTC高压主动放电状态";
+CM_ SG_ 909 PTC_F_FaultLevel "PTC_F故障等级";
+CM_ SG_ 909 PTC_F_InlT "PTC_F进口温度";
+CM_ SG_ 909 PTC_F_OutlT "PTC_F出口温度";
+CM_ SG_ 909 PTC_F_CrtPwr "PTC_F当前功率";
+CM_ SG_ 909 PTC_F_CrtT "PTC_F当前工作温度";
+CM_ SG_ 909 PTC_F_IninSts "PTC_F初始化状态";
+CM_ SG_ 909 PTC_F_HVPwrSplySts "PTC_F高压供电状态";
+CM_ SG_ 909 PTC_F_ActGear "PTC_F实际挡位";
+CM_ SG_ 909 PTC_F_Mod "PTC_F当前工作模式";
+CM_ SG_ 905 PTC_F_HighVoltage "PTC_F当前电压";
+CM_ SG_ 905 PTC_F_PCBT "PTC_FPCB温度";
+CM_ SG_ 905 PTC_F_Crt "PTC_F当前工作电流";
+CM_ SG_ 905 PTC_F_CrtSts "PTC_F当前工作状态";
+CM_ SG_ 905 PTC_F_ComLost_VDC "PTC_F与VDC通讯丢失故障_U198187_E00(0x351报文丢失）";
+CM_ SG_ 905 PTC_F_OverCrtFlt "PTC_F过流故障_P164019_E00";
+CM_ SG_ 905 PTC_F_HVUnderVoltFlt "PTC_F高压欠压故障_P165716_E00";
+CM_ SG_ 905 PTC_F_HVOverVoltFlt "PTC_F高压过压故障_P165717_E00";
+CM_ SG_ 905 PTC_F_ChkBattOverVoltFlt "PTC_F检蓄电池电压过高故障_U190017_E00";
+CM_ SG_ 905 PTC_F_ChkBattUnderVoltFlt "PTC_F检蓄电池电压过低故障_U190016_E00";
+CM_ SG_ 905 PTC_F_InlTSnsrFlt "PTC_F进水口温度传感器故障_P16491C_E00";
+CM_ SG_ 905 PTC_F_OutlTSnsrFlt "PTC_F出水口温度传感器故障_P164A1C_E00";
+CM_ SG_ 905 PTC_F_InlOverTFlt "PTC_F进水口温度过温故障_P164998_E00";
+CM_ SG_ 905 PTC_F_OutlOverTFlt "PTC_F出水口温度过温故障_P164A98_E00";
+CM_ SG_ 905 PTC_F_PCBOverTFlt "PTC_F电路板(PCB)过温故障_P164898_E00";
+CM_ SG_ 905 PTC_F_PCBTSnsrFlt "PTC_F电路板(PCB)温度传感器故障_P16481C_E00";
+CM_ SG_ 905 PTC_F_PwrOutpFlt "PTC_F功率输出故障_P164C00_E00";
+CM_ SG_ 905 PTC_F_IGBTOpenCircuitFlt "PTC_F IGBT开路故障";
+CM_ SG_ 905 PTC_F_IGBTSnsrFlt "PTC_F IGBT温度传感器故障";
+CM_ SG_ 905 PTC_F_IGBTOverTFlt "PTC_F IGBT过温故障";
+CM_ SG_ 905 PTC_F_HVIL_St "PTC_F高压互锁状态";
+CM_ SG_ 905 PTC_F_CtrlrVoltFlt "PTC_F IGBT驱动电压异常故障";
+CM_ SG_ 907 PTC_R_BusLineVolt "Bus Line Voltage
+母线电压";
+CM_ SG_ 907 PTC_R_BusLineCurrent "Bus Line Current
+母线电流";
+CM_ SG_ 907 PTC_R_Temperature "Internal Temperature
+芯体温度";
+CM_ SG_ 907 PTC_R_HeatPwr "Heat Power
+功率";
+CM_ SG_ 907 PTC_R_Status "PTC_R Status signals
+PTC_R状态";
+CM_ SG_ 907 PTC_R_FaultState "PTC_R Fault Status
+PTC_R 故障状态";
+CM_ SG_ 907 PTC_R_OverCurrentFault "Over Current Fault
+过流故障";
+CM_ SG_ 907 PTC_R_LvUnderVoltFault "Low Voltage Under Voltage Fault
+低压侧欠压故障";
+CM_ SG_ 907 PTC_R_LvOverVoltFault "Low Voltage Over Voltage Fault
+低压侧过压故障";
+CM_ SG_ 907 PTC_R_IGBTTempSensorFault "IGBT Temperature Sensor Fault
+IGBT温度传感器故障";
+CM_ SG_ 907 PTC_R_IGBTOverTempFault "IGBT Over Temperature Fault
+IGBT过温故障";
+CM_ SG_ 907 PTC_R_TempSensorFault "CHCMF Temperature Sensor Fault
+PTC_R温度传感器故障";
+CM_ SG_ 907 PTC_R_OverTempFault "PTC_R Over Remperature Fault 
+PTC_R过温故障";
+CM_ SG_ 907 PTC_R_HvUnderVoltFault "High Voltage Under Voltage Fault
+高压侧欠压故障";
+CM_ SG_ 907 PTC_R_HvOverVoltFault "High Voltage Over Voltage Fault
+高压侧过压故障";
+CM_ SG_ 907 PTC_R_ShortCircuitFault "PTC_R Short Circuit Fault
+PTC_R短路故障";
+CM_ SG_ 907 PTC_R_OpentCircuitFault "PTC_R Opent Circuit Fault        
+PTC_R开路故障";
+CM_ SG_ 907 PTC_R_HVIL_St "PTC_R高压互锁状态";
+CM_ SG_ 907 PTC_R_FaultLevel "PTC_R故障等级";
+CM_ SG_ 907 PTC_R_IninSts "PTC_R初始化状态";
+CM_ SG_ 907 PTC_R_CrtSts "PTC_R当前工作状态";
+CM_ SG_ 908 PTC_R_IGBTTemperature "IGBT_Temperature
+IGBT 温度";
+CM_ SG_ 908 PTC_R_PCB_Temperature "PCB_Temperature
+PCB 温度";
+CM_ SG_ 903 CDC_ACSystemOnOffSet "空调系统开关设置";
+CM_ SG_ 903 CDC_RACSystemOnOffSet "后空调系统开关设置";
+CM_ SG_ 903 CDC_ACSet "AC开关";
+CM_ SG_ 903 CDC_FrontDefrostSet "前除霜设置";
+CM_ SG_ 903 CDC_FHvacBlowLvSet "前鼓风机风量设置";
+CM_ SG_ 903 CDC_RHvacBlowLvSet "后鼓风机风量设置";
+CM_ SG_ 903 CDC_FHvacModeSet "前空调模式设置";
+CM_ SG_ 903 CDC_RHvacModeSet "后空调模式设置";
+CM_ SG_ 903 CDC_DriverTempCSet "主驾温度设置";
+CM_ SG_ 903 CDC_PassengerTempCSet "副驾温度设置";
+CM_ SG_ 903 CDC_RrTempCSet "后排温度设置";
+CM_ SG_ 903 TBOX_ACONOFFSet "远程空调开启设置";
+CM_ SG_ 903 TBOX_ACTempSet "远程温度设置";
+CM_ SG_ 903 TBOX_ACVentSet "远程通风设置";
+CM_ SG_ 903 TBOX_ACDefrostSet "远程除霜设置";
+CM_ SG_ 903 TBOX_MaxACSet "远程速冷设置";
+CM_ SG_ 903 TBOX_MaxHeatSet "远程速热设置";
+CM_ SG_ 903 TBOX_PurificationSet "远程空气净化设置";
+CM_ SG_ 903 TBOX_UVCSet "远程杀菌设置";
+CM_ SG_ 903 CDC_ThirdRowACSystemOnOffSet "三排空调系统开关设置";
+CM_ SG_ 897 CDC_ACMaxSet "最大制冷设置";
+CM_ SG_ 897 CDC_HeatMaxSet "最大制热设置";
+CM_ SG_ 897 CDC_HvacAutoModeSet "前排空调Auto设置";
+CM_ SG_ 897 CDC_RHvacAutoModeSet "后排空调Auto设置";
+CM_ SG_ 897 CDC_AutoDefogSet "自动除雾设置";
+CM_ SG_ 897 CDC_ACFourZoneSync "温区同步设置";
+CM_ SG_ 897 CDC_TempExclusive "温区独享设置";
+CM_ SG_ 897 CDC_CircModSet "内外循环设置";
+CM_ SG_ 897 CDC_IntelligentizePurSet "智能净化开关设置";
+CM_ SG_ 897 CDC_ACParkAutoVentSet "驻车自动通风请求";
+CM_ SG_ 897 CDC_IONset "负离子开关控制";
+CM_ SG_ 897 CDC_UVCset "紫外杀菌开关设置";
+CM_ SG_ 897 CDC_FilterRenewSet "滤芯换新设置";
+CM_ SG_ 897 CDC_AutoDrySet "空调自干燥设置";
+CM_ SG_ 897 CDC_ACECOModReq "空调ECO模式设置";
+CM_ SG_ 897 CDC_VentSet "通风设置信号";
+CM_ SG_ 897 CDC_OdorRemoveSet "一键除味设置";
+CM_ SG_ 897 CDC_ThirdRowHvacBlowLvSet "三排风量档位设置";
+CM_ SG_ 897 CDC_ThirdRowHvacModeSet "三排出风模式设置";
+CM_ SG_ 897 CDC_ThirdRowTempCSet "三排温度设置";
+CM_ SG_ 897 CDC_ThirdRowHvacAutoModeSet "三排空调Auto设置";
+CM_ SG_ 897 TBOX_ACParkAutoVentSetSts "驻车自动通风设置开关状态";
+CM_ SG_ 826 AC_ACSystemOnOffSts "空调开关状态";
+CM_ SG_ 826 AC_RACSystemOnOffSts "后空调开关状态";
+CM_ SG_ 826 AC_ACSts "AC开关状态";
+CM_ SG_ 826 AC_FrontDefrostSts "前除霜工作状态";
+CM_ SG_ 826 AC_FBlowSpeedLevel "前鼓风机风量";
+CM_ SG_ 826 AC_RBlowSpeedLevel "后鼓风机风量";
+CM_ SG_ 826 AC_FModeAdjustSts "前空调模式调节状态";
+CM_ SG_ 826 AC_RModeAdjustSts "后空调模式调节状态";
+CM_ SG_ 826 AC_DriverTempC "驾驶侧设置温度";
+CM_ SG_ 826 AC_PassengerTempC "副驾侧设置温度";
+CM_ SG_ 826 AC_RrTempC "后排设置温度状态";
+CM_ SG_ 826 AC_CircleModeSts "内外循环状态";
+CM_ SG_ 826 AC_ParkAutoVentSts "驻车自动通风状态";
+CM_ SG_ 826 AC_FHvacBlowLvAutoSts "前空调箱风量自动状态";
+CM_ SG_ 826 AC_RHvacBlowLvAutoSts "后空调箱风量自动状态";
+CM_ SG_ 826 AC_FBlowModeAutoSts "前空调吹风模式自动状态";
+CM_ SG_ 826 AC_RBlowModeAutoSts "后空调吹风模式自动状态";
+CM_ SG_ 826 AC_ThirdRowACSystemOnOffSts "三排空调开关状态";
+CM_ SG_ 826 AC_ThirdRowHvacBlowLvAutoSts "三排风量当前自动状态";
+CM_ SG_ 826 AC_ThirdRowBlowModeAutoSts "三排出风模式自动状态";
+CM_ SG_ 827 AC_ACMaxSts "最大制冷状态";
+CM_ SG_ 827 AC_HeatMaxSts "最大制热状态";
+CM_ SG_ 827 AC_AutoModeSts "空调Auto状态";
+CM_ SG_ 827 AC_RAutoModeSts "后空调Auto状态";
+CM_ SG_ 827 AC_AutoDefogSts "自动除雾状态";
+CM_ SG_ 827 AC_ACFourZoneSyncSts "温区同步状态";
+CM_ SG_ 827 AC_TempExclusiveSts "空调温区独享状态";
+CM_ SG_ 827 AC_AutoDefogRunSts "自动除雾运行状态反馈";
+CM_ SG_ 827 AC_FaultREASON "空调故障原因";
+CM_ SG_ 827 AC_Pres_HP "空调高压端压力(冷凝器出口）";
+CM_ SG_ 827 AC_Pres_LPT_Chiller "空调低压端压力(Chiller）";
+CM_ SG_ 827 AC_Pres_LPT_EVAP "空调低压端压力(压缩机进口）";
+CM_ SG_ 827 AC_ThirdRowBlowSpeedLevel "三排风量档位状态";
+CM_ SG_ 827 AC_ThirdRowModeAdjustSts "三排出风模式状态";
+CM_ SG_ 827 AC_ThirdRowTempC "三排温度状态";
+CM_ SG_ 827 AC_ThirdRowAutoModeSts "三排空调Auto状态";
+CM_ SG_ 828 AC_TimeVentSt "定时通风开关状态";
+CM_ SG_ 828 AC_VentTimeFlag "定时通风到期标志";
+CM_ SG_ 828 AC_VentholdTime "通风时长反馈";
+CM_ SG_ 828 AC_VentTime "通风次数";
+CM_ SG_ 828 AC_BlowerVolt "鼓风机电压";
+CM_ SG_ 828 AC_RBlowerVolt "后鼓风机电压";
+CM_ SG_ 828 AC_UVCSts "紫外杀菌工作状态";
+CM_ SG_ 828 AC_UVC_Err "紫外杀菌故障状态";
+CM_ SG_ 828 AC_UVC_ErrValid "紫外杀菌故障状态有效";
+CM_ SG_ 828 AC_AutoDrySts "空调自干燥状态";
+CM_ SG_ 828 AC_ACECOModSts "空调ECO模式状态";
+CM_ SG_ 828 AC_VentSts "通风反馈信号";
+CM_ SG_ 828 AC_RemFaultSts "空调故障反馈（远控）";
+CM_ SG_ 828 AC_OdorRemoveSts "一键除味反馈";
+CM_ SG_ 828 AC_FilterRemain "滤芯剩余寿命反馈";
+CM_ SG_ 1397 AC_FrntSOVSt "前冷媒截止阀状态";
+CM_ SG_ 1397 AC_ReSOVSt "后冷媒截止阀状态";
+CM_ SG_ 1397 AC_BmsEXVInitSt "电池膨胀阀初始化状态";
+CM_ SG_ 1397 AC_BmsEXVSt "电池膨胀阀运行状态";
+CM_ SG_ 1397 AC_BmsEXV_OpenCmd "电池膨胀阀开度指令";
+CM_ SG_ 1397 AC_BmsEXV_ActOpenVal "电池膨胀阀实际开度";
+CM_ SG_ 1397 AC_BmsEXVInitReq "AC电池膨胀阀初始化请求";
+CM_ SG_ 1397 AC_Forward_ModePerReq "前排模式风门请求百分比";
+CM_ SG_ 1397 AC_Second_ModePerReq "二排模式风门请求百分比";
+CM_ SG_ 1397 AC_FrntInCarT_Target "车内目标温度";
+CM_ SG_ 824 AC_FrntInCarT "前排车内温度（摄氏度）";
+CM_ SG_ 824 AC_ReInCarT "后排车内温度（摄氏度）";
+CM_ SG_ 824 AC_FrntInCarTValid "前排车内温度有效状态";
+CM_ SG_ 824 AC_ReInCarTValid "后排车内温度有效状态";
+CM_ SG_ 824 AC_OverheatdT "过热温度";
+CM_ SG_ 824 AC_Forward_BlwPwmOut "chiller出口温度";
+CM_ SG_ 824 AC_LPTSnsrT "压缩机进口温度";
+CM_ SG_ 824 AC_Second_BlwPwmOut "二排空调鼓风机PWM输出";
+CM_ SG_ 830 AC_FEvapTargetTemp "前蒸发器目标温度0-30";
+CM_ SG_ 830 AC_FEvapCurrentTemp "前蒸发器当前温度-40-60";
+CM_ SG_ 830 AC_REvapTargetTemp "后蒸发器目标温度0-30";
+CM_ SG_ 830 AC_REvapCurrentTemp "后蒸发器当前温度-40-60";
+CM_ SG_ 830 AC_THS_RelHum "温湿度传感器相对湿度";
+CM_ SG_ 830 AC_THS_DewPointT "温湿度传感器露点温度";
+CM_ SG_ 830 AC_THS_T "温湿度传感器温度值";
+CM_ SG_ 830 AC_cabinCoolingLevel "乘员舱制冷等级";
+CM_ SG_ 830 AC_cabinheatingLevel "乘员舱采暖等级";
+CM_ SG_ 831 AC_DrvrFaceVentTargetT "主驾吹面出风目标温度";
+CM_ SG_ 831 AC_PassFaceVentTargetT "副驾吹面出风目标温度";
+CM_ SG_ 831 AC_SecRowFaceVentTargetT "二排通道出风目标温度（吹面）";
+CM_ SG_ 831 AC_DrvrFaceVentActT "主驾吹面出风实际温度";
+CM_ SG_ 831 AC_PassFaceVentActT "副驾吹面出风实际温度";
+CM_ SG_ 831 AC_SecRowFaceVentActT "二排通道出风实际温度（吹面）";
+CM_ SG_ 831 AC_ThrdRowVentTargetT "三排吹面出风目标温度";
+CM_ SG_ 831 AC_ThrdRowVentActT "三排吹面出风实际温度";
+CM_ SG_ 880 AC_DrvrTempVentilaPosn "主驾温度风门位置";
+CM_ SG_ 880 AC_PassTempVentilaPosn "副驾温度风门位置";
+CM_ SG_ 880 AC_CircleModeVentilaPosn "循环风门位置";
+CM_ SG_ 880 AC_ModeVentilaPosn "模式风门位置";
+CM_ SG_ 880 AC_SecRowFootVentilaPosn "后吹脚风门位置";
+CM_ SG_ 880 AC_SecRowTempVentilaPosn "后排温度风门位置";
+CM_ SG_ 880 AC_SecRowModeVentilaPosn "后排模式风门位置";
+CM_ SG_ 880 AC_ThrdTempVentilaPosn "三区混合风门电机";
+CM_ SG_ 880 AC_BLOW_FaceVentilaPosn "吹面风门电机位置";
+CM_ SG_ 881 AC_DrvrFootVentTargetT "主驾吹脚出风目标温度";
+CM_ SG_ 881 AC_PassFootVentTargetT "副驾吹脚出风目标温度";
+CM_ SG_ 881 AC_ThrdRowFootVentTargetT "三排吹脚出风目标温度";
+CM_ SG_ 881 AC_DrvrFootVentActT "主驾吹脚出风实际温度";
+CM_ SG_ 881 AC_PassFootVentActT "副驾吹脚出风实际温度";
+CM_ SG_ 881 AC_ThrdRowFootVentActT "三排吹脚出风实际温度";
+CM_ SG_ 881 AC_Forward_AirFlowTarget "前排目标风量";
+CM_ SG_ 881 AC_Second_AirFlowTarget "二排目标风量";
+CM_ SG_ 919 AC_Third_BlwPwmOut "三排空调鼓风机PWM输出";
+CM_ SG_ 919 AC_UnlockVentSt "解锁通风状态";
+CM_ SG_ 919 UVC_RespErr "通讯错误";
+CM_ SG_ 919 UVC_TotWorkHr "累计工作时长";
+CM_ SG_ 919 UVC_DCDrvrErr "DC驱动器错误";
+CM_ SG_ 919 UVC_Err "UVC错误（包含DC驱动器错误、短路、过载、开路）";
+CM_ SG_ 919 UVC_ErrSt "错误有效状态";
+CM_ SG_ 919 UVC_ShortErr "UVC错误(短路)";
+CM_ SG_ 919 UVC_OverLoadErr "UVC错误(过载)";
+CM_ SG_ 919 UVC_OpenErr "UVC错误(开路)";
+CM_ SG_ 919 UVC_SW_MinorVersA "软件次版本号A(value range 1~99)";
+CM_ SG_ 919 UVC_SW_MajorVersA "软件主版本号A(value range 1~9)";
+CM_ SG_ 919 UVC_HW_PhaVers "硬件阶段版本号";
+CM_ SG_ 919 UVC_HW_MajorVersB "硬件主版本号B(value range 1~9)";
+CM_ SG_ 919 UVC_HW_MinorVersB "硬件次版本号B(value range 0~9)";
+CM_ SG_ 919 UVC_SN_MajorVersB "主序号B";
+CM_ SG_ 919 UVC_SN_MinorVersB "次序号B(value range 1~9)";
+CM_ SG_ 919 UVC_SN_SupplierCod "供应商代码";
+CM_ SG_ 899 AC_InsidePM25Level "车内PM2.5空气质量等级";
+CM_ SG_ 899 AC_PM25InCarValid "车内PM2.5浓度有效";
+CM_ SG_ 899 AC_PM25InCar "车内PM2.5浓度";
+CM_ SG_ 899 AC_outsidePM255Level "车外PM2.5空气质量等级";
+CM_ SG_ 899 AC_PM25OutCarValid "车外PM2.5浓度有效";
+CM_ SG_ 899 AC_PM25OutCar "车外PM2.5浓度";
+CM_ SG_ 899 AC_AQSAirQualityLevel "AQS空气质量等级";
+CM_ SG_ 899 AC_PurificationStSwitch "智能净化开关状态";
+CM_ SG_ 899 AC_PurificationSt "净化状态";
+CM_ SG_ 899 AC_IntPurificationSt "智能净化状态";
+CM_ SG_ 899 AC_IONRunSts "负离子开关状态";
+CM_ SG_ 899 AC_FBlowerNegaVol "前空调鼓风机负端电压";
+CM_ SG_ 899 AC_SecBlowerNegaVol "二排鼓风机负端电压";
+CM_ SG_ 906 AC_PTC_R_HeatPwrReq "APTC功率请求";
+CM_ SG_ 906 AC_PTC_R_Enable "APTC使能";
+CM_ SG_ 906 AC_HVCnctHldReq "AC请求高压保持连接";
+CM_ SG_ 906 AC_CoolgFanSpeedReq "AC请求风扇转速";
+CM_ SG_ 906 AC_CmprEnable "压缩机使能";
+CM_ SG_ 906 AC_HeatOutletTargetT "PTCF出水口目标水温";
+CM_ SG_ 906 AC_HeatReq "PTCF制热请求";
+CM_ SG_ 906 AC_RBlowerNegaVol "后空调鼓风机负端电压";
+CM_ SG_ 906 AC_AirReq "空调进气量请求（0-100%请求和VDC交互，用于控制AGS)";
+CM_ SG_ 906 AC_CmprTargetSpeed "压缩机目标转速";
+CM_ SG_ 1344 AC_RBlowFaceVentReq "二排吹面风门位置请求";
+CM_ SG_ 1344 AC_ThrdRowModeVentReq "三排模式电机位置请求";
+CM_ SG_ 1344 AC_CarVersion "AC识别车型配置";
+CM_ SG_ 1344 AC_FrontSOVReq "前冷媒截止阀请求";
+CM_ SG_ 1344 AC_RearSOVReq "后冷媒截止阀请求";
+CM_ SG_ 1344 AC_SysWorkingMode "AC系统工作模式";
+CM_ SG_ 1344 AC_FrontBlowerVoltReq "前鼓风机电压请求";
+CM_ SG_ 1344 AC_SecondBlowerVoltReq "二排鼓风机电压请求";
+CM_ SG_ 1344 AC_ThirdBlowerVoltReq "三排鼓风机电压请求";
+CM_ SG_ 1344 AC_CirclePriorVentilaPosn "预留双层流优先风门电机位置";
+CM_ SG_ 1345 AC_RBlowFaceVentPosn "二排吹面风门位置";
+CM_ SG_ 1345 AC_RBlowFootVentPosn "二排吹脚风门位置";
+CM_ SG_ 1345 AC_ThrdRowModeVentPosn "三排模式电机位置";
+CM_ SG_ 1345 AC_ThrdBlowVol "三排鼓风机电压";
+CM_ SG_ 1345 AC_12VOUT "12V输出电压";
+CM_ SG_ 1345 AC_INGVol "IGN输入电压";
+CM_ SG_ 1345 AC_FrantFootVentPosn "预留前排吹脚风门位置";
+CM_ SG_ 1345 AC_DefrostVentilaPosn "除霜风门电机位置";
+CM_ SG_ 1346 AC_DrvrTempVentilaReq "主驾温度风门位置请求";
+CM_ SG_ 1346 AC_PassTempVentilaReq "副驾温度风门位置请求";
+CM_ SG_ 1346 AC_CircleModeVentilaReq "循环风门位置请求";
+CM_ SG_ 1346 AC_BLOW_FaceVentilaReq "吹面风门电机位置请求";
+CM_ SG_ 1346 AC_DefrostVentilaReq "除霜风门电机位置请求";
+CM_ SG_ 1346 AC_FrantFootVentReq "前排吹脚风门电机位置请求";
+CM_ SG_ 1346 AC_ThrdTempVentilaReq "三区混合风门电机位置请求";
+CM_ SG_ 1346 AC_CirclePriorVentilaReq "预留双层流优先风门电机位置请求";
+CM_ SG_ 1346 AC_RBlowFootVentReq "二排吹脚风门位置请求";
+CM_ SG_ 1353 AC_SupplierCode "供应商代号";
+CM_ SG_ 1353 AC_HwVersion "硬件版本号";
+CM_ SG_ 1353 AC_SwMajorVersion "软件主版本号";
+CM_ SG_ 1353 AC_SwMinorVersion "软件子版本号";
+CM_ SG_ 1353 AC_SwPatchVersion "软件补充版本号";
+CM_ SG_ 1353 AC_SwVersionYear "软件版本年-2000";
+CM_ SG_ 1353 AC_SwVersionMonth "软件版本月";
+CM_ SG_ 1353 AC_SwVersionDay "软件版本日";
+CM_ SG_ 1396 EXV_RespErr "通讯错误";
+CM_ SG_ 1396 EXV_IninSt "初始化状态";
+CM_ SG_ 1396 EXV_RunngSt "运行状态";
+CM_ SG_ 1396 EXV_FltSt "故障状态";
+CM_ SG_ 1396 EXV_USt "电压状态";
+CM_ SG_ 1396 EXV_OverTWarn "过温报警";
+CM_ SG_ 1396 EXV_Posn "位置";
+CM_ SG_ 1396 EXV_SW_MinorVersA "软件次版本号A(value range 1~99)";
+CM_ SG_ 1396 EXV_SW_MajorVersA "软件主版本号A(value range 1~9)";
+CM_ SG_ 1396 EXV_HW_PhaVers "硬件阶段版本号";
+CM_ SG_ 1396 EXV_HW_MajorVersB "硬件主版本号B(value range 1~9)";
+CM_ SG_ 1396 EXV_HW_MinorVersB "硬件次版本号B(value range 0~9)";
+CM_ SG_ 1396 EXV_SN_MajorVersB "主序号B";
+CM_ SG_ 1396 EXV_SN_MinorVersB "次序号B(value range 1~9)";
+CM_ SG_ 1396 EXV_SN_SupplierCod "供应商代码";
+CM_ SG_ 1393 ION_L_ION_ErrSts "打开供模块的电源之后，模块将根据主节点发送的帧头报告模块错误状态";
+CM_ SG_ 1393 ION_L_ION_Sts "当电源档处于IGN ON状态时，模块将根据主节点发送的帧头报告模块状态";
+CM_ SG_ 1393 ION_Response_Error "LIN通讯错误";
+CM_ SG_ 1393 ION_Majorversion "主版本";
+CM_ SG_ 1393 ION_Minorversion "次版本";
+CM_ SG_ 1393 ION_Supplier "供应商";
+CM_ SG_ 1394 pm25_responseError "错误状态反馈信号";
+CM_ SG_ 1394 pm25_indoorValue "车内PM2.5数值";
+CM_ SG_ 1394 pm25_indoorLevel "车内PM2.5浓度等级";
+CM_ SG_ 1394 pm25_Sts "PM2.5的运行状态";
+CM_ SG_ 1394 pm25_errorSts "PM2.5的故障状态";
+CM_ SG_ 1394 pm10_indoorValue "车内PM10数值";
+CM_ SG_ 1394 pm10_indoorLevel "车内PM10浓度等级";
+CM_ SG_ 1394 pm25_airPump_FaultSt "PM2.5速测仪气泵故障状态";
+CM_ SG_ 1394 pm25_LaserDiode_FaultSt "PM2.5速测仪激光二极管故障状态";
+CM_ SG_ 1394 pm25_Phtoelectric_FaultSt "PM2.5速测仪光电接受模块故障状态";
+CM_ SG_ 1394 pm25_Benchmarkdata_FaultSt "PM2.5速测仪对标数据故障状态";
+CM_ SG_ 1394 pm25_Short_FaultSt "PM2.5速测仪短路故障状态";
+CM_ SG_ 1394 pm25_Majorversion "主版本";
+CM_ SG_ 1394 pm25_Minorversion "次版本";
+CM_ SG_ 1394 pm25_Supplier "供应商";
+CM_ SG_ 1506 TBOX_TimeYear "本地时间_年";
+CM_ SG_ 1506 TBOX_TimeMonth "本地时间_月";
+CM_ SG_ 1506 TBOX_TimeDay "本地时间_日";
+CM_ SG_ 1506 TBOX_TimeHour "本地时间_时";
+CM_ SG_ 1506 TBOX_TimeMinute "本地时间_分";
+CM_ SG_ 1506 TBOX_TimeSecond "本地时间_秒";
+CM_ SG_ 1506 TBOX_TimeZone "东/西时区";
+CM_ SG_ 1506 TBOX_TimeZoneNum "时区编号";
+CM_ SG_ 1506 TBOX_TimeFlag "时间有效性标志";
+CM_ SG_ 466 VIU_Info_Checksum "CRC8 Checksum(Data ID:0x00D2)";
+CM_ SG_ 466 VIU_Info_Counter "RollingCounter";
+CM_ SG_ 466 VIU_UsageMode "整车用户模式";
+CM_ SG_ 466 VIU_CarMode "车辆模式";
+CM_ SG_ 466 VIU_PowerMode "整车电源模式";
+CM_ SG_ 466 VIU_PowerModeFltFlag "电源模式故障状态";
+CM_ SG_ 914 RAC_RACSystemOnOffSet "后空调系统开关设置";
+CM_ SG_ 914 RAC_RHvacBlowLvSet "后鼓风机风量设置";
+CM_ SG_ 914 RAC_RHvacModeSet "后空调模式设置";
+CM_ SG_ 914 RAC_HvacAutoModeSet "温度Auto设置";
+CM_ SG_ 914 RAC_SecRowTempCSet "后排温度设置";
+CM_ SG_ 914 RAC_LockSt "后空调屏锁状态";
+CM_ SG_ 914 RAC_RLSecRowSeatHeatLvlSet "二排左座椅加热等级设置";
+CM_ SG_ 914 RAC_RRSecRowSeatHeatLvlSet "二排右座椅加热等级设置";
+CM_ SG_ 914 RAC_RLSecRowSeatVentLvlSet "二排左座椅通风等级设置";
+CM_ SG_ 914 RAC_RRSecRowSeatVentLvlSet "二排右座椅通风等级设置";
+CM_ SG_ 1362 DSM_CtrlSts "主驾座椅控制状态";
+CM_ SG_ 1362 DSM_AntiPinchSts "主驾防夹状态";
+CM_ SG_ 1362 DSM_HeatProtectionSts "主驾热保护状态";
+CM_ SG_ 1362 DSM_SLCUotPosn "主驾座椅前后位置";
+CM_ SG_ 1362 DSM_BackrestMotPosn "主驾座椅靠背角度位置";
+CM_ SG_ 1362 DSM_CushHeiMotPosn "主驾座椅座垫高度位置";
+CM_ SG_ 1362 DSM_CushTiltMotPosn "主驾座椅座垫倾斜位置";
+CM_ SG_ 1362 DSM_CushExtnMotPosn "主驾座椅座垫延伸位置";
+CM_ SG_ 1362 DSM_InitSts "主驾座椅初始化状态";
+CM_ SG_ 1362 DSM_WarningReq "主驾座椅告警请求";
+CM_ SG_ 1362 DSM_HeatgSts "主驾座椅加热状态";
+CM_ SG_ 1362 DSM_HeatFltSts "主驾座椅加热故障状态";
+CM_ SG_ 1362 DSM_VentnSts "主驾座椅通风状态";
+CM_ SG_ 1362 DSM_VentnFltSts "主驾座椅通风故障状态";
+CM_ SG_ 1362 DSM_driverSeatDetectSts "主驾座椅乘员检测状态";
+CM_ SG_ 1362 DSM_DevSupportSts "主驾Mlink支架状态";
+CM_ SG_ 1362 DSM_DevLinkSts "主驾Mlink设备状态";
+CM_ SG_ 1362 DSM_ChargeSts "主驾Mlink供电状态";
+CM_ SG_ 1362 DSM_DrvrSeatLinkageSt "主驾座椅联动状态上报";
+CM_ SG_ 1363 PSM_CtrlSts "副驾座椅控制状态";
+CM_ SG_ 1363 PSM_AntiPinchSts "副驾防夹状态";
+CM_ SG_ 1363 PSM_HeatProtectionSts "副驾热保护状态";
+CM_ SG_ 1363 PSM_SLCUotPosn "副驾座椅前后位置";
+CM_ SG_ 1363 PSM_BackrestMotPosn "副驾座椅靠背角度位置";
+CM_ SG_ 1363 PSM_CushHeiMotPosn "副驾座椅座垫高度位置";
+CM_ SG_ 1363 PSM_CushTiltMotPosn "副驾座椅座垫倾斜位置";
+CM_ SG_ 1363 PSM_LegSupportMotPosn "副驾座椅腿托角度位置";
+CM_ SG_ 1363 PSM_FootSupportMotPosn "副驾座椅脚托位置";
+CM_ SG_ 1363 PSM_SpindleMotPosn "副驾座椅折叠（Spindle）位置";
+CM_ SG_ 1363 PSM_InitSts "副驾座椅初始化状态";
+CM_ SG_ 1363 PSM_WarningReq "副驾座椅告警请求";
+CM_ SG_ 1363 PSM_HeatgSts "副驾座椅加热状态";
+CM_ SG_ 1363 PSM_HeatFltSts "副驾座椅加热故障状态";
+CM_ SG_ 1363 PSM_passengerSeatDetectSts "副驾座椅乘员检测状态";
+CM_ SG_ 916 VIU_PassSeatHeatgReq "副驾座椅加热请求";
+CM_ SG_ 916 VIU_PassSeatVentnReq "副驾座椅通风请求";
+CM_ SG_ 915 VIU_DrvrSeatHeatgReq "主驾座椅加热功能请求";
+CM_ SG_ 915 VIU_DrvrSeatVentnReq "主驾座椅通风功能请求";
+
+
+BA_DEF_ BO_  "NmMessage" ENUM "No","Yes";
+BA_DEF_ BO_  "DiagState" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","Event","IfActive","CE","CA","NoMsgSendType";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnChange","OnWrite","IfActive","OnChangeWithRepetition","OnWriteWithRepetition","IfActiveWithRepetition","NoSigSendType","OnChangeAndIfActive","OnChangeAndIfActiveWithRepetition","CA","CE","Event";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 0;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 0;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_  "NmMessageCount" INT 0 255;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 65535;
+BA_DEF_ BU_  "NmStationAddress" INT 0 63;
+BA_DEF_ BU_  "NmNode" ENUM  "no","yes";
+BA_DEF_  "NmBaseAddress" HEX 1024 1087;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "NmMessage" "No";
+BA_DEF_DEF_  "DiagState" "No";
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "CANFD_BRS" "1";
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN_FD";
+BA_DEF_DEF_  "NmMessageCount" 128;
+BA_DEF_DEF_  "GenMsgILSupport" "No";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "NmNode" "no";
+BA_DEF_DEF_  "NmBaseAddress" 1024;
+BA_DEF_DEF_  "BusType" "CAN FD";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_ "DBName" "【机密】问界产品预研项目VIU0_TMS网段 Matria V1.2 20260210_AI控制器";
+BA_ "BusType" "CAN FD";
+BA_ "GenMsgCycleTime" BO_ 859 100;
+BA_ "CANFD_BRS" BO_ 859 0;
+BA_ "VFrameFormat" BO_ 859 0;
+BA_ "GenSigStartValue" SG_ 859 VIU_VehAntithftSt 6;
+BA_ "GenMsgCycleTime" BO_ 953 100;
+BA_ "CANFD_BRS" BO_ 953 0;
+BA_ "VFrameFormat" BO_ 953 0;
+BA_ "GenSigStartValue" SG_ 953 BMS_PackSOCRange 1022;
+BA_ "GenSigStartValue" SG_ 953 RSM_LeSolarInten 254;
+BA_ "GenSigStartValue" SG_ 953 RSM_RiSolarInten 254;
+BA_ "GenMsgCycleTime" BO_ 849 100;
+BA_ "CANFD_BRS" BO_ 849 0;
+BA_ "VFrameFormat" BO_ 849 0;
+BA_ "GenSigStartValue" SG_ 849 VDC_acCompressorPowerAllowed 50;
+BA_ "GenSigStartValue" SG_ 849 VDC_cabinPtcPowerAllowed 30;
+BA_ "GenSigStartValue" SG_ 849 VDC_HeatThreeDirectValveControl 99;
+BA_ "GenMsgCycleTime" BO_ 789 100;
+BA_ "CANFD_BRS" BO_ 789 0;
+BA_ "VFrameFormat" BO_ 789 0;
+BA_ "GenSigStartValue" SG_ 789 BMS_BattVolt_U7 16382;
+BA_ "GenSigStartValue" SG_ 789 BMS_BattTempMax 254;
+BA_ "GenSigStartValue" SG_ 789 BMS_BattTempMin 254;
+BA_ "GenSigStartValue" SG_ 789 BMS_BattTempAvg 254;
+BA_ "GenSigStartValue" SG_ 789 BMS_TrgtFlowRate 510;
+BA_ "GenMsgCycleTime" BO_ 954 100;
+BA_ "CANFD_BRS" BO_ 954 0;
+BA_ "VFrameFormat" BO_ 954 0;
+BA_ "GenSigStartValue" SG_ 954 AGS1_CurrPosFeedback 127;
+BA_ "GenSigStartValue" SG_ 954 VIU_BattInletWaterT 68;
+BA_ "GenSigStartValue" SG_ 954 VIU_BattOutletWaterT 68;
+BA_ "GenMsgCycleTime" BO_ 863 100;
+BA_ "CANFD_BRS" BO_ 863 0;
+BA_ "VFrameFormat" BO_ 863 0;
+BA_ "GenMsgCycleTime" BO_ 958 100;
+BA_ "CANFD_BRS" BO_ 958 0;
+BA_ "VFrameFormat" BO_ 958 0;
+BA_ "GenMsgCycleTime" BO_ 399 20;
+BA_ "CANFD_BRS" BO_ 399 0;
+BA_ "VFrameFormat" BO_ 399 0;
+BA_ "GenMsgCycleTime" BO_ 901 100;
+BA_ "CANFD_BRS" BO_ 901 0;
+BA_ "VFrameFormat" BO_ 901 0;
+BA_ "GenMsgCycleTime" BO_ 902 100;
+BA_ "CANFD_BRS" BO_ 902 0;
+BA_ "VFrameFormat" BO_ 902 0;
+BA_ "GenMsgCycleTime" BO_ 1471 1000;
+BA_ "CANFD_BRS" BO_ 1471 0;
+BA_ "VFrameFormat" BO_ 1471 0;
+BA_ "GenMsgCycleTime" BO_ 1352 200;
+BA_ "CANFD_BRS" BO_ 1352 0;
+BA_ "VFrameFormat" BO_ 1352 0;
+BA_ "GenMsgCycleTime" BO_ 909 100;
+BA_ "CANFD_BRS" BO_ 909 0;
+BA_ "VFrameFormat" BO_ 909 0;
+BA_ "GenMsgCycleTime" BO_ 905 100;
+BA_ "CANFD_BRS" BO_ 905 0;
+BA_ "VFrameFormat" BO_ 905 0;
+BA_ "GenSigStartValue" SG_ 905 PTC_F_PCBT 48;
+BA_ "GenMsgCycleTime" BO_ 907 100;
+BA_ "CANFD_BRS" BO_ 907 0;
+BA_ "VFrameFormat" BO_ 907 0;
+BA_ "GenMsgCycleTime" BO_ 908 100;
+BA_ "CANFD_BRS" BO_ 908 0;
+BA_ "VFrameFormat" BO_ 908 0;
+BA_ "GenMsgSendType" BO_ 903 3;
+BA_ "GenMsgCycleTime" BO_ 903 100;
+BA_ "GenMsgCycleTimeFast" BO_ 903 20;
+BA_ "GenMsgNrOfRepetition" BO_ 903 3;
+BA_ "CANFD_BRS" BO_ 903 0;
+BA_ "VFrameFormat" BO_ 903 0;
+BA_ "GenSigSendType" SG_ 903 CDC_ACSystemOnOffSet 4;
+BA_ "GenSigSendType" SG_ 903 CDC_RACSystemOnOffSet 4;
+BA_ "GenSigSendType" SG_ 903 CDC_ACSet 4;
+BA_ "GenSigSendType" SG_ 903 CDC_FrontDefrostSet 4;
+BA_ "GenSigSendType" SG_ 903 CDC_FHvacBlowLvSet 4;
+BA_ "GenSigSendType" SG_ 903 CDC_RHvacBlowLvSet 4;
+BA_ "GenSigSendType" SG_ 903 CDC_FHvacModeSet 4;
+BA_ "GenSigSendType" SG_ 903 CDC_RHvacModeSet 4;
+BA_ "GenSigSendType" SG_ 903 CDC_DriverTempCSet 4;
+BA_ "GenSigStartValue" SG_ 903 CDC_DriverTempCSet 31;
+BA_ "GenSigSendType" SG_ 903 CDC_PassengerTempCSet 4;
+BA_ "GenSigStartValue" SG_ 903 CDC_PassengerTempCSet 31;
+BA_ "GenSigSendType" SG_ 903 CDC_RrTempCSet 4;
+BA_ "GenSigStartValue" SG_ 903 CDC_RrTempCSet 31;
+BA_ "GenSigSendType" SG_ 903 TBOX_ACONOFFSet 4;
+BA_ "GenSigSendType" SG_ 903 TBOX_ACTempSet 4;
+BA_ "GenSigStartValue" SG_ 903 TBOX_ACTempSet 31;
+BA_ "GenSigSendType" SG_ 903 TBOX_ACVentSet 4;
+BA_ "GenSigSendType" SG_ 903 TBOX_ACDefrostSet 4;
+BA_ "GenSigSendType" SG_ 903 TBOX_MaxACSet 4;
+BA_ "GenSigSendType" SG_ 903 TBOX_MaxHeatSet 4;
+BA_ "GenSigSendType" SG_ 903 TBOX_PurificationSet 4;
+BA_ "GenSigSendType" SG_ 903 TBOX_UVCSet 4;
+BA_ "GenSigSendType" SG_ 903 CDC_ThirdRowACSystemOnOffSet 4;
+BA_ "GenMsgSendType" BO_ 897 3;
+BA_ "GenMsgCycleTime" BO_ 897 100;
+BA_ "GenMsgCycleTimeFast" BO_ 897 20;
+BA_ "GenMsgNrOfRepetition" BO_ 897 3;
+BA_ "CANFD_BRS" BO_ 897 0;
+BA_ "VFrameFormat" BO_ 897 0;
+BA_ "GenSigSendType" SG_ 897 CDC_ACMaxSet 4;
+BA_ "GenSigSendType" SG_ 897 CDC_HeatMaxSet 4;
+BA_ "GenSigSendType" SG_ 897 CDC_HvacAutoModeSet 4;
+BA_ "GenSigSendType" SG_ 897 CDC_RHvacAutoModeSet 4;
+BA_ "GenSigSendType" SG_ 897 CDC_AutoDefogSet 4;
+BA_ "GenSigSendType" SG_ 897 CDC_ACFourZoneSync 4;
+BA_ "GenSigSendType" SG_ 897 CDC_TempExclusive 4;
+BA_ "GenSigSendType" SG_ 897 CDC_CircModSet 4;
+BA_ "GenSigSendType" SG_ 897 CDC_IntelligentizePurSet 4;
+BA_ "GenSigSendType" SG_ 897 CDC_ACParkAutoVentSet 4;
+BA_ "GenSigSendType" SG_ 897 CDC_IONset 4;
+BA_ "GenSigSendType" SG_ 897 CDC_UVCset 4;
+BA_ "GenSigSendType" SG_ 897 CDC_FilterRenewSet 4;
+BA_ "GenSigSendType" SG_ 897 CDC_AutoDrySet 4;
+BA_ "GenSigSendType" SG_ 897 CDC_ACECOModReq 4;
+BA_ "GenSigSendType" SG_ 897 CDC_VentSet 4;
+BA_ "GenSigSendType" SG_ 897 CDC_OdorRemoveSet 5;
+BA_ "GenSigSendType" SG_ 897 CDC_ThirdRowHvacBlowLvSet 4;
+BA_ "GenSigSendType" SG_ 897 CDC_ThirdRowHvacModeSet 4;
+BA_ "GenSigSendType" SG_ 897 CDC_ThirdRowTempCSet 4;
+BA_ "GenSigStartValue" SG_ 897 CDC_ThirdRowTempCSet 31;
+BA_ "GenSigSendType" SG_ 897 CDC_ThirdRowHvacAutoModeSet 4;
+BA_ "GenSigSendType" SG_ 897 TBOX_ACParkAutoVentSetSts 4;
+BA_ "GenMsgCycleTime" BO_ 826 100;
+BA_ "CANFD_BRS" BO_ 826 0;
+BA_ "VFrameFormat" BO_ 826 0;
+BA_ "GenSigStartValue" SG_ 826 AC_DriverTempC 31;
+BA_ "GenSigStartValue" SG_ 826 AC_PassengerTempC 31;
+BA_ "GenSigStartValue" SG_ 826 AC_RrTempC 31;
+BA_ "GenMsgCycleTime" BO_ 827 100;
+BA_ "CANFD_BRS" BO_ 827 0;
+BA_ "VFrameFormat" BO_ 827 0;
+BA_ "GenSigStartValue" SG_ 827 AC_Pres_HP 511;
+BA_ "GenSigStartValue" SG_ 827 AC_Pres_LPT_Chiller 127;
+BA_ "GenSigStartValue" SG_ 827 AC_Pres_LPT_EVAP 127;
+BA_ "GenSigStartValue" SG_ 827 AC_ThirdRowTempC 31;
+BA_ "GenMsgCycleTime" BO_ 828 100;
+BA_ "CANFD_BRS" BO_ 828 0;
+BA_ "VFrameFormat" BO_ 828 0;
+BA_ "GenSigStartValue" SG_ 828 AC_FilterRemain 126;
+BA_ "GenMsgCycleTime" BO_ 1397 100;
+BA_ "CANFD_BRS" BO_ 1397 0;
+BA_ "VFrameFormat" BO_ 1397 0;
+BA_ "GenMsgCycleTime" BO_ 824 100;
+BA_ "CANFD_BRS" BO_ 824 0;
+BA_ "VFrameFormat" BO_ 824 0;
+BA_ "GenSigStartValue" SG_ 824 AC_FrntInCarT 680;
+BA_ "GenSigStartValue" SG_ 824 AC_ReInCarT 680;
+BA_ "GenSigStartValue" SG_ 824 AC_FrntInCarTValid 1;
+BA_ "GenSigStartValue" SG_ 824 AC_ReInCarTValid 1;
+BA_ "GenMsgCycleTime" BO_ 830 100;
+BA_ "CANFD_BRS" BO_ 830 0;
+BA_ "VFrameFormat" BO_ 830 0;
+BA_ "GenMsgCycleTime" BO_ 831 100;
+BA_ "CANFD_BRS" BO_ 831 0;
+BA_ "VFrameFormat" BO_ 831 0;
+BA_ "GenMsgCycleTime" BO_ 880 100;
+BA_ "CANFD_BRS" BO_ 880 0;
+BA_ "VFrameFormat" BO_ 880 0;
+BA_ "GenMsgCycleTime" BO_ 881 100;
+BA_ "CANFD_BRS" BO_ 881 0;
+BA_ "VFrameFormat" BO_ 881 0;
+BA_ "GenMsgCycleTime" BO_ 919 100;
+BA_ "CANFD_BRS" BO_ 919 0;
+BA_ "VFrameFormat" BO_ 919 0;
+BA_ "GenSigStartValue" SG_ 919 UVC_SW_MinorVersA 1;
+BA_ "GenSigStartValue" SG_ 919 UVC_SW_MajorVersA 1;
+BA_ "GenSigStartValue" SG_ 919 UVC_HW_PhaVers 1;
+BA_ "GenSigStartValue" SG_ 919 UVC_HW_MajorVersB 1;
+BA_ "GenSigStartValue" SG_ 919 UVC_SN_MajorVersB 1;
+BA_ "GenSigStartValue" SG_ 919 UVC_SN_MinorVersB 1;
+BA_ "GenMsgCycleTime" BO_ 899 100;
+BA_ "CANFD_BRS" BO_ 899 0;
+BA_ "VFrameFormat" BO_ 899 0;
+BA_ "GenSigStartValue" SG_ 899 AC_PM25InCarValid 1;
+BA_ "GenSigStartValue" SG_ 899 AC_PM25InCar 1023;
+BA_ "GenSigStartValue" SG_ 899 AC_PM25OutCarValid 1;
+BA_ "GenSigStartValue" SG_ 899 AC_PM25OutCar 1023;
+BA_ "GenMsgCycleTime" BO_ 906 100;
+BA_ "CANFD_BRS" BO_ 906 0;
+BA_ "VFrameFormat" BO_ 906 0;
+BA_ "GenMsgCycleTime" BO_ 1344 200;
+BA_ "CANFD_BRS" BO_ 1344 0;
+BA_ "VFrameFormat" BO_ 1344 0;
+BA_ "GenMsgCycleTime" BO_ 1345 200;
+BA_ "CANFD_BRS" BO_ 1345 0;
+BA_ "VFrameFormat" BO_ 1345 0;
+BA_ "GenMsgCycleTime" BO_ 1346 200;
+BA_ "CANFD_BRS" BO_ 1346 0;
+BA_ "VFrameFormat" BO_ 1346 0;
+BA_ "GenMsgCycleTime" BO_ 1353 200;
+BA_ "CANFD_BRS" BO_ 1353 0;
+BA_ "VFrameFormat" BO_ 1353 0;
+BA_ "GenMsgCycleTime" BO_ 1396 200;
+BA_ "CANFD_BRS" BO_ 1396 0;
+BA_ "VFrameFormat" BO_ 1396 0;
+BA_ "GenSigStartValue" SG_ 1396 EXV_SW_MinorVersA 1;
+BA_ "GenSigStartValue" SG_ 1396 EXV_SW_MajorVersA 1;
+BA_ "GenSigStartValue" SG_ 1396 EXV_HW_PhaVers 1;
+BA_ "GenSigStartValue" SG_ 1396 EXV_HW_MajorVersB 1;
+BA_ "GenSigStartValue" SG_ 1396 EXV_SN_MajorVersB 1;
+BA_ "GenSigStartValue" SG_ 1396 EXV_SN_MinorVersB 1;
+BA_ "GenMsgCycleTime" BO_ 1393 200;
+BA_ "CANFD_BRS" BO_ 1393 0;
+BA_ "VFrameFormat" BO_ 1393 0;
+BA_ "GenMsgCycleTime" BO_ 1394 200;
+BA_ "CANFD_BRS" BO_ 1394 0;
+BA_ "VFrameFormat" BO_ 1394 0;
+BA_ "GenMsgSendType" BO_ 1347 1;
+BA_ "CANFD_BRS" BO_ 1347 0;
+BA_ "VFrameFormat" BO_ 1347 0;
+BA_ "GenSigSendType" SG_ 1347 AC_XCP_PhyReq_Data 2;
+BA_ "GenMsgSendType" BO_ 1348 1;
+BA_ "CANFD_BRS" BO_ 1348 0;
+BA_ "VFrameFormat" BO_ 1348 0;
+BA_ "GenSigSendType" SG_ 1348 AC_XCP_Resp_Data 2;
+BA_ "GenMsgSendType" BO_ 1745 1;
+BA_ "CANFD_BRS" BO_ 1745 0;
+BA_ "VFrameFormat" BO_ 1745 0;
+BA_ "GenSigSendType" SG_ 1745 AC_DebugFrame2_Data 2;
+BA_ "GenMsgSendType" BO_ 1746 1;
+BA_ "CANFD_BRS" BO_ 1746 0;
+BA_ "VFrameFormat" BO_ 1746 0;
+BA_ "GenSigSendType" SG_ 1746 AC_DebugFrame3_Data 2;
+BA_ "GenMsgSendType" BO_ 1747 1;
+BA_ "CANFD_BRS" BO_ 1747 0;
+BA_ "VFrameFormat" BO_ 1747 0;
+BA_ "GenSigSendType" SG_ 1747 AC_DebugFrame4_Data 2;
+BA_ "GenMsgSendType" BO_ 1748 1;
+BA_ "CANFD_BRS" BO_ 1748 0;
+BA_ "VFrameFormat" BO_ 1748 0;
+BA_ "GenSigSendType" SG_ 1748 AC_DebugFrame5_Data 2;
+BA_ "GenMsgSendType" BO_ 1749 1;
+BA_ "CANFD_BRS" BO_ 1749 0;
+BA_ "VFrameFormat" BO_ 1749 0;
+BA_ "GenSigSendType" SG_ 1749 AC_DebugFrame6_Data 2;
+BA_ "GenMsgSendType" BO_ 1750 1;
+BA_ "CANFD_BRS" BO_ 1750 0;
+BA_ "VFrameFormat" BO_ 1750 0;
+BA_ "GenSigSendType" SG_ 1750 AC_DebugFrame7_Data 2;
+BA_ "GenMsgSendType" BO_ 1751 1;
+BA_ "CANFD_BRS" BO_ 1751 0;
+BA_ "VFrameFormat" BO_ 1751 0;
+BA_ "GenSigSendType" SG_ 1751 AC_DebugFrame8_Data 2;
+BA_ "GenMsgSendType" BO_ 1752 1;
+BA_ "CANFD_BRS" BO_ 1752 0;
+BA_ "VFrameFormat" BO_ 1752 0;
+BA_ "GenSigSendType" SG_ 1752 AC_DebugFrame9_Data 2;
+BA_ "GenMsgSendType" BO_ 1753 1;
+BA_ "CANFD_BRS" BO_ 1753 0;
+BA_ "VFrameFormat" BO_ 1753 0;
+BA_ "GenSigSendType" SG_ 1753 AC_DebugFrame10_Data 2;
+BA_ "GenMsgCycleTime" BO_ 1506 500;
+BA_ "CANFD_BRS" BO_ 1506 0;
+BA_ "VFrameFormat" BO_ 1506 0;
+BA_ "GenSigStartValue" SG_ 1506 TBOX_TimeMonth 1;
+BA_ "GenSigStartValue" SG_ 1506 TBOX_TimeDay 1;
+BA_ "GenMsgCycleTime" BO_ 466 20;
+BA_ "CANFD_BRS" BO_ 466 0;
+BA_ "VFrameFormat" BO_ 466 0;
+BA_ "GenSigStartValue" SG_ 466 VIU_UsageMode 1;
+BA_ "GenSigStartValue" SG_ 466 VIU_CarMode 14;
+BA_ "GenMsgSendType" BO_ 914 3;
+BA_ "GenMsgCycleTime" BO_ 914 100;
+BA_ "GenMsgCycleTimeFast" BO_ 914 20;
+BA_ "GenMsgNrOfRepetition" BO_ 914 3;
+BA_ "CANFD_BRS" BO_ 914 0;
+BA_ "VFrameFormat" BO_ 914 0;
+BA_ "GenSigSendType" SG_ 914 RAC_RACSystemOnOffSet 4;
+BA_ "GenSigSendType" SG_ 914 RAC_RHvacBlowLvSet 4;
+BA_ "GenSigSendType" SG_ 914 RAC_RHvacModeSet 4;
+BA_ "GenSigSendType" SG_ 914 RAC_HvacAutoModeSet 4;
+BA_ "GenSigSendType" SG_ 914 RAC_SecRowTempCSet 4;
+BA_ "GenSigStartValue" SG_ 914 RAC_SecRowTempCSet 31;
+BA_ "GenSigSendType" SG_ 914 RAC_RLSecRowSeatHeatLvlSet 4;
+BA_ "GenSigSendType" SG_ 914 RAC_RRSecRowSeatHeatLvlSet 4;
+BA_ "GenSigSendType" SG_ 914 RAC_RLSecRowSeatVentLvlSet 4;
+BA_ "GenSigSendType" SG_ 914 RAC_RRSecRowSeatVentLvlSet 4;
+BA_ "GenMsgCycleTime" BO_ 1362 200;
+BA_ "CANFD_BRS" BO_ 1362 0;
+BA_ "VFrameFormat" BO_ 1362 0;
+BA_ "GenSigStartValue" SG_ 1362 DSM_SLCUotPosn 125;
+BA_ "GenSigStartValue" SG_ 1362 DSM_BackrestMotPosn 125;
+BA_ "GenSigStartValue" SG_ 1362 DSM_CushHeiMotPosn 125;
+BA_ "GenSigStartValue" SG_ 1362 DSM_CushTiltMotPosn 125;
+BA_ "GenSigStartValue" SG_ 1362 DSM_CushExtnMotPosn 125;
+BA_ "GenMsgCycleTime" BO_ 1363 200;
+BA_ "CANFD_BRS" BO_ 1363 0;
+BA_ "VFrameFormat" BO_ 1363 0;
+BA_ "GenSigStartValue" SG_ 1363 PSM_SLCUotPosn 125;
+BA_ "GenSigStartValue" SG_ 1363 PSM_BackrestMotPosn 125;
+BA_ "GenSigStartValue" SG_ 1363 PSM_CushHeiMotPosn 125;
+BA_ "GenSigStartValue" SG_ 1363 PSM_CushTiltMotPosn 125;
+BA_ "GenSigStartValue" SG_ 1363 PSM_LegSupportMotPosn 125;
+BA_ "GenSigStartValue" SG_ 1363 PSM_FootSupportMotPosn 125;
+BA_ "GenSigStartValue" SG_ 1363 PSM_SpindleMotPosn 125;
+BA_ "GenMsgSendType" BO_ 916 3;
+BA_ "GenMsgCycleTime" BO_ 916 100;
+BA_ "CANFD_BRS" BO_ 916 0;
+BA_ "VFrameFormat" BO_ 916 0;
+BA_ "GenSigSendType" SG_ 916 VIU_PassSeatHeatgReq 4;
+BA_ "GenSigSendType" SG_ 916 VIU_PassSeatVentnReq 4;
+BA_ "GenMsgSendType" BO_ 915 3;
+BA_ "GenMsgCycleTime" BO_ 915 100;
+BA_ "CANFD_BRS" BO_ 915 0;
+BA_ "VFrameFormat" BO_ 915 0;
+BA_ "GenSigSendType" SG_ 915 VIU_DrvrSeatHeatgReq 4;
+BA_ "GenSigSendType" SG_ 915 VIU_DrvrSeatVentnReq 4;
+VAL_ 859 VIU_AmbTVld 1 "Valid" 0 "Invalid" ;
+VAL_ 859 VIU_AmbT 2047 "Invalid" ;
+VAL_ 859 VIU_VehAntithftSt 7 "invalid 无效" 6 "reserved 预留" 5 "reserved 预留" 4 "pre_set 预设防" 3 "alarm 报警" 2 "part_set 部分设防" 1 "set 设防" 0 "unset 解防" ;
+VAL_ 859 CDC_SceneModePowerOnSts 3 "OFF" 2 "ON_REMOTE" 1 "ON" 0 "INVALID" ;
+VAL_ 859 VIU_FLWinOpenDeg 127 "Invalid" 126 "Reserved" 125 "Reserved" 124 "Reserved" 123 "Reserved" 122 "Reserved" 121 "Reserved" 120 "Reserved" 119 "Reserved" 118 "Reserved" 117 "Reserved" 116 "Reserved" 115 "Reserved" 114 "Reserved" 113 "Reserved" 112 "Reserved" 111 "Reserved" 110 "Reserved" 109 "Reserved" 108 "Reserved" 107 "Reserved" 106 "Reserved" 105 "Reserved" 104 "Reserved" 103 "Reserved" 102 "Reserved" 101 "100%(fully Open)" 1 "0%（fully close）" 0 "Initial" ;
+VAL_ 859 VIU_FRWinOpenDeg 127 "Invalid" 126 "Reserved" 125 "Reserved" 124 "Reserved" 123 "Reserved" 122 "Reserved" 121 "Reserved" 120 "Reserved" 119 "Reserved" 118 "Reserved" 117 "Reserved" 116 "Reserved" 115 "Reserved" 114 "Reserved" 113 "Reserved" 112 "Reserved" 111 "Reserved" 110 "Reserved" 109 "Reserved" 108 "Reserved" 107 "Reserved" 106 "Reserved" 105 "Reserved" 104 "Reserved" 103 "Reserved" 102 "Reserved" 101 "100%(fully Open)" 1 "0%（fully close）" 0 "Initial" ;
+VAL_ 859 VIU_RLWinOpenDeg 127 "Invalid" 126 "Reserved" 125 "Reserved" 124 "Reserved" 123 "Reserved" 122 "Reserved" 121 "Reserved" 120 "Reserved" 119 "Reserved" 118 "Reserved" 117 "Reserved" 116 "Reserved" 115 "Reserved" 114 "Reserved" 113 "Reserved" 112 "Reserved" 111 "Reserved" 110 "Reserved" 109 "Reserved" 108 "Reserved" 107 "Reserved" 106 "Reserved" 105 "Reserved" 104 "Reserved" 103 "Reserved" 102 "Reserved" 101 "100%(fully Open)" 1 "0%（fully close）" 0 "Initial" ;
+VAL_ 859 VIU_RRWinOpenDeg 127 "Invalid" 126 "Reserved" 125 "Reserved" 124 "Reserved" 123 "Reserved" 122 "Reserved" 121 "Reserved" 120 "Reserved" 119 "Reserved" 118 "Reserved" 117 "Reserved" 116 "Reserved" 115 "Reserved" 114 "Reserved" 113 "Reserved" 112 "Reserved" 111 "Reserved" 110 "Reserved" 109 "Reserved" 108 "Reserved" 107 "Reserved" 106 "Reserved" 105 "Reserved" 104 "Reserved" 103 "Reserved" 102 "Reserved" 101 "100%(fully Open)" 1 "0%（fully close）" 0 "Initial" ;
+VAL_ 953 BMS_PackSOCRange 1023 "Invalid" 1022 "Initial Value" ;
+VAL_ 953 SSM_F_Position 7 "Uninitialized" 6 "Fully open" 5 "Reversed" 4 "Half open" 3 "Fully close" 2 "Second half of slide" 1 "First half of slide" 0 "Reserved" ;
+VAL_ 953 RSM_DewPointT 2047 "Invalid" ;
+VAL_ 953 RSM_RainFalLev 15 "Invaild" 14 "Reversed" 13 "Level13" 12 "Level12" 11 "Level11" 10 "Level10" 9 "Level9" 8 "Level8" 7 "Level7" 6 "Level6" 5 "Level5" 4 "Level4" 3 "Level3" 2 "Level2" 1 "Level1" 0 "No Rain" ;
+VAL_ 953 RSM_WinT 2047 "Invalid" ;
+VAL_ 953 RSM_RelHum 255 "Invalid" ;
+VAL_ 953 RSM_LeSolarInten 255 "Invalid" 254 "Initial Value" ;
+VAL_ 953 RSM_RiSolarInten 255 "Invalid" 254 "Initial Value" ;
+VAL_ 849 VDC_BattInletCooltTReq 127 "Invalid" ;
+VAL_ 849 VDC_battLoopCoolingLevel 7 "Reserved" 6 "冷却等级5" 5 "冷却等级4" 4 "水循环" 3 "冷却等级3" 2 "冷却等级2" 1 "冷却等级1" 0 "STOP" ;
+VAL_ 849 VDC_PTCF_ModeRequest 3 "Discharge" 2 "Temperature control" 1 "PWM control" 0 "No request" ;
+VAL_ 849 VDC_PTCF_PWM_Value 127 "Invalid" ;
+VAL_ 849 VDC_AllowHMC_HVworkReq 3 "Invalid" 2 "reserved" 1 "ON" 0 "OFF" ;
+VAL_ 849 VDC_BattCoolgLoopSts 3 "Failure" 2 "Warning" 1 "Normal" 0 "OFF" ;
+VAL_ 849 VDC_MotCoolgLoopSts 3 "Failure" 2 "Warning" 1 "Normal" 0 "OFF" ;
+VAL_ 849 VDC_ACHeatMode 7 "invalid" 6 "reserved" 5 "reserved" 4 "reserved" 3 "By PTC+Engine" 2 "By Engine" 1 "By PTC" 0 "off" ;
+VAL_ 849 VDC_BatHeatMode 7 "invalid" 6 "reserved" 5 "reserved" 4 "reserved" 3 "By PTC+Engine" 2 "By Engine" 1 "By PTC" 0 "off" ;
+VAL_ 849 VDC_ACReqStartEngRemind 3 "Invalid" 2 "空调加热器故障，启动增程器" 1 "空调需求，启动增程器" 0 "no request" ;
+VAL_ 849 VDC_HeatThreeDirectValveControl 127 "Invalid" 126 "reserved" 125 "reserved" 124 "reserved" 123 "reserved" 122 "reserved" 121 "reserved" 120 "reserved" 119 "reserved" 118 "reserved" 117 "reserved" 116 "reserved" 115 "reserved" 114 "reserved" 113 "reserved" 112 "reserved" 111 "reserved" 110 "reserved" 109 "reserved" 108 "reserved" 107 "reserved" 106 "reserved" 105 "reserved" 104 "reserved" 103 "reserved" 102 "reserved" 101 "reserved" ;
+VAL_ 789 BMS_BattVolt_U7 16383 "Invalid" 16382 "Initial Value" ;
+VAL_ 789 BMS_BattTempMax 255 "Invalid" 254 "Initial Value" ;
+VAL_ 789 BMS_BattTempMin 255 "Invalid" 254 "Initial Value" ;
+VAL_ 789 BMS_BattTempAvg 255 "Invalid" 254 "Initial Value" ;
+VAL_ 789 BMS_TrgtFlowRate 511 "Invalid" 510 "Initial Value" ;
+VAL_ 789 BMS_ThermRunawaySt 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Reserved" 2 "Reserved" 1 "Error" 0 "No Error" ;
+VAL_ 789 BMS_DCChrgSt 15 "预留" 14 "预留" 13 "预留" 12 "预留" 11 "预留" 10 "预留" 9 "EmergencyStop 紧急结束" 8 "Power supply mode 供电模式" 7 "Schedule 预约" 6 "Fault 充电异常终止" 5 "PreHeat 预热" 4 "CHGEnd 充电终止" 3 "Charging 充电中" 2 "Standby 待机" 1 "Init 初始化" 0 "Off 未插枪" ;
+VAL_ 789 BMS_ACChrgSt 15 "预留" 14 "预留" 13 "预留" 12 "预留" 11 "预留" 10 "预留" 9 "预留" 8 "预留" 7 "PilePowerOn 桩端供电" 6 "Fault 充电异常终止" 5 "PreHeat 预热" 4 "CHGEnd 充电终止" 3 "Charging 充电中" 2 "Standby 待机" 1 "Init 初始化" 0 "Off 未插枪" ;
+VAL_ 954 AGS1_CurrPosFeedback 255 "Position Step15 Fully Open" 254 "Position Step15 Fully Open" 253 "Position Step15 Fully Open" 252 "Position Step15 Fully Open" 251 "Position Step15 Fully Open" 250 "Position Step15 Fully Open" 249 "Position Step15 Fully Open" 248 "Position Step15 Fully Open" 247 "Position Step15 Fully Open" 246 "Position Step15 Fully Open" 245 "Position Step15 Fully Open" 244 "Position Step15 Fully Open" 243 "Position Step15 Fully Open" 242 "Position Step15 Fully Open" 241 "Position Step15 Fully Open" 240 "Position Step15 Fully Open" 239 "Position Step14" 238 "Position Step14" 237 "Position Step14" 236 "Position Step14" 235 "Position Step14" 234 "Position Step14" 233 "Position Step14" 232 "Position Step14" 231 "Position Step14" 230 "Position Step14" 229 "Position Step14" 228 "Position Step14" 227 "Position Step14" 226 "Position Step14" 225 "Position Step14" 224 "Position Step14" 223 "Position Step13" 222 "Position Step13" 221 "Position Step13" 220 "Position Step13" 219 "Position Step13" 218 "Position Step13" 217 "Position Step13" 216 "Position Step13" 215 "Position Step13" 214 "Position Step13" 213 "Position Step13" 212 "Position Step13" 211 "Position Step13" 210 "Position Step13" 209 "Position Step13" 208 "Position Step13" 207 "Position Step12" 206 "Position Step12" 205 "Position Step12" 204 "Position Step12" 203 "Position Step12" 202 "Position Step12" 201 "Position Step12" 200 "Position Step12" 199 "Position Step12" 198 "Position Step12" 197 "Position Step12" 196 "Position Step12" 195 "Position Step12" 194 "Position Step12" 193 "Position Step12" 192 "Position Step12" 191 "Position Step11" 190 "Position Step11" 189 "Position Step11" 188 "Position Step11" 187 "Position Step11" 186 "Position Step11" 185 "Position Step11" 184 "Position Step11" 183 "Position Step11" 182 "Position Step11" 181 "Position Step11" 180 "Position Step11" 179 "Position Step11" 178 "Position Step11" 177 "Position Step11" 176 "Position Step11" 175 "Position Step10" 174 "Position Step10" 173 "Position Step10" 172 "Position Step10" 171 "Position Step10" 170 "Position Step10" 169 "Position Step10" 168 "Position Step10" 167 "Position Step10" 166 "Position Step10" 165 "Position Step10" 164 "Position Step10" 163 "Position Step10" 162 "Position Step10" 161 "Position Step10" 160 "Position Step10" 159 "Position Step9" 158 "Position Step9" 157 "Position Step9" 156 "Position Step9" 155 "Position Step9" 154 "Position Step9" 153 "Position Step9" 152 "Position Step9" 151 "Position Step9" 150 "Position Step9" 149 "Position Step9" 148 "Position Step9" 147 "Position Step9" 146 "Position Step9" 145 "Position Step9" 144 "Position Step9" 143 "Position Step8" 142 "Position Step8" 141 "Position Step8" 140 "Position Step8" 139 "Position Step8" 138 "Position Step8" 137 "Position Step8" 136 "Position Step8" 135 "Position Step8" 134 "Position Step8" 133 "Position Step8" 132 "Position Step8" 131 "Position Step8" 130 "Position Step8" 129 "Position Step8" 128 "Position Step8" 127 "Position Step7" 126 "Position Step7" 125 "Position Step7" 124 "Position Step7" 123 "Position Step7" 122 "Position Step7" 121 "Position Step7" 120 "Position Step7" 119 "Position Step7" 118 "Position Step7" 117 "Position Step7" 116 "Position Step7" 115 "Position Step7" 114 "Position Step7" 113 "Position Step7" 112 "Position Step7" 111 "Position Step6" 110 "Position Step6" 109 "Position Step6" 108 "Position Step6" 107 "Position Step6" 106 "Position Step6" 105 "Position Step6" 104 "Position Step6" 103 "Position Step6" 102 "Position Step6" 101 "Position Step6" 100 "Position Step6" 99 "Position Step6" 98 "Position Step6" 97 "Position Step6" 96 "Position Step6" 95 "Position Step5" 94 "Position Step5" 93 "Position Step5" 92 "Position Step5" 91 "Position Step5" 90 "Position Step5" 89 "Position Step5" 88 "Position Step5" 87 "Position Step5" 86 "Position Step5" 85 "Position Step5" 84 "Position Step5" 83 "Position Step5" 82 "Position Step5" 81 "Position Step5" 80 "Position Step5" 79 "Position Step4" 78 "Position Step4" 77 "Position Step4" 76 "Position Step4" 75 "Position Step4" 74 "Position Step4" 73 "Position Step4" 72 "Position Step4" 71 "Position Step4" 70 "Position Step4" 69 "Position Step4" 68 "Position Step4" 67 "Position Step4" 66 "Position Step4" 65 "Position Step4" 64 "Position Step4" 63 "Position Step3" 62 "Position Step3" 61 "Position Step3" 60 "Position Step3" 59 "Position Step3" 58 "Position Step3" 57 "Position Step3" 56 "Position Step3" 55 "Position Step3" 54 "Position Step3" 53 "Position Step3" 52 "Position Step3" 51 "Position Step3" 50 "Position Step3" 49 "Position Step3" 48 "Position Step3" 47 "Position Step2" 46 "Position Step2" 45 "Position Step2" 44 "Position Step2" 43 "Position Step2" 42 "Position Step2" 41 "Position Step2" 40 "Position Step2" 39 "Position Step2" 38 "Position Step2" 37 "Position Step2" 36 "Position Step2" 35 "Position Step2" 34 "Position Step2" 33 "Position Step2" 32 "Position Step2" 31 "Position Step1" 30 "Position Step1" 29 "Position Step1" 28 "Position Step1" 27 "Position Step1" 26 "Position Step1" 25 "Position Step1" 24 "Position Step1" 23 "Position Step1" 22 "Position Step1" 21 "Position Step1" 20 "Position Step1" 19 "Position Step1" 18 "Position Step1" 17 "Position Step1" 16 "Position Step1" 15 "Position Step0 Fully Close" 14 "Position Step0 Fully Close" 13 "Position Step0 Fully Close" 12 "Position Step0 Fully Close" 11 "Position Step0 Fully Close" 10 "Position Step0 Fully Close" 9 "Position Step0 Fully Close" 8 "Position Step0 Fully Close" 7 "Position Step0 Fully Close" 6 "Position Step0 Fully Close" 5 "Position Step0 Fully Close" 4 "Position Step0 Fully Close" 3 "Position Step0 Fully Close" 2 "Position Step0 Fully Close" 1 "Position Step0 Fully Close" 0 "Position Step0 Fully Close" ;
+VAL_ 954 VIU_BattInletWaterT 255 "Invalid" ;
+VAL_ 954 VIU_BattOutletWaterT 255 "Invalid" ;
+VAL_ 954 VIU_BattInletWaterPumpSt 3 "No PWM signal" 2 "Pump fault" 1 "No liquid" 0 "Normal" ;
+VAL_ 954 VIU_ReMotInletWaterPumpSt 3 "No PWM signal" 2 "Pump fault" 1 "No liquid" 0 "Normal" ;
+VAL_ 954 VIU_CoolgFanSt 3 "Invalid" 2 "Active" 1 "No Active" 0 "Initial" ;
+VAL_ 954 VIU_PumpHSt 3 "No PWM signal" 2 "Pump fault" 1 "No liquid" 0 "Normal" ;
+VAL_ 954 VIU_CoolgFanCtrl 101 "Invalid" ;
+VAL_ 954 VIU_NavTunnelSt 1 "Enter" 0 "OUT" ;
+VAL_ 863 VDC_FactoryReset 1 "Request" 0 "NO Request" ;
+VAL_ 863 VDC_DrvMod 15 "Reserved" 14 "UltraPowerSaving" 13 "Wade" 12 "Reserved" 11 "Reserved" 10 "MtnSicknessMtgtn" 9 "Reserved" 8 "Race" 7 "Escape" 6 "Snow" 5 "Wet" 4 "Individual" 3 "Sport" 2 "Comfort" 1 "ECO" 0 "Initial" ;
+VAL_ 863 VDC_CDC_WashModSts 7 "Invalid" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "OFF" 2 "ConveyerBelt" 1 "Normal" 0 "NO_REQUEST" ;
+VAL_ 863 VDC_TotalRang 1048575 "Invalid" ;
+VAL_ 863 VDC_REVMode 7 "Reserved" 6 "Electric_Keeping强制保电" 5 "Fuel_Priority_Saving燃油优先-节油" 4 "Electric_Only强制纯电" 3 "Fuel_Test燃油检测" 2 "Fuel_Priority_Standard燃油优先-标准" 1 "Auto自动" 0 "Electric_Priority纯电优先" ;
+VAL_ 958 VIU_DrvrDoorSt 3 "Invalid" 2 "Opened" 1 "Closed" 0 "Initial" ;
+VAL_ 958 VIU_PassDoorSt 3 "Invalid" 2 "Opened" 1 "Closed" 0 "Initial" ;
+VAL_ 958 VIU_RLDoorSt 3 "Invalid" 2 "Opened" 1 "Closed" 0 "Initial" ;
+VAL_ 958 VIU_RRDoorSt 3 "Invalid" 2 "Opened" 1 "Closed" 0 "Initial" ;
+VAL_ 958 VIU_TailgateSt 15 "Invalid" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "opening" 3 "closeing" 2 "opened" 1 "closed" 0 "Initial" ;
+VAL_ 958 VIU_HoodSts 3 "Invalid" 2 "Opened" 1 "Closed" 0 "Initial" ;
+VAL_ 958 VIU_DriverSeatOccptSt 3 "Invalid" 2 "Occupied" 1 "Free" 0 "Initial" ;
+VAL_ 958 VIU_PassSeatOccptSt 3 "Invalid" 2 "Occupied" 1 "Free" 0 "Initial" ;
+VAL_ 958 VIU_RLSecRowSeatOccptSt 3 "Invalid" 2 "Occupied" 1 "Free" 0 "Initial" ;
+VAL_ 958 VIU_RMSecRowSeatOccptSt 3 "Invalid" 2 "Occupied" 1 "Free" 0 "Initial" ;
+VAL_ 958 VIU_RRSecRowSeatOccptSt 3 "Invalid" 2 "Occupied" 1 "Free" 0 "Initial" ;
+VAL_ 958 VIU_RLThrdRowSeatOccptSt 3 "Invalid" 2 "Occupied" 1 "Free" 0 "Initial" ;
+VAL_ 958 VIU_RRThrdRowSeatOccptSt 3 "Invalid" 2 "Occupied" 1 "Free" 0 "Initial" ;
+VAL_ 399 VDC_HV_State 7 "RESERVED" 6 "RESERVED" 5 "RESERVED" 4 "RESERVED" 3 "RESERVED" 2 "RESERVED" 1 "HIGH_VOLT_UP" 0 "HIGH_VOLT_DOWN" ;
+VAL_ 399 IPB_VehicleSpeedValid 1 "Valid" 0 "Invalid" ;
+VAL_ 399 IPB_VehicleSpeed 8191 "Invalid" ;
+VAL_ 901 CCU_MotSpdVld 1 "Invalid" 0 "Valid" ;
+VAL_ 901 CCU_CtrlrVoltVld 1 "Invalid" 0 "Valid" ;
+VAL_ 901 CCU_CtrlrCrtVld 1 "Invalid" 0 "Valid" ;
+VAL_ 902 CCU_HVUnderVoltFlt 1 "异常" 0 "正常" ;
+VAL_ 902 CCU_FaultLevel 7 "invalid" 6 "reserve" 5 "Level 5" 4 "Level 4" 3 "reserve" 2 "Level 2" 1 "Level 1" 0 "Normal" ;
+VAL_ 902 CCU_CrtSts 3 "Reserved" 2 "故障状态" 1 "工作状态" 0 "待机状态" ;
+VAL_ 902 CCU_IninSts 1 "初始化已完成" 0 "初始化未完成" ;
+VAL_ 902 CCU_OverCrtFlt 1 "异常" 0 "正常" ;
+VAL_ 902 CCU_HVIntlkFlt 1 "异常" 0 "正常" ;
+VAL_ 902 CCU_IPMTOverFlt 1 "异常" 0 "正常" ;
+VAL_ 902 CCU_ComLost_ECC 1 "异常" 0 "正常" ;
+VAL_ 902 CCU_CtrlCircFlt 1 "异常" 0 "正常" ;
+VAL_ 902 CCU_IPMHwFlt 1 "异常" 0 "正常" ;
+VAL_ 902 CCU_HVIL_St 3 "HW Fault硬件检测电路故障" 2 "Unlock确认互锁连接异常" 1 "Lock互锁连接正常" 0 "Not ready检测结果未出" ;
+VAL_ 1352 CAN_busoff 1 "异常" 0 "正常" ;
+VAL_ 1352 LV_overvoltage 1 "异常" 0 "正常" ;
+VAL_ 1352 LV_undervoltage 1 "异常" 0 "正常" ;
+VAL_ 1352 Compressor_software_overcurrent 1 "异常" 0 "正常" ;
+VAL_ 1352 Compressor_loss_phase 1 "异常" 0 "正常" ;
+VAL_ 1352 Compressor_startup_failure 1 "异常" 0 "正常" ;
+VAL_ 1352 HV_Bus_overvoltage 1 "异常" 0 "正常" ;
+VAL_ 1352 Current_sensor_fault 1 "异常" 0 "正常" ;
+VAL_ 1352 HV_interlock_short_to_ground 1 "异常" 0 "正常" ;
+VAL_ 1352 HV_interlock_short_to_power 1 "异常" 0 "正常" ;
+VAL_ 1352 Temperature_sensor_fault 1 "异常" 0 "正常" ;
+VAL_ 1352 Over_load 1 "异常" 0 "正常" ;
+VAL_ 1352 Drive_overvoltage 1 "异常" 0 "正常" ;
+VAL_ 1352 Drive_undervoltage 1 "异常" 0 "正常" ;
+VAL_ 1352 Voltage_sensor_fault 1 "异常" 0 "正常" ;
+VAL_ 1352 Drive_voltage_sensor_fault 1 "异常" 0 "正常" ;
+VAL_ 1352 Low_temperature 1 "异常" 0 "正常" ;
+VAL_ 1352 Out_of_step 1 "异常" 0 "正常" ;
+VAL_ 909 PTC_F_Power_Rate 127 "Invalid" ;
+VAL_ 909 PTCF_DischargeState 3 "放电失败" 2 "放电完成" 1 "放电中" 0 "未放电" ;
+VAL_ 909 PTC_F_FaultLevel 7 "invalid" 6 "reserve" 5 "Level 5" 4 "Level 4" 3 "reserve" 2 "Level 2" 1 "Level 1" 0 "Normal" ;
+VAL_ 909 PTC_F_InlT 255 "Invalid" ;
+VAL_ 909 PTC_F_OutlT 255 "Invalid" ;
+VAL_ 909 PTC_F_CrtT 255 "Invalid" ;
+VAL_ 909 PTC_F_IninSts 1 "初始化已完成" 0 "初始化未完成" ;
+VAL_ 909 PTC_F_HVPwrSplySts 1 "已供电" 0 "未供电" ;
+VAL_ 909 PTC_F_ActGear 15 "15档" 14 "14挡" 13 "13挡" 12 "12挡" 11 "11挡" 10 "10挡" 9 "9挡" 8 "8挡" 7 "7挡" 6 "6挡" 5 "5挡" 4 "4挡" 3 "3挡" 2 "2挡" 1 "1挡" 0 "0挡" ;
+VAL_ 909 PTC_F_Mod 1 "主动放电模式" 0 "挡位/功率工作模式" ;
+VAL_ 905 PTC_F_HighVoltage 65535 "Invalid" ;
+VAL_ 905 PTC_F_PCBT 255 "Invalid" ;
+VAL_ 905 PTC_F_Crt 65535 "Invalid" ;
+VAL_ 905 PTC_F_CrtSts 3 "挡位工作状态" 2 "故障状态" 1 "功率工作状态" 0 "待机状态" ;
+VAL_ 905 PTC_F_ComLost_VDC 1 "异常" 0 "正常" ;
+VAL_ 905 PTC_F_OverCrtFlt 1 "异常" 0 "正常" ;
+VAL_ 905 PTC_F_HVUnderVoltFlt 1 "异常" 0 "正常" ;
+VAL_ 905 PTC_F_HVOverVoltFlt 1 "异常" 0 "正常" ;
+VAL_ 905 PTC_F_ChkBattOverVoltFlt 1 "异常" 0 "正常" ;
+VAL_ 905 PTC_F_ChkBattUnderVoltFlt 1 "异常" 0 "正常" ;
+VAL_ 905 PTC_F_InlTSnsrFlt 1 "异常" 0 "正常" ;
+VAL_ 905 PTC_F_OutlTSnsrFlt 1 "异常" 0 "正常" ;
+VAL_ 905 PTC_F_InlOverTFlt 1 "异常" 0 "正常" ;
+VAL_ 905 PTC_F_OutlOverTFlt 1 "异常" 0 "正常" ;
+VAL_ 905 PTC_F_PCBOverTFlt 1 "异常" 0 "正常" ;
+VAL_ 905 PTC_F_PCBTSnsrFlt 1 "异常" 0 "正常" ;
+VAL_ 905 PTC_F_PwrOutpFlt 1 "异常" 0 "正常" ;
+VAL_ 905 PTC_F_IGBTOpenCircuitFlt 1 "异常" 0 "正常" ;
+VAL_ 905 PTC_F_IGBTSnsrFlt 1 "异常" 0 "正常" ;
+VAL_ 905 PTC_F_IGBTOverTFlt 1 "异常" 0 "正常" ;
+VAL_ 905 PTC_F_HVIL_St 3 "HW Fault硬件检测电路故障" 2 "Unlock确认互锁连接异常" 1 "Lock互锁连接正常" 0 "Not ready检测结果未出" ;
+VAL_ 905 PTC_F_CtrlrVoltFlt 1 "异常" 0 "正常" ;
+VAL_ 907 PTC_R_HeatPwr 255 "Invalid" ;
+VAL_ 907 PTC_R_Status 1 "ON" 0 "OFF" ;
+VAL_ 907 PTC_R_FaultState 1 "Failure" 0 "Normal" ;
+VAL_ 907 PTC_R_OverCurrentFault 1 "Failure" 0 "Normal" ;
+VAL_ 907 PTC_R_LvUnderVoltFault 1 "Failure" 0 "Normal" ;
+VAL_ 907 PTC_R_LvOverVoltFault 1 "Failure" 0 "Normal" ;
+VAL_ 907 PTC_R_IGBTTempSensorFault 1 "Failure" 0 "Normal" ;
+VAL_ 907 PTC_R_IGBTOverTempFault 1 "Failure" 0 "Normal" ;
+VAL_ 907 PTC_R_TempSensorFault 1 "Failure" 0 "Normal" ;
+VAL_ 907 PTC_R_OverTempFault 1 "Failure" 0 "Normal" ;
+VAL_ 907 PTC_R_HvUnderVoltFault 1 "Failure" 0 "Normal" ;
+VAL_ 907 PTC_R_HvOverVoltFault 1 "Failure" 0 "Normal" ;
+VAL_ 907 PTC_R_ShortCircuitFault 1 "Failure" 0 "Normal" ;
+VAL_ 907 PTC_R_OpentCircuitFault 1 "Failure" 0 "Normal" ;
+VAL_ 907 PTC_R_HVIL_St 3 "HW Fault硬件检测电路故障" 2 "Unlock确认互锁连接异常" 1 "Lock互锁连接正常" 0 "Not ready检测结果未出" ;
+VAL_ 907 PTC_R_FaultLevel 7 "invalid" 6 "reserve" 5 "Level 5" 4 "Level 4" 3 "reserve" 2 "Level 2" 1 "Level 1" 0 "Normal" ;
+VAL_ 907 PTC_R_IninSts 1 "初始化已完成" 0 "初始化未完成" ;
+VAL_ 907 PTC_R_CrtSts 3 "挡位工作状态" 2 "故障状态" 1 "功率工作状态" 0 "待机状态" ;
+VAL_ 903 CDC_ACSystemOnOffSet 3 "INVALID" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 903 CDC_RACSystemOnOffSet 3 "INVALID" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 903 CDC_ACSet 3 "INVALID" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 903 CDC_FrontDefrostSet 3 "INVALID" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 903 CDC_FHvacBlowLvSet 15 "Reserved" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Level 10(Reserved)" 9 "Level  9" 8 "Level  8" 7 "Level  7" 6 "Level  6" 5 "Level  5" 4 "Level  4" 3 "Level  3" 2 "Level  2" 1 "Level  1" 0 "No Request" ;
+VAL_ 903 CDC_RHvacBlowLvSet 15 "Reserved" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Level 10(Reserved)" 9 "Level  9(Reserved)" 8 "Level  8(Reserved)" 7 "Level  7" 6 "Level  6" 5 "Level  5" 4 "Level  4" 3 "Level  3" 2 "Level  2" 1 "Level  1" 0 "No Request" ;
+VAL_ 903 CDC_FHvacModeSet 15 "Reserved" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "BlowFace & Foot & Windows" 6 "BlowFace & Windows" 5 "BlowWindows" 4 "BlowFoot & Windows" 3 "BlowFoot" 2 "BlowFace & Foot" 1 "BlowFace" 0 "NO Request" ;
+VAL_ 903 CDC_RHvacModeSet 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "BlowFoot" 2 "BlowFace & Foot" 1 "BlowFace" 0 "NO Request" ;
+VAL_ 903 CDC_DriverTempCSet 31 "INVALID" 30 "HI" 29 "30.5" 28 "30" 3 "17.5" 2 "17" 1 "16.5" 0 "lO" ;
+VAL_ 903 CDC_PassengerTempCSet 31 "INVALID" 30 "HI" 29 "30.5" 28 "30" 3 "17.5" 2 "17" 1 "16.5" 0 "lO" ;
+VAL_ 903 CDC_RrTempCSet 31 "INVALID" 30 "HI" 29 "30.5" 28 "30" 3 "17.5" 2 "17" 1 "16.5" 0 "lO" ;
+VAL_ 903 TBOX_ACONOFFSet 3 "Reserved" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 903 TBOX_ACTempSet 31 "INVALID" 30 "HI" 29 "30.5" 28 "30" 3 "17.5" 2 "17" 1 "16.5" 0 "LO" ;
+VAL_ 903 TBOX_ACVentSet 3 "Reserved" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 903 TBOX_ACDefrostSet 3 "Reserved" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 903 TBOX_MaxACSet 3 "Reserved" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 903 TBOX_MaxHeatSet 3 "Reserved" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 903 TBOX_PurificationSet 3 "Reserved" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 903 TBOX_UVCSet 3 "Level2" 2 "Level1" 1 "OFF" 0 "NO Request" ;
+VAL_ 903 CDC_ThirdRowACSystemOnOffSet 3 "INVALID" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 897 CDC_ACMaxSet 3 "INVALID" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 897 CDC_HeatMaxSet 3 "INVALID" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 897 CDC_HvacAutoModeSet 3 "INVALID" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 897 CDC_RHvacAutoModeSet 3 "INVALID" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 897 CDC_AutoDefogSet 3 "INVALID" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 897 CDC_ACFourZoneSync 3 "INVALID" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 897 CDC_TempExclusive 3 "INVALID" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 897 CDC_CircModSet 3 "AUTO" 2 "External" 1 "Internal" 0 "NO Request" ;
+VAL_ 897 CDC_IntelligentizePurSet 3 "INVALID" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 897 CDC_ACParkAutoVentSet 3 "INVALID" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 897 CDC_IONset 3 "INVALID" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 897 CDC_UVCset 3 "Level2" 2 "Level1" 1 "OFF" 0 "NO Request" ;
+VAL_ 897 CDC_FilterRenewSet 1 "Renew" 0 "NO request" ;
+VAL_ 897 CDC_AutoDrySet 3 "Reserved" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 897 CDC_ACECOModReq 3 "Reserved" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 897 CDC_VentSet 3 "Reserved" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 897 CDC_OdorRemoveSet 3 "Reserved" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 897 CDC_ThirdRowHvacBlowLvSet 15 "Reserved" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Level 10(Reserved)" 9 "Level  9(Reserved)" 8 "Level  8(Reserved)" 7 "Level  7" 6 "Level  6" 5 "Level  5" 4 "Level  4" 3 "Level  3" 2 "Level  2" 1 "Level  1" 0 "No Request" ;
+VAL_ 897 CDC_ThirdRowHvacModeSet 7 "INVALID" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "FOOT" 2 "FACE_AND_FOOT" 1 "FACE" 0 "NO Request" ;
+VAL_ 897 CDC_ThirdRowTempCSet 31 "INVALID" 30 "HI" 29 "30.5" 28 "30" 3 "17.5" 2 "17" 1 "16.5" 0 "lO" ;
+VAL_ 897 CDC_ThirdRowHvacAutoModeSet 3 "INVALID" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 897 TBOX_ACParkAutoVentSetSts 3 "Reserved" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 826 AC_ACSystemOnOffSts 3 "Invalid" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 826 AC_RACSystemOnOffSts 3 "Invalid" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 826 AC_ACSts 3 "Invalid" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 826 AC_FrontDefrostSts 3 "Invalid" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 826 AC_FBlowSpeedLevel 15 "Invalid" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Level  9" 8 "Level  8" 7 "Level  7" 6 "Level  6" 5 "Level  5" 4 "Level  4" 3 "Level  3" 2 "Level  2" 1 "Level  1" 0 "Initial" ;
+VAL_ 826 AC_RBlowSpeedLevel 15 "Invalid" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Level  7" 6 "Level  6" 5 "Level  5" 4 "Level  4" 3 "Level  3" 2 "Level  2" 1 "Level  1" 0 "Initial" ;
+VAL_ 826 AC_FModeAdjustSts 15 "Invalid" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "BlowFace & Foot & Windows" 6 "BlowFace & Windows" 5 "BlowWindows" 4 "BlowFoot & Windows" 3 "BlowFoot" 2 "BlowFace & Foot" 1 "BlowFace" 0 "Initial" ;
+VAL_ 826 AC_RModeAdjustSts 7 "INVALID" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "BlowFoot" 2 "BlowFace & Foot" 1 "BlowFace" 0 "Initial" ;
+VAL_ 826 AC_DriverTempC 31 "INVALID" 30 "HI" 29 "30.5" 28 "30" 3 "17.5" 2 "17" 1 "16.5" 0 "lO" ;
+VAL_ 826 AC_PassengerTempC 31 "INVALID" 30 "HI" 29 "30.5" 28 "30" 3 "17.5" 2 "17" 1 "16.5" 0 "lO" ;
+VAL_ 826 AC_RrTempC 31 "INVALID" 30 "HI" 29 "30.5" 28 "30" 3 "17.5" 2 "17" 1 "16.5" 0 "lO" ;
+VAL_ 826 AC_CircleModeSts 7 "Invalid" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Auto" 2 "External" 1 "Internal" 0 "Initial" ;
+VAL_ 826 AC_ParkAutoVentSts 3 "Invalid" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 826 AC_FHvacBlowLvAutoSts 1 "Not Auto" 0 "Auto" ;
+VAL_ 826 AC_RHvacBlowLvAutoSts 1 "Not Auto" 0 "Auto" ;
+VAL_ 826 AC_FBlowModeAutoSts 1 "Not Auto" 0 "Auto" ;
+VAL_ 826 AC_RBlowModeAutoSts 1 "Not Auto" 0 "Auto" ;
+VAL_ 826 AC_ThirdRowACSystemOnOffSts 3 "INVALID" 2 "ON" 1 "OFF" 0 "INITIAL" ;
+VAL_ 826 AC_ThirdRowHvacBlowLvAutoSts 1 "Not Auto" 0 "Auto" ;
+VAL_ 826 AC_ThirdRowBlowModeAutoSts 1 "Not Auto" 0 "Auto" ;
+VAL_ 827 AC_ACMaxSts 3 "Invalid" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 827 AC_HeatMaxSts 3 "Invalid" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 827 AC_AutoModeSts 3 "Invalid" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 827 AC_RAutoModeSts 3 "Invalid" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 827 AC_AutoDefogSts 3 "Invalid" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 827 AC_ACFourZoneSyncSts 3 "Invalid" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 827 AC_TempExclusiveSts 3 "Invalid" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 827 AC_AutoDefogRunSts 3 "invaild" 2 "STOP" 1 "Running" 0 "initial" ;
+VAL_ 827 AC_FaultREASON 15 "Invalid" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "CCU Fault" 2 "Sensor Fault" 1 "Voltage Fault" 0 "NORMAL" ;
+VAL_ 827 AC_Pres_HP 511 "Invalid" ;
+VAL_ 827 AC_Pres_LPT_Chiller 127 "Invalid" ;
+VAL_ 827 AC_Pres_LPT_EVAP 127 "Invalid" ;
+VAL_ 827 AC_ThirdRowBlowSpeedLevel 15 "Reserved" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Level 10(Reserved)" 9 "Level  9(Reserved)" 8 "Level  8(Reserved)" 7 "Level  7" 6 "Level  6" 5 "Level  5" 4 "Level  4" 3 "Level  3" 2 "Level  2" 1 "Level  1" 0 "No Request" ;
+VAL_ 827 AC_ThirdRowModeAdjustSts 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "BlowFoot" 2 "BlowFace & Foot" 1 "BlowFace" 0 "Initial" ;
+VAL_ 827 AC_ThirdRowTempC 31 "INVALID" 30 "HI" 29 "30.5" 28 "30" 3 "17.5" 2 "17" 1 "16.5" 0 "lO" ;
+VAL_ 827 AC_ThirdRowAutoModeSts 3 "INVALID" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 828 AC_TimeVentSt 3 "Invalid" 2 "关闭" 1 "开启" 0 "Initial" ;
+VAL_ 828 AC_VentTimeFlag 3 "Invalid" 2 "已到期" 1 "未到期" 0 "Initial" ;
+VAL_ 828 AC_VentholdTime 511 "Invalid" ;
+VAL_ 828 AC_VentTime 1023 "Invalid" 1022 "通风次数" 1021 "通风次数" 1020 "通风次数" 1019 "通风次数" 1018 "通风次数" 1017 "通风次数" 1016 "通风次数" 1015 "通风次数" 1014 "通风次数" 1013 "通风次数" 1012 "通风次数" 1011 "通风次数" 1010 "通风次数" 1009 "通风次数" 1008 "通风次数" 1007 "通风次数" 1006 "通风次数" 1005 "通风次数" 1004 "通风次数" 1003 "通风次数" 1002 "通风次数" 1001 "通风次数" 1000 "通风次数" 999 "通风次数" 998 "通风次数" 997 "通风次数" 996 "通风次数" 995 "通风次数" 994 "通风次数" 993 "通风次数" 992 "通风次数" 991 "通风次数" 990 "通风次数" 989 "通风次数" 988 "通风次数" 987 "通风次数" 986 "通风次数" 985 "通风次数" 984 "通风次数" 983 "通风次数" 982 "通风次数" 981 "通风次数" 980 "通风次数" 979 "通风次数" 978 "通风次数" 977 "通风次数" 976 "通风次数" 975 "通风次数" 974 "通风次数" 973 "通风次数" 972 "通风次数" 971 "通风次数" 970 "通风次数" 969 "通风次数" 968 "通风次数" 967 "通风次数" 966 "通风次数" 965 "通风次数" 964 "通风次数" 963 "通风次数" 962 "通风次数" 961 "通风次数" 960 "通风次数" 959 "通风次数" 958 "通风次数" 957 "通风次数" 956 "通风次数" 955 "通风次数" 954 "通风次数" 953 "通风次数" 952 "通风次数" 951 "通风次数" 950 "通风次数" 949 "通风次数" 948 "通风次数" 947 "通风次数" 946 "通风次数" 945 "通风次数" 944 "通风次数" 943 "通风次数" 942 "通风次数" 941 "通风次数" 940 "通风次数" 939 "通风次数" 938 "通风次数" 937 "通风次数" 936 "通风次数" 935 "通风次数" 934 "通风次数" 933 "通风次数" 932 "通风次数" 931 "通风次数" 930 "通风次数" 929 "通风次数" 928 "通风次数" 927 "通风次数" 926 "通风次数" 925 "通风次数" 924 "通风次数" 923 "通风次数" 922 "通风次数" 921 "通风次数" 920 "通风次数" 919 "通风次数" 918 "通风次数" 917 "通风次数" 916 "通风次数" 915 "通风次数" 914 "通风次数" 913 "通风次数" 912 "通风次数" 911 "通风次数" 910 "通风次数" 909 "通风次数" 908 "通风次数" 907 "通风次数" 906 "通风次数" 905 "通风次数" 904 "通风次数" 903 "通风次数" 902 "通风次数" 901 "通风次数" 900 "通风次数" 899 "通风次数" 898 "通风次数" 897 "通风次数" 896 "通风次数" 895 "通风次数" 894 "通风次数" 893 "通风次数" 892 "通风次数" 891 "通风次数" 890 "通风次数" 889 "通风次数" 888 "通风次数" 887 "通风次数" 886 "通风次数" 885 "通风次数" 884 "通风次数" 883 "通风次数" 882 "通风次数" 881 "通风次数" 880 "通风次数" 879 "通风次数" 878 "通风次数" 877 "通风次数" 876 "通风次数" 875 "通风次数" 874 "通风次数" 873 "通风次数" 872 "通风次数" 871 "通风次数" 870 "通风次数" 869 "通风次数" 868 "通风次数" 867 "通风次数" 866 "通风次数" 865 "通风次数" 864 "通风次数" 863 "通风次数" 862 "通风次数" 861 "通风次数" 860 "通风次数" 859 "通风次数" 858 "通风次数" 857 "通风次数" 856 "通风次数" 855 "通风次数" 854 "通风次数" 853 "通风次数" 852 "通风次数" 851 "通风次数" 850 "通风次数" 849 "通风次数" 848 "通风次数" 847 "通风次数" 846 "通风次数" 845 "通风次数" 844 "通风次数" 843 "通风次数" 842 "通风次数" 841 "通风次数" 840 "通风次数" 839 "通风次数" 838 "通风次数" 837 "通风次数" 836 "通风次数" 835 "通风次数" 834 "通风次数" 833 "通风次数" 832 "通风次数" 831 "通风次数" 830 "通风次数" 829 "通风次数" 828 "通风次数" 827 "通风次数" 826 "通风次数" 825 "通风次数" 824 "通风次数" 823 "通风次数" 822 "通风次数" 821 "通风次数" 820 "通风次数" 819 "通风次数" 818 "通风次数" 817 "通风次数" 816 "通风次数" 815 "通风次数" 814 "通风次数" 813 "通风次数" 812 "通风次数" 811 "通风次数" 810 "通风次数" 809 "通风次数" 808 "通风次数" 807 "通风次数" 806 "通风次数" 805 "通风次数" 804 "通风次数" 803 "通风次数" 802 "通风次数" 801 "通风次数" 800 "通风次数" 799 "通风次数" 798 "通风次数" 797 "通风次数" 796 "通风次数" 795 "通风次数" 794 "通风次数" 793 "通风次数" 792 "通风次数" 791 "通风次数" 790 "通风次数" 789 "通风次数" 788 "通风次数" 787 "通风次数" 786 "通风次数" 785 "通风次数" 784 "通风次数" 783 "通风次数" 782 "通风次数" 781 "通风次数" 780 "通风次数" 779 "通风次数" 778 "通风次数" 777 "通风次数" 776 "通风次数" 775 "通风次数" 774 "通风次数" 773 "通风次数" 772 "通风次数" 771 "通风次数" 770 "通风次数" 769 "通风次数" 768 "通风次数" 767 "通风次数" 766 "通风次数" 765 "通风次数" 764 "通风次数" 763 "通风次数" 762 "通风次数" 761 "通风次数" 760 "通风次数" 759 "通风次数" 758 "通风次数" 757 "通风次数" 756 "通风次数" 755 "通风次数" 754 "通风次数" 753 "通风次数" 752 "通风次数" 751 "通风次数" 750 "通风次数" 749 "通风次数" 748 "通风次数" 747 "通风次数" 746 "通风次数" 745 "通风次数" 744 "通风次数" 743 "通风次数" 742 "通风次数" 741 "通风次数" 740 "通风次数" 739 "通风次数" 738 "通风次数" 737 "通风次数" 736 "通风次数" 735 "通风次数" 734 "通风次数" 733 "通风次数" 732 "通风次数" 731 "通风次数" 730 "通风次数" 729 "通风次数" 728 "通风次数" 727 "通风次数" 726 "通风次数" 725 "通风次数" 724 "通风次数" 723 "通风次数" 722 "通风次数" 721 "通风次数" 720 "通风次数" 719 "通风次数" 718 "通风次数" 717 "通风次数" 716 "通风次数" 715 "通风次数" 714 "通风次数" 713 "通风次数" 712 "通风次数" 711 "通风次数" 710 "通风次数" 709 "通风次数" 708 "通风次数" 707 "通风次数" 706 "通风次数" 705 "通风次数" 704 "通风次数" 703 "通风次数" 702 "通风次数" 701 "通风次数" 700 "通风次数" 699 "通风次数" 698 "通风次数" 697 "通风次数" 696 "通风次数" 695 "通风次数" 694 "通风次数" 693 "通风次数" 692 "通风次数" 691 "通风次数" 690 "通风次数" 689 "通风次数" 688 "通风次数" 687 "通风次数" 686 "通风次数" 685 "通风次数" 684 "通风次数" 683 "通风次数" 682 "通风次数" 681 "通风次数" 680 "通风次数" 679 "通风次数" 678 "通风次数" 677 "通风次数" 676 "通风次数" 675 "通风次数" 674 "通风次数" 673 "通风次数" 672 "通风次数" 671 "通风次数" 670 "通风次数" 669 "通风次数" 668 "通风次数" 667 "通风次数" 666 "通风次数" 665 "通风次数" 664 "通风次数" 663 "通风次数" 662 "通风次数" 661 "通风次数" 660 "通风次数" 659 "通风次数" 658 "通风次数" 657 "通风次数" 656 "通风次数" 655 "通风次数" 654 "通风次数" 653 "通风次数" 652 "通风次数" 651 "通风次数" 650 "通风次数" 649 "通风次数" 648 "通风次数" 647 "通风次数" 646 "通风次数" 645 "通风次数" 644 "通风次数" 643 "通风次数" 642 "通风次数" 641 "通风次数" 640 "通风次数" 639 "通风次数" 638 "通风次数" 637 "通风次数" 636 "通风次数" 635 "通风次数" 634 "通风次数" 633 "通风次数" 632 "通风次数" 631 "通风次数" 630 "通风次数" 629 "通风次数" 628 "通风次数" 627 "通风次数" 626 "通风次数" 625 "通风次数" 624 "通风次数" 623 "通风次数" 622 "通风次数" 621 "通风次数" 620 "通风次数" 619 "通风次数" 618 "通风次数" 617 "通风次数" 616 "通风次数" 615 "通风次数" 614 "通风次数" 613 "通风次数" 612 "通风次数" 611 "通风次数" 610 "通风次数" 609 "通风次数" 608 "通风次数" 607 "通风次数" 606 "通风次数" 605 "通风次数" 604 "通风次数" 603 "通风次数" 602 "通风次数" 601 "通风次数" 600 "通风次数" 599 "通风次数" 598 "通风次数" 597 "通风次数" 596 "通风次数" 595 "通风次数" 594 "通风次数" 593 "通风次数" 592 "通风次数" 591 "通风次数" 590 "通风次数" 589 "通风次数" 588 "通风次数" 587 "通风次数" 586 "通风次数" 585 "通风次数" 584 "通风次数" 583 "通风次数" 582 "通风次数" 581 "通风次数" 580 "通风次数" 579 "通风次数" 578 "通风次数" 577 "通风次数" 576 "通风次数" 575 "通风次数" 574 "通风次数" 573 "通风次数" 572 "通风次数" 571 "通风次数" 570 "通风次数" 569 "通风次数" 568 "通风次数" 567 "通风次数" 566 "通风次数" 565 "通风次数" 564 "通风次数" 563 "通风次数" 562 "通风次数" 561 "通风次数" 560 "通风次数" 559 "通风次数" 558 "通风次数" 557 "通风次数" 556 "通风次数" 555 "通风次数" 554 "通风次数" 553 "通风次数" 552 "通风次数" 551 "通风次数" 550 "通风次数" 549 "通风次数" 548 "通风次数" 547 "通风次数" 546 "通风次数" 545 "通风次数" 544 "通风次数" 543 "通风次数" 542 "通风次数" 541 "通风次数" 540 "通风次数" 539 "通风次数" 538 "通风次数" 537 "通风次数" 536 "通风次数" 535 "通风次数" 534 "通风次数" 533 "通风次数" 532 "通风次数" 531 "通风次数" 530 "通风次数" 529 "通风次数" 528 "通风次数" 527 "通风次数" 526 "通风次数" 525 "通风次数" 524 "通风次数" 523 "通风次数" 522 "通风次数" 521 "通风次数" 520 "通风次数" 519 "通风次数" 518 "通风次数" 517 "通风次数" 516 "通风次数" 515 "通风次数" 514 "通风次数" 513 "通风次数" 512 "通风次数" 511 "通风次数" 510 "通风次数" 509 "通风次数" 508 "通风次数" 507 "通风次数" 506 "通风次数" 505 "通风次数" 504 "通风次数" 503 "通风次数" 502 "通风次数" 501 "通风次数" 500 "通风次数" 499 "通风次数" 498 "通风次数" 497 "通风次数" 496 "通风次数" 495 "通风次数" 494 "通风次数" 493 "通风次数" 492 "通风次数" 491 "通风次数" 490 "通风次数" 489 "通风次数" 488 "通风次数" 487 "通风次数" 486 "通风次数" 485 "通风次数" 484 "通风次数" 483 "通风次数" 482 "通风次数" 481 "通风次数" 480 "通风次数" 479 "通风次数" 478 "通风次数" 477 "通风次数" 476 "通风次数" 475 "通风次数" 474 "通风次数" 473 "通风次数" 472 "通风次数" 471 "通风次数" 470 "通风次数" 469 "通风次数" 468 "通风次数" 467 "通风次数" 466 "通风次数" 465 "通风次数" 464 "通风次数" 463 "通风次数" 462 "通风次数" 461 "通风次数" 460 "通风次数" 459 "通风次数" 458 "通风次数" 457 "通风次数" 456 "通风次数" 455 "通风次数" 454 "通风次数" 453 "通风次数" 452 "通风次数" 451 "通风次数" 450 "通风次数" 449 "通风次数" 448 "通风次数" 447 "通风次数" 446 "通风次数" 445 "通风次数" 444 "通风次数" 443 "通风次数" 442 "通风次数" 441 "通风次数" 440 "通风次数" 439 "通风次数" 438 "通风次数" 437 "通风次数" 436 "通风次数" 435 "通风次数" 434 "通风次数" 433 "通风次数" 432 "通风次数" 431 "通风次数" 430 "通风次数" 429 "通风次数" 428 "通风次数" 427 "通风次数" 426 "通风次数" 425 "通风次数" 424 "通风次数" 423 "通风次数" 422 "通风次数" 421 "通风次数" 420 "通风次数" 419 "通风次数" 418 "通风次数" 417 "通风次数" 416 "通风次数" 415 "通风次数" 414 "通风次数" 413 "通风次数" 412 "通风次数" 411 "通风次数" 410 "通风次数" 409 "通风次数" 408 "通风次数" 407 "通风次数" 406 "通风次数" 405 "通风次数" 404 "通风次数" 403 "通风次数" 402 "通风次数" 401 "通风次数" 400 "通风次数" 399 "通风次数" 398 "通风次数" 397 "通风次数" 396 "通风次数" 395 "通风次数" 394 "通风次数" 393 "通风次数" 392 "通风次数" 391 "通风次数" 390 "通风次数" 389 "通风次数" 388 "通风次数" 387 "通风次数" 386 "通风次数" 385 "通风次数" 384 "通风次数" 383 "通风次数" 382 "通风次数" 381 "通风次数" 380 "通风次数" 379 "通风次数" 378 "通风次数" 377 "通风次数" 376 "通风次数" 375 "通风次数" 374 "通风次数" 373 "通风次数" 372 "通风次数" 371 "通风次数" 370 "通风次数" 369 "通风次数" 368 "通风次数" 367 "通风次数" 366 "通风次数" 365 "通风次数" 364 "通风次数" 363 "通风次数" 362 "通风次数" 361 "通风次数" 360 "通风次数" 359 "通风次数" 358 "通风次数" 357 "通风次数" 356 "通风次数" 355 "通风次数" 354 "通风次数" 353 "通风次数" 352 "通风次数" 351 "通风次数" 350 "通风次数" 349 "通风次数" 348 "通风次数" 347 "通风次数" 346 "通风次数" 345 "通风次数" 344 "通风次数" 343 "通风次数" 342 "通风次数" 341 "通风次数" 340 "通风次数" 339 "通风次数" 338 "通风次数" 337 "通风次数" 336 "通风次数" 335 "通风次数" 334 "通风次数" 333 "通风次数" 332 "通风次数" 331 "通风次数" 330 "通风次数" 329 "通风次数" 328 "通风次数" 327 "通风次数" 326 "通风次数" 325 "通风次数" 324 "通风次数" 323 "通风次数" 322 "通风次数" 321 "通风次数" 320 "通风次数" 319 "通风次数" 318 "通风次数" 317 "通风次数" 316 "通风次数" 315 "通风次数" 314 "通风次数" 313 "通风次数" 312 "通风次数" 311 "通风次数" 310 "通风次数" 309 "通风次数" 308 "通风次数" 307 "通风次数" 306 "通风次数" 305 "通风次数" 304 "通风次数" 303 "通风次数" 302 "通风次数" 301 "通风次数" 300 "通风次数" 299 "通风次数" 298 "通风次数" 297 "通风次数" 296 "通风次数" 295 "通风次数" 294 "通风次数" 293 "通风次数" 292 "通风次数" 291 "通风次数" 290 "通风次数" 289 "通风次数" 288 "通风次数" 287 "通风次数" 286 "通风次数" 285 "通风次数" 284 "通风次数" 283 "通风次数" 282 "通风次数" 281 "通风次数" 280 "通风次数" 279 "通风次数" 278 "通风次数" 277 "通风次数" 276 "通风次数" 275 "通风次数" 274 "通风次数" 273 "通风次数" 272 "通风次数" 271 "通风次数" 270 "通风次数" 269 "通风次数" 268 "通风次数" 267 "通风次数" 266 "通风次数" 265 "通风次数" 264 "通风次数" 263 "通风次数" 262 "通风次数" 261 "通风次数" 260 "通风次数" 259 "通风次数" 258 "通风次数" 257 "通风次数" 256 "通风次数" 255 "通风次数" 254 "通风次数" 253 "通风次数" 252 "通风次数" 251 "通风次数" 250 "通风次数" 249 "通风次数" 248 "通风次数" 247 "通风次数" 246 "通风次数" 245 "通风次数" 244 "通风次数" 243 "通风次数" 242 "通风次数" 241 "通风次数" 240 "通风次数" 239 "通风次数" 238 "通风次数" 237 "通风次数" 236 "通风次数" 235 "通风次数" 234 "通风次数" 233 "通风次数" 232 "通风次数" 231 "通风次数" 230 "通风次数" 229 "通风次数" 228 "通风次数" 227 "通风次数" 226 "通风次数" 225 "通风次数" 224 "通风次数" 223 "通风次数" 222 "通风次数" 221 "通风次数" 220 "通风次数" 219 "通风次数" 218 "通风次数" 217 "通风次数" 216 "通风次数" 215 "通风次数" 214 "通风次数" 213 "通风次数" 212 "通风次数" 211 "通风次数" 210 "通风次数" 209 "通风次数" 208 "通风次数" 207 "通风次数" 206 "通风次数" 205 "通风次数" 204 "通风次数" 203 "通风次数" 202 "通风次数" 201 "通风次数" 200 "通风次数" 199 "通风次数" 198 "通风次数" 197 "通风次数" 196 "通风次数" 195 "通风次数" 194 "通风次数" 193 "通风次数" 192 "通风次数" 191 "通风次数" 190 "通风次数" 189 "通风次数" 188 "通风次数" 187 "通风次数" 186 "通风次数" 185 "通风次数" 184 "通风次数" 183 "通风次数" 182 "通风次数" 181 "通风次数" 180 "通风次数" 179 "通风次数" 178 "通风次数" 177 "通风次数" 176 "通风次数" 175 "通风次数" 174 "通风次数" 173 "通风次数" 172 "通风次数" 171 "通风次数" 170 "通风次数" 169 "通风次数" 168 "通风次数" 167 "通风次数" 166 "通风次数" 165 "通风次数" 164 "通风次数" 163 "通风次数" 162 "通风次数" 161 "通风次数" 160 "通风次数" 159 "通风次数" 158 "通风次数" 157 "通风次数" 156 "通风次数" 155 "通风次数" 154 "通风次数" 153 "通风次数" 152 "通风次数" 151 "通风次数" 150 "通风次数" 149 "通风次数" 148 "通风次数" 147 "通风次数" 146 "通风次数" 145 "通风次数" 144 "通风次数" 143 "通风次数" 142 "通风次数" 141 "通风次数" 140 "通风次数" 139 "通风次数" 138 "通风次数" 137 "通风次数" 136 "通风次数" 135 "通风次数" 134 "通风次数" 133 "通风次数" 132 "通风次数" 131 "通风次数" 130 "通风次数" 129 "通风次数" 128 "通风次数" 127 "通风次数" 126 "通风次数" 125 "通风次数" 124 "通风次数" 123 "通风次数" 122 "通风次数" 121 "通风次数" 120 "通风次数" 119 "通风次数" 118 "通风次数" 117 "通风次数" 116 "通风次数" 115 "通风次数" 114 "通风次数" 113 "通风次数" 112 "通风次数" 111 "通风次数" 110 "通风次数" 109 "通风次数" 108 "通风次数" 107 "通风次数" 106 "通风次数" 105 "通风次数" 104 "通风次数" 103 "通风次数" 102 "通风次数" 101 "通风次数" 100 "通风次数" 99 "通风次数" 98 "通风次数" 97 "通风次数" 96 "通风次数" 95 "通风次数" 94 "通风次数" 93 "通风次数" 92 "通风次数" 91 "通风次数" 90 "通风次数" 89 "通风次数" 88 "通风次数" 87 "通风次数" 86 "通风次数" 85 "通风次数" 84 "通风次数" 83 "通风次数" 82 "通风次数" 81 "通风次数" 80 "通风次数" 79 "通风次数" 78 "通风次数" 77 "通风次数" 76 "通风次数" 75 "通风次数" 74 "通风次数" 73 "通风次数" 72 "通风次数" 71 "通风次数" 70 "通风次数" 69 "通风次数" 68 "通风次数" 67 "通风次数" 66 "通风次数" 65 "通风次数" 64 "通风次数" 63 "通风次数" 62 "通风次数" 61 "通风次数" 60 "通风次数" 59 "通风次数" 58 "通风次数" 57 "通风次数" 56 "通风次数" 55 "通风次数" 54 "通风次数" 53 "通风次数" 52 "通风次数" 51 "通风次数" 50 "通风次数" 49 "通风次数" 48 "通风次数" 47 "通风次数" 46 "通风次数" 45 "通风次数" 44 "通风次数" 43 "通风次数" 42 "通风次数" 41 "通风次数" 40 "通风次数" 39 "通风次数" 38 "通风次数" 37 "通风次数" 36 "通风次数" 35 "通风次数" 34 "通风次数" 33 "通风次数" 32 "通风次数" 31 "通风次数" 30 "通风次数" 29 "通风次数" 28 "通风次数" 27 "通风次数" 26 "通风次数" 25 "通风次数" 24 "通风次数" 23 "通风次数" 22 "通风次数" 21 "通风次数" 20 "通风次数" 19 "通风次数" 18 "通风次数" 17 "通风次数" 16 "通风次数" 15 "通风次数" 14 "通风次数" 13 "通风次数" 12 "通风次数" 11 "通风次数" 10 "通风次数" 9 "通风次数" 8 "通风次数" 7 "通风次数" 6 "通风次数" 5 "通风次数" 4 "通风次数" 3 "通风次数" 2 "通风次数" 1 "通风次数" 0 "通风次数" ;
+VAL_ 828 AC_UVCSts 3 "Level2" 2 "Level1" 1 "OFF" 0 "Initial" ;
+VAL_ 828 AC_UVC_Err 1 "Error" 0 "Normal" ;
+VAL_ 828 AC_UVC_ErrValid 1 "Valid" 0 "Invalid" ;
+VAL_ 828 AC_AutoDrySts 3 "Invalid" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 828 AC_ACECOModSts 3 "Invalid" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 828 AC_VentSts 3 "Reserved" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 828 AC_RemFaultSts 3 "Reserved" 2 "Reserved" 1 "Fault" 0 "Normal" ;
+VAL_ 828 AC_OdorRemoveSts 3 "Reserved" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 828 AC_FilterRemain 127 "Invalid" 126 "Initial" ;
+VAL_ 1397 AC_FrntSOVSt 3 "Invalid" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 1397 AC_ReSOVSt 3 "Invalid" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 1397 AC_BmsEXVInitSt 3 "Invalid" 2 "Initialized" 1 "Initialization in Process" 0 "Not Initialized" ;
+VAL_ 1397 AC_BmsEXVSt 1 "Actuator is moving" 0 "Actuator is not moving" ;
+VAL_ 1397 AC_BmsEXV_ActOpenVal 65535 "Invalid" ;
+VAL_ 1397 AC_BmsEXVInitReq 1 "Init" 0 "No Init" ;
+VAL_ 1397 AC_Forward_ModePerReq 127 "Invalid" ;
+VAL_ 1397 AC_Second_ModePerReq 127 "Invalid" ;
+VAL_ 1397 AC_FrntInCarT_Target 255 "Invalid" ;
+VAL_ 824 AC_FrntInCarT 4095 "Invalid" ;
+VAL_ 824 AC_ReInCarT 4095 "Invalid" ;
+VAL_ 824 AC_FrntInCarTValid 1 "Valid" 0 "Invalid" ;
+VAL_ 824 AC_ReInCarTValid 1 "Valid" 0 "Invalid" ;
+VAL_ 824 AC_OverheatdT 511 "Invalid" ;
+VAL_ 824 AC_Forward_BlwPwmOut 255 "Invalid" ;
+VAL_ 824 AC_LPTSnsrT 255 "Invalid" ;
+VAL_ 824 AC_Second_BlwPwmOut 127 "Invalid" ;
+VAL_ 830 AC_cabinCoolingLevel 7 "Reserved" 6 "冷却等级6" 5 "冷却等级5" 4 "冷却等级4" 3 "冷却等级3" 2 "冷却等级2" 1 "冷却等级1" 0 "STOP" ;
+VAL_ 830 AC_cabinheatingLevel 7 "Reserved" 6 "采暖等级6" 5 "采暖等级5" 4 "采暖等级4" 3 "采暖等级3" 2 "采暖等级2" 1 "采暖等级1" 0 "STOP" ;
+VAL_ 880 AC_CircleModeVentilaPosn 100 "外循环" 0 "内循环" ;
+VAL_ 919 AC_Third_BlwPwmOut 127 "Invalid" ;
+VAL_ 919 AC_UnlockVentSt 3 "Reserved" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 919 UVC_RespErr 1 "Comm Error detected" 0 "No Comm Error" ;
+VAL_ 919 UVC_TotWorkHr 65535 "Invalid" ;
+VAL_ 919 UVC_DCDrvrErr 1 "Error" 0 "No error" ;
+VAL_ 919 UVC_Err 1 "Error" 0 "No error" ;
+VAL_ 919 UVC_ErrSt 1 "Valid" 0 "Invalid" ;
+VAL_ 919 UVC_ShortErr 1 "Error" 0 "No error" ;
+VAL_ 919 UVC_OverLoadErr 1 "Error" 0 "No error" ;
+VAL_ 919 UVC_OpenErr 1 "Error" 0 "No error" ;
+VAL_ 919 UVC_HW_PhaVers 3 "C" 2 "B" 1 "A" 0 "Reserved" ;
+VAL_ 919 UVC_SN_MajorVersB 3 "C" 2 "B" 1 "A" 0 "Reserved" ;
+VAL_ 919 UVC_SN_SupplierCod 3 "Reserved" 2 "Reserved" 1 "Reserved" 0 "深圳英唐2446" ;
+VAL_ 899 AC_InsidePM25Level 7 "Invalid" 6 "当PM2.5平均浓度大于250时" 5 "当PM2.5平均浓度151-250时" 4 "当PM2.5平均浓度116-150" 3 "当PM2.5平均浓度76-115时" 2 "当PM2.5平均浓度36-75时" 1 "当PM2.5平均浓度0-35时" 0 "Initial" ;
+VAL_ 899 AC_PM25InCarValid 3 "Failure" 2 "reserved" 1 "Calculating/Invaild" 0 "vaild" ;
+VAL_ 899 AC_PM25InCar 1023 "invalid" ;
+VAL_ 899 AC_outsidePM255Level 7 "Invalid" 6 "当PM2.5平均浓度大于250时" 5 "当PM2.5平均浓度151-250时" 4 "当PM2.5平均浓度116-150" 3 "当PM2.5平均浓度76-115时" 2 "当PM2.5平均浓度36-75时" 1 "当PM2.5平均浓度0-35时" 0 "Initial" ;
+VAL_ 899 AC_PM25OutCarValid 3 "Failure" 2 "reserved" 1 "Calculating/Invaild" 0 "vaild" ;
+VAL_ 899 AC_PM25OutCar 1023 "invalid" ;
+VAL_ 899 AC_AQSAirQualityLevel 7 "Invalid" 6 "等级6（＞65%～75%）" 5 "等级5（＞55%～65%）" 4 "等级4（＞45%～55% ）" 3 "等级3（＞35%～45%）" 2 "等级2（≥25%～35%)" 1 "等级1（10%～20%）" 0 "Initial" ;
+VAL_ 899 AC_PurificationStSwitch 3 "Invalid" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 899 AC_PurificationSt 3 "Invalid" 2 "净化完成" 1 "净化中" 0 "Initial" ;
+VAL_ 899 AC_IntPurificationSt 3 "Invalid" 2 "Stop" 1 "智能净化中" 0 "Initial" ;
+VAL_ 899 AC_IONRunSts 3 "Invalid" 2 "ON" 1 "OFF" 0 "Initial" ;
+VAL_ 906 AC_PTC_R_HeatPwrReq 255 "Invalid" ;
+VAL_ 906 AC_PTC_R_Enable 1 "Enable" 0 "Disable" ;
+VAL_ 906 AC_HVCnctHldReq 1 "Request" 0 "No Request" ;
+VAL_ 906 AC_CmprEnable 3 "Invalid" 2 "reserved" 1 "request" 0 "No request" ;
+VAL_ 906 AC_HeatOutletTargetT 127 "Invalid" ;
+VAL_ 906 AC_HeatReq 1 "on request" 0 "no request" ;
+VAL_ 906 AC_AirReq 127 "Invalid" 126 "Reserved" 125 "Reserved" 124 "Reserved" 123 "Reserved" 122 "Reserved" 121 "Reserved" 120 "Reserved" 119 "Reserved" 118 "Reserved" 117 "Reserved" 116 "Reserved" 115 "Reserved" 114 "Reserved" 113 "Reserved" 112 "Reserved" 111 "Reserved" 110 "Reserved" 109 "Reserved" 108 "Reserved" 107 "Reserved" 106 "Reserved" 105 "Reserved" 104 "Reserved" 103 "Reserved" 102 "Reserved" 101 "100%" 100 "99%" 1 "0%" 0 "Initial" ;
+VAL_ 906 AC_CmprTargetSpeed 65535 "Invalid" ;
+VAL_ 1344 AC_CarVersion 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "F3A EVR 6 Seat" 3 "F3A EVR 5 Seat" 2 "F3 EVR 6 Seat" 1 "F3 EVR 5 Seat" 0 "Initial" ;
+VAL_ 1344 AC_FrontSOVReq 3 "Invalid" 1 "ON" 0 "OFF" ;
+VAL_ 1344 AC_RearSOVReq 3 "Invalid" 1 "ON" 0 "OFF" ;
+VAL_ 1344 AC_SysWorkingMode 31 "reserved" 30 "reserved" 29 "reserved" 28 "reserved" 27 "reserved" 26 "reserved" 25 "reserved" 24 "reserved" 23 "reserved" 22 "reserved" 21 "reserved" 20 "reserved" 19 "reserved" 18 "reserved" 17 "reserved" 16 "reserved" 15 "reserved" 14 "reserved" 13 "reserved" 12 "reserved" 11 "reserved" 10 "reserved" 9 "reserved" 8 "reserved" 7 "reserved" 6 "除湿" 5 "采暖除湿" 4 "Failure" 3 "Chiller" 2 "ACChiller" 1 "AC mode （前空调单制冷）" 0 "Stop" ;
+VAL_ 1353 AC_SupplierCode 3 "重庆赛特" 2 "南方英特" 1 "法雷奥" 0 "Initial" ;
+VAL_ 1396 EXV_RespErr 1 "Comm Error detected" 0 "No Comm Error" ;
+VAL_ 1396 EXV_IninSt 3 "Invalid" 2 "Initialized" 1 "Initialization in Process" 0 "Not Initialized" ;
+VAL_ 1396 EXV_RunngSt 1 "Actuator is moving" 0 "Actuator is not moving" ;
+VAL_ 1396 EXV_FltSt 15 "not defined" 14 "not defined" 13 "not defined" 12 "not defined" 11 "not defined" 10 "not defined" 9 "not defined" 8 "not defined" 7 "not defined" 6 "not defined" 5 "Actuator Fault Status Indeterminate" 4 "not defined" 3 "Over temperature shutdown" 2 "Motor-Coil open load" 1 "Motor-Coil shorted" 0 "Actuator Not Faulted" ;
+VAL_ 1396 EXV_USt 3 "Not defined" 2 "Under voltage" 1 "Overvoltage" 0 "Voltage Range ok" ;
+VAL_ 1396 EXV_OverTWarn 3 "not defined" 2 "not defined" 1 "High Temperature Warning" 0 "Ok" ;
+VAL_ 1396 EXV_Posn 576 "phys=raw halfstep" 575 "phys=raw halfstep" 574 "phys=raw halfstep" 573 "phys=raw halfstep" 572 "phys=raw halfstep" 571 "phys=raw halfstep" 570 "phys=raw halfstep" 569 "phys=raw halfstep" 568 "phys=raw halfstep" 567 "phys=raw halfstep" 566 "phys=raw halfstep" 565 "phys=raw halfstep" 564 "phys=raw halfstep" 563 "phys=raw halfstep" 562 "phys=raw halfstep" 561 "phys=raw halfstep" 560 "phys=raw halfstep" 559 "phys=raw halfstep" 558 "phys=raw halfstep" 557 "phys=raw halfstep" 556 "phys=raw halfstep" 555 "phys=raw halfstep" 554 "phys=raw halfstep" 553 "phys=raw halfstep" 552 "phys=raw halfstep" 551 "phys=raw halfstep" 550 "phys=raw halfstep" 549 "phys=raw halfstep" 548 "phys=raw halfstep" 547 "phys=raw halfstep" 546 "phys=raw halfstep" 545 "phys=raw halfstep" 544 "phys=raw halfstep" 543 "phys=raw halfstep" 542 "phys=raw halfstep" 541 "phys=raw halfstep" 540 "phys=raw halfstep" 539 "phys=raw halfstep" 538 "phys=raw halfstep" 537 "phys=raw halfstep" 536 "phys=raw halfstep" 535 "phys=raw halfstep" 534 "phys=raw halfstep" 533 "phys=raw halfstep" 532 "phys=raw halfstep" 531 "phys=raw halfstep" 530 "phys=raw halfstep" 529 "phys=raw halfstep" 528 "phys=raw halfstep" 527 "phys=raw halfstep" 526 "phys=raw halfstep" 525 "phys=raw halfstep" 524 "phys=raw halfstep" 523 "phys=raw halfstep" 522 "phys=raw halfstep" 521 "phys=raw halfstep" 520 "phys=raw halfstep" 519 "phys=raw halfstep" 518 "phys=raw halfstep" 517 "phys=raw halfstep" 516 "phys=raw halfstep" 515 "phys=raw halfstep" 514 "phys=raw halfstep" 513 "phys=raw halfstep" 512 "phys=raw halfstep" 511 "phys=raw halfstep" 510 "phys=raw halfstep" 509 "phys=raw halfstep" 508 "phys=raw halfstep" 507 "phys=raw halfstep" 506 "phys=raw halfstep" 505 "phys=raw halfstep" 504 "phys=raw halfstep" 503 "phys=raw halfstep" 502 "phys=raw halfstep" 501 "phys=raw halfstep" 500 "phys=raw halfstep" 499 "phys=raw halfstep" 498 "phys=raw halfstep" 497 "phys=raw halfstep" 496 "phys=raw halfstep" 495 "phys=raw halfstep" 494 "phys=raw halfstep" 493 "phys=raw halfstep" 492 "phys=raw halfstep" 491 "phys=raw halfstep" 490 "phys=raw halfstep" 489 "phys=raw halfstep" 488 "phys=raw halfstep" 487 "phys=raw halfstep" 486 "phys=raw halfstep" 485 "phys=raw halfstep" 484 "phys=raw halfstep" 483 "phys=raw halfstep" 482 "phys=raw halfstep" 481 "phys=raw halfstep" 480 "phys=raw halfstep" 479 "phys=raw halfstep" 478 "phys=raw halfstep" 477 "phys=raw halfstep" 476 "phys=raw halfstep" 475 "phys=raw halfstep" 474 "phys=raw halfstep" 473 "phys=raw halfstep" 472 "phys=raw halfstep" 471 "phys=raw halfstep" 470 "phys=raw halfstep" 469 "phys=raw halfstep" 468 "phys=raw halfstep" 467 "phys=raw halfstep" 466 "phys=raw halfstep" 465 "phys=raw halfstep" 464 "phys=raw halfstep" 463 "phys=raw halfstep" 462 "phys=raw halfstep" 461 "phys=raw halfstep" 460 "phys=raw halfstep" 459 "phys=raw halfstep" 458 "phys=raw halfstep" 457 "phys=raw halfstep" 456 "phys=raw halfstep" 455 "phys=raw halfstep" 454 "phys=raw halfstep" 453 "phys=raw halfstep" 452 "phys=raw halfstep" 451 "phys=raw halfstep" 450 "phys=raw halfstep" 449 "phys=raw halfstep" 448 "phys=raw halfstep" 447 "phys=raw halfstep" 446 "phys=raw halfstep" 445 "phys=raw halfstep" 444 "phys=raw halfstep" 443 "phys=raw halfstep" 442 "phys=raw halfstep" 441 "phys=raw halfstep" 440 "phys=raw halfstep" 439 "phys=raw halfstep" 438 "phys=raw halfstep" 437 "phys=raw halfstep" 436 "phys=raw halfstep" 435 "phys=raw halfstep" 434 "phys=raw halfstep" 433 "phys=raw halfstep" 432 "phys=raw halfstep" 431 "phys=raw halfstep" 430 "phys=raw halfstep" 429 "phys=raw halfstep" 428 "phys=raw halfstep" 427 "phys=raw halfstep" 426 "phys=raw halfstep" 425 "phys=raw halfstep" 424 "phys=raw halfstep" 423 "phys=raw halfstep" 422 "phys=raw halfstep" 421 "phys=raw halfstep" 420 "phys=raw halfstep" 419 "phys=raw halfstep" 418 "phys=raw halfstep" 417 "phys=raw halfstep" 416 "phys=raw halfstep" 415 "phys=raw halfstep" 414 "phys=raw halfstep" 413 "phys=raw halfstep" 412 "phys=raw halfstep" 411 "phys=raw halfstep" 410 "phys=raw halfstep" 409 "phys=raw halfstep" 408 "phys=raw halfstep" 407 "phys=raw halfstep" 406 "phys=raw halfstep" 405 "phys=raw halfstep" 404 "phys=raw halfstep" 403 "phys=raw halfstep" 402 "phys=raw halfstep" 401 "phys=raw halfstep" 400 "phys=raw halfstep" 399 "phys=raw halfstep" 398 "phys=raw halfstep" 397 "phys=raw halfstep" 396 "phys=raw halfstep" 395 "phys=raw halfstep" 394 "phys=raw halfstep" 393 "phys=raw halfstep" 392 "phys=raw halfstep" 391 "phys=raw halfstep" 390 "phys=raw halfstep" 389 "phys=raw halfstep" 388 "phys=raw halfstep" 387 "phys=raw halfstep" 386 "phys=raw halfstep" 385 "phys=raw halfstep" 384 "phys=raw halfstep" 383 "phys=raw halfstep" 382 "phys=raw halfstep" 381 "phys=raw halfstep" 380 "phys=raw halfstep" 379 "phys=raw halfstep" 378 "phys=raw halfstep" 377 "phys=raw halfstep" 376 "phys=raw halfstep" 375 "phys=raw halfstep" 374 "phys=raw halfstep" 373 "phys=raw halfstep" 372 "phys=raw halfstep" 371 "phys=raw halfstep" 370 "phys=raw halfstep" 369 "phys=raw halfstep" 368 "phys=raw halfstep" 367 "phys=raw halfstep" 366 "phys=raw halfstep" 365 "phys=raw halfstep" 364 "phys=raw halfstep" 363 "phys=raw halfstep" 362 "phys=raw halfstep" 361 "phys=raw halfstep" 360 "phys=raw halfstep" 359 "phys=raw halfstep" 358 "phys=raw halfstep" 357 "phys=raw halfstep" 356 "phys=raw halfstep" 355 "phys=raw halfstep" 354 "phys=raw halfstep" 353 "phys=raw halfstep" 352 "phys=raw halfstep" 351 "phys=raw halfstep" 350 "phys=raw halfstep" 349 "phys=raw halfstep" 348 "phys=raw halfstep" 347 "phys=raw halfstep" 346 "phys=raw halfstep" 345 "phys=raw halfstep" 344 "phys=raw halfstep" 343 "phys=raw halfstep" 342 "phys=raw halfstep" 341 "phys=raw halfstep" 340 "phys=raw halfstep" 339 "phys=raw halfstep" 338 "phys=raw halfstep" 337 "phys=raw halfstep" 336 "phys=raw halfstep" 335 "phys=raw halfstep" 334 "phys=raw halfstep" 333 "phys=raw halfstep" 332 "phys=raw halfstep" 331 "phys=raw halfstep" 330 "phys=raw halfstep" 329 "phys=raw halfstep" 328 "phys=raw halfstep" 327 "phys=raw halfstep" 326 "phys=raw halfstep" 325 "phys=raw halfstep" 324 "phys=raw halfstep" 323 "phys=raw halfstep" 322 "phys=raw halfstep" 321 "phys=raw halfstep" 320 "phys=raw halfstep" 319 "phys=raw halfstep" 318 "phys=raw halfstep" 317 "phys=raw halfstep" 316 "phys=raw halfstep" 315 "phys=raw halfstep" 314 "phys=raw halfstep" 313 "phys=raw halfstep" 312 "phys=raw halfstep" 311 "phys=raw halfstep" 310 "phys=raw halfstep" 309 "phys=raw halfstep" 308 "phys=raw halfstep" 307 "phys=raw halfstep" 306 "phys=raw halfstep" 305 "phys=raw halfstep" 304 "phys=raw halfstep" 303 "phys=raw halfstep" 302 "phys=raw halfstep" 301 "phys=raw halfstep" 300 "phys=raw halfstep" 299 "phys=raw halfstep" 298 "phys=raw halfstep" 297 "phys=raw halfstep" 296 "phys=raw halfstep" 295 "phys=raw halfstep" 294 "phys=raw halfstep" 293 "phys=raw halfstep" 292 "phys=raw halfstep" 291 "phys=raw halfstep" 290 "phys=raw halfstep" 289 "phys=raw halfstep" 288 "phys=raw halfstep" 287 "phys=raw halfstep" 286 "phys=raw halfstep" 285 "phys=raw halfstep" 284 "phys=raw halfstep" 283 "phys=raw halfstep" 282 "phys=raw halfstep" 281 "phys=raw halfstep" 280 "phys=raw halfstep" 279 "phys=raw halfstep" 278 "phys=raw halfstep" 277 "phys=raw halfstep" 276 "phys=raw halfstep" 275 "phys=raw halfstep" 274 "phys=raw halfstep" 273 "phys=raw halfstep" 272 "phys=raw halfstep" 271 "phys=raw halfstep" 270 "phys=raw halfstep" 269 "phys=raw halfstep" 268 "phys=raw halfstep" 267 "phys=raw halfstep" 266 "phys=raw halfstep" 265 "phys=raw halfstep" 264 "phys=raw halfstep" 263 "phys=raw halfstep" 262 "phys=raw halfstep" 261 "phys=raw halfstep" 260 "phys=raw halfstep" 259 "phys=raw halfstep" 258 "phys=raw halfstep" 257 "phys=raw halfstep" 256 "phys=raw halfstep" 255 "phys=raw halfstep" 254 "phys=raw halfstep" 253 "phys=raw halfstep" 252 "phys=raw halfstep" 251 "phys=raw halfstep" 250 "phys=raw halfstep" 249 "phys=raw halfstep" 248 "phys=raw halfstep" 247 "phys=raw halfstep" 246 "phys=raw halfstep" 245 "phys=raw halfstep" 244 "phys=raw halfstep" 243 "phys=raw halfstep" 242 "phys=raw halfstep" 241 "phys=raw halfstep" 240 "phys=raw halfstep" 239 "phys=raw halfstep" 238 "phys=raw halfstep" 237 "phys=raw halfstep" 236 "phys=raw halfstep" 235 "phys=raw halfstep" 234 "phys=raw halfstep" 233 "phys=raw halfstep" 232 "phys=raw halfstep" 231 "phys=raw halfstep" 230 "phys=raw halfstep" 229 "phys=raw halfstep" 228 "phys=raw halfstep" 227 "phys=raw halfstep" 226 "phys=raw halfstep" 225 "phys=raw halfstep" 224 "phys=raw halfstep" 223 "phys=raw halfstep" 222 "phys=raw halfstep" 221 "phys=raw halfstep" 220 "phys=raw halfstep" 219 "phys=raw halfstep" 218 "phys=raw halfstep" 217 "phys=raw halfstep" 216 "phys=raw halfstep" 215 "phys=raw halfstep" 214 "phys=raw halfstep" 213 "phys=raw halfstep" 212 "phys=raw halfstep" 211 "phys=raw halfstep" 210 "phys=raw halfstep" 209 "phys=raw halfstep" 208 "phys=raw halfstep" 207 "phys=raw halfstep" 206 "phys=raw halfstep" 205 "phys=raw halfstep" 204 "phys=raw halfstep" 203 "phys=raw halfstep" 202 "phys=raw halfstep" 201 "phys=raw halfstep" 200 "phys=raw halfstep" 199 "phys=raw halfstep" 198 "phys=raw halfstep" 197 "phys=raw halfstep" 196 "phys=raw halfstep" 195 "phys=raw halfstep" 194 "phys=raw halfstep" 193 "phys=raw halfstep" 192 "phys=raw halfstep" 191 "phys=raw halfstep" 190 "phys=raw halfstep" 189 "phys=raw halfstep" 188 "phys=raw halfstep" 187 "phys=raw halfstep" 186 "phys=raw halfstep" 185 "phys=raw halfstep" 184 "phys=raw halfstep" 183 "phys=raw halfstep" 182 "phys=raw halfstep" 181 "phys=raw halfstep" 180 "phys=raw halfstep" 179 "phys=raw halfstep" 178 "phys=raw halfstep" 177 "phys=raw halfstep" 176 "phys=raw halfstep" 175 "phys=raw halfstep" 174 "phys=raw halfstep" 173 "phys=raw halfstep" 172 "phys=raw halfstep" 171 "phys=raw halfstep" 170 "phys=raw halfstep" 169 "phys=raw halfstep" 168 "phys=raw halfstep" 167 "phys=raw halfstep" 166 "phys=raw halfstep" 165 "phys=raw halfstep" 164 "phys=raw halfstep" 163 "phys=raw halfstep" 162 "phys=raw halfstep" 161 "phys=raw halfstep" 160 "phys=raw halfstep" 159 "phys=raw halfstep" 158 "phys=raw halfstep" 157 "phys=raw halfstep" 156 "phys=raw halfstep" 155 "phys=raw halfstep" 154 "phys=raw halfstep" 153 "phys=raw halfstep" 152 "phys=raw halfstep" 151 "phys=raw halfstep" 150 "phys=raw halfstep" 149 "phys=raw halfstep" 148 "phys=raw halfstep" 147 "phys=raw halfstep" 146 "phys=raw halfstep" 145 "phys=raw halfstep" 144 "phys=raw halfstep" 143 "phys=raw halfstep" 142 "phys=raw halfstep" 141 "phys=raw halfstep" 140 "phys=raw halfstep" 139 "phys=raw halfstep" 138 "phys=raw halfstep" 137 "phys=raw halfstep" 136 "phys=raw halfstep" 135 "phys=raw halfstep" 134 "phys=raw halfstep" 133 "phys=raw halfstep" 132 "phys=raw halfstep" 131 "phys=raw halfstep" 130 "phys=raw halfstep" 129 "phys=raw halfstep" 128 "phys=raw halfstep" 127 "phys=raw halfstep" 126 "phys=raw halfstep" 125 "phys=raw halfstep" 124 "phys=raw halfstep" 123 "phys=raw halfstep" 122 "phys=raw halfstep" 121 "phys=raw halfstep" 120 "phys=raw halfstep" 119 "phys=raw halfstep" 118 "phys=raw halfstep" 117 "phys=raw halfstep" 116 "phys=raw halfstep" 115 "phys=raw halfstep" 114 "phys=raw halfstep" 113 "phys=raw halfstep" 112 "phys=raw halfstep" 111 "phys=raw halfstep" 110 "phys=raw halfstep" 109 "phys=raw halfstep" 108 "phys=raw halfstep" 107 "phys=raw halfstep" 106 "phys=raw halfstep" 105 "phys=raw halfstep" 104 "phys=raw halfstep" 103 "phys=raw halfstep" 102 "phys=raw halfstep" 101 "phys=raw halfstep" 100 "phys=raw halfstep" 99 "phys=raw halfstep" 98 "phys=raw halfstep" 97 "phys=raw halfstep" 96 "phys=raw halfstep" 95 "phys=raw halfstep" 94 "phys=raw halfstep" 93 "phys=raw halfstep" 92 "phys=raw halfstep" 91 "phys=raw halfstep" 90 "phys=raw halfstep" 89 "phys=raw halfstep" 88 "phys=raw halfstep" 87 "phys=raw halfstep" 86 "phys=raw halfstep" 85 "phys=raw halfstep" 84 "phys=raw halfstep" 83 "phys=raw halfstep" 82 "phys=raw halfstep" 81 "phys=raw halfstep" 80 "phys=raw halfstep" 79 "phys=raw halfstep" 78 "phys=raw halfstep" 77 "phys=raw halfstep" 76 "phys=raw halfstep" 75 "phys=raw halfstep" 74 "phys=raw halfstep" 73 "phys=raw halfstep" 72 "phys=raw halfstep" 71 "phys=raw halfstep" 70 "phys=raw halfstep" 69 "phys=raw halfstep" 68 "phys=raw halfstep" 67 "phys=raw halfstep" 66 "phys=raw halfstep" 65 "phys=raw halfstep" 64 "phys=raw halfstep" 63 "phys=raw halfstep" 62 "phys=raw halfstep" 61 "phys=raw halfstep" 60 "phys=raw halfstep" 59 "phys=raw halfstep" 58 "phys=raw halfstep" 57 "phys=raw halfstep" 56 "phys=raw halfstep" 55 "phys=raw halfstep" 54 "phys=raw halfstep" 53 "phys=raw halfstep" 52 "phys=raw halfstep" 51 "phys=raw halfstep" 50 "phys=raw halfstep" 49 "phys=raw halfstep" 48 "phys=raw halfstep" 47 "phys=raw halfstep" 46 "phys=raw halfstep" 45 "phys=raw halfstep" 44 "phys=raw halfstep" 43 "phys=raw halfstep" 42 "phys=raw halfstep" 41 "phys=raw halfstep" 40 "phys=raw halfstep" 39 "phys=raw halfstep" 38 "phys=raw halfstep" 37 "phys=raw halfstep" 36 "phys=raw halfstep" 35 "phys=raw halfstep" 34 "phys=raw halfstep" 33 "phys=raw halfstep" 32 "phys=raw halfstep" 31 "phys=raw halfstep" 30 "phys=raw halfstep" 29 "phys=raw halfstep" 28 "phys=raw halfstep" 27 "phys=raw halfstep" 26 "phys=raw halfstep" 25 "phys=raw halfstep" 24 "phys=raw halfstep" 23 "phys=raw halfstep" 22 "phys=raw halfstep" 21 "phys=raw halfstep" 20 "phys=raw halfstep" 19 "phys=raw halfstep" 18 "phys=raw halfstep" 17 "phys=raw halfstep" 16 "phys=raw halfstep" 15 "phys=raw halfstep" 14 "phys=raw halfstep" 13 "phys=raw halfstep" 12 "phys=raw halfstep" 11 "phys=raw halfstep" 10 "phys=raw halfstep" 9 "phys=raw halfstep" 8 "phys=raw halfstep" 7 "phys=raw halfstep" 6 "phys=raw halfstep" 5 "phys=raw halfstep" 4 "phys=raw halfstep" 3 "phys=raw halfstep" 2 "phys=raw halfstep" 1 "phys=raw halfstep" 0 "phys=raw halfstep" ;
+VAL_ 1396 EXV_HW_PhaVers 3 "C" 2 "B" 1 "A" 0 "Reserved" ;
+VAL_ 1396 EXV_SN_MajorVersB 3 "C" 2 "B" 1 "A" 0 "Reserved" ;
+VAL_ 1396 EXV_SN_SupplierCod 3 "Reserved" 2 "常州腾龙" 1 "浙江三花8049" 0 "宁波拓普1247" ;
+VAL_ 1393 ION_L_ION_ErrSts 7 "Reserved" 6 "Reserved" 5 "OverVoltage Error" 4 "UnderVoltage Error" 3 "Open Circuit" 2 "Short Circuit" 1 "Error(EEPROM/FLASH/Watdog Reset)" 0 "No Error" ;
+VAL_ 1393 ION_L_ION_Sts 1 "Running" 0 "Standby" ;
+VAL_ 1393 ION_Response_Error 1 "Error" 0 "Normal" ;
+VAL_ 1393 ION_Majorversion 3 "C" 2 "B" 1 "A" 0 "Reserve" ;
+VAL_ 1393 ION_Minorversion 15 "15" 14 "14" 13 "13" 12 "12" 11 "11" 10 "10" 9 "9" 8 "8" 7 "7" 6 "6" 5 "5" 4 "4" 3 "3" 2 "2" 1 "1" 0 "0" ;
+VAL_ 1393 ION_Supplier 3 "供应商D" 2 "供应商C" 1 "供应商B 美时美克" 0 "供应商A 苏州翰霖" ;
+VAL_ 1394 pm25_responseError 1 "Fault" 0 "Normal" ;
+VAL_ 1394 pm25_indoorValue 1023 "Invalid" ;
+VAL_ 1394 pm25_indoorLevel 7 "Invalid" 6 "Level6" 5 "Level5" 4 "Level4" 3 "Level3" 2 "Level2" 1 "Level1" 0 "Default" ;
+VAL_ 1394 pm25_Sts 3 "Reserved" 2 "Complete" 1 "Collecting" 0 "Standby" ;
+VAL_ 1394 pm25_errorSts 1 "Error" 0 "No Error" ;
+VAL_ 1394 pm10_indoorValue 1023 "Invalid" ;
+VAL_ 1394 pm10_indoorLevel 7 "Invalid" 6 "Level6" 5 "Level5" 4 "Level4" 3 "Level3" 2 "Level2" 1 "Level1" 0 "Default" ;
+VAL_ 1394 pm25_airPump_FaultSt 1 "Fault" 0 "Normal" ;
+VAL_ 1394 pm25_LaserDiode_FaultSt 1 "Fault" 0 "Normal" ;
+VAL_ 1394 pm25_Phtoelectric_FaultSt 1 "Fault" 0 "Normal" ;
+VAL_ 1394 pm25_Benchmarkdata_FaultSt 1 "Fault" 0 "Normal" ;
+VAL_ 1394 pm25_Short_FaultSt 1 "Fault" 0 "Normal" ;
+VAL_ 1394 pm25_Majorversion 3 "C" 2 "B" 1 "A" 0 "reserve" ;
+VAL_ 1394 pm25_Minorversion 15 "15" 14 "14" 13 "13" 12 "12" 11 "11" 10 "10" 9 "9" 8 "8" 7 "7" 6 "6" 5 "5" 4 "4" 3 "3" 2 "2" 1 "1" 0 "0" ;
+VAL_ 1394 pm25_Supplier 3 "供应商D" 2 "供应商C" 1 "供应商B 苏州翰霖" 0 "供应商A 比亚迪" ;
+VAL_ 1506 TBOX_TimeZone 3 "Reserved" 2 "West" 1 "East" 0 "Initial" ;
+VAL_ 1506 TBOX_TimeZoneNum 31 "Reserved" 30 "Reserved" 29 "Reserved" 28 "Reserved" 27 "Reserved" 26 "Reserved" 25 "Reserved" 24 "Reserved" 23 "Reserved" 22 "Reserved" 21 "Reserved" 20 "Reserved" 19 "Reserved" 18 "Reserved" 17 "Reserved" 16 "Reserved" 15 "Reserved" 14 "Reserved" 13 "Reserved" 12 "TimeZone 12" 11 "TimeZone 11" 10 "TimeZone 10" 9 "TimeZone 9" 8 "TimeZone 8" 7 "TimeZone 7" 6 "TimeZone 6" 5 "TimeZone 5" 4 "TimeZone 4" 3 "TimeZone 3" 2 "TimeZone 2" 1 "TimeZone 1" 0 "Initial" ;
+VAL_ 1506 TBOX_TimeFlag 3 "Reserved" 2 "With Offset(Reserved)" 1 "Valid" 0 "Invalid" ;
+VAL_ 466 VIU_Info_Counter 15 "Invalid" ;
+VAL_ 466 VIU_UsageMode 15 "Invalid" 14 "reserved" 13 "reserved" 12 "reserved" 11 "reserved" 10 "reserved" 9 "reserved" 8 "reserved" 7 "reserved" 6 "RemoteDriving" 5 "Remote" 4 "OTA Updating" 3 "Driving" 2 "Convenience" 1 "Inactive" 0 "Abandoned" ;
+VAL_ 466 VIU_CarMode 15 "Invalid" 14 "Initial" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "Reserved" 5 "ExhibitionOutDoor" 4 "ExhibitionInDoor" 3 "Normal" 2 "Dynotest" 1 "Transport" 0 "Factory" ;
+VAL_ 466 VIU_PowerMode 3 "Invalid" 2 "Reserved" 1 "ON" 0 "OFF" ;
+VAL_ 466 VIU_PowerModeFltFlag 3 "Invalid" 2 "Reserved" 1 "True" 0 "False" ;
+VAL_ 914 RAC_RACSystemOnOffSet 3 "INVALID" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 914 RAC_RHvacBlowLvSet 15 "Invalid" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "LEVEL_7" 7 "LEVEL_6" 6 "LEVEL_5" 5 "LEVEL_4" 4 "LEVEL_3" 3 "LEVEL_2" 2 "LEVEL_1" 1 "OFF" 0 "NO Request" ;
+VAL_ 914 RAC_RHvacModeSet 7 "INVALID" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "FOOT" 2 "FACE_AND_FOOT" 1 "FACE" 0 "NO Request" ;
+VAL_ 914 RAC_HvacAutoModeSet 3 "INVALID" 2 "ON" 1 "OFF" 0 "NO Request" ;
+VAL_ 914 RAC_SecRowTempCSet 31 "INVALID" 30 "HI" 29 "30.5" 28 "30" 3 "17.5" 2 "17" 1 "16.5" 0 "lO" ;
+VAL_ 914 RAC_LockSt 3 "invalid" 2 "unlock" 1 "Lock" 0 "Initial" ;
+VAL_ 914 RAC_RLSecRowSeatHeatLvlSet 7 "Invalid" 4 "Level_3" 3 "Level_2" 2 "Level_1" 1 "OFF" 0 "No Request" ;
+VAL_ 914 RAC_RRSecRowSeatHeatLvlSet 7 "Invalid" 4 "Level_3" 3 "Level_2" 2 "Level_1" 1 "OFF" 0 "No Request" ;
+VAL_ 914 RAC_RLSecRowSeatVentLvlSet 7 "Invalid" 4 "Level_3" 3 "Level_2" 2 "Level_1" 1 "OFF" 0 "No Request" ;
+VAL_ 914 RAC_RRSecRowSeatVentLvlSet 7 "Invalid" 4 "Level_3" 3 "Level_2" 2 "Level_1" 1 "OFF" 0 "No Request" ;
+VAL_ 1362 DSM_CtrlSts 7 "Invalid" 4 "Crash event" 3 "System failure" 2 "Manual control" 1 "Recall" 0 "No action" ;
+VAL_ 1362 DSM_AntiPinchSts 1 "Active" 0 "No active" ;
+VAL_ 1362 DSM_HeatProtectionSts 1 "Active" 0 "No active" ;
+VAL_ 1362 DSM_SLCUotPosn 127 "Invalid" 126 "UnInitialized" 125 "Initial" 100 "100% （前:0后:100）" 99 "99%" 2 "2%" 1 "1%" 0 "0%" ;
+VAL_ 1362 DSM_BackrestMotPosn 127 "Invalid" 126 "UnInitialized" 125 "Initial" 100 "100% （前:0后:100）" 99 "99%" 2 "2%" 1 "1%" 0 "0%" ;
+VAL_ 1362 DSM_CushHeiMotPosn 127 "Invalid" 126 "UnInitialized" 125 "Initial" 100 "100% （前:0后:100）" 99 "99%" 2 "2%" 1 "1%" 0 "0%" ;
+VAL_ 1362 DSM_CushTiltMotPosn 127 "Invalid" 126 "UnInitialized" 125 "Initial" 100 "100% （前:0后:100）" 99 "99%" 2 "2%" 1 "1%" 0 "0%" ;
+VAL_ 1362 DSM_CushExtnMotPosn 127 "Invalid" 126 "UnInitialized" 125 "Initial" 100 "100% （前:0后:100）" 99 "99%" 2 "2%" 1 "1%" 0 "0%" ;
+VAL_ 1362 DSM_InitSts 1 "Valid" 0 "Invalid" ;
+VAL_ 1362 DSM_WarningReq 7 "Invalid" 3 "Warning3" 2 "Warning2" 1 "Warning1" 0 "No Req" ;
+VAL_ 1362 DSM_HeatgSts 7 "Invalid" 3 "Level_3" 2 "Level_2" 1 "Level_1" 0 "OFF" ;
+VAL_ 1362 DSM_HeatFltSts 1 "Fault" 0 "Normal" ;
+VAL_ 1362 DSM_VentnSts 7 "Invalid" 3 "Level_3" 2 "Level_2" 1 "Level_1" 0 "OFF" ;
+VAL_ 1362 DSM_VentnFltSts 1 "System failure" 0 "Normal" ;
+VAL_ 1362 DSM_driverSeatDetectSts 1 "DETECTED" 0 "NOT_DETECTED" ;
+VAL_ 1362 DSM_DevSupportSts 3 "UNKNOWN" 2 "ACTIVE//设备已安装" 1 "INACTIVE//设备未安装" 0 "Default" ;
+VAL_ 1362 DSM_DevLinkSts 3 "UNKNOWN" 2 "ACTIVE//设备已安装" 1 "INACTIVE//设备未安装" 0 "Default" ;
+VAL_ 1362 DSM_ChargeSts 3 "INVALID" 2 "OFF" 1 "ON" 0 "NO_REQUEST" ;
+VAL_ 1362 DSM_DrvrSeatLinkageSt 7 "Invalid" 3 "Linkage_PAUSESTS" 2 "Linkage_ Retracting" 1 "Linkage_Forwarding" 0 "No Request" ;
+VAL_ 1363 PSM_CtrlSts 7 "Invalid" 4 "Crash event" 3 "System failure" 2 "Manual control" 1 "Recall" 0 "No action" ;
+VAL_ 1363 PSM_AntiPinchSts 1 "Active" 0 "No active" ;
+VAL_ 1363 PSM_HeatProtectionSts 1 "Active" 0 "No active" ;
+VAL_ 1363 PSM_SLCUotPosn 127 "Invalid" 126 "UnInitialized" 125 "Initial" 100 "100% （前:0后:100）" 99 "99%" 2 "2%" 1 "1%" 0 "0%" ;
+VAL_ 1363 PSM_BackrestMotPosn 127 "Invalid" 126 "UnInitialized" 125 "Initial" 100 "100% （前:0后:100）" 99 "99%" 2 "2%" 1 "1%" 0 "0%" ;
+VAL_ 1363 PSM_CushHeiMotPosn 127 "Invalid" 126 "UnInitialized" 125 "Initial" 100 "100% （前:0后:100）" 99 "99%" 2 "2%" 1 "1%" 0 "0%" ;
+VAL_ 1363 PSM_CushTiltMotPosn 127 "Invalid" 126 "UnInitialized" 125 "Initial" ;
+VAL_ 1363 PSM_LegSupportMotPosn 127 "Invalid" 126 "UnInitialized" 125 "Initial" 100 "100% （前:0后:100）" 99 "99%" 2 "2%" 1 "1%" 0 "0%" ;
+VAL_ 1363 PSM_FootSupportMotPosn 127 "Invalid" 126 "UnInitialized" 125 "Initial" 100 "100% （前:0后:100）" 99 "99%" 2 "2%" 1 "1%" 0 "0%" ;
+VAL_ 1363 PSM_SpindleMotPosn 127 "Invalid" 126 "UnInitialized" 125 "Initial" 100 "100% （前:0后:100）" 99 "99%" 2 "2%" 1 "1%" 0 "0%" ;
+VAL_ 1363 PSM_InitSts 1 "Valid" 0 "Invalid" ;
+VAL_ 1363 PSM_WarningReq 7 "Invalid" 3 "Warning3" 2 "Warning2" 1 "Warning1" 0 "No Req" ;
+VAL_ 1363 PSM_HeatgSts 7 "Invalid" 3 "Level_3" 2 "Level_2" 1 "Level_1" 0 "OFF" ;
+VAL_ 1363 PSM_HeatFltSts 1 "Fault" 0 "Normal" ;
+VAL_ 1363 PSM_passengerSeatDetectSts 1 "DETECTED" 0 "NOT_DETECTED" ;
+VAL_ 916 VIU_PassSeatHeatgReq 7 "Invalid" 4 "Level_3" 3 "Level_2" 2 "Level_1" 1 "OFF" 0 "No Request" ;
+VAL_ 916 VIU_PassSeatVentnReq 7 "Invalid" 4 "Level_3" 3 "Level_2" 2 "Level_1" 1 "OFF" 0 "No Request" ;
+VAL_ 915 VIU_DrvrSeatHeatgReq 7 "Invalid" 4 "Level_3" 3 "Level_2" 2 "Level_1" 1 "OFF" 0 "No Request" ;
+VAL_ 915 VIU_DrvrSeatVentnReq 7 "Invalid" 4 "Level_3" 3 "Level_2" 2 "Level_1" 1 "OFF" 0 "No Request" ;

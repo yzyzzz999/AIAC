@@ -1,0 +1,80 @@
+{
+  "schema": "signal_mapping_sig_fte_v1",
+  "note": "Maps SIG/FTE engineering quantities to RuntimeSignalInput fields",
+  "mappings": [
+    {
+      "runtime_field": "amb_t_c",
+      "sig_fte_name": "SIG.AmbientTemperature_C",
+      "can_fallback": "VIU_AmbT",
+      "unit": "degC",
+      "required": true
+    },
+    {
+      "runtime_field": "rh_percent",
+      "sig_fte_name": "SIG.RelativeHumidity_pct",
+      "can_fallback": "RH_pct",
+      "unit": "%",
+      "required": false,
+      "default": 50.0
+    },
+    {
+      "runtime_field": "vehicle_speed_kph",
+      "sig_fte_name": "SIG.VehicleSpeed_kph",
+      "can_fallback": "IPB_VehicleSpeed",
+      "unit": "km/h",
+      "required": false,
+      "default": 0.0
+    },
+    {
+      "runtime_field": "solar_driver_w_m2",
+      "sig_fte_name": "SIG.SolarIrradiance_Driver",
+      "can_fallback": "RSM_LeSolarInten",
+      "unit": "W/m2",
+      "required": false,
+      "default": 0.0
+    },
+    {
+      "runtime_field": "solar_passenger_w_m2",
+      "sig_fte_name": "SIG.SolarIrradiance_Passenger",
+      "can_fallback": "RSM_RiSolarInten",
+      "unit": "W/m2",
+      "required": false,
+      "default": 0.0
+    },
+    {
+      "runtime_field": "eva_t_c",
+      "sig_fte_name": "FTE.EvapOutletTemp_C",
+      "can_fallback": null,
+      "unit": "degC",
+      "required": false
+    },
+    {
+      "runtime_field": "driver_face_flow",
+      "sig_fte_name": "FTE.FrntDrvFaceFlow_m3h",
+      "can_fallback": "AC_DrvrFaceVentActT",
+      "unit": "m3/h",
+      "required": false
+    },
+    {
+      "runtime_field": "passenger_face_flow",
+      "sig_fte_name": "FTE.FrntPsgFaceFlow_m3h",
+      "can_fallback": "AC_PassFaceVentActT",
+      "unit": "m3/h",
+      "required": false
+    },
+    {
+      "runtime_field": "driver_floor_flow",
+      "sig_fte_name": "FTE.FrntDrvFloorFlow_m3h",
+      "can_fallback": "AC_DrvrFootVentActT",
+      "unit": "m3/h",
+      "required": false
+    },
+    {
+      "runtime_field": "passenger_floor_flow",
+      "sig_fte_name": "FTE.FrntPsgFloorFlow_m3h",
+      "can_fallback": "AC_PassFootVentActT",
+      "unit": "m3/h",
+      "required": false
+    }
+  ]
+}
