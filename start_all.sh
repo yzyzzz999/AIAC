@@ -20,6 +20,8 @@ LOG_BASE="${SCRIPT_DIR}/.startup_logs"
 
 # 各服务端口 / 就绪标记
 CAN_SOCKET="${SCRIPT_DIR}/can_service/sock/can0_bus.sock"
+CAN_SERVICE_NAME="can0_service_v1.3.8.py"
+CAN_SERVICE_PATH="${SCRIPT_DIR}/can_service/${CAN_SERVICE_NAME}"
 VISION_API_PORT="${VISION_API_PORT:-7860}"
 VISION_API_URL="http://localhost:${VISION_API_PORT}/health"
 VISION_STARTUP_TIMEOUT=120
@@ -194,19 +196,45 @@ start_can() {
     fi
     log_info "CAN 接口配置完成 ✓"
 
-    # 1b. 启动 can0 服务 (后台)
-    if pgrep -f "can0_service_v1.3.8.py" >/dev/null 2>&1; then
-        log_warn "can0 服务已在运行，跳过启动"
-    else
-        local can0_py="${SCRIPT_DIR}/can_service/can0_service_v1.3.8.py"
+    # 1b. 启动 can0 服务 (后台)。进程存在不代表 Unix Socket 仍可连接；
+    # stop_all 曾可能留下一个监听着已删除 inode 的旧进程，需要先清理再拉起。
+    local start_can_service=1
+    if pgrep -f "$CAN_SERVICE_NAME" >/dev/null 2>&1; then
+        if can_socket_ok; then
+            log_warn "can0 服务已在运行且 Socket 正常，跳过启动"
+            start_can_service=0
+        else
+            log_warn "can0 进程存在但 Socket 不可连接，正在清理失效进程后重启"
+            pkill -TERM -f "$CAN_SERVICE_NAME" 2>/dev/null || true
+            sudo -n pkill -TERM -f "$CAN_SERVICE_NAME" 2>/dev/null || true
+            local elapsed=0
+            while pgrep -f "$CAN_SERVICE_NAME" >/dev/null 2>&1 && [ "$elapsed" -lt 5 ]; do
+                sleep 1
+                elapsed=$((elapsed + 1))
+            done
+            if pgrep -f "$CAN_SERVICE_NAME" >/dev/null 2>&1; then
+                log_warn "失效的 can0 进程未及时退出，正在强制停止"
+                pkill -KILL -f "$CAN_SERVICE_NAME" 2>/dev/null || true
+                sudo -n pkill -KILL -f "$CAN_SERVICE_NAME" 2>/dev/null || true
+                sleep 1
+                if pgrep -f "$CAN_SERVICE_NAME" >/dev/null 2>&1; then
+                    log_error "失效的 can0 进程无法停止，请检查进程权限"
+                    return 1
+                fi
+            fi
+            rm -f "$CAN_SOCKET"
+        fi
+    fi
+
+    if [ "$start_can_service" = 1 ]; then
         # 存在 sudoers NOPASSWD 白名单时自动以 root 启动（socket chown root:test 需要）
-        if sudo -n -l 2>/dev/null | grep -qF "can0_service_v1.3.8.py"; then
+        if sudo -n -l 2>/dev/null | grep -qF "$CAN_SERVICE_NAME"; then
             log_info "启动 can0_service (root, sudoers 白名单) ..."
-            nohup sudo -n -- "$(readlink -f "$PYPATH")" -u "${can0_py}" \
+            nohup sudo -n -- "$(readlink -f "$PYPATH")" -u "$CAN_SERVICE_PATH" \
                 >> "${LOG_BASE}/can0_service.log" 2>&1 </dev/null &
         else
             log_info "启动 can0_service (当前用户, 无 sudoers 白名单) ..."
-            nohup "$PYPATH" -u "${can0_py}" \
+            nohup "$PYPATH" -u "$CAN_SERVICE_PATH" \
                 >> "${LOG_BASE}/can0_service.log" 2>&1 </dev/null &
         fi
         echo $! > /tmp/can0_service.pid
@@ -215,10 +243,15 @@ start_can() {
     fi
 
     # 等待 socket 出现
-    wait_for_socket "$CAN_SOCKET" 30 "CAN Socket"
+    wait_for_socket "$CAN_SOCKET" 30 "CAN Socket" || return 1
+
+    if ! can_socket_ok; then
+        log_error "CAN Socket 文件已出现，但无法建立连接"
+        return 1
+    fi
 
     # socket 文件可能残留自上次崩溃，需确认进程真实存活
-    if ! pgrep -f "can0_service_v1.3.8.py" >/dev/null 2>&1; then
+    if ! pgrep -f "$CAN_SERVICE_NAME" >/dev/null 2>&1; then
         log_error "can0 服务进程已退出，查看: ${LOG_BASE}/can0_service.log"
         tail -30 "${LOG_BASE}/can0_service.log" | sed 's/^/  /'
         return 1

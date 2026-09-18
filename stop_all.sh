@@ -11,6 +11,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CAN_SERVICE_PATTERN='can0_service_v[0-9.]+\.py'
 
 RED='\033[0;31m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'; CYAN='\033[0;36m'; NC='\033[0m'
 log_info()  { echo -e "${GREEN}[INFO]${NC}  $*"; }
@@ -103,10 +104,10 @@ fi
 # ---- 1. 停止 CAN 服务 ---------------------------------------------------
 log_step "7/7  停止 CAN 服务"
 kill_by_pidfile "/tmp/can0_service.pid" "can0 Service"
-kill_by_pattern "can0_service_v1.3.6.py" "can0 Service(残留)"
+kill_by_pattern "$CAN_SERVICE_PATTERN" "can0 Service(残留)"
 # root 启动的 can0 服务需要 sudo 才能停止（sudoers 白名单）
-if pgrep -f "can0_service_v1.3.6.py" >/dev/null 2>&1; then
-    sudo -n pkill -f can0_service_v1.3.6.py 2>/dev/null || log_warn "can0 服务以 root 运行但 sudo 停止失败，请手动处理"
+if pgrep -f "$CAN_SERVICE_PATTERN" >/dev/null 2>&1; then
+    sudo -n pkill -f "$CAN_SERVICE_PATTERN" 2>/dev/null || log_warn "can0 服务以 root 运行但 sudo 停止失败，请手动处理"
 fi
 
 # ---- 清理共享内存和 socket -----------------------------------------------
@@ -115,7 +116,12 @@ for shm in vr_frame vr_result; do
     [ -e "/dev/shm/${shm}" ] && rm -f "/dev/shm/${shm}" 2>/dev/null && log_info "已清理 /dev/shm/${shm}"
 done
 [ -S /tmp/vr_cmd.sock ] && rm -f /tmp/vr_cmd.sock && log_info "已清理 /tmp/vr_cmd.sock"
-[ -S "${SCRIPT_DIR}/can_service/sock/can0_bus.sock" ] && rm -f "${SCRIPT_DIR}/can_service/sock/can0_bus.sock" && log_info "已清理残留 CAN socket"
+if pgrep -f "$CAN_SERVICE_PATTERN" >/dev/null 2>&1; then
+    log_warn "can0 服务仍在运行，保留 CAN socket，避免破坏活动监听"
+elif [ -S "${SCRIPT_DIR}/can_service/sock/can0_bus.sock" ]; then
+    rm -f "${SCRIPT_DIR}/can_service/sock/can0_bus.sock"
+    log_info "已清理残留 CAN socket"
+fi
 
 echo ""
 log_info "全部服务已停止 ✓"

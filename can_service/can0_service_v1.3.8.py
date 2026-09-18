@@ -96,7 +96,7 @@ BACKEND_LISTEN_HOST = os.environ.get("BACKEND_LISTEN_HOST", "0.0.0.0")  # AIBox 
 BACKEND_LISTEN_PORT = int(os.environ.get("BACKEND_LISTEN_PORT", "20001"))
 BACKEND_UPDATE_URL = os.environ.get(
     "BACKEND_UPDATE_URL",
-    "http://192.168.0.18:20001/api/airConditioningControl/updateInfo",
+    "http://192.168.0.48:20001/api/airConditioningControl/updateInfo",
 )
 BACKEND_UPDATE_INTERVAL_SECONDS = 1.0
 BACKEND_HTTP_TIMEOUT_SECONDS = 0.8
@@ -2737,7 +2737,7 @@ class CANParser:
 
     # ==================== 0x100 C_100 解析 (CAN-Send-2.dbc) ====================
     def _parse_c_100(self, frame: CANFrame, result: ParsedCANData):
-        """解析 C_100 (GPS/温度/湿度 — CAN FD 25字节帧, Motorola @1 格式)"""
+        """解析 C_100 (GPS/温度/湿度 — CAN FD 25字节帧, Intel @1 格式)"""
         data = frame.data
         if len(data) < 25:
             return
@@ -2747,17 +2747,14 @@ class CANParser:
         result.parsed_signals["C________1"] = raw
         result.parsed_signals["C________1_raw"] = raw
 
-        # GPS__ (纬度): start=24, len=32, signed (@1-) → bytes3-6 大端
-        raw = (data[3] << 24) | (data[4] << 16) | (data[5] << 8) | data[6]
-        if raw & 0x80000000:
-            raw = raw - 0x100000000
+        # DBC @1 means Intel/little-endian byte order.
+        # GPS__ (纬度): start=24, len=32, signed (@1-) → bytes3-6 小端
+        raw = int.from_bytes(data[3:7], byteorder="little", signed=True)
         result.parsed_signals["GPS__"] = raw
         result.parsed_signals["GPS___raw"] = raw
 
-        # GPS___1 (经度): start=56, len=32, signed (@1-) → bytes7-10 大端
-        raw = (data[7] << 24) | (data[8] << 16) | (data[9] << 8) | data[10]
-        if raw & 0x80000000:
-            raw = raw - 0x100000000
+        # GPS___1 (经度): start=56, len=32, signed (@1-) → bytes7-10 小端
+        raw = int.from_bytes(data[7:11], byteorder="little", signed=True)
         result.parsed_signals["GPS___1"] = raw
         result.parsed_signals["GPS___1_raw"] = raw
 
@@ -2765,28 +2762,28 @@ class CANParser:
         TEMP_SCALE = 0.0102235446707866
         TEMP_OFFSET = -270
 
-        # TA_FdHeadTempLe: start=88, len=16, unsigned (@1+) → bytes11-12 大端
-        raw = (data[11] << 8) | data[12]
+        # TA_FdHeadTempLe: start=88, len=16, unsigned (@1+) → bytes11-12 小端
+        raw = int.from_bytes(data[11:13], byteorder="little", signed=False)
         result.parsed_signals["TA_FdHeadTempLe"] = round(raw * TEMP_SCALE + TEMP_OFFSET, 1)
         result.parsed_signals["TA_FdHeadTempLe_raw"] = raw
 
         # TA_FdHeadTempRi: start=104, len=16, unsigned (@1+) → bytes13-14
-        raw = (data[13] << 8) | data[14]
+        raw = int.from_bytes(data[13:15], byteorder="little", signed=False)
         result.parsed_signals["TA_FdHeadTempRi"] = round(raw * TEMP_SCALE + TEMP_OFFSET, 1)
         result.parsed_signals["TA_FdHeadTempRi_raw"] = raw
 
         # TA_FpHeadTempLe: start=120, len=16, unsigned (@1+) → bytes15-16
-        raw = (data[15] << 8) | data[16]
+        raw = int.from_bytes(data[15:17], byteorder="little", signed=False)
         result.parsed_signals["TA_FpHeadTempLe"] = round(raw * TEMP_SCALE + TEMP_OFFSET, 1)
         result.parsed_signals["TA_FpHeadTempLe_raw"] = raw
 
         # TA_FpHeadTempRi: start=136, len=16, unsigned (@1+) → bytes17-18
-        raw = (data[17] << 8) | data[18]
+        raw = int.from_bytes(data[17:19], byteorder="little", signed=False)
         result.parsed_signals["TA_FpHeadTempRi"] = round(raw * TEMP_SCALE + TEMP_OFFSET, 1)
         result.parsed_signals["TA_FpHeadTempRi_raw"] = raw
 
         # TS_FrntWidTemp: start=152, len=16, unsigned (@1+) → bytes19-20
-        raw = (data[19] << 8) | data[20]
+        raw = int.from_bytes(data[19:21], byteorder="little", signed=False)
         result.parsed_signals["TS_FrntWidTemp"] = round(raw * TEMP_SCALE + TEMP_OFFSET, 1)
         result.parsed_signals["TS_FrntWidTemp_raw"] = raw
 
@@ -2795,12 +2792,12 @@ class CANParser:
         HUM_OFFSET = -100
 
         # V_FrntHum: start=168, len=16, unsigned (@1+) → bytes21-22
-        raw = (data[21] << 8) | data[22]
+        raw = int.from_bytes(data[21:23], byteorder="little", signed=False)
         result.parsed_signals["V_FrntHum"] = round(raw * HUM_SCALE + HUM_OFFSET, 1)
         result.parsed_signals["V_FrntHum_raw"] = raw
 
         # V_SecHum: start=184, len=16, unsigned (@1+) → bytes23-24
-        raw = (data[23] << 8) | data[24]
+        raw = int.from_bytes(data[23:25], byteorder="little", signed=False)
         result.parsed_signals["V_SecHum"] = round(raw * HUM_SCALE + HUM_OFFSET, 1)
         result.parsed_signals["V_SecHum_raw"] = raw
 
@@ -2947,9 +2944,15 @@ class SocketCANInterface:
         
     def open(self) -> bool:
         try:
+            # can5 carries the 0x100 telemetry as CAN FD (25-byte payload,
+            # encoded as a 32-byte FD frame on the wire).  python-can defaults
+            # to a Classical CAN socket unless fd=True is supplied, in which
+            # case the kernel silently withholds those FD frames.
+            is_fd_interface = self.interface == "can5"
             self.bus = can.interface.Bus(
                 channel=self.interface,
-                interface='socketcan'
+                interface='socketcan',
+                fd=is_fd_interface,
             )
             self.is_connected = True
             print(f"[SocketCAN] Opened {self.interface}")
@@ -3602,7 +3605,8 @@ class CANReceiver:
             dlc=message.dlc,
             data=message.data,
             timestamp_us=timestamp_us,
-            bus_name=interface
+            bus_name=interface,
+            is_fd=message.is_fd,
         )
     
     
