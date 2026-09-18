@@ -2,27 +2,28 @@
 冒烟测试: 车载 PMV Runtime 包
 验证目标：
   1. 读取 sample_input.json，运行 CHTD + PMV 一步
-  2. 输出结构符合 runtime_output_schema.json
+  2. 输出结构符合 config/schemas/runtime_output_schema.json
   3. forbidden_input_detected = False
   4. status in {ok, degraded}（允许 degraded 但不允许 blocked/error）
   5. use_next_state = True 且 x_next 字段存在（或 None — 表示模型未实现状态传递）
 """
 import sys
 import json
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
 
 SAMPLE_INPUT = Path(__file__).parent / "sample_input.json"
-RESULT_OUTPUT = Path(__file__).parent / "smoke_test_output.json"
+EXPECTED_OUTPUT_KEYS = Path(__file__).parent / "expected_output_keys.json"
+RESULT_OUTPUT = Path(tempfile.gettempdir()) / "vehicle_pmv_smoke_test_output.json"
 
-
-REQUIRED_TOP_LEVEL = ["status", "model_state", "pmv", "diagnostics", "provenance"]
-REQUIRED_MODEL_STATE = ["driver_head_temp_c", "passenger_head_temp_c",
-                        "driver_feet_temp_c", "passenger_feet_temp_c"]
-REQUIRED_PMV = ["pmv_driver", "pmv_passenger"]
-REQUIRED_DIAG = ["forbidden_input_detected", "fallback_used"]
+EXPECTED = json.loads(EXPECTED_OUTPUT_KEYS.read_text(encoding="utf-8"))
+REQUIRED_TOP_LEVEL = EXPECTED["required_top_level"]
+REQUIRED_MODEL_STATE = EXPECTED["required_model_state"]
+REQUIRED_PMV = EXPECTED["required_pmv"]
+REQUIRED_DIAG = EXPECTED["required_diagnostics"]
 FORBIDDEN_INPUT_KEYS = {
     "TA_FdHeadTempLe", "TA_FpHeadTempLe", "TA_FdFloorTemp1",
     "TA_FdFloorTemp2", "TA_CarbinFrntTempLe",
@@ -108,12 +109,13 @@ def run_smoke_test():
     print("\nT7: provenance")
     prov = out.get("provenance", {}) or {}
     results.append(check(
-        prov.get("calibration_status") == "midterm_preview_not_vehicle_calibration",
+        prov.get("calibration_status")
+        == "spring_summer_v8_l1_candidate_not_vehicle_calibration",
         "calibration_status 正确"
     ))
     results.append(check(
-        prov.get("chtd_param_mode") == "safe_preview",
-        "chtd_param_mode = safe_preview"
+        prov.get("chtd_param_mode") == "default",
+        "chtd_param_mode = default"
     ))
 
     # ── T8: use_next_state 语义 ──────────────────────────────────
@@ -147,3 +149,7 @@ def run_smoke_test():
 if __name__ == "__main__":
     ok = run_smoke_test()
     sys.exit(0 if ok else 1)
+
+
+def test_runtime_smoke():
+    assert run_smoke_test()

@@ -15,13 +15,6 @@ import numpy as np
 from hvac_sim.chtd.bus_index import U_INDEX
 from hvac_sim.chtd.params import CHTDParams
 from hvac_sim.afe.actuator_based_airflow import apply_voltage_actuator_distribution
-from hvac_sim.validation.chtd_foot_flow_gating_fix import (
-    FOOT_FLOW_KEYS,
-    apply_actuator_gated_flow,
-    apply_leakage_ratio,
-    foot_open_normalized,
-)
-from hvac_sim.validation.chtd_global_calibration_phase1 import _scale_lut_params
 
 PHASE3_PROVENANCE = "engineering_capacity_preview_not_vehicle_calibration"
 CLASSIFICATION = PHASE3_PROVENANCE
@@ -32,6 +25,16 @@ FOOT_DOMINANCE_MARGIN = 0.10
 
 FRONT_DRV_FLOW_KEYS = ("FrntFdvFlow", "FrntFdfFlow", "FrntFdDefFlow")
 FRONT_PSG_FLOW_KEYS = ("FrntFpvFlow", "FrntFpfFlow", "FrntFpDefFlow")
+FOOT_FLOW_KEYS = (
+    "FrntFdfFlow",
+    "FrntFpfFlow",
+    "FrntSdfFlow",
+    "FrntSpfFlow",
+    "RearSdfFlow",
+    "RearSpfFlow",
+    "RearTdfFlow",
+    "RearTpfFlow",
+)
 
 HEAD_SOLAR_LUTS = (
     "CHTD_FdSolarRadCo_M",
@@ -113,6 +116,48 @@ class Phase3StructureConfig:
 
 def _side_total(u: np.ndarray, keys: Tuple[str, ...]) -> float:
     return float(sum(float(u[U_INDEX[k]]) for k in keys))
+
+
+def foot_open_normalized(voltage: float) -> float:
+    """Map the retained actuator voltage convention to a 0..1 opening."""
+    if not math.isfinite(voltage):
+        return 0.0
+    return float(np.clip((4.4 - float(voltage)) / (4.4 - 2.15), 0.0, 1.0))
+
+
+def apply_actuator_gated_flow(
+    u: np.ndarray,
+    *,
+    foot_vent_v: float,
+    closed_threshold: float,
+    span: float,
+) -> np.ndarray:
+    """Gate foot-outlet flows using the foot actuator opening."""
+    out = u.copy()
+    openness = foot_open_normalized(foot_vent_v)
+    gate = float(np.clip((openness - closed_threshold) / max(span, 1e-6), 0.0, 1.0))
+    for key in FOOT_FLOW_KEYS:
+        out[U_INDEX[key]] *= gate
+    return out
+
+
+def apply_leakage_ratio(u: np.ndarray, *, leakage_ratio: float) -> np.ndarray:
+    """Limit foot-outlet flows to the configured leakage fraction."""
+    out = u.copy()
+    ratio = float(np.clip(leakage_ratio, 0.0, 1.0))
+    for key in FOOT_FLOW_KEYS:
+        out[U_INDEX[key]] *= ratio
+    return out
+
+
+def _scale_lut_params(base: CHTDParams, names: Tuple[str, ...], scale: float) -> CHTDParams:
+    """Return a copy with selected lookup-table parameters scaled."""
+    out = copy.deepcopy(base)
+    for name in names:
+        if hasattr(out, name):
+            value = np.asarray(getattr(out, name), dtype=float) * float(scale)
+            setattr(out, name, value)
+    return out
 
 
 def apply_actuator_based_distribution(

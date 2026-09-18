@@ -1,0 +1,6 @@
+{
+  "_comment": "Minimal runtime input — only amb_t_c required. All others default.",
+  "amb_t_c": 35.0,
+  "chtd_param_mode": "default",
+  "use_next_state": true
+}

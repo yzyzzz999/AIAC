@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Vehicle PMV runtime input",
+  "type": "object",
+  "required": ["amb_t_c"],
+  "properties": {
+    "amb_t_c": {"type": "number"},
+    "raw_amb_t_c": {"type": ["number", "null"]},
+    "rh_percent": {"type": "number", "default": 50.0},
+    "vehicle_speed_kph": {"type": ["number", "null"], "default": 0.0},
+    "solar_driver_w_m2": {"type": ["number", "null"], "default": 0.0},
+    "solar_passenger_w_m2": {"type": ["number", "null"], "default": 0.0},
+    "eva_t_c": {"type": ["number", "null"]},
+    "ict_c": {"type": ["number", "null"]},
+    "hct_c": {"type": ["number", "null"]},
+    "front_blower_level": {"type": ["number", "null"]},
+    "front_windshield_temp_c": {"type": ["number", "null"]},
+    "tma": {
+      "type": "object",
+      "additionalProperties": {"type": "number"}
+    },
+    "flows": {
+      "type": "object",
+      "additionalProperties": {"type": "number"}
+    },
+    "measured_head_air_temp_c": {
+      "type": "object",
+      "properties": {
+        "driver_left": {"type": ["number", "null"]},
+        "driver_right": {"type": ["number", "null"]},
+        "passenger_left": {"type": ["number", "null"]},
+        "passenger_right": {"type": ["number", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "image_inputs": {
+      "type": ["object", "null"],
+      "properties": {
+        "driver": {"$ref": "#/definitions/occupant"},
+        "passenger": {"$ref": "#/definitions/occupant"}
+      },
+      "additionalProperties": false
+    },
+    "chtd_param_mode": {
+      "type": "string",
+      "enum": ["default", "safe_preview", "phase3_engineering_preview"],
+      "default": "default"
+    },
+    "params_bundle_path": {"type": ["string", "null"]},
+    "use_next_state": {"type": "boolean", "default": true},
+    "apply_runtime_policy": {"type": "boolean", "default": true},
+    "bypass_models": {"type": "boolean", "default": false},
+    "driver_air_temp_override_c": {"type": ["number", "null"]},
+    "passenger_air_temp_override_c": {"type": ["number", "null"]},
+    "driver_mrt_override_c": {"type": ["number", "null"]},
+    "passenger_mrt_override_c": {"type": ["number", "null"]},
+    "driver_air_speed_override_m_s": {"type": ["number", "null"]},
+    "passenger_air_speed_override_m_s": {"type": ["number", "null"]}
+  },
+  "definitions": {
+    "occupant": {
+      "type": "object",
+      "properties": {
+        "occupied": {"type": ["boolean", "null"]},
+        "clothing_clo": {"type": ["number", "null"]},
+        "clothing_class": {"type": ["string", "number", "null"]},
+        "activity_met": {"type": ["number", "null"]},
+        "ir_head_surface_temp_c": {"type": ["number", "null"]},
+        "confidence": {"type": ["number", "null"]}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

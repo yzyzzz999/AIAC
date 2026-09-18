@@ -12,6 +12,7 @@
 # 环境变量:
 #   API_PORT        默认 7861
 #   PMV_INTERVAL    默认 1.0 (秒)
+#   PMV_LOG_LEVEL   默认 INFO
 #   SOCKET_PATH     默认 ../can_service/sock/can0_bus.sock
 #   PMV_PARAM_LOG   默认 /tmp/pmv_service_logs/pmv_param_trace.log
 #
@@ -23,6 +24,7 @@ set -euo pipefail
 
 API_PORT="${API_PORT:-7861}"
 PMV_INTERVAL="${PMV_INTERVAL:-1.0}"
+PMV_LOG_LEVEL="${PMV_LOG_LEVEL:-INFO}"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SOCKET_PATH="${SOCKET_PATH:-${SCRIPT_DIR}/../can_service/sock/can0_bus.sock}"
@@ -57,6 +59,7 @@ echo "Starting PMV consumer..."
 echo "  Socket:   $SOCKET_PATH"
 echo "  API port: $API_PORT"
 echo "  Interval: ${PMV_INTERVAL}s"
+echo "  LogLevel: $PMV_LOG_LEVEL"
 echo "  Log:      $LOG_FILE"
 echo "  ParamLog: $PARAM_LOG_FILE"
 
@@ -67,6 +70,7 @@ nohup python -u "$SCRIPT_DIR/pmv_socket_consumer.py" \
     --interval "$PMV_INTERVAL" \
     --api-port "$API_PORT" \
     --param-log "$PARAM_LOG_FILE" \
+    --log-level "$PMV_LOG_LEVEL" \
     >> "$LOG_FILE" 2>&1 </dev/null &
 
 PMV_PID=$!

@@ -23,7 +23,12 @@ from hvac_sim.chtd.thermal import compute_chtd_delta, one_step_chtd
 from hvac_sim.chtd.zone_config import CHTD_ZONE_CONFIG, ZoneImplementationMode
 from hvac_sim.ekf.head_temp_filter import HeadTempFilterResult, fuse_front_row_heads
 from hvac_sim.occupant import ImageModuleInputs, SeatOccupantResolved, resolve_image_module_inputs
-from hvac_sim.pmv.interface import VehicleComfortInputs, compute_vehicle_pmv
+from hvac_sim.pipeline_diagnostics import (
+    PMV_DIAGNOSTIC_OBSERVER,
+    PmvDiagnosticSnapshot,
+)
+from hvac_sim.pipeline_pmv import SeatPmvConditions, evaluate_seat_pmv
+from hvac_sim.pipeline_serialization import serialize_pipeline_result
 
 
 @dataclass(frozen=True)
@@ -99,6 +104,36 @@ class PipelineResult:
     trace_status: str
     implementation_modes: Dict[str, list[str]]
     inputs_used: Dict[str, Any] = field(default_factory=dict)
+
+
+def _evaluate_seat(
+    *,
+    air_temp_c: float,
+    mean_radiant_temp_c: float,
+    air_speed_m_s: float,
+    relative_humidity_pct: float,
+    metabolic_rate_met: float,
+    clothing_insulation_clo: float,
+    occupied: bool,
+) -> SeatComfortResult:
+    comfort = evaluate_seat_pmv(
+        SeatPmvConditions(
+            air_temp_c=air_temp_c,
+            mean_radiant_temp_c=mean_radiant_temp_c,
+            air_speed_m_s=air_speed_m_s,
+            relative_humidity_pct=relative_humidity_pct,
+            metabolic_rate_met=metabolic_rate_met,
+            clothing_insulation_clo=clothing_insulation_clo,
+        )
+    )
+    return SeatComfortResult(
+        air_temp_c=air_temp_c,
+        mean_radiant_temp_c=mean_radiant_temp_c,
+        air_speed_m_s=air_speed_m_s,
+        pmv=comfort.pmv,
+        ppd=comfort.ppd,
+        valid=occupied,
+    )
 
 
 def _validate_chtd_vectors(x: np.ndarray, u: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
@@ -413,25 +448,23 @@ def _run_comfort_pipeline_bypass(
         inputs.passenger_air_speed_override_m_s, _BYPASS_DEFAULT_AIR_SPEED_M_S
     )
 
-    driver_comfort = compute_vehicle_pmv(
-        VehicleComfortInputs(
-            air_temp_c=driver_pmv_air_temp,
-            mean_radiant_temp_c=driver_mrt,
-            air_velocity_m_s=driver_air_speed,
-            relative_humidity_pct=inputs.rh,
-            metabolic_rate_met=met_driver,
-            clothing_insulation_clo=clo_driver,
-        )
+    driver_comfort = _evaluate_seat(
+        air_temp_c=driver_pmv_air_temp,
+        mean_radiant_temp_c=driver_mrt,
+        air_speed_m_s=driver_air_speed,
+        relative_humidity_pct=inputs.rh,
+        metabolic_rate_met=met_driver,
+        clothing_insulation_clo=clo_driver,
+        occupied=driver_occ.occupied,
     )
-    passenger_comfort = compute_vehicle_pmv(
-        VehicleComfortInputs(
-            air_temp_c=passenger_pmv_air_temp,
-            mean_radiant_temp_c=passenger_mrt,
-            air_velocity_m_s=passenger_air_speed,
-            relative_humidity_pct=inputs.rh,
-            metabolic_rate_met=met_passenger,
-            clothing_insulation_clo=clo_passenger,
-        )
+    passenger_comfort = _evaluate_seat(
+        air_temp_c=passenger_pmv_air_temp,
+        mean_radiant_temp_c=passenger_mrt,
+        air_speed_m_s=passenger_air_speed,
+        relative_humidity_pct=inputs.rh,
+        metabolic_rate_met=met_passenger,
+        clothing_insulation_clo=clo_passenger,
+        occupied=passenger_occ.occupied,
     )
 
     x_delta = np.zeros(N_X_STATES, dtype=float)
@@ -471,22 +504,8 @@ def _run_comfort_pipeline_bypass(
     return PipelineResult(
         x_next=x_next,
         x_delta=x_delta,
-        driver=SeatComfortResult(
-            air_temp_c=driver_pmv_air_temp,
-            mean_radiant_temp_c=driver_mrt,
-            air_speed_m_s=driver_air_speed,
-            pmv=driver_comfort.pmv,
-            ppd=driver_comfort.ppd,
-            valid=driver_occ.occupied,
-        ),
-        passenger=SeatComfortResult(
-            air_temp_c=passenger_pmv_air_temp,
-            mean_radiant_temp_c=passenger_mrt,
-            air_speed_m_s=passenger_air_speed,
-            pmv=passenger_comfort.pmv,
-            ppd=passenger_comfort.ppd,
-            valid=passenger_occ.occupied,
-        ),
+        driver=driver_comfort,
+        passenger=passenger_comfort,
         trace_status="CHTD bypassed — direct PMV inputs used",
         implementation_modes=impl_modes,
         inputs_used=inputs_used,
@@ -551,121 +570,56 @@ def run_comfort_pipeline(inputs: PipelineInputs) -> PipelineResult:
         passenger_head_fusion.fused_temp_c,
     )
 
-    driver_comfort = compute_vehicle_pmv(
-        VehicleComfortInputs(
-            air_temp_c=driver_pmv_air_temp,
-            mean_radiant_temp_c=driver_mrt,
-            air_velocity_m_s=air_speeds.driver_air_speed_m_s,
-            relative_humidity_pct=inputs.rh,
-            metabolic_rate_met=met_driver,
-            clothing_insulation_clo=clo_driver,
-        )
+    driver_comfort = _evaluate_seat(
+        air_temp_c=driver_pmv_air_temp,
+        mean_radiant_temp_c=driver_mrt,
+        air_speed_m_s=air_speeds.driver_air_speed_m_s,
+        relative_humidity_pct=inputs.rh,
+        metabolic_rate_met=met_driver,
+        clothing_insulation_clo=clo_driver,
+        occupied=driver_occ.occupied,
     )
-    passenger_comfort = compute_vehicle_pmv(
-        VehicleComfortInputs(
-            air_temp_c=passenger_pmv_air_temp,
-            mean_radiant_temp_c=passenger_mrt,
-            air_velocity_m_s=air_speeds.passenger_air_speed_m_s,
-            relative_humidity_pct=inputs.rh,
-            metabolic_rate_met=met_passenger,
-            clothing_insulation_clo=clo_passenger,
-        )
+    passenger_comfort = _evaluate_seat(
+        air_temp_c=passenger_pmv_air_temp,
+        mean_radiant_temp_c=passenger_mrt,
+        air_speed_m_s=air_speeds.passenger_air_speed_m_s,
+        relative_humidity_pct=inputs.rh,
+        metabolic_rate_met=met_passenger,
+        clothing_insulation_clo=clo_passenger,
+        occupied=passenger_occ.occupied,
     )
 
-    # ---- PMV debug: print detailed inputs every 20 calls ----
-    _pmv_debug_counter = getattr(run_comfort_pipeline, "_pmv_debug_counter", 0) + 1
-    run_comfort_pipeline._pmv_debug_counter = _pmv_debug_counter  # type: ignore[attr-defined]
-    if _pmv_debug_counter == 1 or _pmv_debug_counter % 20 == 0:
-        import sys as _sys
-        pas_head_raw = x_comfort[X_INDEX["HeadTempFp"]]
-        pas_cabin_raw = x_comfort[X_INDEX["CabinTempFp"]]
-        pas_win_raw = x_comfort[X_INDEX["WinTempFp"]]
-        pas_roof_raw = x_comfort[X_INDEX["RoofTemp"]]
-        pas_win_mrt = _mrt_surface_or_cabin(pas_win_raw, pas_cabin_raw)
-        pas_roof_mrt = _mrt_surface_or_cabin(pas_roof_raw, pas_cabin_raw)
-        pas_win_clamped = pas_win_raw > MRT_HOT_SURFACE_THRESHOLD_C
-        pas_roof_clamped = pas_roof_raw > MRT_HOT_SURFACE_THRESHOLD_C
-        print(
-            f"\n[PMV-DEBUG #{_pmv_debug_counter}] "
-            f"========== 副驾 Passenger PMV 输入明细 ==========",
-            file=_sys.stderr,
+    passenger_cabin_raw = x_comfort[X_INDEX["CabinTempFp"]]
+    passenger_window_raw = x_comfort[X_INDEX["WinTempFp"]]
+    passenger_roof_raw = x_comfort[X_INDEX["RoofTemp"]]
+    PMV_DIAGNOSTIC_OBSERVER.observe(
+        PmvDiagnosticSnapshot(
+            passenger_pmv=passenger_comfort.pmv,
+            passenger_ppd=passenger_comfort.ppd,
+            passenger_air_temp_c=passenger_pmv_air_temp,
+            passenger_air_temp_source=passenger_air_temp_source,
+            passenger_mrt_c=passenger_mrt,
+            passenger_air_speed_m_s=air_speeds.passenger_air_speed_m_s,
+            relative_humidity_pct=inputs.rh,
+            passenger_met=met_passenger,
+            passenger_clo=clo_passenger,
+            passenger_head_raw_c=x_comfort[X_INDEX["HeadTempFp"]],
+            passenger_cabin_raw_c=passenger_cabin_raw,
+            passenger_window_raw_c=passenger_window_raw,
+            passenger_roof_raw_c=passenger_roof_raw,
+            passenger_window_mrt_c=_mrt_surface_or_cabin(
+                passenger_window_raw, passenger_cabin_raw
+            ),
+            passenger_roof_mrt_c=_mrt_surface_or_cabin(
+                passenger_roof_raw, passenger_cabin_raw
+            ),
+            driver_head_raw_c=x_comfort[X_INDEX["HeadTempFd"]],
+            driver_feet_raw_c=x_comfort[X_INDEX["FeetTempFd"]],
+            passenger_feet_raw_c=x_comfort[X_INDEX["FeetTempFp"]],
+            driver_pmv=driver_comfort.pmv,
+            mrt_hot_surface_threshold_c=MRT_HOT_SURFACE_THRESHOLD_C,
         )
-        print(
-            f"  PMV结果: PMV={passenger_comfort.pmv:+.3f}  PPD={passenger_comfort.ppd:.1f}%",
-            file=_sys.stderr,
-        )
-        print(
-            f"  ① air_temp_c       = {passenger_pmv_air_temp:.2f} °C  "
-            f"(source={passenger_air_temp_source})",
-            file=_sys.stderr,
-        )
-        print(
-            f"  ② mean_radiant_temp = {passenger_mrt:.2f} °C",
-            file=_sys.stderr,
-        )
-        print(
-            f"     ├ HeadTempFp  = {pas_head_raw:.2f} °C",
-            file=_sys.stderr,
-        )
-        print(
-            f"     ├ CabinTempFp = {pas_cabin_raw:.2f} °C",
-            file=_sys.stderr,
-        )
-        print(
-            f"     ├ WinTempFp   = {pas_win_raw:.2f} °C"
-            + (" ← 已截断(>35°C)" if pas_win_clamped else ""),
-            file=_sys.stderr,
-        )
-        print(
-            f"     └ RoofTemp    = {pas_roof_raw:.2f} °C"
-            + (" ← 已截断(>35°C)" if pas_roof_clamped else ""),
-            file=_sys.stderr,
-        )
-        print(
-            f"  MRT计算值(截断后): mean({pas_head_raw:.1f}, "
-            f"{pas_cabin_raw:.1f}, "
-            f"{pas_win_mrt:.1f}, "
-            f"{pas_roof_mrt:.1f})",
-            file=_sys.stderr,
-        )
-        print(
-            f"  ③ air_velocity     = {air_speeds.passenger_air_speed_m_s:.3f} m/s",
-            file=_sys.stderr,
-        )
-        print(
-            f"  ④ rh               = {inputs.rh:.1f} %",
-            file=_sys.stderr,
-        )
-        print(
-            f"  ⑤ met              = {met_passenger:.2f} met",
-            file=_sys.stderr,
-        )
-        print(
-            f"  ⑥ clo              = {clo_passenger:.2f} clo",
-            file=_sys.stderr,
-        )
-        print(
-            f"  操作温度 ≈ (ta+tr)/2 = {(passenger_pmv_air_temp + passenger_mrt) / 2:.2f} °C",
-            file=_sys.stderr,
-        )
-        drv_head_raw = x_comfort[X_INDEX["HeadTempFd"]]
-        drv_feet_raw = x_comfort[X_INDEX["FeetTempFd"]]
-        pas_feet_raw = x_comfort[X_INDEX["FeetTempFp"]]
-        print(
-            f"  主驾头温={drv_head_raw:.1f}°C  主驾脚温={drv_feet_raw:.1f}°C  "
-            f"副驾脚温={pas_feet_raw:.1f}°C  "
-            f"主驾PMV={driver_comfort.pmv:+.3f}",
-            file=_sys.stderr,
-        )
-        print(
-            f"  MRT阈值={MRT_HOT_SURFACE_THRESHOLD_C}°C  "
-            f"头脚温差={pas_head_raw - pas_feet_raw:.1f}°C",
-            file=_sys.stderr,
-        )
-        print(
-            f"==============================================================\n",
-            file=_sys.stderr,
-        )
+    )
 
     impl_modes = _build_implementation_modes()
     inputs_used: Dict[str, Any] = {
@@ -734,88 +688,17 @@ def run_comfort_pipeline(inputs: PipelineInputs) -> PipelineResult:
     return PipelineResult(
         x_next=x_next,
         x_delta=x_delta,
-        driver=SeatComfortResult(
-            air_temp_c=driver_pmv_air_temp,
-            mean_radiant_temp_c=driver_mrt,
-            air_speed_m_s=air_speeds.driver_air_speed_m_s,
-            pmv=driver_comfort.pmv,
-            ppd=driver_comfort.ppd,
-            valid=driver_occ.occupied,
-        ),
-        passenger=SeatComfortResult(
-            air_temp_c=passenger_pmv_air_temp,
-            mean_radiant_temp_c=passenger_mrt,
-            air_speed_m_s=air_speeds.passenger_air_speed_m_s,
-            pmv=passenger_comfort.pmv,
-            ppd=passenger_comfort.ppd,
-            valid=passenger_occ.occupied,
-        ),
+        driver=driver_comfort,
+        passenger=passenger_comfort,
         trace_status=_trace_status_summary(impl_modes),
         implementation_modes=impl_modes,
         inputs_used=inputs_used,
     )
 
 
-def _seat_comfort_to_dict(seat: SeatComfortResult) -> Dict[str, Any]:
-    return {
-        "air_temp_c": float(seat.air_temp_c),
-        "mean_radiant_temp_c": float(seat.mean_radiant_temp_c),
-        "air_speed_m_s": float(seat.air_speed_m_s),
-        "pmv": float(seat.pmv),
-        "ppd": float(seat.ppd),
-        "valid": bool(seat.valid),
-    }
-
-
-def _to_json_safe(value: Any) -> Any:
-    """Convert pipeline values to JSON-serializable Python builtins."""
-    if value is None or isinstance(value, (bool, str)):
-        return value
-    if isinstance(value, np.ndarray):
-        return [float(v) for v in np.asarray(value, dtype=float).tolist()]
-    if isinstance(value, np.generic):
-        item = value.item()
-        if isinstance(item, bool):
-            return item
-        if isinstance(item, int) and not isinstance(item, bool):
-            return int(item)
-        return float(item)
-    if isinstance(value, SeatComfortResult):
-        return _seat_comfort_to_dict(value)
-    if isinstance(value, dict):
-        return {str(key): _to_json_safe(item) for key, item in value.items()}
-    if isinstance(value, (list, tuple)):
-        return [_to_json_safe(item) for item in value]
-    if isinstance(value, int) and not isinstance(value, bool):
-        return int(value)
-    if isinstance(value, float):
-        return float(value)
-    raise TypeError(
-        f"pipeline: value not JSON-serializable: {type(value)!r}"
-    )
-
-
 def pipeline_result_to_dict(result: PipelineResult) -> Dict[str, Any]:
     """Convert a ``PipelineResult`` to a JSON-safe plain dict."""
-    x_delta = np.asarray(result.x_delta, dtype=float)
-    x_next = np.asarray(result.x_next, dtype=float)
-    return {
-        "trace_status": result.trace_status,
-        "driver": _seat_comfort_to_dict(result.driver),
-        "passenger": _seat_comfort_to_dict(result.passenger),
-        "x_delta": [float(v) for v in x_delta.tolist()],
-        "x_next": [float(v) for v in x_next.tolist()],
-        "x_delta_summary": {
-            "min": float(np.min(x_delta)),
-            "max": float(np.max(x_delta)),
-            "mean": float(np.mean(x_delta)),
-        },
-        "implementation_modes": {
-            mode: list(names)
-            for mode, names in result.implementation_modes.items()
-        },
-        "inputs_used": _to_json_safe(result.inputs_used),
-    }
+    return serialize_pipeline_result(result)
 
 
 def run_comfort_pipeline_dict(inputs: PipelineInputs) -> Dict[str, Any]:

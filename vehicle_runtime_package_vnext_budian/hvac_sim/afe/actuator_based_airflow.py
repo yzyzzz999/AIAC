@@ -6,7 +6,6 @@ Uses decode_hvac_actuator_scores + bench anchors. Does not use AC_ModeVentilaPos
 from __future__ import annotations
 
 import math
-from pathlib import Path
 from typing import Any, Dict, List, Mapping, Optional, Sequence, Tuple
 
 import numpy as np
@@ -16,13 +15,22 @@ from hvac_sim.afe.actuator_score_decoder import (
     decode_hvac_actuator_scores,
 )
 from hvac_sim.chtd.bus_index import U_INDEX
-from hvac_sim.validation.airflow_reference_loader import build_mode_distribution_templates
 
 FRONT_DRV_FLOW_KEYS = ("FrntFdvFlow", "FrntFdfFlow", "FrntFdDefFlow")
 FRONT_PSG_FLOW_KEYS = ("FrntFpvFlow", "FrntFpfFlow", "FrntFpDefFlow")
 
 BENCH_CONFLICT_L1 = 0.35
 DEFROST_LEAK_MIN_SCORE = 0.08
+
+# The original deployment copy referenced a validation-only loader that was not
+# shipped.  Keep the runtime self-contained with the same four mode-level priors
+# expected by the blending logic.  These are priors, not calibrated flow rates.
+_MODE_FRONT_PRIORS = {
+    "face": (1.0, 0.0, 0.0),
+    "foot": (0.0, 1.0, 0.0),
+    "defrost": (0.0, 0.0, 1.0),
+    "mixed": (1.0 / 3.0, 1.0 / 3.0, 1.0 / 3.0),
+}
 
 
 def _side_total(u: np.ndarray, keys: Tuple[str, ...]) -> float:
@@ -31,7 +39,6 @@ def _side_total(u: np.ndarray, keys: Tuple[str, ...]) -> float:
 
 def _bench_front_fractions(mode_key: str) -> Tuple[float, float, float]:
     """Return (face, foot, defrost) front-duct fraction priors from bench anchors."""
-    templates = build_mode_distribution_templates()
     mode_map = {
         "face_dominant": "face",
         "foot_dominant": "foot",
@@ -39,14 +46,7 @@ def _bench_front_fractions(mode_key: str) -> Tuple[float, float, float]:
         "mixed": "mixed",
     }
     tpl_key = mode_map.get(mode_key, "mixed")
-    fracs = templates.get(tpl_key) or templates.get("face", {})
-    face = float(fracs.get("FrntFdvFlow", 0)) + float(fracs.get("FrntFpvFlow", 0))
-    foot = float(fracs.get("FrntFdfFlow", 0)) + float(fracs.get("FrntFpfFlow", 0))
-    defrost = float(fracs.get("FrntFdDefFlow", 0)) + float(fracs.get("FrntFpDefFlow", 0))
-    s = face + foot + defrost
-    if s < 1e-9:
-        return 1.0 / 3.0, 1.0 / 3.0, 1.0 / 3.0
-    return face / s, foot / s, defrost / s
+    return _MODE_FRONT_PRIORS[tpl_key]
 
 
 def _normalize_scores(face: float, foot: float, defrost: float) -> Tuple[float, float, float]:

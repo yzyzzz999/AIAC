@@ -1,105 +1,24 @@
 {
-  "schema": "can_signal_exception_list_v1",
-  "generated": "2026-06-15",
-  "note": "CAN signals still used directly; SIG/FTE equivalents not yet available. Replace before production.",
-  "exceptions": [
-    {
-      "can_signal": "VIU_AmbT",
-      "runtime_field": "amb_t_c",
-      "unit": "degC",
-      "sig_fte_replacement": "SIG.AmbientTemperature_C",
-      "deployment_impact": "Required"
-    },
-    {
-      "can_signal": "RH_pct",
-      "runtime_field": "rh_percent",
-      "unit": "%",
-      "sig_fte_replacement": "SIG.RelativeHumidity_pct",
-      "deployment_impact": "Defaults to 50% if missing"
-    },
-    {
-      "can_signal": "IPB_VehicleSpeed",
-      "runtime_field": "vehicle_speed_kph",
-      "unit": "km/h",
-      "sig_fte_replacement": "SIG.VehicleSpeed_kph",
-      "deployment_impact": "Defaults to 0 if missing"
-    },
-    {
-      "can_signal": "RSM_LeSolarInten",
-      "runtime_field": "solar_driver_w_m2",
-      "unit": "W/m2",
-      "sig_fte_replacement": "SIG.SolarIrradiance_Driver",
-      "deployment_impact": "Defaults to 0 if missing"
-    },
-    {
-      "can_signal": "RSM_RiSolarInten",
-      "runtime_field": "solar_passenger_w_m2",
-      "unit": "W/m2",
-      "sig_fte_replacement": "SIG.SolarIrradiance_Passenger",
-      "deployment_impact": "Defaults to 0 if missing"
-    },
-    {
-      "can_signal": "AC_Forward_AirFlowTarget",
-      "runtime_field": "flows.total_m3h",
-      "unit": "m3/h",
-      "sig_fte_replacement": "FTE.TotalAirflowTarget_m3h",
-      "deployment_impact": "Required for airflow"
-    },
-    {
-      "can_signal": "AC_DrvrFaceVentActT",
-      "runtime_field": "driver_face_flow",
-      "unit": "m3/h",
-      "sig_fte_replacement": "FTE.FrntDrvFaceFlow_m3h",
-      "deployment_impact": "Required for head zone"
-    },
-    {
-      "can_signal": "AC_PassFaceVentActT",
-      "runtime_field": "passenger_face_flow",
-      "unit": "m3/h",
-      "sig_fte_replacement": "FTE.FrntPsgFaceFlow_m3h",
-      "deployment_impact": "Required for head zone"
-    },
-    {
-      "can_signal": "AC_DrvrFootVentActT",
-      "runtime_field": "driver_floor_flow",
-      "unit": "m3/h",
-      "sig_fte_replacement": "FTE.FrntDrvFloorFlow_m3h",
-      "deployment_impact": "Required for feet zone"
-    },
-    {
-      "can_signal": "AC_PassFootVentActT",
-      "runtime_field": "passenger_floor_flow",
-      "unit": "m3/h",
-      "sig_fte_replacement": "FTE.FrntPsgFloorFlow_m3h",
-      "deployment_impact": "Required for feet zone"
-    },
-    {
-      "can_signal": "AC_BLOW_FaceVentilaPosn",
-      "runtime_field": "tma.face_posn_v",
-      "unit": "V",
-      "sig_fte_replacement": "FTE.FaceVentPosition_V",
-      "deployment_impact": "Mode detection"
-    },
-    {
-      "can_signal": "AC_FrantFootVentPosn",
-      "runtime_field": "tma.foot_posn_v",
-      "unit": "V",
-      "sig_fte_replacement": "FTE.FootVentPosition_V",
-      "deployment_impact": "Mode detection"
-    },
-    {
-      "can_signal": "AC_DefrostVentilaPosn",
-      "runtime_field": "tma.defrost_posn_v",
-      "unit": "V",
-      "sig_fte_replacement": "FTE.DefrostVentPosition_V",
-      "deployment_impact": "Mode detection"
-    },
-    {
-      "can_signal": "AC_FrntInCarT",
-      "runtime_field": "ict_c",
-      "unit": "degC",
-      "sig_fte_replacement": "SIG.InCarTemp_C",
-      "deployment_impact": "Optional — estimated internally"
-    }
+  "schema": "can_signal_exception_list_v2",
+  "note": "DBC-decoded engineering signals consumed by the online PMV service.",
+  "signals": [
+    {"signal": "VIU_AmbT", "runtime_field": "amb_t_c", "unit": "degC", "required_for_first_run": true},
+    {"signal": "RSM_RelHum", "runtime_field": "rh_percent", "unit": "%", "default": 50.0},
+    {"signal": "IPB_VehicleSpeed", "runtime_field": "vehicle_speed_kph", "unit": "km/h", "default": 0.0},
+    {"signal": "RSM_LeSolarInten", "runtime_field": "solar_driver_w_m2", "unit": "W/m2", "default": 0.0},
+    {"signal": "RSM_RiSolarInten", "runtime_field": "solar_passenger_w_m2", "unit": "W/m2", "default": 0.0},
+    {"signal": "AC_FEvapCurrentTemp", "runtime_field": "eva_t_c", "unit": "degC"},
+    {"signal": "AC_FrntInCarT", "runtime_field": "ict_c", "unit": "degC"},
+    {"signal": "AC_DrvrFaceVentActT", "runtime_field": "tma.FrntFdvTma", "unit": "degC"},
+    {"signal": "AC_PassFaceVentActT", "runtime_field": "tma.FrntFpvTma", "unit": "degC"},
+    {"signal": "AC_DrvrFootVentActT", "runtime_field": "tma.FrntFdfTma", "unit": "degC"},
+    {"signal": "AC_PassFootVentActT", "runtime_field": "tma.FrntFpfTma", "unit": "degC"},
+    {"signal": "AC_Forward_AirFlowTarget", "runtime_field": "air_speed_estimator.total_airflow", "unit": "m3/h"},
+    {"signal": "AC_BLOW_FaceVentilaPosn", "runtime_field": "air_speed_estimator.face_position"},
+    {"signal": "AC_FrantFootVentPosn", "runtime_field": "air_speed_estimator.foot_position"},
+    {"signal": "AC_DefrostVentilaPosn", "runtime_field": "air_speed_estimator.defrost_position"},
+    {"signal": "TA_FdHeadTempLe/Ri", "runtime_field": "measured_head_air_temp_c.driver", "unit": "degC"},
+    {"signal": "TA_FpHeadTempLe/Ri", "runtime_field": "measured_head_air_temp_c.passenger", "unit": "degC"},
+    {"signal": "TS_FrntWidTemp", "runtime_field": "front_windshield_temp_c", "unit": "degC"}
   ]
 }

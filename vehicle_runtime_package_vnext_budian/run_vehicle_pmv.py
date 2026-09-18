@@ -49,7 +49,7 @@ def run(raw_input: dict, previous_state=None, init_temp_c=None) -> dict:
     forbidden = check_forbidden(raw_input)
 
     raw_input.setdefault("params_bundle_path", str(ROOT / "config/initial_calibration_params_v8_l1_candidate.json"))
-    raw_input.setdefault("chtd_param_mode", "stage2_v4_calibrated")
+    raw_input.setdefault("chtd_param_mode", "default")
     raw_input.setdefault("use_next_state", True)
 
     if previous_state is None and init_temp_c is not None:
@@ -162,7 +162,7 @@ def run(raw_input: dict, previous_state=None, init_temp_c=None) -> dict:
         "provenance": {
             "calibration_status": CALIBRATION_STATUS,
             "airflow_mode":       AIRFLOW_MODE,
-            "chtd_param_mode":    raw_input.get("chtd_param_mode", "stage2_v4_calibrated"),
+            "chtd_param_mode":    raw_input.get("chtd_param_mode", "default"),
             "package_version":    SCHEMA_VERSION,
             "adapter_provenance": adapter_prov,
         },

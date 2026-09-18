@@ -31,6 +31,31 @@ def test_socket_consumer_subscribes_to_can_send_2_head_points():
     assert 0x100 in SUBSCRIBE_CAN_IDS
 
 
+def test_socket_consumer_estimates_air_speed_from_flow_and_actuator_openings():
+    signals = {
+        "AC_Forward_AirFlowTarget": 228.0,
+        "AC_BLOW_FaceVentilaPosn": 4.7,
+        "AC_FrantFootVentPosn": 2.1,
+        "AC_DefrostVentilaPosn": 4.6,
+        # This is a temperature in the DBC and must not scale airflow.
+        "AC_Forward_BlwPwmOut": 36.0,
+    }
+    pmv_input = build_pmv_input(signals)
+
+    assert 0.5 < pmv_input["driver_air_speed_override_m_s"] < 0.6
+    assert (
+        pmv_input["passenger_air_speed_override_m_s"]
+        == pmv_input["driver_air_speed_override_m_s"]
+    )
+
+    signals["AC_Forward_BlwPwmOut"] = -20.0
+    changed_temperature = build_pmv_input(signals)
+    assert (
+        changed_temperature["driver_air_speed_override_m_s"]
+        == pmv_input["driver_air_speed_override_m_s"]
+    )
+
+
 def test_runtime_uses_measured_head_points_for_pmv_air_temp_only():
     out = run(
         {
@@ -59,4 +84,5 @@ def test_runtime_uses_measured_head_points_for_pmv_air_temp_only():
 if __name__ == "__main__":
     test_socket_consumer_builds_measured_head_air_temp_block()
     test_socket_consumer_subscribes_to_can_send_2_head_points()
+    test_socket_consumer_estimates_air_speed_from_flow_and_actuator_openings()
     test_runtime_uses_measured_head_points_for_pmv_air_temp_only()

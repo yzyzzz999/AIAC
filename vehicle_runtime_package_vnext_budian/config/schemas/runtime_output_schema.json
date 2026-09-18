@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Vehicle PMV runtime output",
+  "type": "object",
+  "required": [
+    "timestamp",
+    "status",
+    "schema_version",
+    "model_state",
+    "pmv",
+    "comfort_flags",
+    "diagnostics",
+    "provenance"
+  ],
+  "properties": {
+    "timestamp": {"type": "string"},
+    "status": {"type": "string", "enum": ["ok", "degraded", "error"]},
+    "schema_version": {"type": "string"},
+    "model_state": {
+      "type": "object",
+      "required": [
+        "driver_head_temp_c",
+        "passenger_head_temp_c",
+        "driver_feet_temp_c",
+        "passenger_feet_temp_c"
+      ],
+      "additionalProperties": {"type": ["number", "null"]}
+    },
+    "pmv": {
+      "type": "object",
+      "required": ["pmv_driver", "pmv_passenger", "ppd_driver", "ppd_passenger"],
+      "additionalProperties": {"type": ["number", "null"]}
+    },
+    "comfort_flags": {
+      "type": "object",
+      "required": ["driver_comfortable", "passenger_comfortable"],
+      "additionalProperties": {"type": "boolean"}
+    },
+    "diagnostics": {
+      "type": "object",
+      "required": ["forbidden_input_detected", "fallback_used"],
+      "additionalProperties": true
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["calibration_status", "chtd_param_mode", "package_version"],
+      "additionalProperties": true
+    },
+    "x_next": {
+      "type": "array",
+      "minItems": 28,
+      "maxItems": 28,
+      "items": {"type": "number"}
+    }
+  },
+  "additionalProperties": true
+}

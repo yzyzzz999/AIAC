@@ -15,16 +15,13 @@ Expected producers:
 
 from __future__ import annotations
 
-import math
-from dataclasses import asdict, dataclass, field
+from dataclasses import asdict, dataclass
 from typing import Any, Dict, List, Mapping, Optional, Sequence, Union
 
 import numpy as np
 
 from hvac_sim.chtd.bus_index import CHTD_U_NAMES, N_U, N_X_STATES, U_INDEX, X_INDEX
 from hvac_sim.config.geometry import merge_geometry_with_air_speed_inputs
-from hvac_sim.occupant import ImageModuleInputs, SeatOccupantInput
-from hvac_sim.config.param_loader import load_runtime_params
 from hvac_sim.defrost import estimate_tma_def
 from hvac_sim.defrost_post_glass import (
     DefrostPostGlassInputs,
@@ -35,124 +32,32 @@ from hvac_sim.pipeline import (
     PipelineInputs,
     air_speed_inputs_from_chtd_u,
 )
+from hvac_sim.runtime_parameter_mode import (
+    CHTD_PARAM_MODE_DEFAULT,
+    CHTD_PARAM_MODE_PHASE3,
+    CHTD_PARAM_MODE_SAFE_PREVIEW,
+    SAFE_PREVIEW_NOT_VEHICLE_CALIBRATION,
+    VALID_CHTD_PARAM_MODES,
+    apply_chtd_parameter_mode,
+    resolve_chtd_param_mode,
+)
+from hvac_sim.runtime_input import (
+    DEFAULT_RH_PERCENT as _DEFAULT_RH_PERCENT,
+    RuntimeFeatureFlags,
+    RuntimeSignalInput,
+    as_optional_float as _as_optional_float,
+    feature_flags_from_signal,
+    first_present as _first_present,
+    resolve_runtime_feature_flags,
+    runtime_mapping_to_signal_input,
+)
 
 RUNTIME_INPUT_SCHEMA_VERSION = "runtime_signal_input_v1"
 RUNTIME_PMV_OUTPUT_SCHEMA_VERSION = "runtime_pmv_output_v1"
 
-CHTD_PARAM_MODE_DEFAULT = "default"
-CHTD_PARAM_MODE_SAFE_PREVIEW = "safe_preview"
-CHTD_PARAM_MODE_PHASE3 = "phase3_engineering_preview"
-VALID_CHTD_PARAM_MODES = frozenset({
-    CHTD_PARAM_MODE_DEFAULT,
-    CHTD_PARAM_MODE_SAFE_PREVIEW,
-    CHTD_PARAM_MODE_PHASE3,
-})
-SAFE_PREVIEW_NOT_VEHICLE_CALIBRATION = "safe_preview_not_vehicle_calibration"
 PHASE3_NOT_VEHICLE_CALIBRATION = "phase3_engineering_preview_not_vehicle_calibration"
 
-_DEFAULT_RH_PERCENT = 50.0
 _DEFAULT_VEH_SPD_KPH = 0.0
-
-@dataclass(frozen=True)
-class RuntimeFeatureFlags:
-    """Runtime feature switches (safe defaults; diagnostics-only where noted)."""
-
-    enable_ir_fusion: bool = False
-    enable_image_occupancy: bool = True
-    enable_runtime_conditioning: bool = False
-    enable_post_glass_defrost: bool = False
-    enable_geometry_merge: bool = False
-    enable_corrected_chtd: bool = False
-    enable_vehicle_adapted_params: bool = False
-
-    def to_dict(self) -> Dict[str, bool]:
-        return {
-            "enable_ir_fusion": self.enable_ir_fusion,
-            "enable_image_occupancy": self.enable_image_occupancy,
-            "enable_runtime_conditioning": self.enable_runtime_conditioning,
-            "enable_post_glass_defrost": self.enable_post_glass_defrost,
-            "enable_geometry_merge": self.enable_geometry_merge,
-            "enable_corrected_chtd": self.enable_corrected_chtd,
-            "enable_vehicle_adapted_params": self.enable_vehicle_adapted_params,
-        }
-
-    @property
-    def disabled_feature_names(self) -> List[str]:
-        disabled: List[str] = []
-        if not self.enable_ir_fusion:
-            disabled.append("ir_fusion")
-        if not self.enable_image_occupancy:
-            disabled.append("image_occupancy")
-        if not self.enable_runtime_conditioning:
-            disabled.append("runtime_conditioning")
-        if not self.enable_post_glass_defrost:
-            disabled.append("post_glass_defrost")
-        if not self.enable_geometry_merge:
-            disabled.append("geometry_merge")
-        if not self.enable_corrected_chtd:
-            disabled.append("corrected_chtd")
-        if not self.enable_vehicle_adapted_params:
-            disabled.append("vehicle_adapted_params")
-        return disabled
-
-    @property
-    def active_feature_names(self) -> List[str]:
-        all_names = {
-            "ir_fusion",
-            "image_occupancy",
-            "runtime_conditioning",
-            "post_glass_defrost",
-            "geometry_merge",
-            "corrected_chtd",
-            "vehicle_adapted_params",
-        }
-        return sorted(all_names - set(self.disabled_feature_names))
-
-
-def resolve_runtime_feature_flags(raw: Mapping[str, Any]) -> RuntimeFeatureFlags:
-    """Resolve flags from runtime JSON (supports legacy alias field names)."""
-    def _flag(*keys: str, default: bool = False) -> bool:
-        for key in keys:
-            if key in raw and raw[key] is not None:
-                return bool(raw[key])
-        return default
-
-    vehicle_params = _flag(
-        "enable_vehicle_adapted_params",
-        "use_initial_calibration_params",
-        default=False,
-    ) or _first_present(
-        raw,
-        "params_bundle_path",
-        "initial_params_path",
-        "param_bundle_path",
-    ) is not None
-
-    return RuntimeFeatureFlags(
-        enable_ir_fusion=_flag("enable_ir_fusion", "use_ir_head_fusion"),
-        enable_image_occupancy=_flag("enable_image_occupancy", default=True),
-        enable_runtime_conditioning=_flag("enable_runtime_conditioning"),
-        enable_post_glass_defrost=_flag("enable_post_glass_defrost"),
-        enable_geometry_merge=_flag("enable_geometry_merge", "apply_geometry"),
-        enable_corrected_chtd=_flag("enable_corrected_chtd"),
-        enable_vehicle_adapted_params=bool(vehicle_params),
-    )
-
-
-def feature_flags_from_signal(signal: RuntimeSignalInput) -> RuntimeFeatureFlags:
-    """Build flags from a normalized ``RuntimeSignalInput``."""
-    return RuntimeFeatureFlags(
-        enable_ir_fusion=bool(signal.use_ir_head_fusion),
-        enable_image_occupancy=bool(signal.enable_image_occupancy),
-        enable_runtime_conditioning=bool(signal.enable_runtime_conditioning),
-        enable_post_glass_defrost=bool(signal.enable_post_glass_defrost),
-        enable_geometry_merge=bool(signal.apply_geometry),
-        enable_corrected_chtd=bool(signal.enable_corrected_chtd),
-        enable_vehicle_adapted_params=bool(
-            signal.use_initial_calibration_params or signal.params_bundle_path is not None
-        ),
-    )
-
 
 _FLOW_RUNTIME_TO_U = {
     "driver_face_flow": "FrntFdvFlow",
@@ -174,61 +79,6 @@ _FLOW_RUNTIME_TO_U = {
 }
 
 
-@dataclass
-class RuntimeSignalInput:
-    """Canonical runtime upstream fields (also accepted as a plain dict)."""
-
-    amb_t_c: float
-    raw_amb_t_c: Optional[float] = None
-    rh_percent: float = _DEFAULT_RH_PERCENT
-    vehicle_speed_kph: Optional[float] = None
-    solar_driver_w_m2: Optional[float] = None
-    solar_passenger_w_m2: Optional[float] = None
-    eva_t_c: Optional[float] = None
-    hct_c: Optional[float] = None
-    posn_fdh: Optional[float] = None
-    blend_request: Optional[float] = None
-    frnt_def_tma_est_c: Optional[float] = None
-    windshield_glass_temp_c: Optional[float] = None
-    ac_mode_ventila_posn: Optional[int] = None
-    win_shd_t_est_c: Optional[float] = None
-    ict_c: Optional[float] = None
-    driver_face_flow: Optional[float] = None
-    passenger_face_flow: Optional[float] = None
-    driver_floor_flow: Optional[float] = None
-    passenger_floor_flow: Optional[float] = None
-    driver_defrost_flow: Optional[float] = None
-    passenger_defrost_flow: Optional[float] = None
-    measured_driver_head_air_temp_c: Optional[float] = None
-    measured_passenger_head_air_temp_c: Optional[float] = None
-    tma_c: Dict[str, float] = field(default_factory=dict)
-    flows: Dict[str, float] = field(default_factory=dict)
-    image_inputs: Optional[ImageModuleInputs] = None
-    use_ir_head_fusion: bool = False
-    enable_image_occupancy: bool = True
-    enable_runtime_conditioning: bool = False
-    enable_post_glass_defrost: bool = False
-    enable_corrected_chtd: bool = False
-    apply_geometry: bool = False
-    geometry_path: Optional[str] = None
-    apply_runtime_policy: bool = True
-    use_next_state: bool = True
-    params_bundle_path: Optional[str] = None
-    use_initial_calibration_params: bool = False
-    chtd_param_mode: str = CHTD_PARAM_MODE_DEFAULT
-    bypass_models: bool = False
-    driver_air_temp_override_c: Optional[float] = None
-    passenger_air_temp_override_c: Optional[float] = None
-    driver_mrt_override_c: Optional[float] = None
-    passenger_mrt_override_c: Optional[float] = None
-    driver_air_speed_override_m_s: Optional[float] = None
-    passenger_air_speed_override_m_s: Optional[float] = None
-
-    @classmethod
-    def from_mapping(cls, raw: Mapping[str, Any]) -> RuntimeSignalInput:
-        return runtime_mapping_to_signal_input(raw)
-
-
 @dataclass(frozen=True)
 class RuntimeAdapterResult:
     """Adapter output: pipeline inputs plus integration diagnostics."""
@@ -236,67 +86,6 @@ class RuntimeAdapterResult:
     pipeline_inputs: PipelineInputs
     provenance: Dict[str, Any]
     warnings: tuple[str, ...]
-
-
-def resolve_chtd_param_mode(raw: Mapping[str, Any]) -> str:
-    """Resolve CHTD param bundle mode from runtime JSON (default unless opt-in)."""
-    if raw.get("use_safe_preview_chtd_params") is True:
-        return CHTD_PARAM_MODE_SAFE_PREVIEW
-    mode = raw.get("chtd_param_mode", CHTD_PARAM_MODE_DEFAULT)
-    if mode is None:
-        return CHTD_PARAM_MODE_DEFAULT
-    mode_str = str(mode).strip().lower()
-    if mode_str in VALID_CHTD_PARAM_MODES:
-        return mode_str
-    return CHTD_PARAM_MODE_DEFAULT
-
-
-def _first_present(raw: Mapping[str, Any], *keys: str) -> Any:
-    for key in keys:
-        if key in raw and raw[key] is not None:
-            return raw[key]
-    return None
-
-
-def _as_optional_float(value: Any) -> Optional[float]:
-    if value is None:
-        return None
-    try:
-        out = float(value)
-    except (TypeError, ValueError):
-        return None
-    return out if math.isfinite(out) else None
-
-
-def _mean_optional(*values: Any) -> Optional[float]:
-    finite = []
-    for value in values:
-        fv = _as_optional_float(value)
-        if fv is not None:
-            finite.append(fv)
-    if not finite:
-        return None
-    return sum(finite) / len(finite)
-
-
-def _parse_seat_occupant(raw: Any) -> SeatOccupantInput:
-    if raw is None:
-        return SeatOccupantInput()
-    if not isinstance(raw, dict):
-        raise ValueError("image_inputs seat entry must be an object")
-    return SeatOccupantInput(
-        occupied=raw.get("occupied"),
-        age=raw.get("age"),
-        gender=raw.get("gender"),
-        height_cm=raw.get("height_cm"),
-        weight_kg=raw.get("weight_kg"),
-        bmi=raw.get("bmi"),
-        clothing_clo=raw.get("clothing_clo"),
-        clothing_class=raw.get("clothing_class"),
-        activity_met=raw.get("activity_met"),
-        ir_head_surface_temp_c=raw.get("ir_head_surface_temp_c"),
-        confidence=raw.get("confidence"),
-    )
 
 
 def make_cabin_state_vector(
@@ -352,156 +141,6 @@ def _resolve_solar_w_m2(
         meta["source"] = "passenger_only_driver_zero"
         return 0.0, float(solar_passenger), meta
     return 0.0, 0.0, meta
-
-
-def _parse_image_inputs(raw: Any) -> Optional[ImageModuleInputs]:
-    if raw is None:
-        return None
-    if not isinstance(raw, dict):
-        raise ValueError("image_inputs must be an object when present")
-    return ImageModuleInputs(
-        driver=_parse_seat_occupant(raw.get("driver")),
-        passenger=_parse_seat_occupant(raw.get("passenger")),
-    )
-
-
-def runtime_mapping_to_signal_input(raw: Mapping[str, Any]) -> RuntimeSignalInput:
-    """Normalize a runtime dict into ``RuntimeSignalInput``."""
-    if "amb_t_c" not in raw:
-        raise ValueError("runtime input requires amb_t_c")
-
-    amb_t = float(raw["amb_t_c"])
-    tma_block = raw.get("tma")
-    tma_c: Dict[str, float] = {}
-    if isinstance(tma_block, dict):
-        for name, value in tma_block.items():
-            fv = _as_optional_float(value)
-            if fv is not None:
-                tma_c[str(name)] = fv
-
-    flows_block = raw.get("flows")
-    flows: Dict[str, float] = {}
-    if isinstance(flows_block, dict):
-        for name, value in flows_block.items():
-            fv = _as_optional_float(value)
-            if fv is not None:
-                flows[str(name)] = fv
-
-    measured_head_block = raw.get("measured_head_air_temp_c")
-    measured_driver_head = None
-    measured_passenger_head = None
-    if isinstance(measured_head_block, Mapping):
-        measured_driver_head = _mean_optional(
-            measured_head_block.get("driver_left"),
-            measured_head_block.get("driver_right"),
-        )
-        measured_passenger_head = _mean_optional(
-            measured_head_block.get("passenger_left"),
-            measured_head_block.get("passenger_right"),
-        )
-
-    flags = resolve_runtime_feature_flags(raw)
-
-    return RuntimeSignalInput(
-        amb_t_c=amb_t,
-        raw_amb_t_c=_as_optional_float(
-            _first_present(raw, "raw_amb_t_c", "raw_ambient_temp_c")
-        ),
-        rh_percent=float(
-            _first_present(raw, "rh_percent", "rh", "relative_humidity_percent")
-            or _DEFAULT_RH_PERCENT
-        ),
-        vehicle_speed_kph=_as_optional_float(
-            _first_present(raw, "vehicle_speed_kph", "veh_spd_kph", "veh_spd")
-        ),
-        solar_driver_w_m2=_as_optional_float(
-            _first_present(raw, "solar_driver_w_m2", "solar_fd_w_m2", "solar_fd")
-        ),
-        solar_passenger_w_m2=_as_optional_float(
-            _first_present(
-                raw, "solar_passenger_w_m2", "solar_fp_w_m2", "solar_fp"
-            )
-        ),
-        eva_t_c=_as_optional_float(
-            _first_present(raw, "eva_t_c", "ac_evap_temp_c", "ac_fevap_current_temp_c")
-        ),
-        hct_c=_as_optional_float(
-            _first_present(raw, "hct_c", "heater_core_outlet_temp_c")
-        ),
-        posn_fdh=_as_optional_float(
-            _first_present(raw, "posn_fdh", "defrost_mix_position")
-        ),
-        blend_request=_as_optional_float(
-            _first_present(raw, "blend_request", "defrost_blend_request")
-        ),
-        frnt_def_tma_est_c=_as_optional_float(
-            _first_present(raw, "frnt_def_tma_est_c", "tma_def_c")
-        ),
-        windshield_glass_temp_c=_as_optional_float(
-            _first_present(
-                raw,
-                "windshield_glass_temp_c",
-                "glass_temp_c",
-                "windshield_temp_state_c",
-            )
-        ),
-        ac_mode_ventila_posn=(
-            int(v)
-            if (v := _first_present(
-                raw, "ac_mode_ventila_posn", "mode_ventila_posn"
-            ))
-            is not None
-            else None
-        ),
-        win_shd_t_est_c=_as_optional_float(
-            _first_present(raw, "win_shd_t_est_c", "windshield_temp_c")
-        ),
-        ict_c=_as_optional_float(raw.get("ict_c")),
-        driver_face_flow=_as_optional_float(raw.get("driver_face_flow")),
-        passenger_face_flow=_as_optional_float(raw.get("passenger_face_flow")),
-        driver_floor_flow=_as_optional_float(raw.get("driver_floor_flow")),
-        passenger_floor_flow=_as_optional_float(raw.get("passenger_floor_flow")),
-        driver_defrost_flow=_as_optional_float(raw.get("driver_defrost_flow")),
-        passenger_defrost_flow=_as_optional_float(raw.get("passenger_defrost_flow")),
-        measured_driver_head_air_temp_c=measured_driver_head,
-        measured_passenger_head_air_temp_c=measured_passenger_head,
-        tma_c=tma_c,
-        flows=flows,
-        image_inputs=_parse_image_inputs(raw.get("image_inputs")),
-        use_ir_head_fusion=flags.enable_ir_fusion,
-        enable_image_occupancy=flags.enable_image_occupancy,
-        enable_runtime_conditioning=flags.enable_runtime_conditioning,
-        enable_post_glass_defrost=flags.enable_post_glass_defrost,
-        enable_corrected_chtd=flags.enable_corrected_chtd,
-        apply_geometry=flags.enable_geometry_merge,
-        geometry_path=(
-            str(raw["geometry_path"]) if raw.get("geometry_path") is not None else None
-        ),
-        apply_runtime_policy=bool(raw.get("apply_runtime_policy", True)),
-        use_next_state=bool(raw.get("use_next_state", True)),
-        params_bundle_path=(
-            str(p)
-            if (
-                p := _first_present(
-                    raw,
-                    "params_bundle_path",
-                    "initial_params_path",
-                    "param_bundle_path",
-                )
-            )
-            is not None
-            else None
-        ),
-        use_initial_calibration_params=flags.enable_vehicle_adapted_params,
-        chtd_param_mode=resolve_chtd_param_mode(raw),
-        bypass_models=bool(raw.get("bypass_models", False)),
-        driver_air_temp_override_c=_as_optional_float(raw.get("driver_air_temp_override_c")),
-        passenger_air_temp_override_c=_as_optional_float(raw.get("passenger_air_temp_override_c")),
-        driver_mrt_override_c=_as_optional_float(raw.get("driver_mrt_override_c")),
-        passenger_mrt_override_c=_as_optional_float(raw.get("passenger_mrt_override_c")),
-        driver_air_speed_override_m_s=_as_optional_float(raw.get("driver_air_speed_override_m_s")),
-        passenger_air_speed_override_m_s=_as_optional_float(raw.get("passenger_air_speed_override_m_s")),
-    )
 
 
 def _build_x_vector(
@@ -782,6 +421,37 @@ def _fill_flow_bus(
         provenance["vent_flows"] = {"status": "explicit", "count": len(mapped)}
 
 
+def _apply_chtd_parameter_mode(
+    runtime: Union[Mapping[str, Any], RuntimeSignalInput],
+    signal: RuntimeSignalInput,
+    pipeline_kw: Dict[str, Any],
+    provenance: Dict[str, Any],
+    warnings: List[str],
+) -> None:
+    raw = runtime if isinstance(runtime, Mapping) else {"chtd_param_mode": signal.chtd_param_mode}
+    apply_chtd_parameter_mode(raw, signal, pipeline_kw, provenance, warnings)
+
+def _apply_direct_pmv_overrides(
+    signal: RuntimeSignalInput,
+    pipeline_kw: Dict[str, Any],
+    provenance: Dict[str, Any],
+) -> None:
+    """Copy the explicit bypass contract without interpreting its values."""
+    pipeline_kw["bypass_models"] = signal.bypass_models
+    for field_name in (
+        "driver_air_temp_override_c",
+        "passenger_air_temp_override_c",
+        "driver_mrt_override_c",
+        "passenger_mrt_override_c",
+        "driver_air_speed_override_m_s",
+        "passenger_air_speed_override_m_s",
+    ):
+        value = getattr(signal, field_name)
+        if value is not None:
+            pipeline_kw[field_name] = value
+    provenance["bypass_models"] = signal.bypass_models
+
+
 def build_runtime_pipeline_inputs(
     runtime: Union[Mapping[str, Any], RuntimeSignalInput],
     previous_state: Optional[Sequence[float]] = None,
@@ -806,11 +476,6 @@ def build_runtime_pipeline_inputs(
         warnings.append(
             "enable_corrected_chtd=true ignored at runtime adapter; pipeline still AS_FOUND."
         )
-    if flags.enable_runtime_conditioning:
-        provenance["runtime_conditioning"] = {
-            "status": "flag_set_not_wired",
-            "note": "enable_runtime_conditioning tools exist but are not applied in adapter.",
-        }
     if not flags.enable_image_occupancy:
         provenance["image_module"] = "disabled"
     elif signal.image_inputs is None:
@@ -964,111 +629,15 @@ def build_runtime_pipeline_inputs(
                 "packaged measured=false defaults; replace when bench data exists."
             )
 
-    chtd_mode = resolve_chtd_param_mode(
-        runtime if isinstance(runtime, Mapping) else {"chtd_param_mode": signal.chtd_param_mode}
+    _apply_chtd_parameter_mode(
+        runtime,
+        signal,
+        pipeline_kw,
+        provenance,
+        warnings,
     )
-    provenance["chtd_param_mode"] = chtd_mode
-    provenance["safe_preview_active"] = chtd_mode == CHTD_PARAM_MODE_SAFE_PREVIEW
-    provenance["phase3_engineering_preview_active"] = chtd_mode == CHTD_PARAM_MODE_PHASE3
-    pipeline_kw["chtd_param_mode"] = chtd_mode
-    pipeline_kw["safe_preview_active"] = chtd_mode == CHTD_PARAM_MODE_SAFE_PREVIEW
-    pipeline_kw["phase3_engineering_preview_active"] = chtd_mode == CHTD_PARAM_MODE_PHASE3
 
-    if signal.use_initial_calibration_params or signal.params_bundle_path is not None:
-        bundle = load_runtime_params(signal.params_bundle_path)
-        pipeline_kw["chtd_params"] = bundle.chtd_params
-        provenance["params_bundle"] = bundle.provenance_dict()
-        provenance["params_bundle"]["loaded_via"] = (
-            "params_bundle_path"
-            if signal.params_bundle_path is not None
-            else "use_initial_calibration_params"
-        )
-        provenance["params_bundle"]["status"] = "initial_calibration_params"
-        if bundle.classification == "initial_guess_not_final_calibration":
-            provenance["params_bundle"]["vehicle_scope"] = (
-                "other_vehicle_initial_guess"
-            )
-        if chtd_mode in (CHTD_PARAM_MODE_SAFE_PREVIEW, CHTD_PARAM_MODE_PHASE3):
-            warnings.append(
-                f"chtd_param_mode={chtd_mode} ignored because params_bundle_path is set."
-            )
-    elif chtd_mode == CHTD_PARAM_MODE_PHASE3:
-        from hvac_sim.chtd.phase3_engineering_preview_params import (
-            PHASE3_NOT_VEHICLE_CALIBRATION,
-            build_phase3_engineering_preview_chtd_params,
-            phase3_diagnostics_flags,
-            resolve_phase3_structure_from_runtime,
-        )
-
-        p3_params, p3_prov = build_phase3_engineering_preview_chtd_params()
-        struct_cfg = resolve_phase3_structure_from_runtime(
-            runtime if isinstance(runtime, Mapping) else {}
-        )
-        p3_flags = phase3_diagnostics_flags(struct_cfg)
-        pipeline_kw["chtd_params"] = p3_params
-        pipeline_kw["params_provenance"] = {**p3_prov, **p3_flags}
-        pipeline_kw["phase3_capacity_active"] = p3_flags["phase3_capacity_active"]
-        pipeline_kw["solar_shell_routing_active"] = p3_flags["solar_shell_routing_active"]
-        pipeline_kw["actuator_distribution_active"] = p3_flags["actuator_distribution_active"]
-        pipeline_kw["foot_leakage_active"] = p3_flags["foot_leakage_active"]
-        pipeline_kw["phase3_classification"] = p3_flags["classification"]
-        provenance["params_provenance"] = pipeline_kw["params_provenance"]
-        provenance["phase3_structure"] = struct_cfg.provenance()
-        provenance["params_bundle"] = {
-            "status": "phase3_engineering_preview",
-            "classification": PHASE3_NOT_VEHICLE_CALIBRATION,
-            "not_vehicle_calibration": True,
-            "calibration_status": PHASE3_NOT_VEHICLE_CALIBRATION,
-            "opt_in_only": True,
-            "note": (
-                "Opt-in phase3 engineering preview: capacity bundle + solar shell routing; "
-                "actuator/foot leakage off unless phase3_experimental overrides."
-            ),
-            **p3_flags,
-        }
-        warnings.append(PHASE3_NOT_VEHICLE_CALIBRATION)
-    elif chtd_mode == CHTD_PARAM_MODE_SAFE_PREVIEW:
-        from hvac_sim.chtd.safe_preview_params import build_safe_preview_chtd_params
-
-        safe_params, safe_prov = build_safe_preview_chtd_params()
-        pipeline_kw["chtd_params"] = safe_params
-        pipeline_kw["params_provenance"] = dict(safe_prov)
-        provenance["params_provenance"] = dict(safe_prov)
-        provenance["params_bundle"] = {
-            "status": "safe_preview",
-            "classification": SAFE_PREVIEW_NOT_VEHICLE_CALIBRATION,
-            "not_vehicle_calibration": True,
-            "calibration_status": SAFE_PREVIEW_NOT_VEHICLE_CALIBRATION,
-            "opt_in_only": True,
-            "note": (
-                "Opt-in safe_preview CHTDParams for demo/guard preview; "
-                "not formal vehicle calibration."
-            ),
-        }
-        warnings.append(SAFE_PREVIEW_NOT_VEHICLE_CALIBRATION)
-    else:
-        provenance["params_bundle"] = {
-            "status": "default_model_params",
-            "note": (
-                "CHTDParams() defaults used; set params_bundle_path or "
-                "use_initial_calibration_params to load initial_calibration_params.json"
-            ),
-        }
-
-    pipeline_kw["bypass_models"] = signal.bypass_models
-    if signal.driver_air_temp_override_c is not None:
-        pipeline_kw["driver_air_temp_override_c"] = signal.driver_air_temp_override_c
-    if signal.passenger_air_temp_override_c is not None:
-        pipeline_kw["passenger_air_temp_override_c"] = signal.passenger_air_temp_override_c
-    if signal.driver_mrt_override_c is not None:
-        pipeline_kw["driver_mrt_override_c"] = signal.driver_mrt_override_c
-    if signal.passenger_mrt_override_c is not None:
-        pipeline_kw["passenger_mrt_override_c"] = signal.passenger_mrt_override_c
-    if signal.driver_air_speed_override_m_s is not None:
-        pipeline_kw["driver_air_speed_override_m_s"] = signal.driver_air_speed_override_m_s
-    if signal.passenger_air_speed_override_m_s is not None:
-        pipeline_kw["passenger_air_speed_override_m_s"] = signal.passenger_air_speed_override_m_s
-    provenance["bypass_models"] = signal.bypass_models
+    _apply_direct_pmv_overrides(signal, pipeline_kw, provenance)
 
     pipeline_inputs = PipelineInputs(**pipeline_kw)
     provenance["ir_fusion_enabled"] = use_ir_fusion

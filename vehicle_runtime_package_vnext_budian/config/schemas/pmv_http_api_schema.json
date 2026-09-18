@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PMV HTTP API Response",
+  "type": "object",
+  "required": ["driver", "passenger", "cabin_temp_c", "amb_temp_c", "timestamp", "status", "run_index"],
+  "properties": {
+    "driver": {"$ref": "#/definitions/seat"},
+    "passenger": {"$ref": "#/definitions/seat"},
+    "cabin_temp_c": {"type": ["number", "null"]},
+    "amb_temp_c": {"type": ["number", "null"]},
+    "timestamp": {"type": "string"},
+    "status": {"type": "string"},
+    "run_index": {"type": "integer"}
+  },
+  "definitions": {
+    "seat": {
+      "type": "object",
+      "required": ["pmv", "ppd", "head_temp_c", "feet_temp_c", "mrt_c", "rh_percent", "air_speed_m_s"],
+      "properties": {
+        "pmv": {"type": ["number", "null"]},
+        "ppd": {"type": ["number", "null"]},
+        "head_temp_c": {"type": ["number", "null"]},
+        "feet_temp_c": {"type": ["number", "null"]},
+        "mrt_c": {"type": ["number", "null"]},
+        "rh_percent": {"type": ["number", "null"]},
+        "air_speed_m_s": {"type": ["number", "null"]}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

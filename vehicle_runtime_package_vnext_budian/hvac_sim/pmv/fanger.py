@@ -1,9 +1,6 @@
 """Fanger PMV / PPD per ISO 7730.
 
 Independent implementation from the standard heat-balance equations.
-Cross-check: ``reference_iso7730.pmv_ppd_reference`` and
-``tests/test_pmv_reference_compare.py``.  Optional ``pythermalcomfort``
-comparison when installed.
 """
 
 from __future__ import annotations

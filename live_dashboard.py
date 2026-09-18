@@ -910,21 +910,20 @@ body {
           </div>
           <div class="pmv-metrics">
             <div class="pmv-metric">
-              <div class="m-label">PPD 不满意率</div>
-              <div class="m-value" id="driverPpd">--%</div>
+              <div class="m-label">平均辐射温度</div>
+              <div class="m-value" id="driverMrt">--°C</div>
             </div>
             <div class="pmv-metric">
               <div class="m-label">头部温度</div>
               <div class="m-value" id="driverHead">--°C</div>
             </div>
             <div class="pmv-metric">
-              <div class="m-label">脚部温度</div>
-              <div class="m-value" id="driverFeet">--°C</div>
+              <div class="m-label">相对湿度</div>
+              <div class="m-value" id="driverRh">--%</div>
             </div>
             <div class="pmv-metric">
-              <div class="m-label">PMV 值</div>
-              <div class="m-value" id="driverPmvVal" style="font-size:15px;">--</div>
-              <div class="m-sub" id="driverPmvLabel"></div>
+              <div class="m-label">空气流速</div>
+              <div class="m-value" id="driverAirSpeed">-- m/s</div>
             </div>
           </div>
         </div>
@@ -942,21 +941,20 @@ body {
           </div>
           <div class="pmv-metrics">
             <div class="pmv-metric">
-              <div class="m-label">PPD 不满意率</div>
-              <div class="m-value" id="passengerPpd">--%</div>
+              <div class="m-label">平均辐射温度</div>
+              <div class="m-value" id="passengerMrt">--°C</div>
             </div>
             <div class="pmv-metric">
               <div class="m-label">头部温度</div>
               <div class="m-value" id="passengerHead">--°C</div>
             </div>
             <div class="pmv-metric">
-              <div class="m-label">脚部温度</div>
-              <div class="m-value" id="passengerFeet">--°C</div>
+              <div class="m-label">相对湿度</div>
+              <div class="m-value" id="passengerRh">--%</div>
             </div>
             <div class="pmv-metric">
-              <div class="m-label">PMV 值</div>
-              <div class="m-value" id="passengerPmvVal" style="font-size:15px;">--</div>
-              <div class="m-sub" id="passengerPmvLabel"></div>
+              <div class="m-label">空气流速</div>
+              <div class="m-value" id="passengerAirSpeed">-- m/s</div>
             </div>
           </div>
         </div>
@@ -1228,22 +1226,20 @@ async function refresh() {
     document.getElementById('driverBadge').textContent = drvPresent ? '在座' : '无人';
     document.getElementById('driverBadge').className = 'badge ' + (drvPresent ? 'present' : 'absent');
     updatePmvCircle(document.getElementById('driverPmvCircle'), drv.pmv);
-    document.getElementById('driverPpd').textContent = drv.ppd !== undefined ? drv.ppd.toFixed(1) + '%' : '--%';
+    document.getElementById('driverMrt').textContent = drv.mrt_c !== undefined ? drv.mrt_c.toFixed(1) + '°C' : '--°C';
     document.getElementById('driverHead').textContent = drv.head_temp_c !== undefined ? drv.head_temp_c.toFixed(1) + '°C' : '--°C';
-    document.getElementById('driverFeet').textContent = drv.feet_temp_c !== undefined ? drv.feet_temp_c.toFixed(1) + '°C' : '--°C';
-    document.getElementById('driverPmvVal').textContent = drv.pmv !== undefined ? drv.pmv.toFixed(2) : '--';
-    document.getElementById('driverPmvLabel').textContent = pmvLabel(drv.pmv);
+    document.getElementById('driverRh').textContent = drv.rh_percent !== undefined ? drv.rh_percent.toFixed(1) + '%' : '--%';
+    document.getElementById('driverAirSpeed').textContent = drv.air_speed_m_s !== undefined ? drv.air_speed_m_s.toFixed(3) + ' m/s' : '-- m/s';
 
     // --- PMV: 副驾 ---
     const pax = pmv.passenger || {};
     document.getElementById('passengerBadge').textContent = paxPresent ? '在座' : '无人';
     document.getElementById('passengerBadge').className = 'badge ' + (paxPresent ? 'present' : 'absent');
     updatePmvCircle(document.getElementById('passengerPmvCircle'), pax.pmv);
-    document.getElementById('passengerPpd').textContent = pax.ppd !== undefined ? pax.ppd.toFixed(1) + '%' : '--%';
+    document.getElementById('passengerMrt').textContent = pax.mrt_c !== undefined ? pax.mrt_c.toFixed(1) + '°C' : '--°C';
     document.getElementById('passengerHead').textContent = pax.head_temp_c !== undefined ? pax.head_temp_c.toFixed(1) + '°C' : '--°C';
-    document.getElementById('passengerFeet').textContent = pax.feet_temp_c !== undefined ? pax.feet_temp_c.toFixed(1) + '°C' : '--°C';
-    document.getElementById('passengerPmvVal').textContent = pax.pmv !== undefined ? pax.pmv.toFixed(2) : '--';
-    document.getElementById('passengerPmvLabel').textContent = pmvLabel(pax.pmv);
+    document.getElementById('passengerRh').textContent = pax.rh_percent !== undefined ? pax.rh_percent.toFixed(1) + '%' : '--%';
+    document.getElementById('passengerAirSpeed').textContent = pax.air_speed_m_s !== undefined ? pax.air_speed_m_s.toFixed(3) + ' m/s' : '-- m/s';
 
     // --- 推荐输出 ---
     // 控制卡片只显示成功写入CAN Socket的最终命令。
