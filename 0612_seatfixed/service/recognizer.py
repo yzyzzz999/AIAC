@@ -1636,8 +1636,11 @@ class VehicleRecognizer:
         cached = self._gender_age_cache.get(cache_key)
         stable = self._get_stable_attrs(identity_id)
 
-        # 有稳定值且在刷新间隔内 → 直接用，不跑 FLIP（不依赖 cache 是否存在）
-        if stable:
+        # 年龄和性别都已稳定且在刷新间隔内 → 直接使用稳定值。
+        # 若只有其中一项稳定，仍需继续推理和累计另一项，
+        # 否则会出现“年龄已固定后性别永远为空”的问题。
+        stable_complete = bool(stable.get("age_group") and stable.get("gender"))
+        if stable_complete:
             stable_frame = int(stable.get("stable_frame", 0))
             if frame_count - stable_frame < self.stable_refresh_interval:
                 return dict(stable)
