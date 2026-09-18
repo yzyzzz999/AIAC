@@ -40,7 +40,11 @@ class MappingTests(unittest.TestCase):
             }
         }
 
-        seats = sync.build_seats(stats, pmv)
+        seats = sync.build_seats(
+            stats,
+            pmv,
+            {"type": "body_temperature", "body_temp_c": 36.42, "valid": True},
+        )
 
         self.assertEqual(
             seats,
@@ -51,7 +55,7 @@ class MappingTests(unittest.TestCase):
                     "age": "18-40",
                     "cloth": "短袖",
                     "bmi": 22.5,
-                    "tmperature": None,
+                    "tmperature": 36.42,
                     "pmv_score": "偏热[80.0]",
                 },
                 "passenger_side": {
@@ -83,6 +87,22 @@ class MappingTests(unittest.TestCase):
         self.assertEqual(seats["driver_side"]["age"], "41-59")
         self.assertEqual(seats["driver_side"]["cloth"], "长袖")
         self.assertEqual(seats["driver_side"]["pmv_score"], "轻微偏冷[70.0]")
+        self.assertIsNone(seats["driver_side"]["tmperature"])
+
+    def test_build_seats_ignores_invalid_body_temperature(self):
+        stats = {
+            "driver": {"identity_id": "drv-1", "gender": 1, "age": 2, "cloth": 8, "bmi": 20.1},
+            "passenger": None,
+        }
+        pmv = {"driver": {"pmv": 0.0, "ppd": 5.0}}
+
+        seats = sync.build_seats(
+            stats,
+            pmv,
+            {"type": "body_temperature", "body_temp_c": None, "valid": False},
+        )
+
+        self.assertIsNone(seats["driver_side"]["tmperature"])
 
 
 class ConfigTests(unittest.TestCase):
@@ -95,6 +115,7 @@ class ConfigTests(unittest.TestCase):
         self.assertEqual(cfg.redis_port, 6379)
         self.assertEqual(cfg.redis_key, "pmv_thermal_comfort")
         self.assertEqual(cfg.pmv_url, "http://127.0.0.1:7861/pmv")
+        self.assertEqual(cfg.body_temperature_url, "http://127.0.0.1:7864/body-temperature")
         self.assertEqual(
             cfg.update_person_info_url,
             "http://192.168.0.104:20001/api/airConditioningControl/updatePersonInfo",
@@ -114,6 +135,7 @@ class ConfigTests(unittest.TestCase):
                         "  key: custom_key",
                         "poll_interval_seconds: 2.5",
                         "pmv_url: http://127.0.0.1:9999/pmv",
+                        "body_temperature_url: http://127.0.0.1:9999/body-temperature",
                     ]
                 ),
                 encoding="utf-8",
@@ -123,6 +145,7 @@ class ConfigTests(unittest.TestCase):
                 path,
                 env={
                     "PERSON_SYNC_STATS_URL": "http://env.local/stats",
+                    "PERSON_SYNC_BODY_TEMPERATURE_URL": "http://env.local/body-temperature",
                     "PERSON_SYNC_REDIS_PORT": "6381",
                 },
             )
@@ -132,6 +155,7 @@ class ConfigTests(unittest.TestCase):
         self.assertEqual(cfg.redis_port, 6381)
         self.assertEqual(cfg.redis_key, "custom_key")
         self.assertEqual(cfg.pmv_url, "http://127.0.0.1:9999/pmv")
+        self.assertEqual(cfg.body_temperature_url, "http://env.local/body-temperature")
         self.assertEqual(cfg.poll_interval_seconds, 2.5)
 
 
@@ -149,6 +173,11 @@ class ChangeDetectionTests(unittest.TestCase):
             cfg,
             fetch_stats=lambda: stats,
             redis_get=lambda key: pmv_raw,
+            fetch_body_temperature=lambda: {
+                "type": "body_temperature",
+                "body_temp_c": 36.58,
+                "valid": True,
+            },
             post_json=lambda url, payload: sent.append(payload),
         )
 
@@ -157,6 +186,7 @@ class ChangeDetectionTests(unittest.TestCase):
         self.assertEqual(len(sent), 1)
         self.assertIn("timestamp", sent[0])
         self.assertEqual(sent[0]["seats"]["driver_side"]["age"], "12-17")
+        self.assertEqual(sent[0]["seats"]["driver_side"]["tmperature"], 36.58)
 
         stats["driver"]["age"] = 1
         self.assertTrue(service.run_once())
@@ -172,12 +202,31 @@ class ChangeDetectionTests(unittest.TestCase):
                 "passenger": None,
             },
             fetch_pmv=lambda: {"driver": {"pmv": 0.9, "ppd": 10}},
+            fetch_body_temperature=lambda: {"body_temp_c": 36.33, "valid": True},
             redis_get=lambda key: (_ for _ in ()).throw(AssertionError("redis should not be used")),
             post_json=lambda url, payload: sent.append(payload),
         )
 
         self.assertTrue(service.run_once())
         self.assertEqual(sent[0]["seats"]["driver_side"]["pmv_score"], "轻微偏热[90.0]")
+        self.assertEqual(sent[0]["seats"]["driver_side"]["tmperature"], 36.33)
+
+    def test_run_once_keeps_syncing_when_body_temperature_fails(self):
+        cfg = sync.Config(pmv_url="http://127.0.0.1:7861/pmv")
+        sent = []
+        service = sync.PersonInfoSync(
+            cfg,
+            fetch_stats=lambda: {
+                "driver": {"identity_id": "1", "gender": 1, "age": 1, "cloth": 6, "bmi": 20},
+                "passenger": None,
+            },
+            fetch_pmv=lambda: {"driver": {"pmv": 0.0, "ppd": 5}},
+            fetch_body_temperature=lambda: (_ for _ in ()).throw(ConnectionRefusedError("boom")),
+            post_json=lambda url, payload: sent.append(payload),
+        )
+
+        self.assertTrue(service.run_once())
+        self.assertIsNone(sent[0]["seats"]["driver_side"]["tmperature"])
 
     def test_run_once_error_includes_fetch_stage(self):
         cfg = sync.Config(stats_url="http://127.0.0.1:7680/stats")

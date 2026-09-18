@@ -1,5 +1,6 @@
 stats_url: http://127.0.0.1:7860/stats
 pmv_url: http://127.0.0.1:7861/pmv
+body_temperature_url: http://127.0.0.1:7864/body-temperature
 update_person_info_url: http://127.0.0.1:20001/api/airConditioningControl/updatePersonInfo
 redis:
   host: 127.0.0.1
@@ -7,4 +8,3 @@ redis:
   key: pmv_thermal_comfort
 poll_interval_seconds: 1.0
 request_timeout_seconds: 3.0
-

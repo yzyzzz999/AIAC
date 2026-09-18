@@ -41,6 +41,7 @@ GENDER_MAP = {
 class Config:
     stats_url: str = "http://127.0.0.1:7680/stats"
     pmv_url: str = "http://127.0.0.1:7861/pmv"
+    body_temperature_url: str = "http://127.0.0.1:7864/body-temperature"
     update_person_info_url: str = (
         "http://192.168.0.104:20001/api/airConditioningControl/updatePersonInfo"
     )
@@ -110,11 +111,28 @@ def pmv_label(pmv: float) -> str | None:
     return None
 
 
-def build_seats(stats: dict[str, Any], pmv_data: dict[str, Any]) -> dict[str, Any]:
+def normalize_body_temperature(body_temperature_data: dict[str, Any] | None) -> float | None:
+    if not body_temperature_data or not body_temperature_data.get("valid"):
+        return None
+    value = body_temperature_data.get("body_temp_c")
+    try:
+        return round(float(value), 2)
+    except (TypeError, ValueError):
+        return None
+
+
+def build_seats(
+    stats: dict[str, Any],
+    pmv_data: dict[str, Any],
+    body_temperature_data: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     comfort = normalize_pmv_data(pmv_data)
+    body_temperature = normalize_body_temperature(body_temperature_data)
     return {
-        "driver_side": build_seat(stats.get("driver"), comfort.get("driver")),
-        "passenger_side": build_seat(stats.get("passenger"), comfort.get("passenger")),
+        "driver_side": build_seat(stats.get("driver"), comfort.get("driver"), body_temperature),
+        "passenger_side": build_seat(
+            stats.get("passenger"), comfort.get("passenger"), body_temperature
+        ),
     }
 
 
@@ -130,7 +148,11 @@ def normalize_pmv_data(pmv_data: dict[str, Any]) -> dict[str, Any]:
     return result
 
 
-def build_seat(person: dict[str, Any] | None, comfort: dict[str, Any] | None) -> dict[str, Any]:
+def build_seat(
+    person: dict[str, Any] | None,
+    comfort: dict[str, Any] | None,
+    body_temperature: float | None = None,
+) -> dict[str, Any]:
     if not person:
         return {
             "User_Id": "-1",
@@ -149,7 +171,7 @@ def build_seat(person: dict[str, Any] | None, comfort: dict[str, Any] | None) ->
         "age": map_age(person.get("age")),
         "cloth": map_cloth(person.get("cloth")),
         "bmi": person.get("bmi"),
-        "tmperature": None,
+        "tmperature": body_temperature,
         "pmv_score": format_pmv_score(comfort.get("pmv"), comfort.get("ppd")),
     }
 
@@ -162,6 +184,11 @@ def load_config(path: str | Path = "config.yaml", env: dict[str, str] | None = N
     cfg = Config(
         stats_url=str(data.get("stats_url") or Config.stats_url),
         pmv_url=str(data.get("pmv_url") if data.get("pmv_url") is not None else Config.pmv_url),
+        body_temperature_url=str(
+            data.get("body_temperature_url")
+            if data.get("body_temperature_url") is not None
+            else Config.body_temperature_url
+        ),
         update_person_info_url=str(
             data.get("update_person_info_url") or Config.update_person_info_url
         ),
@@ -178,6 +205,9 @@ def load_config(path: str | Path = "config.yaml", env: dict[str, str] | None = N
 
     cfg.stats_url = env.get("PERSON_SYNC_STATS_URL", cfg.stats_url)
     cfg.pmv_url = env.get("PERSON_SYNC_PMV_URL", cfg.pmv_url)
+    cfg.body_temperature_url = env.get(
+        "PERSON_SYNC_BODY_TEMPERATURE_URL", cfg.body_temperature_url
+    )
     cfg.update_person_info_url = env.get(
         "PERSON_SYNC_UPDATE_URL", cfg.update_person_info_url
     )
@@ -291,6 +321,7 @@ class PersonInfoSync:
         config: Config,
         fetch_stats: Callable[[], dict[str, Any]] | None = None,
         fetch_pmv: Callable[[], dict[str, Any]] | None = None,
+        fetch_body_temperature: Callable[[], dict[str, Any]] | None = None,
         redis_get: Callable[[str], str | None] | None = None,
         post_json: Callable[[str, dict[str, Any]], Any] | None = None,
     ):
@@ -300,6 +331,9 @@ class PersonInfoSync:
         )
         self.fetch_pmv = fetch_pmv or (
             lambda: http_get_json(config.pmv_url, config.request_timeout_seconds)
+        )
+        self.fetch_body_temperature = fetch_body_temperature or (
+            lambda: http_get_json(config.body_temperature_url, config.request_timeout_seconds)
         )
         self.redis_get = redis_get or (
             lambda key: globals()["redis_get"](
@@ -337,7 +371,17 @@ class PersonInfoSync:
                 redis_addr = f"{self.config.redis_host}:{self.config.redis_port}/{self.config.redis_key}"
                 raise RuntimeError(f"fetch Redis PMV failed from {redis_addr}: {exc}") from exc
 
-        seats = build_seats(stats, pmv_data)
+        body_temperature_data = None
+        if self.config.body_temperature_url:
+            try:
+                body_temperature_data = self.fetch_body_temperature()
+            except Exception as exc:
+                print(
+                    "person info sync warning: "
+                    f"fetch body temperature failed from {self.config.body_temperature_url}: {exc}"
+                )
+
+        seats = build_seats(stats, pmv_data, body_temperature_data)
         seats_json = json.dumps(seats, sort_keys=True, ensure_ascii=False)
         if seats_json == self.last_sent_seats_json:
             return False
